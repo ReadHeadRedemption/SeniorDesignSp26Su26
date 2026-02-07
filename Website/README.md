@@ -1,158 +1,100 @@
-# Senior Design Project Website
+# C.R.I.P Senior Design Project Website
 
-A clean, professional website template for your UCF Senior Design project. This site is designed to be easily editable and expandable as you add more deliverables throughout the semester.
+## Overview
+This is a multi-page website for the Conductive Rapid Inking Prototyping (C.R.I.P) senior design project.
 
-## Files
-
-- **index.html** - Main HTML file with all page structure
-- **styles.css** - CSS styling for a modern, responsive design
-- **script.js** - JavaScript for interactivity and navigation
-- **README.md** - This file with instructions
-
-## Quick Start
-
-1. Open `index.html` in any web browser to view the website
-2. Edit the placeholder text in `index.html` to add your project information
-
-## How to Edit the Website
-
-### Editing Project Information
-
-Open `index.html` and find the section marked with `[placeholder text]`. Replace these with your actual information:
-
-#### Home Page Section (id="home")
-- **Project Title**: Replace `[Your Project Title Here]`
-- **Group Members**: Replace member placeholders in the `<ul id="members-list">` section
-- **Reviewers**: Replace reviewer placeholders in the `<ul id="reviewers-list">` section
-- **Project Description**: Replace the paragraph in the "Project Description" card
-- **Sponsorship**: Replace sponsor name and contact information
-
-### Adding/Updating Deliverables
-
-#### For SD1 Deliverables:
-The following items are already structured in the SD1 section (id="sd1"):
-- Divide and Conquer Document
-- Midterm Milestone Report
-- SD1 Final Report
-- Mini Demo Video
-
-To add a link to an uploaded file, edit the card in the HTML:
-```html
-<div class="deliverable-card">
-    <h3>Document Title</h3>
-    <p>Brief description or date uploaded</p>
-    <a href="path/to/your/file.pdf" class="upload-placeholder">Download</a>
-</div>
+## File Structure
+```
+project/
+├── index.html          (Home page)
+├── team.html           (Team members with photos)
+├── sd1.html            (SD1 deliverables)
+├── sd2.html            (SD2 deliverables)
+├── materials.html      (Additional materials)
+├── styles.css          (Styling)
+├── script.js           (JavaScript functionality)
+├── images/             (Photo folder - CREATE THIS)
+│   ├── ethan-baker.jpg
+│   ├── andrew-eppich.jpg
+│   ├── jeremy-jiang.jpg
+│   ├── giancarlo-luna.jpg
+│   ├── team-photo.jpg
+│   ├── placeholder.jpg
+│   └── placeholder-wide.jpg
+└── Documents/          (Your documents folder)
+    └── SD1/
+        └── D&C Submission - Group 7.pdf
 ```
 
-#### For SD2 Deliverables:
-All 8 SD2 deliverables are already set up in the SD2 section (id="sd2"):
-- CDR Presentation Video
-- CDR Presentation Slides
-- Midterm Demonstration Video
-- 8-Page Conference Paper
-- SD2 Final Report
-- Final Presentation Video
-- Final Presentation Slides
-- Final Demonstration Video
+## Adding Team Photos
 
-#### For Additional Materials:
-Add items to the "Additional Materials" section (id="materials") using the same card structure.
+### 1. Create the Images Folder
+Create a folder named `images` in the same directory as your HTML files.
 
-### Adding New Members or Reviewers (Using Browser Console)
+### 2. Add Individual Photos
+Add photos for each team member with these exact filenames:
+- `ethan-baker.jpg` - Ethan Baker's photo
+- `andrew-eppich.jpg` - Andrew Eppich's photo
+- `jeremy-jiang.jpg` - Jeremy Jiang's photo
+- `giancarlo-luna.jpg` - Giancarlo Luna's photo
 
-You can add members or reviewers directly through the browser console:
+**Photo Guidelines:**
+- Recommended size: 800x800 pixels (square)
+- Format: JPG or PNG
+- Professional headshot or team photo style
+- Good lighting and clear face visibility
 
-```javascript
-// Add a new group member
-projectSite.addMember("Jane Doe");
+### 3. Add Team Photo
+Add a full team photo as `team-photo.jpg`:
+- Recommended size: 1200x600 pixels (landscape)
+- Format: JPG or PNG
+- Shows all team members together
 
-// Add a new reviewer
-projectSite.addReviewer("Dr. Johnson");
-```
+### 4. Create Placeholder Images (Optional)
+If you don't have photos yet, create simple placeholder images:
+- `placeholder.jpg` - 800x800 pixels with text "Photo Coming Soon"
+- `placeholder-wide.jpg` - 1200x600 pixels with text "Team Photo Coming Soon"
 
-## File Organization Recommendations
+The website will automatically fall back to placeholders if photos aren't found.
 
-When uploading documents and videos, consider organizing them in folders:
+## Customizing Content
 
-```
-Website/
-├── index.html
-├── styles.css
-├── script.js
-├── README.md
-├── documents/
-│   ├── sd1/
-│   │   ├── divide-and-conquer.pdf
-│   │   ├── midterm-report.pdf
-│   │   └── final-report.pdf
-│   └── sd2/
-│       ├── conference-paper.pdf
-│       ├── final-report.pdf
-│       └── ...
-├── videos/
-│   ├── sd1/
-│   │   └── demo-video.mp4
-│   └── sd2/
-│       ├── cdr-presentation.mp4
-│       ├── midterm-demo.mp4
-│       └── ...
-└── presentations/
-    ├── cdr-slides.pptx
-    └── final-slides.pptx
-```
+### Update Team Member Information (team.html)
+Edit the following for each team member:
+- **Bio**: Replace the placeholder text in `<p class="member-bio placeholder">`
+- **Email**: Update the href in `<a href="mailto:...">`
+- **LinkedIn**: Update the href in the LinkedIn link
 
-Then reference files like:
-```html
-<a href="documents/sd1/divide-and-conquer.pdf" class="upload-placeholder">Download PDF</a>
-```
+### Update Project Description (index.html)
+- Find the "Project Description" section
+- Replace placeholder text with your actual project description
+- Update "Key Features" and "Project Goals" sections
 
-## Hosting the Website
+### Add Documents
+1. Keep your documents in the `Documents/SD1/` and `Documents/SD2/` folders
+2. Update the href attributes in sd1.html and sd2.html to point to your files
+3. Change "Not yet uploaded" to descriptive text once files are added
 
-### Local Viewing
-Simply open `index.html` in any web browser.
+## Navigation
+The website has 5 pages:
+- **Home** - Project overview and general information
+- **Team** - Team member profiles with photos
+- **SD1** - Senior Design 1 deliverables
+- **SD2** - Senior Design 2 deliverables
+- **Materials** - Additional resources and documentation
 
-### Online Hosting Options
-- **GitHub Pages** (Free) - Upload files to a GitHub repository
-- **UCF Web Server** - Check with your university for student hosting options
-- **Netlify** (Free) - Drag and drop to deploy
-- **Vercel** (Free) - Simple hosting for static sites
+## Uploading to a Server
+To make your website live:
+1. Ensure all files are in the correct structure
+2. Upload all files to your web hosting service
+3. Make sure the images folder and all photos are uploaded
+4. Test all links and photo displays
 
-## Features
+## Tips
+- Photos display better when they're high quality but optimized for web (under 500KB each)
+- Use consistent photo styles (all headshots or all candid, etc.)
+- Test the website locally by opening index.html in a browser
+- All placeholder text is marked with `class="placeholder"` for easy identification
 
-✅ Responsive design (works on mobile, tablet, desktop)
-✅ Organized sections for Home, SD1, SD2, and Additional Materials
-✅ Professional styling with hover effects
-✅ Smooth navigation between sections
-✅ Easy to update and expand
-✅ All 17 deliverables pre-structured
-✅ No backend or database required
-
-## Customization Tips
-
-1. **Change Colors**: Edit the color codes in `styles.css`
-   - Primary color: `#3498db` (blue)
-   - Secondary color: `#2c3e50` (dark gray)
-   - Success color: `#27ae60` (green)
-
-2. **Add Embedded Videos**: Replace video links with embedded video players:
-   ```html
-   <iframe width="100%" height="400" src="https://www.youtube.com/embed/VIDEO_ID" 
-           frameborder="0" allowfullscreen></iframe>
-   ```
-
-3. **Add Images**: Insert project images:
-   ```html
-   <img src="path/to/image.jpg" alt="Description" style="max-width: 100%; height: auto;">
-   ```
-
-4. **Change Fonts**: Update the font-family in `styles.css`
-
-## Need Help?
-
-- Check the placeholder text for clues on what to update
-- Look at the HTML structure to understand where content goes
-- Use browser developer tools (F12) to inspect elements
-- All styling is in `styles.css` for easy customization
-
-## Good Luck with Your Senior Design Project!
+## Support
+For issues or questions, contact the team leads.

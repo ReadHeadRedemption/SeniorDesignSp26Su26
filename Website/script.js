@@ -1,30 +1,21 @@
-// Navigation active link highlighting
+// Navigation active link highlighting based on current page
 document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.nav-links a');
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     
-    // Highlight active nav link based on scroll position
-    window.addEventListener('scroll', function() {
-        const sections = document.querySelectorAll('section');
-        let current = '';
-        
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (scrollY >= sectionTop - 200) {
-                current = section.getAttribute('id');
-            }
-        });
-        
-        navLinks.forEach(link => {
+    // Set active link based on current page
+    navLinks.forEach(link => {
+        const linkPage = link.getAttribute('href');
+        if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
+            link.classList.add('active');
+        } else {
             link.classList.remove('active');
-            if (link.getAttribute('href').slice(1) === current) {
-                link.classList.add('active');
-            }
-        });
+        }
     });
 
-    // Smooth scrolling for navigation links
-    navLinks.forEach(link => {
+    // Smooth scrolling for any hash links
+    const hashLinks = document.querySelectorAll('a[href^="#"]');
+    hashLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = this.getAttribute('href').slice(1);
@@ -41,40 +32,27 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Function to easily update project information
-// Usage: updateProjectInfo('projectTitle', 'Your Project Name')
 function updateProjectInfo(field, value) {
     const fieldMap = {
         'projectTitle': 'Update the project title in the Home section',
         'description': 'Update the project description',
         'sponsor': 'Update sponsor information',
-        // Add more fields as needed
     };
     
     console.log(`To update ${field}: ${value}`);
-    // You can expand this function to programmatically update the page
 }
 
-// Function to add a group member
-// Usage: addMember('John Doe')
-function addMember(name) {
-    const membersList = document.getElementById('members-list');
-    const newMember = document.createElement('li');
-    newMember.textContent = name;
-    membersList.appendChild(newMember);
-}
-
-// Function to add a reviewer
-// Usage: addReviewer('Dr. Smith')
-function addReviewer(name) {
-    const reviewersList = document.getElementById('reviewers-list');
-    const newReviewer = document.createElement('li');
-    newReviewer.textContent = name;
-    reviewersList.appendChild(newReviewer);
+// Function to add a group member (for console use)
+function addMember(name, role, bio, email, linkedin, photoUrl) {
+    console.log('Add member to team.html:');
+    console.log(`Name: ${name}, Role: ${role}`);
+    console.log(`Bio: ${bio}`);
+    console.log(`Email: ${email}, LinkedIn: ${linkedin}`);
+    console.log(`Photo: ${photoUrl}`);
 }
 
 // Export functions for console access
 window.projectSite = {
     addMember: addMember,
-    addReviewer: addReviewer,
     updateProjectInfo: updateProjectInfo
 };
