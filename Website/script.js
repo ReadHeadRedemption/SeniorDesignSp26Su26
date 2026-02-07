@@ -6,14 +6,17 @@ document.addEventListener('DOMContentLoaded', function() {
     // Set active link based on current page
     navLinks.forEach(link => {
         const linkPage = link.getAttribute('href');
-        if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
+        link.classList.remove('active');
+        
+        // Check if this link matches the current page
+        if (linkPage === currentPage || 
+            (currentPage === '' && linkPage === 'index.html') ||
+            (currentPage === 'index.html' && linkPage === 'index.html')) {
             link.classList.add('active');
-        } else {
-            link.classList.remove('active');
         }
     });
 
-    // Smooth scrolling for any hash links
+    // Smooth scrolling for any hash links on the same page
     const hashLinks = document.querySelectorAll('a[href^="#"]');
     hashLinks.forEach(link => {
         link.addEventListener('click', function(e) {
