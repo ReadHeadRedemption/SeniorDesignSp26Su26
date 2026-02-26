@@ -1,7 +1,7 @@
-# C.R.I.P Senior Design Project Website
-
+# C.I.P Senior Design Project Website
+-- Code initally designed by claude and modified by team members --
 ## Overview
-This is a multi-page website for the Conductive Rapid Inking Prototyping (C.R.I.P) senior design project.
+This is a multi-page website for the Conductive Rapid Inking Prototyping (C.I.P) senior design project.
 
 ## File Structure
 ```
