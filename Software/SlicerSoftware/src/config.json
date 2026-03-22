@@ -1,0 +1,10 @@
+{
+    "nozzleDiameter": 999.0,
+    "layerHeight": 999.0,
+    "maxBedSize": [
+        3.0,
+        1.0,
+        2.0
+    ],
+    "gerberFile": "Hello World"
+}
