@@ -6,26 +6,17 @@ from pygerber import gerber as gb
 from itertools import product
 from gscrib import GCodeBuilder
 
+import pygerber
+
 #importing modules for GUI
 from GUI import GUI
 
-# misc imports
-import zipfile
+#misc imports
+import json
 
-
-#global variables for paramreters 
-'''Define Later with GUI input'''
-nozzleDiameter = 0.4
-maxBedSize = {"X": 200, "Y": 200, "Z": 200} #in mm
-
-layerHeight = 0.2 #in mm
-printSpeed = 60 #in mm/s
-maxBedTemp = 180 #in celcius
-flowRate = 5 #in mm/s
-
-
-   
-
+# config file location
+configFilePath = "./src/config.json"
+configFile = json.load(configFilePath)
 
 #read in the file from the user input and parse it using the parser and tokenizer
 
@@ -36,4 +27,4 @@ flowRate = 5 #in mm/s
 
 
 
-GUI()
+#GUI()

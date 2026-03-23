@@ -1,10 +1,17 @@
 {
-    "nozzleDiameter": 999.0,
-    "layerHeight": 999.0,
+    "units": "mm",
     "maxBedSize": [
-        3.0,
-        1.0,
-        2.0
+        100.0,
+        100.0,
+        100.0
     ],
-    "gerberFile": "Hello World"
+    "layerHeight": 10.0,
+    "printSpeed": 60,
+    "gerberFile": "TestFiles\test-gbr.zip",
+    "Cond3": {
+        "headType": "C",
+        "nozzleDiameter": 0.225,
+        "curingTemperature": 170.0,
+        "curingTime": 15.0
+    }
 }
