@@ -1,17 +1,17 @@
 {
     "units": "mm",
     "maxBedSize": [
-        100.0,
-        100.0,
-        100.0
+        1.0,
+        1.0,
+        1.0
     ],
-    "layerHeight": 10.0,
+    "layerHeight": 1.0,
     "printSpeed": 60,
-    "gerberFile": "TestFiles\test-gbr.zip",
-    "Cond3": {
+    "gerberFile": "C:/Users/ethan/Downloads/CAMotics-master.zip",
+    "1": {
         "headType": "C",
-        "nozzleDiameter": 0.225,
-        "curingTemperature": 170.0,
-        "curingTime": 15.0
+        "nozzleDiameter": 1.0,
+        "curingTemperature": 1.0,
+        "curingTime": 1.0
     }
 }

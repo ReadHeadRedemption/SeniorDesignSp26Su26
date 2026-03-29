@@ -24,21 +24,21 @@ def addHead(name, head, nD, cTe, cTi):
     print(f"{head}")
     try:
         headName = str(name.get()) if name.get() != "" else "NA"
-        print(f"Head name: {headName}")
+        #print(f"Head name: {headName}")
         headType = (head.get()) if head.get() != "" else "NA"
-        print(f"Head type: {head}")
+        #print(f"Head type: {head}")
         nD = float(nD.get()) if nD.get() != "" else 0
-        print(f"Nozzle diameter: {nD}")
+        #print(f"Nozzle diameter: {nD}")
         cTe = float(cTe.get()) if cTe.get() != "" else 0
-        print(f"Cureing temperature: {cTe}")
+        #print(f"Cureing temperature: {cTe}")
         cTi = float(cTi.get()) if cTi.get() != "" else 0
-        print(f"Cureing time: {cTi}")
+        #print(f"Cureing time: {cTi}")
     except ValueError:
         print("Invalid input. Please enter numeric values")
 
 
     if headName != "NA" and head != "NA" and nD != 0 and cTe != 0 and cTi != 0:
-        print("Attempting update")
+        #print("Attempting update")
         update =   {
             f"{headName}" :{
                 "headType": headType,

@@ -16,15 +16,16 @@ import json
 
 # config file location
 configFilePath = "./src/config.json"
-configFile = json.load(configFilePath)
+
+with open(configFilePath, "r") as f:
+    print("load succseded")
+    configFile = json.load(f)
+    print(configFile)
+
 
 #read in the file from the user input and parse it using the parser and tokenizer
 
 #once file is parsed use gscrib to convert the file
 #need to set up pre generation parameters to read into marlin firmware
-
-
-
-
 
 #GUI()

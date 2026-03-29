@@ -61,4 +61,4 @@ def defConfig():
     updConf(printProp)
     updConf(filePath)
 
-defConfig()
+#defConfig()
