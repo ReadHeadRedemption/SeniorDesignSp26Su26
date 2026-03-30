@@ -3896,6 +3896,16 @@
 		)
 		(uuid "32caf29a-fb14-459f-8c32-6479be9522b4")
 	)
+	(text "Note: change the low side and high side to discrete pins\n"
+		(exclude_from_sim no)
+		(at 89.408 234.442 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "6fa399b5-bf4f-4f7f-a7a2-7978d5e4d4a5")
+	)
 	(text "Red"
 		(exclude_from_sim no)
 		(at 527.685 341.63 90)
@@ -3929,6 +3939,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "07a6ca10-e0b4-44c5-a9f3-909b83dc4871")
+	)
+	(junction
+		(at 48.26 309.88)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0821816e-bee3-4dab-bf05-b696be98b9e3")
 	)
 	(junction
 		(at 43.18 139.065)
@@ -3997,10 +4013,22 @@
 		(uuid "41476e09-6887-4adc-93a3-dd9826378bce")
 	)
 	(junction
+		(at 49.53 278.13)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "49f68fb8-148e-4e64-b935-ce6709345eee")
+	)
+	(junction
 		(at 85.725 147.955)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "61bb8b1e-dee6-4435-bf29-b4d371a06e65")
+	)
+	(junction
+		(at 29.21 341.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "662148aa-c963-4de4-90b7-b259db549b33")
 	)
 	(junction
 		(at 78.74 40.64)
@@ -4015,10 +4043,28 @@
 		(uuid "819ade47-e559-4c0c-8f1a-da8577389e95")
 	)
 	(junction
+		(at 30.48 309.88)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "855901b8-ea6c-49ed-afbd-be5de5d80da6")
+	)
+	(junction
 		(at 66.675 83.185)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "893288f6-798e-497b-84a9-5d57c6460543")
+	)
+	(junction
+		(at 31.75 278.13)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8ab9ed6b-7d57-451d-a97d-d95e3bf6ae80")
+	)
+	(junction
+		(at 46.99 341.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8b781b18-ad13-42cc-8526-a6152fcc636a")
 	)
 	(junction
 		(at 37.465 139.065)
@@ -4218,6 +4264,16 @@
 	)
 	(wire
 		(pts
+			(xy 45.72 278.13) (xy 49.53 278.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "08a2e38f-2a22-44d6-ad00-9b7299b8d3c9")
+	)
+	(wire
+		(pts
 			(xy 103.505 147.955) (xy 103.505 153.67)
 		)
 		(stroke
@@ -4295,6 +4351,16 @@
 			(type default)
 		)
 		(uuid "17abe4d1-de8c-4775-8520-8fb244fe9d30")
+	)
+	(wire
+		(pts
+			(xy 40.64 294.64) (xy 30.48 294.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "195a9d5a-15c8-4a28-aca2-b6e120a2c8a3")
 	)
 	(wire
 		(pts
@@ -4398,6 +4464,16 @@
 	)
 	(wire
 		(pts
+			(xy 49.53 278.13) (xy 53.34 278.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "272ed541-ac92-416d-852b-35207471e206")
+	)
+	(wire
+		(pts
 			(xy 103.505 59.69) (xy 103.505 60.96)
 		)
 		(stroke
@@ -4468,6 +4544,16 @@
 	)
 	(wire
 		(pts
+			(xy 30.48 309.88) (xy 34.29 309.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3b96550a-aecc-46f8-834f-85a0b338e65f")
+	)
+	(wire
+		(pts
 			(xy 63.5 108.585) (xy 51.435 108.585)
 		)
 		(stroke
@@ -4495,6 +4581,26 @@
 			(type dash)
 		)
 		(uuid "3f5c9a66-5ffa-4817-bc83-c35387cceb3f")
+	)
+	(wire
+		(pts
+			(xy 30.48 278.13) (xy 31.75 278.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "41c35d23-4f68-4ee3-aa9f-f6fed1313eee")
+	)
+	(wire
+		(pts
+			(xy 44.45 309.88) (xy 48.26 309.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "425e3b0a-78c2-4b6e-a9c2-c88b16625b8e")
 	)
 	(wire
 		(pts
@@ -4528,6 +4634,26 @@
 	)
 	(wire
 		(pts
+			(xy 39.37 271.78) (xy 41.91 271.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "48a916b0-3c81-4632-93d4-c61e3dcbf8da")
+	)
+	(wire
+		(pts
+			(xy 46.99 341.63) (xy 50.8 341.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4f4222fa-6a97-40dc-b646-30687ad3dad5")
+	)
+	(wire
+		(pts
 			(xy 70.485 63.5) (xy 73.025 63.5)
 		)
 		(stroke
@@ -4545,6 +4671,16 @@
 			(type default)
 		)
 		(uuid "51fd25cf-7bd9-45a2-a18f-85d8877ccead")
+	)
+	(wire
+		(pts
+			(xy 43.18 341.63) (xy 46.99 341.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "527c2bc3-d197-4e4f-8ad4-81157ca787f4")
 	)
 	(wire
 		(pts
@@ -4595,6 +4731,26 @@
 			(type default)
 		)
 		(uuid "5819e226-0326-4689-b197-f329100f1dc8")
+	)
+	(wire
+		(pts
+			(xy 29.21 309.88) (xy 30.48 309.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "590d2ed6-df29-4076-914e-20b7f16e30e5")
+	)
+	(wire
+		(pts
+			(xy 39.37 335.28) (xy 39.37 326.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5a5b3cca-f636-4383-8f4c-0de0db848467")
 	)
 	(wire
 		(pts
@@ -4675,6 +4831,16 @@
 			(type default)
 		)
 		(uuid "64c22386-42e4-49c9-8d47-e1ff032a5240")
+	)
+	(wire
+		(pts
+			(xy 29.21 334.01) (xy 29.21 341.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "661a8553-13c1-4f77-b32c-7410e663e277")
 	)
 	(wire
 		(pts
@@ -4778,6 +4944,16 @@
 	)
 	(wire
 		(pts
+			(xy 41.91 271.78) (xy 41.91 262.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "741a2227-6fd8-43e0-927f-dad4f134594d")
+	)
+	(wire
+		(pts
 			(xy 36.83 47.625) (xy 41.91 47.625)
 		)
 		(stroke
@@ -4828,6 +5004,16 @@
 	)
 	(wire
 		(pts
+			(xy 48.26 302.26) (xy 48.26 309.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8227d0ae-b114-4a53-9d61-20a9a915622a")
+	)
+	(wire
+		(pts
 			(xy 72.39 147.955) (xy 85.725 147.955)
 		)
 		(stroke
@@ -4835,6 +5021,16 @@
 			(type default)
 		)
 		(uuid "83fbd20e-1350-450e-84f2-e915123ac5c9")
+	)
+	(wire
+		(pts
+			(xy 40.64 303.53) (xy 40.64 294.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "84760035-952d-41ca-9a18-88750c8e7bbc")
 	)
 	(wire
 		(pts
@@ -4898,6 +5094,16 @@
 	)
 	(wire
 		(pts
+			(xy 39.37 326.39) (xy 29.21 326.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8a52a600-7e94-48a7-b63e-8c9c51798cd5")
+	)
+	(wire
+		(pts
 			(xy 559.435 331.47) (xy 559.435 334.01)
 		)
 		(stroke
@@ -4915,6 +5121,26 @@
 			(type default)
 		)
 		(uuid "8ea11861-8627-4569-aa68-03d3ac3fedb5")
+	)
+	(wire
+		(pts
+			(xy 27.94 341.63) (xy 29.21 341.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8fe6ca3d-7de1-4c3b-83e5-17cdf398461b")
+	)
+	(wire
+		(pts
+			(xy 49.53 270.51) (xy 49.53 278.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "91b2e130-264d-4a0b-95fb-9f5fbe99c3de")
 	)
 	(wire
 		(pts
@@ -5096,6 +5322,26 @@
 		)
 		(uuid "a67f0cec-8dd6-498c-9e45-3a5de5b0d209")
 	)
+	(wire
+		(pts
+			(xy 31.75 270.51) (xy 31.75 278.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a774f3e7-f77e-4c0d-b035-527939f85093")
+	)
+	(wire
+		(pts
+			(xy 31.75 278.13) (xy 35.56 278.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a7e5deab-def1-4786-a617-86ee08038ff0")
+	)
 	(polyline
 		(pts
 			(xy 16.51 170.815) (xy 16.51 15.875)
@@ -5125,6 +5371,16 @@
 			(type default)
 		)
 		(uuid "ab31a665-c103-466f-83ff-1fd0bf9a2ff8")
+	)
+	(wire
+		(pts
+			(xy 29.21 341.63) (xy 33.02 341.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ad7d379b-27e7-4867-947a-b39cf1c84b6b")
 	)
 	(wire
 		(pts
@@ -5198,6 +5454,26 @@
 	)
 	(wire
 		(pts
+			(xy 36.83 335.28) (xy 39.37 335.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b7ad0d00-7b04-4a43-8eb6-4e3130fdae81")
+	)
+	(wire
+		(pts
+			(xy 30.48 302.26) (xy 30.48 309.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b80ca117-8237-4e56-a3af-fdfdf5729525")
+	)
+	(wire
+		(pts
 			(xy 51.435 125.73) (xy 54.61 125.73)
 		)
 		(stroke
@@ -5215,6 +5491,16 @@
 			(type default)
 		)
 		(uuid "bab17ae0-083c-4d23-95f5-665746bc773c")
+	)
+	(wire
+		(pts
+			(xy 41.91 262.89) (xy 31.75 262.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bb806e1e-7b8b-4131-a35e-a67d0d3bbd37")
 	)
 	(wire
 		(pts
@@ -5295,6 +5581,16 @@
 			(type default)
 		)
 		(uuid "c1f67917-f1e5-4171-9805-9e69769c2966")
+	)
+	(wire
+		(pts
+			(xy 46.99 334.01) (xy 46.99 341.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c3317ab8-12ce-4085-ad2d-2d238340f70a")
 	)
 	(wire
 		(pts
@@ -5498,6 +5794,16 @@
 	)
 	(wire
 		(pts
+			(xy 48.26 309.88) (xy 52.07 309.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dbdbf3d6-f523-4050-a3f2-69776d34fe0c")
+	)
+	(wire
+		(pts
 			(xy 42.545 63.5) (xy 45.085 63.5)
 		)
 		(stroke
@@ -5565,6 +5871,16 @@
 			(type default)
 		)
 		(uuid "ea40d475-2234-4020-8c29-9e6462e03082")
+	)
+	(wire
+		(pts
+			(xy 38.1 303.53) (xy 40.64 303.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ebfa57f2-8730-4df1-8fe4-3dad1d6c73d1")
 	)
 	(polyline
 		(pts
@@ -5727,6 +6043,54 @@
 			)
 		)
 	)
+	(global_label "LV"
+		(shape input)
+		(at 30.48 294.64 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "18e6d304-ca84-4187-82d7-8690c0cd2e03")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 30.48 289.5381 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "LV1"
+		(shape input)
+		(at 29.21 309.88 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "1ef75ebb-15aa-4a91-871f-6522c254069e")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 22.8986 309.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
 	(global_label "VBUS_DETECT"
 		(shape output)
 		(at 29.21 30.48 180)
@@ -5747,6 +6111,54 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+	)
+	(global_label "HV"
+		(shape input)
+		(at 46.99 326.39 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "2558fc0b-fc5d-4e1a-acb2-a0fc7ab369fd")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 46.99 320.9857 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "HV1"
+		(shape input)
+		(at 53.34 278.13 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "2b5d11b6-9f34-44fb-8692-2a892e7a77e7")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 59.9538 278.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 	)
@@ -5819,6 +6231,30 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+			)
+		)
+	)
+	(global_label "LV"
+		(shape input)
+		(at 31.75 262.89 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "310a9cce-36f8-42d6-b93d-6bf75fd99f93")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 31.75 257.7881 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 	)
@@ -6013,6 +6449,30 @@
 			)
 		)
 	)
+	(global_label "HV"
+		(shape input)
+		(at 48.26 294.64 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "6d2c4411-7acf-467d-b13b-992a54f43213")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 48.26 289.2357 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
 	(global_label "SWDIO"
 		(shape input)
 		(at 530.86 354.965 180)
@@ -6057,6 +6517,30 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+	)
+	(global_label "LV1"
+		(shape input)
+		(at 27.94 341.63 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "911a7b5c-db08-4ae4-bdbe-6124693604b8")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 21.6286 341.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 	)
@@ -6154,6 +6638,54 @@
 			)
 		)
 	)
+	(global_label "HV1"
+		(shape input)
+		(at 50.8 341.63 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c06d0007-48bd-4904-9e38-0fb6230b8d2d")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 57.4138 341.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "HV"
+		(shape input)
+		(at 49.53 262.89 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c30ca3bb-d7f0-4bf5-b19a-e9b62af620ab")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 49.53 257.4857 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
 	(global_label "VBUS"
 		(shape output)
 		(at 104.775 147.955 0)
@@ -6174,6 +6706,30 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+	)
+	(global_label "LV"
+		(shape input)
+		(at 29.21 326.39 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c7a6889f-76c4-4cc9-94fc-aab1c1209ce9")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 29.21 321.2881 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 	)
@@ -6309,6 +6865,54 @@
 		(uuid "ed59c667-0157-45f1-8493-45b3a7f73dbf")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 97.5137 100.8856 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "LV1"
+		(shape input)
+		(at 30.48 278.13 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "f5f36c79-5de8-42af-ad18-b5027db16b41")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 24.1686 278.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "HV1"
+		(shape input)
+		(at 52.07 309.88 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "f69fb8e9-8b20-4ecf-bbc1-29d5e3e14d5e")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 58.6838 309.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6516,6 +7120,89 @@
 			(project "Senior design Mainboard"
 				(path "/1027da72-a2dd-4309-b004-99ab5e04adbe/9095e8d5-0d3d-4f63-98f2-4261bdd8f9fe"
 					(reference "D23")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_Transistor_MOSFET_AKL:BSS138")
+		(at 39.37 307.34 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "13166bf8-42a6-4f57-b7a9-ee4051114911")
+		(property "Reference" "Q15"
+			(at 39.37 313.69 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BSS138"
+			(at 39.37 316.23 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "PCM_Package_TO_SOT_SMD_AKL:SOT-23"
+			(at 41.91 312.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.tme.eu/Document/2b32cdd3c66afedbcd628e73d93ae817/BSS138-7-F.pdf"
+			(at 39.37 307.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "SOT-23 N-MOSFET enchancement mode transistor, 50V, 200mA, 300mW, Alternate KiCAD Library"
+			(at 39.37 307.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "a389dc66-bddb-42f2-a9bd-5848a7ebf0b8")
+		)
+		(pin "1"
+			(uuid "94fde90a-3754-48f2-b54e-376aaa28d060")
+		)
+		(pin "3"
+			(uuid "c1147efe-ee01-40f2-8124-996b1c1af084")
+		)
+		(instances
+			(project "Senior design Mainboard"
+				(path "/1027da72-a2dd-4309-b004-99ab5e04adbe/9095e8d5-0d3d-4f63-98f2-4261bdd8f9fe"
+					(reference "Q15")
 					(unit 1)
 				)
 			)
@@ -7741,6 +8428,170 @@
 		)
 	)
 	(symbol
+		(lib_id "PCM_Resistor_AKL:R_Generic")
+		(at 46.99 330.2 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "42e9d351-a226-49c8-86cb-ddf009aa17f3")
+		(property "Reference" "R17"
+			(at 49.53 328.9299 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 49.53 331.4699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 45.212 330.2 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 46.99 330.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, Generic European Symbol, Alternate KiCad Library"
+			(at 46.99 330.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "63d680ef-1627-4219-850a-9556f833de39")
+		)
+		(pin "1"
+			(uuid "def50e86-9969-43fe-b48c-7071fa53862e")
+		)
+		(instances
+			(project "Senior design Mainboard"
+				(path "/1027da72-a2dd-4309-b004-99ab5e04adbe/9095e8d5-0d3d-4f63-98f2-4261bdd8f9fe"
+					(reference "R17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_Resistor_AKL:R_Generic")
+		(at 48.26 298.45 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "44c7bf2a-bdb5-4ad7-8880-090a21e79283")
+		(property "Reference" "R8"
+			(at 50.8 297.1799 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 50.8 299.7199 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 46.482 298.45 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 48.26 298.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, Generic European Symbol, Alternate KiCad Library"
+			(at 48.26 298.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "e92da5cd-c516-477f-a8b5-7634cf2bef21")
+		)
+		(pin "1"
+			(uuid "99c04bfc-53cc-4cc0-b0ed-283ad8fdc74a")
+		)
+		(instances
+			(project "Senior design Mainboard"
+				(path "/1027da72-a2dd-4309-b004-99ab5e04adbe/9095e8d5-0d3d-4f63-98f2-4261bdd8f9fe"
+					(reference "R8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_Small")
 		(at 75.565 142.875 0)
 		(unit 1)
@@ -7824,6 +8675,89 @@
 			(project "Senior design Mainboard"
 				(path "/1027da72-a2dd-4309-b004-99ab5e04adbe/9095e8d5-0d3d-4f63-98f2-4261bdd8f9fe"
 					(reference "R244")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_Transistor_MOSFET_AKL:BSS138")
+		(at 40.64 275.59 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4b0a7dd5-71fe-4384-970d-5da93e03adad")
+		(property "Reference" "Q14"
+			(at 40.64 281.94 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BSS138"
+			(at 40.64 284.48 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "PCM_Package_TO_SOT_SMD_AKL:SOT-23"
+			(at 43.18 280.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.tme.eu/Document/2b32cdd3c66afedbcd628e73d93ae817/BSS138-7-F.pdf"
+			(at 40.64 275.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "SOT-23 N-MOSFET enchancement mode transistor, 50V, 200mA, 300mW, Alternate KiCAD Library"
+			(at 40.64 275.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "d46f2bef-497e-4135-b12f-34c4273b71ac")
+		)
+		(pin "1"
+			(uuid "d04710e8-7593-4503-b44d-235688f01205")
+		)
+		(pin "3"
+			(uuid "9b54e07b-d272-4787-80cf-20256a67e611")
+		)
+		(instances
+			(project "Senior design Mainboard"
+				(path "/1027da72-a2dd-4309-b004-99ab5e04adbe/9095e8d5-0d3d-4f63-98f2-4261bdd8f9fe"
+					(reference "Q14")
 					(unit 1)
 				)
 			)
@@ -8253,6 +9187,88 @@
 			(project "Senior design Mainboard"
 				(path "/1027da72-a2dd-4309-b004-99ab5e04adbe/9095e8d5-0d3d-4f63-98f2-4261bdd8f9fe"
 					(reference "C171")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_Resistor_AKL:R_Generic")
+		(at 31.75 266.7 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "64f1a9f7-b814-4ed9-bc06-0abc149efa3b")
+		(property "Reference" "R3"
+			(at 34.29 265.4299 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 34.29 267.9699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 29.972 266.7 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 31.75 266.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, Generic European Symbol, Alternate KiCad Library"
+			(at 31.75 266.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "d0a9d193-f350-46d6-8c14-ddf4facf10bb")
+		)
+		(pin "1"
+			(uuid "37462efd-e66e-4a41-be71-d8fead197a8d")
+		)
+		(instances
+			(project "Senior design Mainboard"
+				(path "/1027da72-a2dd-4309-b004-99ab5e04adbe/9095e8d5-0d3d-4f63-98f2-4261bdd8f9fe"
+					(reference "R3")
 					(unit 1)
 				)
 			)
@@ -9170,6 +10186,88 @@
 		)
 	)
 	(symbol
+		(lib_id "PCM_Resistor_AKL:R_Generic")
+		(at 30.48 298.45 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "abcb5744-f1e0-4794-b686-b4de77f9526b")
+		(property "Reference" "R7"
+			(at 33.02 297.1799 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 33.02 299.7199 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 28.702 298.45 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 30.48 298.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, Generic European Symbol, Alternate KiCad Library"
+			(at 30.48 298.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "48a4181e-1d4e-42c9-9e0d-958a5d545585")
+		)
+		(pin "1"
+			(uuid "af5f4b09-90f6-48eb-833c-2ef0e15729f5")
+		)
+		(instances
+			(project "Senior design Mainboard"
+				(path "/1027da72-a2dd-4309-b004-99ab5e04adbe/9095e8d5-0d3d-4f63-98f2-4261bdd8f9fe"
+					(reference "R7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_Small")
 		(at 34.29 43.815 270)
 		(unit 1)
@@ -9342,6 +10440,88 @@
 			(project "Senior design Mainboard"
 				(path "/1027da72-a2dd-4309-b004-99ab5e04adbe/9095e8d5-0d3d-4f63-98f2-4261bdd8f9fe"
 					(reference "R238")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_Resistor_AKL:R_Generic")
+		(at 49.53 266.7 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ba70ce22-a0df-4ad5-a368-cd65dbacc7e4")
+		(property "Reference" "R4"
+			(at 52.07 265.4299 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 52.07 267.9699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 47.752 266.7 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 49.53 266.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, Generic European Symbol, Alternate KiCad Library"
+			(at 49.53 266.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "a9ae9331-be94-4ed3-8112-8a9be854d751")
+		)
+		(pin "1"
+			(uuid "453ebcf5-4ea0-4c2e-b15d-879dce2375c2")
+		)
+		(instances
+			(project "Senior design Mainboard"
+				(path "/1027da72-a2dd-4309-b004-99ab5e04adbe/9095e8d5-0d3d-4f63-98f2-4261bdd8f9fe"
+					(reference "R4")
 					(unit 1)
 				)
 			)
@@ -9609,6 +10789,89 @@
 			(project "Senior design Mainboard"
 				(path "/1027da72-a2dd-4309-b004-99ab5e04adbe/9095e8d5-0d3d-4f63-98f2-4261bdd8f9fe"
 					(reference "R144")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_Transistor_MOSFET_AKL:BSS138")
+		(at 38.1 339.09 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c324fa80-a211-46db-a7b5-9a1638050147")
+		(property "Reference" "Q16"
+			(at 38.1 345.44 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BSS138"
+			(at 38.1 347.98 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "PCM_Package_TO_SOT_SMD_AKL:SOT-23"
+			(at 40.64 344.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.tme.eu/Document/2b32cdd3c66afedbcd628e73d93ae817/BSS138-7-F.pdf"
+			(at 38.1 339.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "SOT-23 N-MOSFET enchancement mode transistor, 50V, 200mA, 300mW, Alternate KiCAD Library"
+			(at 38.1 339.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "0437b1d1-f221-4f49-b764-8a33502965bf")
+		)
+		(pin "1"
+			(uuid "e33f8177-984e-4944-a9cc-7cd594c20929")
+		)
+		(pin "3"
+			(uuid "b9f4e847-3a9e-4f43-9272-e92cec595c7e")
+		)
+		(instances
+			(project "Senior design Mainboard"
+				(path "/1027da72-a2dd-4309-b004-99ab5e04adbe/9095e8d5-0d3d-4f63-98f2-4261bdd8f9fe"
+					(reference "Q16")
 					(unit 1)
 				)
 			)
@@ -9892,6 +11155,88 @@
 			(project "Senior design Mainboard"
 				(path "/1027da72-a2dd-4309-b004-99ab5e04adbe/9095e8d5-0d3d-4f63-98f2-4261bdd8f9fe"
 					(reference "U20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_Resistor_AKL:R_Generic")
+		(at 29.21 330.2 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e9eba833-9eda-4acb-8194-3a523d9d80b8")
+		(property "Reference" "R16"
+			(at 31.75 328.9299 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 31.75 331.4699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 27.432 330.2 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 29.21 330.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, Generic European Symbol, Alternate KiCad Library"
+			(at 29.21 330.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "2d5b9944-dd35-4e16-a5bb-760befe44301")
+		)
+		(pin "1"
+			(uuid "1403ff94-6ef5-49eb-b9ab-9e7eff937040")
+		)
+		(instances
+			(project "Senior design Mainboard"
+				(path "/1027da72-a2dd-4309-b004-99ab5e04adbe/9095e8d5-0d3d-4f63-98f2-4261bdd8f9fe"
+					(reference "R16")
 					(unit 1)
 				)
 			)
