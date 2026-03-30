@@ -1,0 +1,5 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "DuetWifi") (type "Legacy") (uri "A:/SD_LFG/KiCAD files/reference schematics/Senior design/duet-repo/Duet-2-Hardware/Duet2/Duet2v1.05/Duet2.lib") (options "") (descr ""))
+	(lib (name "Senior design Mainboard-eagle-import") (type "KiCad") (uri "${KIPRJMOD}/Senior design Mainboard-eagle-import.kicad_sym") (options "") (descr ""))
+)

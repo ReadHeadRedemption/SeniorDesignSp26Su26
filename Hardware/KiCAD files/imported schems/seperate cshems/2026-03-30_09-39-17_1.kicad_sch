@@ -1,0 +1,1919 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "25402d90-43dc-4741-a9c9-89322c92bf2c")
+	(paper "User" 373.5324 210.0072)
+	(lib_symbols
+		(symbol "Senior design Mainboard-eagle-import:DR1040-150-RDR1040-150-R"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" ""
+				(at 0 5.715 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 2 1.7)
+					)
+				)
+			)
+			(property "Value" ""
+				(at 0 3.175 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 2 1.7)
+					)
+				)
+			)
+			(property "Footprint" "Senior design Mainboard:DR1040"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "DR1040-150-RDR1040-150-R_1_0"
+				(polyline
+					(pts
+						(xy -7.62 1.3174) (xy -5.08 1.3716)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -2.722 0.8367)
+					(mid -2.594 0.3363)
+					(end -2.5444 -0.1778)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -0.182 0.8367)
+					(mid -2.2701 0.1651)
+					(end -4.4366 -0.1778)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -3.8098 1.8564)
+					(mid -3.0785 1.5453)
+					(end -2.7154 0.8384)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -4.9292 0.8384)
+					(mid -4.5513 1.547)
+					(end -3.81 1.8559)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -4.9976 -0.1804)
+					(mid -5.3182 1.1686)
+					(end -4.9976 2.5175)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -1.2698 1.8564)
+					(mid -0.5385 1.5453)
+					(end -0.1754 0.8384)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -2.3892 0.8384)
+					(mid -2.0113 1.547)
+					(end -1.27 1.8559)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 2.3579 0.8367)
+					(mid 2.4859 0.3363)
+					(end 2.5355 -0.1778)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -2.5449 -0.1803)
+					(mid -2.8655 1.1686)
+					(end -2.5449 2.5175)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 1.2701 1.8565)
+					(mid 2.0014 1.5453)
+					(end 2.3645 0.8384)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0.1507 0.8384)
+					(mid 0.5286 1.547)
+					(end 1.2699 1.8559)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 3.8101 1.8565)
+					(mid 4.5414 1.5453)
+					(end 4.9045 0.8384)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 2.6907 0.8384)
+					(mid 3.0686 1.547)
+					(end 3.8099 1.8559)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 7.3274) (xy 7.62 8.717)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 2.535 -0.1803)
+					(mid 2.2144 1.1686)
+					(end 2.535 2.5175)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -5.0711 -6.2481)
+					(mid -5.1881 -2.7021)
+					(end -4.9191 0.8356)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -2.5311 -6.2482)
+					(mid -2.6481 -2.7022)
+					(end -2.3791 0.8356)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 2.5488 -6.2479)
+					(mid 2.4318 -2.702)
+					(end 2.7008 0.8356)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 8.8127 -6.248)
+					(mid 4.2938 -2.9419)
+					(end 0.1608 0.8356)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 4.9041 0.8386)
+					(mid 4.9531 4.25)
+					(end 5.0819 7.6593)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -7.62 0 180)
+					(length 2.54)
+					(name "1@1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 0 0)
+					(length 2.54)
+					(name "2@2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Senior design Mainboard-eagle-import:FSV360FPFSV360FP"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 2 1.7)
+					)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 2 1.7)
+					)
+				)
+			)
+			(property "Footprint" "Senior design Mainboard:SOD-123HE"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "FSV360FPFSV360FP_1_0"
+				(polyline
+					(pts
+						(xy -7.62 0) (xy 7.62 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.794 2.54) (xy -2.032 2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.794 2.032) (xy -2.794 2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 2.54) (xy -2.032 -2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -2.54) (xy -1.27 -2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -2.54) (xy -1.27 -2.032)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.032 -2.54) (xy -2.032 0) (xy 2.032 2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(pin passive line
+					(at -7.62 0 180)
+					(length 2.54)
+					(name "K@2"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 0 0)
+					(length 2.54)
+					(name "A@1"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Senior design Mainboard-eagle-import:TPS54231DRTPS54231DR"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" ""
+				(at 0 3.4982 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 2 1.7)
+					)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 2 1.7)
+					)
+				)
+			)
+			(property "Footprint" "Senior design Mainboard:D0008A"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TPS54231DRTPS54231DR_1_0"
+				(polyline
+					(pts
+						(xy -20.32 27.94) (xy -17.78 27.94)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -20.32 12.7) (xy -17.78 12.7)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -20.32 -5.08) (xy -17.78 -5.08)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -20.32 -12.7) (xy -17.78 -12.7)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -17.78 31.75) (xy 17.78 31.75)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -17.78 -31.75) (xy -17.78 31.75)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 17.78 31.75) (xy 17.78 -31.75)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 17.78 -31.75) (xy -17.78 -31.75)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 20.32 20.32) (xy 17.78 20.32)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 20.32 12.7) (xy 17.78 12.7)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 20.32 -20.32) (xy 17.78 -20.32)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 20.32 -27.94) (xy 17.78 -27.94)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 20.32 20.32 0)
+					(length 2.54)
+					(name "BOOT@1"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -20.32 27.94 180)
+					(length 2.54)
+					(name "VIN@2"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -20.32 12.7 180)
+					(length 2.54)
+					(name "EN@3"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -20.32 -12.7 180)
+					(length 2.54)
+					(name "SS@4"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 20.32 -20.32 0)
+					(length 2.54)
+					(name "VSENSE@5"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -20.32 -5.08 180)
+					(length 2.54)
+					(name "COMP@6"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 20.32 -27.94 0)
+					(length 2.54)
+					(name "GND@7"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 20.32 12.7 0)
+					(length 2.54)
+					(name "PH@8"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Senior design Mainboard-eagle-import:WB_GNDWB_GND"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Senior design Mainboard:WB_GND"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "WB_GNDWB_GND_1_0"
+				(polyline
+					(pts
+						(xy -3.302 0) (xy 3.302 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.286 -1.016) (xy 2.286 -1.016)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.762 -2.032) (xy 0.762 -2.032)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 0 2.54 270)
+					(length 2.54)
+					(name "1@1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(text "I have a report on the completed design components I just need to implement them because there is no library I could find 3/30/2026"
+		(exclude_from_sim no)
+		(at 89.408 43.688 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "e1f1ab41-c5ae-4930-9a28-d786ebae2509")
+	)
+	(wire
+		(pts
+			(xy 45.72 97.79) (xy 63.5 97.79)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "01a0c5cc-84d2-4241-b517-1c02955d35d3")
+	)
+	(wire
+		(pts
+			(xy 129.54 139.7) (xy 129.54 135.89)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "02aff4be-1c39-43ad-aa7a-2d0ea946b726")
+	)
+	(wire
+		(pts
+			(xy 356.87 127) (xy 356.87 139.7)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "151597e7-7bd8-42b2-9daf-558daaf24eef")
+	)
+	(wire
+		(pts
+			(xy 205.74 83.82) (xy 274.32 83.82)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "199b6d6a-ca0d-4e41-9149-fe8388af5749")
+	)
+	(wire
+		(pts
+			(xy 356.87 83.82) (xy 356.87 111.76)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "31a8c340-5c6b-4124-acfc-46d64678023c")
+	)
+	(wire
+		(pts
+			(xy 316.23 106.68) (xy 316.23 83.82)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "38bccc85-8275-4edf-931f-ba681e6ea2d1")
+	)
+	(wire
+		(pts
+			(xy 209.55 76.2) (xy 209.55 60.96)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "4659c3f1-6e9c-47bf-96c4-aff16b4b29e3")
+	)
+	(wire
+		(pts
+			(xy 21.59 139.7) (xy 356.87 139.7)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "4a4b0962-6dce-413e-a300-4a8481a0d52a")
+	)
+	(wire
+		(pts
+			(xy 149.86 119.38) (xy 149.86 109.22)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "50957621-d0b1-4185-8e8b-436c949e8c73")
+	)
+	(wire
+		(pts
+			(xy 129.54 119.38) (xy 129.54 120.65)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "511d14e1-a6e0-4e4a-ac09-7a445675dfe3")
+	)
+	(wire
+		(pts
+			(xy 257.81 83.82) (xy 257.81 87.63)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "58d6ff56-6d15-42e7-b044-904e67bd919a")
+	)
+	(wire
+		(pts
+			(xy 293.37 121.92) (xy 293.37 106.68)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "5a4fa242-2ee0-4ef3-b53a-a2684c5002e7")
+	)
+	(wire
+		(pts
+			(xy 45.72 97.79) (xy 45.72 68.58)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "6b76e7f0-8070-4e21-a127-c4f23a90de5c")
+	)
+	(wire
+		(pts
+			(xy 257.81 105.41) (xy 257.81 102.87)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "6c22a16b-de93-45c0-b0d0-2c1fa16f912f")
+	)
+	(wire
+		(pts
+			(xy 21.59 111.76) (xy 21.59 139.7)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "711a38f9-0a77-46e1-b445-473d69479a5a")
+	)
+	(wire
+		(pts
+			(xy 45.72 113.03) (xy 63.5 113.03)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "76a522fd-04d7-495f-97a5-5b72d8e08d12")
+	)
+	(wire
+		(pts
+			(xy 104.14 119.38) (xy 104.14 101.6)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "8363e773-fb58-42b5-a360-196fdb21fb78")
+	)
+	(wire
+		(pts
+			(xy 87.63 96.52) (xy 87.63 86.36)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "876537f5-9b57-4d9d-9414-d2b5fe305fbd")
+	)
+	(wire
+		(pts
+			(xy 205.74 116.84) (xy 293.37 116.84)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "881a503f-6d6e-4fb2-9873-e33abe132f01")
+	)
+	(wire
+		(pts
+			(xy 149.86 109.22) (xy 165.1 109.22)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "8ae6c96f-7690-44b6-b877-c53861e20c67")
+	)
+	(wire
+		(pts
+			(xy 165.1 101.6) (xy 104.14 101.6)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "8b971889-17ab-48b1-bc17-90a1cbda612c")
+	)
+	(wire
+		(pts
+			(xy 165.1 83.82) (xy 139.7 83.82)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "8c95e503-5bfa-4dda-b312-8b0f7c1b193b")
+	)
+	(wire
+		(pts
+			(xy 316.23 106.68) (xy 334.01 106.68)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "944b9190-ea33-44bc-b92b-02b8e414473f")
+	)
+	(wire
+		(pts
+			(xy 87.63 87.63) (xy 139.7 87.63)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "9e86f7ea-3eb4-4f76-94d6-99b31f8048c6")
+	)
+	(wire
+		(pts
+			(xy 139.7 87.63) (xy 139.7 83.82)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "a709f123-05e8-45cd-8698-4484a9b38468")
+	)
+	(wire
+		(pts
+			(xy 87.63 71.12) (xy 87.63 68.58)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "aae2aa59-0d8d-4284-91fd-4c8eb789159f")
+	)
+	(wire
+		(pts
+			(xy 228.6 60.96) (xy 228.6 68.58)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "aeebee41-c29a-402b-b29a-1b8b8f717d8c")
+	)
+	(wire
+		(pts
+			(xy 205.74 76.2) (xy 209.55 76.2)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "b3f42f6a-1991-4fc6-83ed-b66a2433acde")
+	)
+	(wire
+		(pts
+			(xy 316.23 121.92) (xy 334.01 121.92)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "b4aa1129-775d-47f4-a1ed-2199ef278e2a")
+	)
+	(wire
+		(pts
+			(xy 129.54 104.14) (xy 129.54 101.6)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "bfc06633-8571-45b2-a0c7-18d5a726d53e")
+	)
+	(wire
+		(pts
+			(xy 293.37 91.44) (xy 293.37 83.82)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "c05e9fc6-0449-4ff9-a8ff-1f07dac9fe52")
+	)
+	(wire
+		(pts
+			(xy 104.14 134.62) (xy 104.14 139.7)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "c0bbb40b-73c6-402d-94a0-1ae60f67172c")
+	)
+	(wire
+		(pts
+			(xy 45.72 113.03) (xy 45.72 139.7)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "cff0a10c-805d-43c4-a241-e0c4c914b642")
+	)
+	(wire
+		(pts
+			(xy 21.59 68.58) (xy 165.1 68.58)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "d5015b3a-6f16-45d0-9c61-66fcef61a86c")
+	)
+	(wire
+		(pts
+			(xy 316.23 121.92) (xy 316.23 139.7)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "d6d49268-dd35-4ec4-bb7a-2e566810c8f8")
+	)
+	(wire
+		(pts
+			(xy 205.74 124.46) (xy 205.74 139.7)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "e22b1c03-f4b1-4eb4-997e-68b842730c3a")
+	)
+	(wire
+		(pts
+			(xy 209.55 60.96) (xy 228.6 60.96)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "e3e502a6-0743-444a-8aa0-237e39c81898")
+	)
+	(wire
+		(pts
+			(xy 21.59 96.52) (xy 21.59 68.58)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "e5960a13-425d-4d3b-a93c-b3b781bf623d")
+	)
+	(wire
+		(pts
+			(xy 149.86 134.62) (xy 149.86 139.7)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "f145ae40-5a72-457e-8c03-caf72ad86836")
+	)
+	(wire
+		(pts
+			(xy 87.63 111.76) (xy 87.63 139.7)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "f2b0dd91-9983-4da2-bff9-9a80f6bf4349")
+	)
+	(wire
+		(pts
+			(xy 289.56 83.82) (xy 356.87 83.82)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "f4cec125-ac5e-46ca-8d39-bd8c255ffffb")
+	)
+	(wire
+		(pts
+			(xy 293.37 139.7) (xy 293.37 137.16)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "fc8271c8-6527-48b7-bf53-624a400eebd1")
+	)
+	(symbol
+		(lib_id "Senior design Mainboard-eagle-import:WB_GNDWB_GND")
+		(at 187.96 142.24 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "2c1caf87-05c9-4f6e-a54d-7c55666d0e70")
+		(property "Reference" "GND0"
+			(at 187.96 136.652 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Value" "WB_GND"
+			(at 187.96 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Senior design Mainboard:WB_GND"
+			(at 187.96 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 187.96 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 187.96 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7a2c1bc9-8824-4a1a-b4b2-bc773a1b8582")
+		)
+		(instances
+			(project "Senior design Mainboard"
+				(path "/c5074592-ae56-4b8b-a706-ea5f07a1f07a"
+					(reference "GND0")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Senior design Mainboard-eagle-import:TPS54231DRTPS54231DR")
+		(at 185.42 96.52 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "39d0ddf9-e096-4709-85fd-af449fa3406f")
+		(property "Reference" "U1"
+			(at 185.42 96.52 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 2 1.7)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Value" "TPS54231DR"
+			(at 185.42 100.33 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 2 1.7)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Footprint" "Senior design Mainboard:D0008A"
+			(at 185.42 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 185.42 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 185.42 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "cb77c04d-5d72-4613-beef-dfeea70599f4")
+		)
+		(pin "2"
+			(uuid "420c1650-571a-4955-93cc-4a9ab9bfc645")
+		)
+		(pin "3"
+			(uuid "7e1dbfa2-5111-43b4-9c19-96b694ef704a")
+		)
+		(pin "4"
+			(uuid "ac75f820-11a3-4cfa-aad5-da322bea8e17")
+		)
+		(pin "5"
+			(uuid "0f676f7e-2ac0-440f-b0bc-21175e79703b")
+		)
+		(pin "6"
+			(uuid "1267c0de-561d-4637-9676-bd2938f320a8")
+		)
+		(pin "7"
+			(uuid "f12d8d47-ca3f-4991-ba0f-f10b161ac253")
+		)
+		(pin "8"
+			(uuid "3eb85256-4a61-45fc-8da5-acbcb61ee390")
+		)
+		(instances
+			(project "Senior design Mainboard"
+				(path "/c5074592-ae56-4b8b-a706-ea5f07a1f07a"
+					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Senior design Mainboard-eagle-import:FSV360FPFSV360FP")
+		(at 257.81 95.25 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "478f9099-fe50-466c-8ef8-7ace2f21a693")
+		(property "Reference" "D1"
+			(at 260.35 91.44 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 2 1.7)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "650mV"
+			(at 260.35 96.012 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 2 1.7)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "Senior design Mainboard:SOD-123HE"
+			(at 257.81 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 257.81 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 257.81 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "79b04f28-782f-48a4-b44e-cd39b6e290dc")
+		)
+		(pin "2"
+			(uuid "f1243005-3a3e-4c4b-94b9-858a7e04104c")
+		)
+		(instances
+			(project "Senior design Mainboard"
+				(path "/c5074592-ae56-4b8b-a706-ea5f07a1f07a"
+					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Senior design Mainboard-eagle-import:WB_GNDWB_GND")
+		(at 257.81 107.95 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b70c7b2f-df3c-40d6-840d-ebd9b17ef158")
+		(property "Reference" "GND2"
+			(at 257.81 102.362 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Value" "WB_GND"
+			(at 257.81 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Senior design Mainboard:WB_GND"
+			(at 257.81 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 257.81 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 257.81 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "820bf251-52cb-4d3e-b8bf-25593e7e12ba")
+		)
+		(instances
+			(project "Senior design Mainboard"
+				(path "/c5074592-ae56-4b8b-a706-ea5f07a1f07a"
+					(reference "GND2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Senior design Mainboard-eagle-import:DR1040-150-RDR1040-150-R")
+		(at 281.94 83.82 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d9d3e004-482d-46b5-9672-903881b655b9")
+		(property "Reference" "L1"
+			(at 281.94 79.502 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 2 1.7)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Value" "15uH"
+			(at 281.94 88.9 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 2 1.7)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Footprint" "Senior design Mainboard:DR1040"
+			(at 281.94 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 281.94 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 281.94 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0e908960-2b85-4478-8414-a6095240d2fa")
+		)
+		(pin "2"
+			(uuid "d33f71da-36eb-4e34-9f50-41f0194cd8b5")
+		)
+		(instances
+			(project "Senior design Mainboard"
+				(path "/c5074592-ae56-4b8b-a706-ea5f07a1f07a"
+					(reference "L1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
