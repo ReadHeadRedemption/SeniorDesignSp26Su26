@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "LM2576ADJ")(type "KiCad")(uri "${KIPRJMOD}/LibraryFiles/ul_LM2576S-12/KiCADv6/2026-04-02_09-12-12.kicad_sym")(options "")(descr ""))
+  (lib (name "MBR360")(type "KiCad")(uri "${KIPRJMOD}/LibraryFiles/ul_MBR360/KiCad/diode.kicad_sym")(options "")(descr ""))
+)
