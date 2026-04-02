@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'STM32H723VEH6'
+CLASS = IC
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "ARROW_PART_NUMBER", "ARROW_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "STMicroelectronics", "STM32H723VEH6" (!) = "", "BGA100C80P10X10_800X800X110", "BGA", "511-STM32H723VEH6", "https://www.mouser.co.uk/ProductDetail/STMicroelectronics/STM32H723VEH6?qs=sPbYRqrBIVmfnFltjZixRA%3D%3D", "STM32H723VEH6", "https://www.arrow.com/en/products/stm32h723veh6/stmicroelectronics?utm_currency=USD&region=nac", "High-performance and DSP with DP-FPU, Arm Cortex-M7 MCU with 512 Kbytes Flash, 564 Kbytes RAM, 550 MHz CPU, L1 cache, external memory interface, subset of peripherals", "https://www.st.com/resource/en/datasheet/stm32h723zg.pdf", "1.1 mm"
+END_PART
+
+END.

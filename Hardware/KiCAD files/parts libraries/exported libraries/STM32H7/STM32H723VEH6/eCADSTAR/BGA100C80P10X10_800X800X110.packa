@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "STM32H723VEH6"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2022-02-20-08:01:40)
+    (mountForm default
+        (footprintRef "BGA100C80P10X10_800X800X110")
+        (spec "System")
+    )
+)
