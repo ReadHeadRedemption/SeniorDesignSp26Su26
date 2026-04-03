@@ -159,7 +159,7 @@
 			(color 0 0 0 0)
 		)
 		(uuid "f18dec87-6e0c-428b-a76d-65d10c309ce8")
-		(property "Sheetname" "IO_expander"
+		(property "Sheetname" "IO"
 			(at 669.925 936.5484 0)
 			(show_name no)
 			(do_not_autoplace no)
