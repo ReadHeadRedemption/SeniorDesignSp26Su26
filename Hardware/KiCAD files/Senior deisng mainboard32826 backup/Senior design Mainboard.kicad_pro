@@ -631,9 +631,24 @@
         "filename": "Senior design Mainboard.kicad_sch",
         "name": "Senior design Mainboard",
         "uuid": "1027da72-a2dd-4309-b004-99ab5e04adbe"
+      },
+      {
+        "filename": "testing_pads.kicad_sch",
+        "name": "Testing pads",
+        "uuid": "c9cc4674-6792-4c1f-97b9-bd54481da43f"
+      },
+      {
+        "filename": "hot-end_board.kicad_sch",
+        "name": "Hot-end gantry board",
+        "uuid": "9e0f45cf-0291-4330-9b97-68cc265b006d"
+      },
+      {
+        "filename": "hot-end_swap-in_board.kicad_sch",
+        "name": "Hot-end swap-in board",
+        "uuid": "c958ae3b-534c-402f-b916-3e55a20ef9cd"
       }
     ],
-    "used_designators": "C9-12,C18-19,C27-48,J11-12,J14-18,R16-20,R22-35,R89-92,R107,R137,#PWR7-10,#PWR18,#PWR34,#PWR45-67,#PWR90,U8-10,Q1",
+    "used_designators": "J3,J5,J9,J18-29,U2,U5,U10-11,RN1,Q2-3,D1,D9-10,#PWR56-62,#PWR65-66,#PWR68-72,#PWR76-89,#PWR91-94,SW6-7,C41-59,L5,R30-34,R36-44",
     "variants": []
   },
   "sheets": [
@@ -660,6 +675,18 @@
     [
       "f18dec87-6e0c-428b-a76d-65d10c309ce8",
       "IO"
+    ],
+    [
+      "c9cc4674-6792-4c1f-97b9-bd54481da43f",
+      "Testing pads"
+    ],
+    [
+      "9e0f45cf-0291-4330-9b97-68cc265b006d",
+      "Hot-end gantry board"
+    ],
+    [
+      "c958ae3b-534c-402f-b916-3e55a20ef9cd",
+      "Hot-end swap-in board"
     ]
   ],
   "text_variables": {},

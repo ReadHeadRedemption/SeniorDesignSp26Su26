@@ -591,6 +591,16 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "NEED TO VERIFY IF I CAN CHAIN THESE\n"
+		(exclude_from_sim no)
+		(at 238.506 24.638 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "0ee860d1-5fe2-41c8-a9af-eb660affc214")
+	)
 	(text "parrallel to the drivers\n"
 		(exclude_from_sim no)
 		(at 168.91 66.294 0)
