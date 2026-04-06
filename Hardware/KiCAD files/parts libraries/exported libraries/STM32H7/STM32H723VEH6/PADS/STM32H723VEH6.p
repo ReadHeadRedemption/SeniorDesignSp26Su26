@@ -1,0 +1,119 @@
+*PADS-LIBRARY-PART-TYPES-V9*
+
+STM32H723VEH6 BGA100C80P10X10_800X800X110 I ANA 9 1 0 0 0
+TIMESTAMP 2026.04.02.03.21.15
+"Manufacturer_Name" STMicroelectronics
+"Manufacturer_Part_Number" STM32H723VEH6
+"Mouser Part Number" 511-STM32H723VEH6
+"Mouser Price/Stock" https://www.mouser.co.uk/ProductDetail/STMicroelectronics/STM32H723VEH6?qs=sPbYRqrBIVmfnFltjZixRA%3D%3D
+"Arrow Part Number" STM32H723VEH6
+"Arrow Price/Stock" https://www.arrow.com/en/products/stm32h723veh6/stmicroelectronics?utm_currency=USD&region=nac
+"Description" High-performance and DSP with DP-FPU, Arm Cortex-M7 MCU with 512 Kbytes Flash, 564 Kbytes RAM, 550 MHz CPU, L1 cache, external memory interface, subset of peripherals
+"Datasheet Link" https://www.st.com/resource/en/datasheet/stm32h723zg.pdf
+"Geometry.Height" 1.1mm
+GATE 1 100 0
+STM32H723VEH6
+A1 0 U PC14-OSC32_IN
+A2 0 U PC13
+A3 0 U PE2
+A4 0 U PB9
+A5 0 U PB7
+A6 0 U PB4
+A7 0 U PB3
+A8 0 U PA15
+A9 0 U PA14
+A10 0 U PA13
+B1 0 U PC15-OSC32_OUT
+B2 0 U VBAT
+B3 0 U PE3
+B4 0 U PB8
+B5 0 U PB6
+B6 0 U PD5
+B7 0 U PD2
+B8 0 U PC11
+B9 0 U PC10
+B10 0 U PA12
+C1 0 U PH0-OSC_IN
+C2 0 U VSS_1
+C3 0 U PE4
+C4 0 U PE1
+C5 0 U PB5
+C6 0 U PD6
+C7 0 U PD3
+C8 0 U PC12
+C9 0 U PA9
+C10 0 U PA11
+D1 0 U PH1-OSC_OUT
+D2 0 U VDD_1
+D3 0 U PE5
+D4 0 U PE0
+D5 0 U BOOT0
+D6 0 U PD7
+D7 0 U PD4
+D8 0 U PD0
+D9 0 U PA8
+D10 0 U PA10
+E1 0 U NRST
+E2 0 U PC2_C
+E3 0 U PE6
+E4 0 U VSS_2
+E5 0 U VSS_3
+E6 0 U VSS_4
+E7 0 U VCAP_1
+E8 0 U PD1
+E9 0 U PC9
+E10 0 U PC7
+F1 0 U PC0
+F2 0 U PC1
+F3 0 U PC3_C
+F4 0 U VDD_2
+F5 0 U VDD_3
+F6 0 U VDD33USB
+F7 0 U PDR_ON
+F8 0 U VCAP_2
+F9 0 U PC8
+F10 0 U PC6
+G1 0 U VSSA
+G2 0 U PA0
+G3 0 U PA4
+G4 0 U PC4
+G5 0 U PB2
+G6 0 U PE10
+G7 0 U PE14
+G8 0 U PD15
+G9 0 U PD11
+G10 0 U PB15
+H1 0 U VDDA
+H2 0 U PA1
+H3 0 U PA5
+H4 0 U PC5
+H5 0 U PE7
+H6 0 U PE11
+H7 0 U PE15
+H8 0 U PD14
+H9 0 U PD10
+H10 0 U PB14
+J1 0 U VSS_5
+J2 0 U PA2
+J3 0 U PA6
+J4 0 U PB0
+J5 0 U PE8
+J6 0 U PE12
+J7 0 U PB10
+J8 0 U PB13
+J9 0 U PD9
+J10 0 U PD13
+K1 0 U VDD_4
+K2 0 U PA3
+K3 0 U PA7
+K4 0 U PB1
+K5 0 U PE9
+K6 0 U PE13
+K7 0 U PB11
+K8 0 U PB12
+K9 0 U PD8
+K10 0 U PD12
+
+*END*
+*REMARK* SamacSys ECAD Model
+12818389/2021378/2.50/100/2/Integrated Circuit

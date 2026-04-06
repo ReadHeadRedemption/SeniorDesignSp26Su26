@@ -1,0 +1,9 @@
+Manufacturer=STMicroelectronics
+PartNumber=STM32H723VEH6
+PartCategory=Integrated Circuit
+PackageCategory=BGA
+PinCount=100
+Version=3.1
+Released=2022-02-20 08:01:40
+Downloaded=2026-04-02 03:21:15
+3D=Y

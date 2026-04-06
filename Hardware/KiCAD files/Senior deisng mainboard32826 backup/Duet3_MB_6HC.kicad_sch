@@ -1,0 +1,431 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "083becc8-e25d-4206-9636-55457650bbe3")
+	(paper "A4")
+	(title_block
+		(title "Duet 3 Main Board")
+		(date "2022-10-05")
+		(rev "1.02")
+		(company "Duet3d")
+		(comment 1 "(c) Duet3D")
+	)
+	(lib_symbols)
+	(text "Comms"
+		(exclude_from_sim no)
+		(at 220.98 102.87 0)
+		(effects
+			(font
+				(size 3.9878 3.9878)
+			)
+			(justify left bottom)
+		)
+		(uuid "02538207-54a8-4266-8d51-23871852b2ff")
+	)
+	(text "Stepper Drivers\n"
+		(exclude_from_sim no)
+		(at 123.19 49.53 0)
+		(effects
+			(font
+				(size 3.9878 3.9878)
+			)
+			(justify left bottom)
+		)
+		(uuid "0d993e48-cea3-4104-9c5a-d8f97b64a3ac")
+	)
+	(text "Duet3 Mainboard 6HC"
+		(exclude_from_sim no)
+		(at 116.84 19.05 0)
+		(effects
+			(font
+				(size 3.9878 3.9878)
+			)
+			(justify left bottom)
+		)
+		(uuid "1c9f6fea-1796-4a2d-80b3-ae22ce51c8f5")
+	)
+	(text "IO"
+		(exclude_from_sim no)
+		(at 40.64 109.855 0)
+		(effects
+			(font
+				(size 3.9878 3.9878)
+			)
+			(justify left bottom)
+		)
+		(uuid "98970bf0-1168-4b4e-a1c9-3b0c8d7eaacf")
+	)
+	(text "Headers"
+		(exclude_from_sim no)
+		(at 227.33 49.53 0)
+		(effects
+			(font
+				(size 3.9878 3.9878)
+			)
+			(justify left bottom)
+		)
+		(uuid "b12e5309-5d01-40ef-a9c3-8453e00a555e")
+	)
+	(text "MOSFET outputs\n"
+		(exclude_from_sim no)
+		(at 120.65 109.22 0)
+		(effects
+			(font
+				(size 3.9878 3.9878)
+			)
+			(justify left bottom)
+		)
+		(uuid "be6b17f9-34f5-44e9-a4c7-725d2e274a9d")
+	)
+	(text "Processor"
+		(exclude_from_sim no)
+		(at 40.64 49.53 0)
+		(effects
+			(font
+				(size 3.9878 3.9878)
+			)
+			(justify left bottom)
+		)
+		(uuid "cf21dfe3-ab4f-4ad9-b7cf-dc892d833b13")
+	)
+	(text "Power"
+		(exclude_from_sim no)
+		(at 44.45 167.64 0)
+		(effects
+			(font
+				(size 3.9878 3.9878)
+			)
+			(justify left bottom)
+		)
+		(uuid "f56d244f-1fa4-4475-ac1d-f41eed31a48b")
+	)
+	(sheet
+		(at 15.24 22.86)
+		(size 85.09 54.61)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "00000000-0000-0000-0000-000050523307")
+		(property "Sheetname" "Processor"
+			(at 15.24 22.0214 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Processor.kicad_sch"
+			(at 15.24 78.1562 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Duet3_MB_6HC"
+				(path "/083becc8-e25d-4206-9636-55457650bbe3"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 105.41 22.86)
+		(size 85.09 54.61)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "00000000-0000-0000-0000-0000505779e3")
+		(property "Sheetname" "Stepper Driver & Endstops"
+			(at 105.41 22.0214 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Stepper_Drv.kicad_sch"
+			(at 105.41 78.1562 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Duet3_MB_6HC"
+				(path "/083becc8-e25d-4206-9636-55457650bbe3"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 15.24 142.24)
+		(size 85.09 53.34)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "00000000-0000-0000-0000-000050577a22")
+		(property "Sheetname" "Power"
+			(at 15.24 141.4014 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Power.kicad_sch"
+			(at 15.24 196.2662 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Duet3_MB_6HC"
+				(path "/083becc8-e25d-4206-9636-55457650bbe3"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 195.58 22.86)
+		(size 85.09 54.61)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "00000000-0000-0000-0000-000050656780")
+		(property "Sheetname" "Headers"
+			(at 195.58 22.0214 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Headers.kicad_sch"
+			(at 195.58 78.1562 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Duet3_MB_6HC"
+				(path "/083becc8-e25d-4206-9636-55457650bbe3"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 105.41 82.55)
+		(size 85.09 53.34)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "00000000-0000-0000-0000-00005b12c3fc")
+		(property "Sheetname" "MOSFET outputs"
+			(at 105.41 81.7114 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Htr_Fan.kicad_sch"
+			(at 105.41 136.5762 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Duet3_MB_6HC"
+				(path "/083becc8-e25d-4206-9636-55457650bbe3"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 195.58 81.28)
+		(size 85.09 54.61)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "00000000-0000-0000-0000-00005b64a4e7")
+		(property "Sheetname" "Comms"
+			(at 195.58 80.4414 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Comms.kicad_sch"
+			(at 195.58 136.5762 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Duet3_MB_6HC"
+				(path "/083becc8-e25d-4206-9636-55457650bbe3"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 15.24 82.55)
+		(size 85.09 54.61)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "00000000-0000-0000-0000-00005f4ec372")
+		(property "Sheetname" "IO"
+			(at 15.24 81.7114 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Endstops.kicad_sch"
+			(at 15.24 137.8462 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Duet3_MB_6HC"
+				(path "/083becc8-e25d-4206-9636-55457650bbe3"
+					(page "8")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

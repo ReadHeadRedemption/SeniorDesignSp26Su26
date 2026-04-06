@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP STM32H723VEH6
+D High-performance and DSP with DP-FPU, Arm Cortex-M7 MCU with 512 Kbytes Flash, 564 Kbytes RAM, 550 MHz CPU, L1 cache, external memory interface, subset of peripherals
+K
+F https://www.st.com/resource/en/datasheet/stm32h723zg.pdf
+$ENDCMP
+#
+#End Doc Library
