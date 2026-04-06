@@ -15,7 +15,7 @@ from GUI import GUI
 import json
 
 # config file location
-configFilePath = "./src/config.json"
+configFilePath = "../src/config.json"
 
 with open(configFilePath, "r") as f:
     print("load succseded")
