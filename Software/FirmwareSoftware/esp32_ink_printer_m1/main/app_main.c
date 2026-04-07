@@ -33,9 +33,10 @@
 #define PIN_X_MIN           GPIO_NUM_NC
 #define PIN_X_MAX           GPIO_NUM_NC
 
-#define PIN_Y_STEP          GPIO_NUM_NC
-#define PIN_Y_DIR           GPIO_NUM_NC
-#define PIN_Y_EN            GPIO_NUM_NC
+// Motor 2 (Y axis reassigned to second DRV8825)
+#define PIN_Y_STEP          GPIO_NUM_5
+#define PIN_Y_DIR           GPIO_NUM_6
+#define PIN_Y_EN            GPIO_NUM_7
 #define PIN_Y_MIN           GPIO_NUM_NC
 #define PIN_Y_MAX           GPIO_NUM_NC
 
@@ -65,7 +66,7 @@
 
 // ======== MACHINE CONFIGURATION ========
 #define STEPS_PER_MM_X      80.0f
-#define STEPS_PER_MM_Y      80.0f
+#define STEPS_PER_MM_Y      400.0f
 #define STEPS_PER_MM_Z      400.0f
 #define STEPS_PER_MM_E      800.0f   // Plunger axis. Replace with your real value.
 
@@ -74,6 +75,12 @@
 #define DEFAULT_FEED_MM_MIN 1200.0f
 #define HOMING_BACKOFF_MM   3.0f
 
+// ======== SPIN SPEED PRESETS ========
+#define SPEED_S1_MM_MIN     500.0f   // Slow
+#define SPEED_S2_MM_MIN     800.0f   // Medium
+#define SPEED_S3_MM_MIN     2000.0f  // Fast
+#define SPIN_TRAVEL_MM      100.0f   // E-axis travel per CW/CCW command (tune to taste)
+
 #define BED_MAX_C           180.0f
 #define BED_MIN_VALID_C     0.0f
 #define BED_MAX_VALID_C     220.0f
@@ -81,7 +88,7 @@
 #define BED_HEATUP_TIMEOUT_MS   (120000) // 2 minutes starter safety timeout
 #define BED_MIN_RISE_C          2.0f
 
-#define STEP_PULSE_US       4   // DRV8825 min pulse width is low single-digit us.
+#define STEP_PULSE_US       128   // DRV8825 min pulse width is low single-digit us.
 #define STEP_MIN_INTERVAL_US 300
 #define CONSOLE_LINE_MAX    160
 
@@ -120,6 +127,7 @@ typedef struct {
     float bed_target_c;
     float bed_temp_c;
     bool heater_enabled;
+    float spin_feed_mm_min;   // current speed preset for CW/CCW
 } machine_state_t;
 
 typedef struct {
@@ -166,8 +174,9 @@ static void latch_fault(const char *msg) {
     snprintf(g_state.fault_msg, sizeof(g_state.fault_msg), "%s", msg);
     xSemaphoreGive(g_state_mutex);
 
-    gpio_set_level(PIN_BED_SSR, 0);
+    if (PIN_BED_SSR != GPIO_NUM_NC) gpio_set_level(PIN_BED_SSR, 0);
     for (int i = 0; i < AXIS_COUNT; ++i) {
+        if (g_axes[i].en_pin == GPIO_NUM_NC) continue;
         const int level = g_axes[i].enabled_low ? 1 : 0;
         gpio_set_level(g_axes[i].en_pin, level);
     }
@@ -194,6 +203,7 @@ static void set_bed_target(float target_c) {
 
 static void set_axis_enable(axis_id_t axis, bool enabled) {
     const axis_hw_t *a = &g_axes[axis];
+    if (a->en_pin == GPIO_NUM_NC) return;
     const int level = a->enabled_low ? (enabled ? 0 : 1) : (enabled ? 1 : 0);
     gpio_set_level(a->en_pin, level);
 }
@@ -205,6 +215,7 @@ static void set_all_axes_enabled(bool enabled) {
 }
 
 static void pulse_step(gpio_num_t pin) {
+    if (pin == GPIO_NUM_NC) return;
     gpio_set_level(pin, 1);
     esp_rom_delay_us(STEP_PULSE_US);
     gpio_set_level(pin, 0);
@@ -294,6 +305,10 @@ static float read_bed_temp_c(void) {
     return thermistor_c_from_adc_mv(mv);
 }
 
+static inline void ssr_set(int level) {
+    if (PIN_BED_SSR != GPIO_NUM_NC) gpio_set_level(PIN_BED_SSR, level);
+}
+
 static void heater_task(void *arg) {
     (void)arg;
     int64_t heat_start_ms = 0;
@@ -313,20 +328,20 @@ static void heater_task(void *arg) {
         xSemaphoreGive(g_state_mutex);
 
         if (faulted) {
-            gpio_set_level(PIN_BED_SSR, 0);
+            ssr_set(0);
             vTaskDelay(pdMS_TO_TICKS(250));
             continue;
         }
 
         if (isnan(temp_c) || temp_c < BED_MIN_VALID_C || temp_c > BED_MAX_VALID_C) {
-            gpio_set_level(PIN_BED_SSR, 0);
+            ssr_set(0);
             latch_fault("Bed thermistor invalid or out of range");
             vTaskDelay(pdMS_TO_TICKS(250));
             continue;
         }
 
         if (!heater_enabled || target_c < 0.1f) {
-            gpio_set_level(PIN_BED_SSR, 0);
+            ssr_set(0);
             heat_start_ms = 0;
             start_temp = temp_c;
             vTaskDelay(pdMS_TO_TICKS(250));
@@ -335,9 +350,9 @@ static void heater_task(void *arg) {
 
         // Starter bang-bang control suitable for a zero-cross SSR; upgrade later if needed.
         if (temp_c < (target_c - BED_BANGBANG_HYST)) {
-            gpio_set_level(PIN_BED_SSR, 1);
+            ssr_set(1);
         } else if (temp_c > (target_c + BED_BANGBANG_HYST)) {
-            gpio_set_level(PIN_BED_SSR, 0);
+            ssr_set(0);
         }
 
         const int64_t now_ms = esp_timer_get_time() / 1000;
@@ -347,12 +362,12 @@ static void heater_task(void *arg) {
         }
 
         if ((now_ms - heat_start_ms) > BED_HEATUP_TIMEOUT_MS && (temp_c - start_temp) < BED_MIN_RISE_C) {
-            gpio_set_level(PIN_BED_SSR, 0);
+            ssr_set(0);
             latch_fault("Bed failed to warm fast enough");
         }
 
         if (temp_c > BED_MAX_C + 5.0f) {
-            gpio_set_level(PIN_BED_SSR, 0);
+            ssr_set(0);
             latch_fault("Bed over-temperature");
         }
 
@@ -362,6 +377,7 @@ static void heater_task(void *arg) {
 
 // ---------- Motion ----------
 static void set_axis_direction(axis_id_t axis, bool positive) {
+    if (g_axes[axis].dir_pin == GPIO_NUM_NC) return;
     printf("Positive: %d", positive);
     bool level = positive;
     if (g_axes[axis].invert_dir) level = !level;
@@ -552,6 +568,80 @@ static esp_err_t execute_gcode_line(char *line) {
 
     if (strncasecmp(line, "HOME", 4) == 0) {
         return home_all_axes();
+    }
+
+    // ======== SPIN SPEED PRESETS ========
+    if (strcasecmp(line, "S1") == 0) {
+        xSemaphoreTake(g_state_mutex, portMAX_DELAY);
+        g_state.spin_feed_mm_min = SPEED_S1_MM_MIN;
+        xSemaphoreGive(g_state_mutex);
+        ESP_LOGI(TAG, "Speed preset S1 (slow): %.0f mm/min", SPEED_S1_MM_MIN);
+        printf("Speed set to S1 (slow): %.0f mm/min\n", SPEED_S1_MM_MIN);
+        return ESP_OK;
+    }
+    if (strcasecmp(line, "S2") == 0) {
+        xSemaphoreTake(g_state_mutex, portMAX_DELAY);
+        g_state.spin_feed_mm_min = SPEED_S2_MM_MIN;
+        xSemaphoreGive(g_state_mutex);
+        ESP_LOGI(TAG, "Speed preset S2 (medium): %.0f mm/min", SPEED_S2_MM_MIN);
+        printf("Speed set to S2 (medium): %.0f mm/min\n", SPEED_S2_MM_MIN);
+        return ESP_OK;
+    }
+    if (strcasecmp(line, "S3") == 0) {
+        xSemaphoreTake(g_state_mutex, portMAX_DELAY);
+        g_state.spin_feed_mm_min = SPEED_S3_MM_MIN;
+        xSemaphoreGive(g_state_mutex);
+        ESP_LOGI(TAG, "Speed preset S3 (fast): %.0f mm/min", SPEED_S3_MM_MIN);
+        printf("Speed set to S3 (fast): %.0f mm/min\n", SPEED_S3_MM_MIN);
+        return ESP_OK;
+    }
+
+    // ======== CW / CCW SPIN COMMANDS ========
+    if (strcasecmp(line, "CW") == 0) {
+        xSemaphoreTake(g_state_mutex, portMAX_DELAY);
+        float feed = g_state.spin_feed_mm_min;
+        xSemaphoreGive(g_state_mutex);
+        ESP_LOGI(TAG, "CW: rotating X -%.1f mm @ %.0f mm/min", SPIN_TRAVEL_MM, feed);
+        return jog_relative(-SPIN_TRAVEL_MM, 0, 0, 0, feed);
+    }
+    if (strcasecmp(line, "CCW") == 0) {
+        xSemaphoreTake(g_state_mutex, portMAX_DELAY);
+        float feed = g_state.spin_feed_mm_min;
+        xSemaphoreGive(g_state_mutex);
+        ESP_LOGI(TAG, "CCW: rotating X +%.1f mm @ %.0f mm/min", SPIN_TRAVEL_MM, feed);
+        return jog_relative(SPIN_TRAVEL_MM, 0, 0, 0, feed);
+    }
+
+    // ======== MOTOR 2 (Y AXIS) SPIN COMMANDS ========
+    if (strcasecmp(line, "CW2") == 0) {
+        xSemaphoreTake(g_state_mutex, portMAX_DELAY);
+        float feed = g_state.spin_feed_mm_min;
+        xSemaphoreGive(g_state_mutex);
+        ESP_LOGI(TAG, "CW2: rotating Y -%.1f mm @ %.0f mm/min", SPIN_TRAVEL_MM, feed);
+        return jog_relative(0, -SPIN_TRAVEL_MM, 0, 0, feed);
+    }
+    if (strcasecmp(line, "CCW2") == 0) {
+        xSemaphoreTake(g_state_mutex, portMAX_DELAY);
+        float feed = g_state.spin_feed_mm_min;
+        xSemaphoreGive(g_state_mutex);
+        ESP_LOGI(TAG, "CCW2: rotating Y +%.1f mm @ %.0f mm/min", SPIN_TRAVEL_MM, feed);
+        return jog_relative(0, SPIN_TRAVEL_MM, 0, 0, feed);
+    }
+
+    // ======== BOTH MOTORS SPIN COMMANDS ========
+    if (strcasecmp(line, "BOTH CW") == 0 || strcasecmp(line, "BOTHCW") == 0) {
+        xSemaphoreTake(g_state_mutex, portMAX_DELAY);
+        float feed = g_state.spin_feed_mm_min;
+        xSemaphoreGive(g_state_mutex);
+        ESP_LOGI(TAG, "BOTH CW: rotating X+Y @ %.0f mm/min", feed);
+        return jog_relative(-SPIN_TRAVEL_MM, -SPIN_TRAVEL_MM, 0, 0, feed);
+    }
+    if (strcasecmp(line, "BOTH CCW") == 0 || strcasecmp(line, "BOTHCCW") == 0) {
+        xSemaphoreTake(g_state_mutex, portMAX_DELAY);
+        float feed = g_state.spin_feed_mm_min;
+        xSemaphoreGive(g_state_mutex);
+        ESP_LOGI(TAG, "BOTH CCW: rotating X+Y @ %.0f mm/min", feed);
+        return jog_relative(SPIN_TRAVEL_MM, SPIN_TRAVEL_MM, 0, 0, feed);
     }
 
     if (toupper((unsigned char)line[0]) == 'G') {
@@ -753,7 +843,7 @@ static esp_err_t sdcard_init(void) {
 // ---------- Console ----------
 static void print_status(void) {
     xSemaphoreTake(g_state_mutex, portMAX_DELAY);
-    printf("X=%.3f Y=%.3f Z=%.3f E=%.3f | Bed=%.1f/%.1f | abs=%d | printing=%d | fault=%d\n",
+    printf("X=%.3f Y=%.3f Z=%.3f E=%.3f | Bed=%.1f/%.1f | abs=%d | printing=%d | fault=%d | spin_feed=%.0f mm/min\n",
            steps_to_mm(AXIS_X, g_state.pos_steps[AXIS_X]),
            steps_to_mm(AXIS_Y, g_state.pos_steps[AXIS_Y]),
            steps_to_mm(AXIS_Z, g_state.pos_steps[AXIS_Z]),
@@ -762,7 +852,8 @@ static void print_status(void) {
            g_state.bed_target_c,
            g_state.absolute_mode,
            g_state.printing,
-           g_state.faulted);
+           g_state.faulted,
+           g_state.spin_feed_mm_min);
     if (g_state.faulted) {
         printf("FAULT: %s\n", g_state.fault_msg);
     }
@@ -777,6 +868,13 @@ static void print_help(void) {
     printf("  temp 60        or  M140 S60\n");
     printf("  run /sdcard/job.gcode\n");
     printf("  stop\n");
+    printf("  cw             - motor 1 clockwise\n");
+    printf("  ccw            - motor 1 counter-clockwise\n");
+    printf("  cw2            - motor 2 clockwise\n");
+    printf("  ccw2           - motor 2 counter-clockwise\n");
+    printf("  both cw        - both motors clockwise\n");
+    printf("  both ccw       - both motors counter-clockwise\n");
+    printf("  s1 / s2 / s3   - set speed preset (slow/medium/fast)\n");
     printf("  Any supported G-code: G0/G1/G28/G90/G91/G92/M105/M140/M190/M112/M18/M84\n\n");
 }
 
@@ -786,7 +884,6 @@ static void console_task(void *arg) {
 
     print_help();
     while (1) {
-        // printf("> ");
         fflush(stdout);
         // Read line with prompt
         char* line = linenoise("esp> ");
@@ -817,7 +914,7 @@ static void console_task(void *arg) {
             g_state.heater_enabled = false;
             g_state.bed_target_c = 0.0f;
             xSemaphoreGive(g_state_mutex);
-            gpio_set_level(PIN_BED_SSR, 0);
+            ssr_set(0);
             set_all_axes_enabled(false);
             ESP_LOGW(TAG, "Stop requested");
             continue;
@@ -840,7 +937,8 @@ static void console_task(void *arg) {
 // ---------- Init ----------
 static void gpio_init_all(void) {
     gpio_config_t out_cfg = {
-        .pin_bit_mask = (1ULL << PIN_X_STEP) | (1ULL << PIN_X_DIR) | (1ULL << PIN_X_EN), //|
+        .pin_bit_mask = (1ULL << PIN_X_STEP) | (1ULL << PIN_X_DIR) | (1ULL << PIN_X_EN) |
+                        (1ULL << PIN_Y_STEP) | (1ULL << PIN_Y_DIR) | (1ULL << PIN_Y_EN),
         //                 (1ULL << PIN_Y_STEP) | (1ULL << PIN_Y_DIR) | (1ULL << PIN_Y_EN) |
         //                 (1ULL << PIN_Z_STEP) | (1ULL << PIN_Z_DIR) | (1ULL << PIN_Z_EN) |
         //                 (1ULL << PIN_E_STEP) | (1ULL << PIN_E_DIR) | (1ULL << PIN_E_EN) |
@@ -867,10 +965,10 @@ static void gpio_init_all(void) {
 
     for (int i = 0; i < AXIS_COUNT; ++i) {
         set_axis_enable((axis_id_t)i, false);
-        gpio_set_level(g_axes[i].step_pin, 0);
-        gpio_set_level(g_axes[i].dir_pin, 0);
+        if (g_axes[i].step_pin != GPIO_NUM_NC) gpio_set_level(g_axes[i].step_pin, 0);
+        if (g_axes[i].dir_pin  != GPIO_NUM_NC) gpio_set_level(g_axes[i].dir_pin,  0);
     }
-    gpio_set_level(PIN_BED_SSR, 0);
+    if (PIN_BED_SSR != GPIO_NUM_NC) gpio_set_level(PIN_BED_SSR, 0);
 }
 
 #define BLINK_GPIO GPIO_NUM_48
@@ -886,6 +984,7 @@ void app_main(void) {
     g_state_mutex = xSemaphoreCreateMutex();
     memset(&g_state, 0, sizeof(g_state));
     g_state.absolute_mode = true;
+    g_state.spin_feed_mm_min = SPEED_S2_MM_MIN;  // Default to medium speed
 
     gpio_init_all();
     ESP_ERROR_CHECK(thermistor_adc_init());
