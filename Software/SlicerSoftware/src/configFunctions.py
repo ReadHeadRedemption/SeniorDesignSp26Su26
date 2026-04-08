@@ -48,15 +48,15 @@ filePath = {
 
 
 def updConf(input):
-    with open("./src/config.json", "r") as configFile:
+    with open("config.json", "r") as configFile:
         data = json.load(configFile)
         data.update(input)
-    with open("./src/config.json", "w") as configFile:
+    with open("config.json", "w") as configFile:
         json.dump(data, configFile, indent=4)
     
 
 def defConfig():
-    with open("./src/config.json", "w") as configFile:
+    with open("config.json", "w") as configFile:
         json.dump({}, configFile, indent=4)
     updConf(printProp)
     updConf(filePath)
