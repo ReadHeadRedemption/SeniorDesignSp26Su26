@@ -2,7 +2,7 @@
 	(version 20260306)
 	(generator "eeschema")
 	(generator_version "10.0")
-	(uuid "d55f9947-a764-4f0f-8519-13e2565f0143")
+	(uuid "d55638fc-8c18-4352-a8d7-1cc5ced4de31")
 	(paper "A4")
 	(lib_symbols
 		(symbol "EDS_DIP_SWITCH:Dual-Set-4Pin_DIPSWITCH"
@@ -1082,380 +1082,339 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "motor phases"
+	(text "preserve orientation accross boards\n"
 		(exclude_from_sim no)
-		(at 65.786 95.758 0)
+		(at 33.02 62.992 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 		)
-		(uuid "4c038670-9acc-4198-8683-04bf6e286866")
+		(uuid "154dd629-8b60-4d5e-91b3-852bee315844")
+	)
+	(text "motor phases"
+		(exclude_from_sim no)
+		(at 68.326 71.628 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "812cf16d-e7d4-4a67-bd8b-88ec84d3a806")
 	)
 	(text "+3.3V"
 		(exclude_from_sim no)
-		(at 106.68 82.804 0)
+		(at 109.22 58.674 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 		)
-		(uuid "e20899af-7cbe-47bd-8652-e3588002a224")
-	)
-	(text "Z-Height sensor placeholder\n"
-		(exclude_from_sim no)
-		(at 151.13 52.324 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "e9cb363c-a377-4ffc-be3e-cf9dc381badc")
-	)
-	(text "preserve orientation accross boards\n"
-		(exclude_from_sim no)
-		(at 30.48 87.122 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "fdf8c8a7-1db5-4822-919e-49b57970bb66")
+		(uuid "c1300dba-3fcd-4c41-a94a-902be4bdb935")
 	)
 	(junction
-		(at 118.11 52.07)
+		(at 120.65 33.02)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "0b6375b3-5718-455e-a601-2a940ba98a47")
+		(uuid "53e6cbd4-06d5-4068-a349-d47364c460b9")
 	)
 	(junction
-		(at 118.11 57.15)
+		(at 80.01 27.94)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "9366603a-ae31-438b-a4d6-6b5644574d8d")
+		(uuid "6aa2e032-6c04-48de-991c-cb4398a6419c")
 	)
 	(junction
-		(at 77.47 52.07)
+		(at 80.01 33.02)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "ae91a0f7-4e59-4c88-aad6-c58a87ffee15")
+		(uuid "7f5470bb-b837-43e8-8f05-07de2b562b12")
 	)
 	(junction
-		(at 77.47 57.15)
+		(at 120.65 27.94)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "dc2b0f8e-5d09-458c-b6e4-7026dd89dd75")
+		(uuid "a58c73e7-9b79-403c-9168-115bb7a2f3ce")
 	)
 	(junction
-		(at 118.11 54.61)
+		(at 120.65 30.48)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "f90d4e06-bd5a-4ddd-b4f0-1e3cb8dea05d")
+		(uuid "a9e29438-eb6e-41b7-af38-c9ec2c8e6a41")
 	)
 	(wire
 		(pts
-			(xy 41.91 81.28) (xy 64.77 81.28)
+			(xy 77.47 27.94) (xy 80.01 27.94)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "20743453-5107-4cee-8c35-cf4fce20465f")
+		(uuid "0a8fd9b3-36d8-455a-88a1-18b2d1c6449f")
 	)
 	(wire
 		(pts
-			(xy 52.07 106.68) (xy 43.18 106.68)
+			(xy 44.45 39.37) (xy 80.01 39.37)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "21382927-fe8e-47c1-8b6f-df8309eafa3e")
+		(uuid "1842f010-fe74-40cc-bf36-b080265946d3")
 	)
 	(wire
 		(pts
-			(xy 77.47 49.53) (xy 77.47 52.07)
+			(xy 80.01 25.4) (xy 80.01 27.94)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "215e4327-f906-459d-8321-5f2bb68bb6c3")
+		(uuid "1d884ffc-779f-42eb-818e-3197e9b9a7b4")
 	)
 	(wire
 		(pts
-			(xy 118.11 57.15) (xy 118.11 83.82)
+			(xy 80.01 30.48) (xy 80.01 33.02)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "24f238d1-b844-4239-868b-1ae9431d7713")
+		(uuid "28452466-52dc-4da7-82f6-22ab9876335d")
 	)
 	(wire
 		(pts
-			(xy 48.26 104.14) (xy 43.18 104.14)
+			(xy 54.61 82.55) (xy 45.72 82.55)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "25e47ccb-b5b5-486f-8630-d76dbc15c3d9")
+		(uuid "28656903-adb9-40b6-80ba-c78e086591e2")
 	)
 	(wire
 		(pts
-			(xy 74.93 52.07) (xy 77.47 52.07)
+			(xy 44.45 59.69) (xy 120.65 59.69)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "272c14cb-48f4-45df-ba48-e9db63e06052")
+		(uuid "2f183e53-3613-4354-8326-66d95a31bc76")
 	)
 	(wire
 		(pts
-			(xy 41.91 83.82) (xy 118.11 83.82)
+			(xy 44.45 44.45) (xy 66.04 44.45)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "2e576b6a-60c2-400b-ae9b-3797a83b8ccd")
+		(uuid "42b8eba5-4e70-43f9-9706-a90412c59791")
 	)
 	(wire
 		(pts
-			(xy 58.42 71.12) (xy 58.42 111.76)
+			(xy 50.8 54.61) (xy 50.8 80.01)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "2e5ac78c-f40d-4863-abd2-15c525e06e8f")
+		(uuid "4360297b-32ee-4b57-aafe-b81fc76bf8e4")
 	)
 	(wire
 		(pts
-			(xy 41.91 68.58) (xy 63.5 68.58)
+			(xy 44.45 46.99) (xy 60.96 46.99)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "3976de0b-aaef-4155-a1e6-e369858a6a8d")
+		(uuid "46b50f04-7dd8-4259-9774-72be45230b0d")
 	)
 	(wire
 		(pts
-			(xy 156.21 71.12) (xy 99.06 71.12)
+			(xy 60.96 87.63) (xy 45.72 87.63)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "3b484969-a86e-4300-974f-0060f82f9567")
+		(uuid "4b3e1bfe-4af4-4e93-bc7a-8dd648a07114")
 	)
 	(wire
 		(pts
-			(xy 77.47 57.15) (xy 77.47 63.5)
+			(xy 50.8 54.61) (xy 44.45 54.61)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "41037b5d-600a-40af-8198-f36ffe7b8d3c")
+		(uuid "544b8b9c-bc77-4ad5-a3ab-667c49e6e8a4")
 	)
 	(wire
 		(pts
-			(xy 52.07 76.2) (xy 41.91 76.2)
+			(xy 120.65 27.94) (xy 120.65 25.4)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "4893f16c-775c-490e-82a8-d88bf6cec2f1")
+		(uuid "66bb9332-2bec-4555-8546-6f8bd85a4630")
 	)
 	(wire
 		(pts
-			(xy 52.07 76.2) (xy 52.07 106.68)
+			(xy 57.15 49.53) (xy 44.45 49.53)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "4f9dbfab-dcb7-4746-8259-461bc6ded23c")
+		(uuid "6a0d2749-b5fc-434d-b787-b1f3e229be81")
 	)
 	(wire
 		(pts
-			(xy 41.91 63.5) (xy 77.47 63.5)
+			(xy 120.65 30.48) (xy 120.65 27.94)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "50a8d34a-6acc-4dd8-8abc-8c1437f83c3a")
+		(uuid "78e15a81-9378-4142-ba82-dc5636c27755")
 	)
 	(wire
 		(pts
-			(xy 118.11 54.61) (xy 118.11 52.07)
+			(xy 50.8 80.01) (xy 45.72 80.01)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "6a4f1384-89df-4879-a63f-877941f4f53b")
+		(uuid "7c0a2899-03d5-4fb7-99bd-854b01541bda")
 	)
 	(wire
 		(pts
-			(xy 54.61 73.66) (xy 41.91 73.66)
+			(xy 57.15 49.53) (xy 57.15 85.09)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "80dec325-0742-4a1c-9e69-048d2a0eb09a")
+		(uuid "95d7dff9-acbe-4505-95c6-d52255c49365")
 	)
 	(wire
 		(pts
-			(xy 41.91 60.96) (xy 74.93 60.96)
+			(xy 54.61 52.07) (xy 54.61 82.55)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "926c9fc6-b0ab-459e-8c83-0ece357df837")
+		(uuid "9ed80d2f-2895-40b4-b01a-ac3bbe371f5c")
 	)
 	(wire
 		(pts
-			(xy 118.11 52.07) (xy 118.11 49.53)
+			(xy 80.01 33.02) (xy 80.01 39.37)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9377144d-e032-4d7f-bcbc-8003e01d00b6")
+		(uuid "ad1336af-d0e4-45b6-b6d5-651d9a0a90e9")
 	)
 	(wire
 		(pts
-			(xy 77.47 54.61) (xy 77.47 57.15)
+			(xy 54.61 52.07) (xy 44.45 52.07)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9e12f80a-9e05-4dcc-8f0f-f34e9b6cc95a")
+		(uuid "c9647828-a9ec-458b-a2f1-c3388aaa80e0")
 	)
 	(wire
 		(pts
-			(xy 41.91 71.12) (xy 58.42 71.12)
+			(xy 44.45 41.91) (xy 62.23 41.91)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a512a4cf-1a37-4f88-aa8e-29a610a13104")
+		(uuid "cd560733-5051-419a-be21-e9a633b71f91")
 	)
 	(wire
 		(pts
-			(xy 54.61 73.66) (xy 54.61 109.22)
+			(xy 120.65 33.02) (xy 120.65 30.48)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b0396b20-27de-4607-838a-7a4a7a264f83")
+		(uuid "d081d6ad-5e82-4714-ae68-c31594051b3a")
 	)
 	(wire
 		(pts
-			(xy 99.06 71.12) (xy 99.06 66.04)
+			(xy 120.65 33.02) (xy 120.65 59.69)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b9743f7a-5996-4c81-ab0f-1fffda26042f")
+		(uuid "d71bef1e-d506-4579-a1d1-4a5cb2e8b127")
 	)
 	(wire
 		(pts
-			(xy 118.11 57.15) (xy 118.11 54.61)
+			(xy 44.45 36.83) (xy 77.47 36.83)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "be38daf0-ab41-41c4-9a2a-837f5c8896d0")
+		(uuid "dc1b040b-9fd6-4ac6-b10a-b1d8eb61891f")
 	)
 	(wire
 		(pts
-			(xy 48.26 78.74) (xy 41.91 78.74)
+			(xy 45.72 85.09) (xy 57.15 85.09)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "be3bd961-41c7-44b5-922a-79b571213792")
+		(uuid "ecf69740-295b-4d3b-a5a4-f4ef29ddec5d")
 	)
 	(wire
 		(pts
-			(xy 156.21 66.04) (xy 156.21 71.12)
+			(xy 77.47 36.83) (xy 77.47 27.94)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "bfb26b41-aea8-46a0-94d1-d1195c84bb70")
+		(uuid "ee254c78-0bf3-4f86-b49f-c0d3b7af4901")
 	)
 	(wire
 		(pts
-			(xy 58.42 111.76) (xy 43.18 111.76)
+			(xy 44.45 57.15) (xy 67.31 57.15)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "c19dcbec-3788-4712-8af7-d1ef7ec957e9")
+		(uuid "eecf705d-e410-46b3-b42b-7179ff617074")
 	)
 	(wire
 		(pts
-			(xy 43.18 109.22) (xy 54.61 109.22)
+			(xy 60.96 46.99) (xy 60.96 87.63)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "ed2d5462-3843-450f-a4df-adf48adc0060")
-	)
-	(wire
-		(pts
-			(xy 74.93 60.96) (xy 74.93 52.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f2853615-7d5c-411e-8847-ce9947428674")
-	)
-	(wire
-		(pts
-			(xy 99.06 66.04) (xy 41.91 66.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fe9f49f9-fd02-4cc7-86d9-7aaa9f31d56a")
-	)
-	(wire
-		(pts
-			(xy 48.26 78.74) (xy 48.26 104.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fef76bca-cb40-41c1-a05d-140a533d5352")
+		(uuid "f479c221-2b5b-4b42-858c-5609b2f2a812")
 	)
 	(symbol
-		(lib_id "PCM_SparkFun-Connector:Conn_01x04_JST_P1.0mm_Vertical_SMD")
-		(at 38.1 106.68 0)
-		(mirror y)
+		(lib_id "PCM_SparkFun-PowerSymbol:GND")
+		(at 66.04 44.45 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1463,9 +1422,11 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "1d8671d0-c2c3-43ae-a986-afa12172e522")
-		(property "Reference" "J24"
-			(at 38.1 118.11 0)
+		(fields_autoplaced yes)
+		(uuid "1da704f7-605e-4bea-b4f2-29c5b845ddd3")
+		(property "Reference" "#PWR070"
+			(at 72.39 44.45 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1474,18 +1435,18 @@
 				)
 			)
 		)
-		(property "Value" "JST_SMD_1.0mm_Vertical"
-			(at 38.1 115.57 0)
+		(property "Value" "GND"
+			(at 69.85 44.45 0)
 			(show_name no)
-			(do_not_autoplace no)
+			(do_not_autoplace yes)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "PCM_SparkFun-Connector:JST_1x04_P1.0mm_Vertical_SMD"
-			(at 38.1 116.84 0)
+		(property "Footprint" ""
+			(at 66.04 44.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1496,7 +1457,84 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 38.1 119.38 0)
+			(at 66.04 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 74.93 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e45a63c9-7226-44e9-885b-6b8fc7292383")
+		)
+		(instances
+			(project "Swapping hotend board"
+				(path "/d55638fc-8c18-4352-a8d7-1cc5ced4de31"
+					(reference "#PWR070")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_SparkFun-Connector:Conn_01x04_JST_P1.0mm_Vertical_SMD")
+		(at 40.64 82.55 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "39152626-ae5f-4110-9167-0d13a88a27dd")
+		(property "Reference" "J24"
+			(at 40.64 93.98 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "JST_SMD_1.0mm_Vertical"
+			(at 40.64 91.44 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "PCM_SparkFun-Connector:JST_1x04_P1.0mm_Vertical_SMD"
+			(at 40.64 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 40.64 95.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1507,7 +1545,7 @@
 			)
 		)
 		(property "Description" "4 pin JST 1mm polarized connector for I2C"
-			(at 38.1 121.92 0)
+			(at 40.64 97.79 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1518,7 +1556,7 @@
 			)
 		)
 		(property "PROD_ID" "CONN-14483"
-			(at 38.1 124.46 0)
+			(at 40.64 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1529,20 +1567,20 @@
 			)
 		)
 		(pin "3"
-			(uuid "69af2c15-7bf2-4240-bd06-c59cb7cb5f38")
+			(uuid "85f86f67-9088-412d-831e-4d4414114d92")
 		)
 		(pin "1"
-			(uuid "6a31a07d-5005-4403-aeb4-c6e3d2fc13fb")
+			(uuid "6c2eed10-b91e-4a14-8505-33d537c79b68")
 		)
 		(pin "4"
-			(uuid "20b6c357-ddab-4ccf-bd09-8d159895ad88")
+			(uuid "52db4a83-8d8c-47fe-ab87-7123988c28a8")
 		)
 		(pin "2"
-			(uuid "54f80811-49b3-4dad-a941-ee226fc3f4a6")
+			(uuid "79c363d4-7c9d-435b-a718-a354fc317c22")
 		)
 		(instances
-			(project "Senior design Mainboard"
-				(path "/c958ae3b-534c-402f-b916-3e55a20ef9cd"
+			(project "Swapping hotend board"
+				(path "/d55638fc-8c18-4352-a8d7-1cc5ced4de31"
 					(reference "J24")
 					(unit 1)
 				)
@@ -1550,8 +1588,8 @@
 		)
 	)
 	(symbol
-		(lib_id "PCM_SL_Pin_Headers:PINHD_1x10_Male")
-		(at 38.1 72.39 180)
+		(lib_id "PCM_SparkFun-PowerSymbol:GND")
+		(at 67.31 57.15 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1560,9 +1598,10 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "31b32f25-55f6-42c6-9351-d1218ebd3c31")
-		(property "Reference" "J19"
-			(at 38.225 54.61 0)
+		(uuid "56463712-f5d9-4c05-b156-0c66480a7709")
+		(property "Reference" "#PWR069"
+			(at 73.66 57.15 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1571,18 +1610,18 @@
 				)
 			)
 		)
-		(property "Value" "PINHD_1x10_Male"
-			(at 38.225 57.15 0)
+		(property "Value" "GND"
+			(at 71.12 57.15 0)
 			(show_name no)
-			(do_not_autoplace no)
+			(do_not_autoplace yes)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical"
-			(at 39.37 91.44 0)
+		(property "Footprint" ""
+			(at 67.31 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1593,7 +1632,162 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 38.1 90.17 0)
+			(at 67.31 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 76.2 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "53d4982e-d167-4186-83f9-0fb56f6e3576")
+		)
+		(instances
+			(project "Swapping hotend board"
+				(path "/d55638fc-8c18-4352-a8d7-1cc5ced4de31"
+					(reference "#PWR069")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_SparkFun-PowerSymbol:GND")
+		(at 62.23 41.91 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5edacf54-ef7e-425d-b00b-3d0fc0effbaf")
+		(property "Reference" "#PWR071"
+			(at 68.58 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 66.04 41.91 0)
+			(show_name no)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 62.23 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 62.23 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 71.12 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "cfb7d896-a224-4d6d-aac2-2e8b297aec00")
+		)
+		(instances
+			(project "Swapping hotend board"
+				(path "/d55638fc-8c18-4352-a8d7-1cc5ced4de31"
+					(reference "#PWR071")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_SL_Pin_Headers:PINHD_1x10_Male")
+		(at 40.64 48.26 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6cc51708-641c-42d4-bba0-3cfabd7ab24e")
+		(property "Reference" "J19"
+			(at 40.765 30.48 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PINHD_1x10_Male"
+			(at 40.765 33.02 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical"
+			(at 41.91 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 40.64 66.04 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1604,7 +1798,7 @@
 			)
 		)
 		(property "Description" "Pin Header male with pin space 2.54mm. Pin Count -10"
-			(at 38.1 72.39 0)
+			(at 40.64 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1615,38 +1809,38 @@
 			)
 		)
 		(pin "3"
-			(uuid "3cee6fdb-6cd7-4242-8ee4-ebc6dd8ada38")
+			(uuid "b4eeb88b-0a6c-4f6d-a1db-79766f89e029")
 		)
 		(pin "2"
-			(uuid "e86e929e-c8e3-4a81-87d1-338ef53f56f4")
+			(uuid "8cdb79c5-6f01-433c-9fc8-8e8946b1dc17")
 		)
 		(pin "5"
-			(uuid "feca6cac-8cae-4aa0-9367-e522f02d7ff2")
+			(uuid "a6ae7111-ca25-4f44-8f6c-bb9ff1325fab")
 		)
 		(pin "1"
-			(uuid "35b07250-eed7-4779-8d7b-8838c29ac923")
+			(uuid "0ee86e40-16f7-461b-8ce4-df9b5803a0fd")
 		)
 		(pin "7"
-			(uuid "41544fa2-4e64-49dd-a308-23f854ddb645")
+			(uuid "f5f184f1-16f2-4da8-adf8-766b6c2bf6ed")
 		)
 		(pin "8"
-			(uuid "03abaefa-5b4e-491c-ad84-57488926d367")
+			(uuid "8bbb85a8-ecd8-4964-af79-038631750de9")
 		)
 		(pin "4"
-			(uuid "2d65d138-3ff3-4b59-baac-e0a366c00034")
+			(uuid "88321eb5-574f-475a-bee3-08c77b4e5d82")
 		)
 		(pin "9"
-			(uuid "4c0cce9c-b989-4c85-acae-fd5edfc83e9f")
+			(uuid "3ca39128-237f-4f14-936c-160dafd332d2")
 		)
 		(pin "6"
-			(uuid "94482801-7c33-44be-812f-8706e145a0ce")
+			(uuid "bd427cc5-1c30-4b04-be07-bae5b5eea5fa")
 		)
 		(pin "10"
-			(uuid "fdffb3b8-c27a-4632-aa45-c9d98b4785bd")
+			(uuid "487cb2af-3682-4f97-aacb-df719f9b67ff")
 		)
 		(instances
-			(project "Senior design Mainboard"
-				(path "/c958ae3b-534c-402f-b916-3e55a20ef9cd"
+			(project "Swapping hotend board"
+				(path "/d55638fc-8c18-4352-a8d7-1cc5ced4de31"
 					(reference "J19")
 					(unit 1)
 				)
@@ -1655,7 +1849,7 @@
 	)
 	(symbol
 		(lib_id "EDS_DIP_SWITCH:Dual-Set-4Pin_DIPSWITCH")
-		(at 90.17 53.34 270)
+		(at 92.71 29.21 270)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -1664,9 +1858,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "b5c59dc2-c2ca-4a46-81d5-754aeb3031c8")
+		(uuid "c8200d39-cdae-4159-b3e2-d66e7eeafa01")
 		(property "Reference" "U2"
-			(at 97.79 43.18 90)
+			(at 100.33 19.05 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1676,7 +1870,7 @@
 			)
 		)
 		(property "Value" ""
-			(at 90.17 53.34 0)
+			(at 92.71 29.21 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1685,8 +1879,8 @@
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 90.17 53.34 0)
+		(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
+			(at 92.71 29.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1697,7 +1891,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 90.17 53.34 0)
+			(at 92.71 29.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1708,7 +1902,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 90.17 53.34 0)
+			(at 92.71 29.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1719,189 +1913,33 @@
 			)
 		)
 		(pin "8"
-			(uuid "7510106c-8fb7-4f4f-9422-b894040c33de")
+			(uuid "e7d4d447-4ace-4789-b5a8-b1cdb3ea3486")
 		)
 		(pin "5"
-			(uuid "439cc5c2-ae14-407c-ad9f-40a70faaa6e7")
+			(uuid "571b56cc-4436-4fbf-9388-3774060019e9")
 		)
 		(pin "2"
-			(uuid "68206ca6-b1ac-41bd-9bb3-d47127d86f79")
+			(uuid "661e18c3-70b6-4bc9-983a-95853099d690")
 		)
 		(pin "3"
-			(uuid "4556d435-a674-4ef3-8937-7a1dd173dead")
+			(uuid "1e177889-c649-4500-8b3e-ff4144a1d5f2")
 		)
 		(pin "7"
-			(uuid "a1a5c0db-4095-4b98-b967-1a4c77c61dd5")
+			(uuid "ef39f06c-8c82-4072-a650-87ffc12ddafc")
 		)
 		(pin "4"
-			(uuid "5d255511-8db0-4ee2-96c8-a5050b2b8858")
+			(uuid "63ff410f-1be2-4e29-9aab-da8f8ba4e5ea")
 		)
 		(pin "1"
-			(uuid "b95b46cd-51b9-4d4a-b4bb-1e9a0665ddaf")
+			(uuid "f87c9f94-e8c1-4d99-984e-04632d475c7b")
 		)
 		(pin "6"
-			(uuid "8f4f55d1-b434-4eb4-8b41-21ce7d92066c")
+			(uuid "5f710777-ff35-45ea-bd6b-21d23ed35c48")
 		)
 		(instances
-			(project "Senior design Mainboard"
-				(path "/c958ae3b-534c-402f-b916-3e55a20ef9cd"
+			(project "Swapping hotend board"
+				(path "/d55638fc-8c18-4352-a8d7-1cc5ced4de31"
 					(reference "U2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "PCM_SparkFun-PowerSymbol:GND")
-		(at 64.77 81.28 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b71f0bba-ec3e-409b-92e9-5f9c52628dc5")
-		(property "Reference" "#PWR069"
-			(at 71.12 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 68.58 81.28 0)
-			(show_name no)
-			(do_not_autoplace yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 64.77 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 64.77 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 73.66 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f3dc3d4f-16dc-4cf0-8c98-76c2a9faf477")
-		)
-		(instances
-			(project "Senior design Mainboard"
-				(path "/c958ae3b-534c-402f-b916-3e55a20ef9cd"
-					(reference "#PWR069")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "PCM_SparkFun-PowerSymbol:GND")
-		(at 63.5 68.58 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e0d5efd0-3d12-4229-a9a4-685af8b9cb6e")
-		(property "Reference" "#PWR070"
-			(at 69.85 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 67.31 68.58 0)
-			(show_name no)
-			(do_not_autoplace yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 63.5 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 63.5 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 72.39 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f6ab1a8b-5017-4518-bf3f-b80e06dd4113")
-		)
-		(instances
-			(project "Senior design Mainboard"
-				(path "/c958ae3b-534c-402f-b916-3e55a20ef9cd"
-					(reference "#PWR070")
 					(unit 1)
 				)
 			)
@@ -1909,7 +1947,7 @@
 	)
 	(sheet_instances
 		(path "/"
-			(page "9")
+			(page "1")
 		)
 	)
 	(embedded_fonts no)

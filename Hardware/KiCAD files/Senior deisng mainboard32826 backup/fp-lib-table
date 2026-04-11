@@ -1,0 +1,4 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "MSP2202_LCD") (type "KiCad") (uri "A:/SD_LFG/SeniorDesignSp26Su26/Hardware/KiCAD files/Footprint libraries/MSP2202_LCD/MSP2202_LCD.pretty") (options "") (descr ""))
+)

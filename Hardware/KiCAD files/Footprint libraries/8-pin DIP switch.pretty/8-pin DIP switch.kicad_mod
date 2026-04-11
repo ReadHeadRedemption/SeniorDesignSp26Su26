@@ -1,0 +1,155 @@
+(footprint "8-pin DIP switch"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "DIP Switch in part reference forum"
+		(at 4 2 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "174662d5-e0e6-4025-98b5-f7a72ac406b7")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "2 interconnected switch"
+		(at 4 4 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "2dc05be2-f08f-4081-bf54-ecfc921a1271")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d36951f6-9213-4bc8-95c1-f33998b53ce4")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "541eb5c8-1dde-45c7-ac2c-457d28e2b042")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_text user "${REFERENCE}"
+		(at 4 6 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "14c4df71-2ea4-4a39-9135-3809be53de51")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole roundrect
+		(at 0 -7.62 90)
+		(size 2.54 1.27)
+		(drill 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.15)
+		(uuid "2801d851-74fb-43de-abb2-d5b74d837bc9")
+	)
+	(pad "1" thru_hole roundrect
+		(at 0 0 90)
+		(size 2.54 1.27)
+		(drill 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.15)
+		(uuid "17267dff-6b72-47db-9673-f7a96fc62bcb")
+	)
+	(pad "2" thru_hole roundrect
+		(at 2.54 -7.62 90)
+		(size 2.54 1.27)
+		(drill 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.15)
+		(uuid "60cf567b-0ec1-45a1-ab8c-339df1fbbd14")
+	)
+	(pad "2" thru_hole roundrect
+		(at 2.54 0 90)
+		(size 2.54 1.27)
+		(drill 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.15)
+		(uuid "bfad9ac6-475c-4108-89a3-e811cc81ceae")
+	)
+	(pad "3" thru_hole roundrect
+		(at 5.08 -7.62 90)
+		(size 2.54 1.27)
+		(drill 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.15)
+		(uuid "b9c2eba8-4159-4c5b-bcbe-fed83821b44a")
+	)
+	(pad "3" thru_hole roundrect
+		(at 5.08 0 90)
+		(size 2.54 1.27)
+		(drill 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.15)
+		(uuid "bf5ef112-de25-4e95-91be-1edce16ec952")
+	)
+	(pad "4" thru_hole roundrect
+		(at 7.62 -7.62 90)
+		(size 2.54 1.27)
+		(drill 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.15)
+		(uuid "be645171-76d4-4125-914b-7e3aef5fd091")
+	)
+	(pad "4" thru_hole roundrect
+		(at 7.62 0 90)
+		(size 2.54 1.27)
+		(drill 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.15)
+		(uuid "abbf0c3b-063e-4db0-b0b5-3c4bcb155d45")
+	)
+	(group ""
+		(uuid "10544391-8bdd-40f6-a55b-a5c8540cd290")
+		(members "2801d851-74fb-43de-abb2-d5b74d837bc9" "60cf567b-0ec1-45a1-ab8c-339df1fbbd14"
+			"b9c2eba8-4159-4c5b-bcbe-fed83821b44a" "be645171-76d4-4125-914b-7e3aef5fd091"
+		)
+	)
+	(group ""
+		(uuid "8e280e44-1380-43b6-9097-6fa00fb10228")
+		(members "17267dff-6b72-47db-9673-f7a96fc62bcb" "abbf0c3b-063e-4db0-b0b5-3c4bcb155d45"
+			"bf5ef112-de25-4e95-91be-1edce16ec952" "bfad9ac6-475c-4108-89a3-e811cc81ceae"
+		)
+	)
+	(embedded_fonts no)
+)

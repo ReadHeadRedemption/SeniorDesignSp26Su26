@@ -53,7 +53,13 @@
           "min_clearance": 0.5
         }
       },
-      "diff_pair_dimensions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
       "drc_exclusions": [],
       "meta": {
         "version": 2
@@ -187,7 +193,10 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [],
+      "track_widths": [
+        0.0,
+        0.3048
+      ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
           "corner_radius_percentage": 80,
@@ -214,7 +223,12 @@
           "spacing": 0.6
         }
       },
-      "via_dimensions": [],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        }
+      ],
       "zones_allow_external_fillets": false
     },
     "ipc2581": {
@@ -423,7 +437,6 @@
       "bus_entry_needed": "error",
       "bus_to_bus_conflict": "error",
       "bus_to_net_conflict": "error",
-      "conflicting_netclasses": "error",
       "different_unit_footprint": "error",
       "different_unit_net": "error",
       "duplicate_reference": "error",
@@ -434,7 +447,6 @@
       "footprint_filter": "ignore",
       "footprint_link_issues": "warning",
       "four_way_junction": "ignore",
-      "global_label_dangling": "warning",
       "ground_pin_not_ground": "warning",
       "hier_label_mismatch": "error",
       "isolated_pin_label": "warning",
@@ -474,7 +486,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "Senior design Mainboard.kicad_pro",
+    "filename": "Swapping hotend board.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -508,14 +520,10 @@
   },
   "pcbnew": {
     "last_paths": {
-      "gencad": "",
       "idf": "",
       "netlist": "",
       "plot": "",
-      "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
-      "svg": "",
       "vrml": ""
     },
     "page_layout_descr_file": ""
@@ -526,7 +534,7 @@
       "method": 0,
       "sort_order": 0
     },
-    "bom_export_filename": "",
+    "bom_export_filename": "${PROJECTNAME}.csv",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
       "field_delimiter": ",",
@@ -548,24 +556,6 @@
           "show": true
         },
         {
-          "group_by": true,
-          "label": "Value",
-          "name": "Value",
-          "show": true
-        },
-        {
-          "group_by": false,
-          "label": "Datasheet",
-          "name": "Datasheet",
-          "show": true
-        },
-        {
-          "group_by": false,
-          "label": "Footprint",
-          "name": "Footprint",
-          "show": true
-        },
-        {
           "group_by": false,
           "label": "Qty",
           "name": "${QUANTITY}",
@@ -573,15 +563,45 @@
         },
         {
           "group_by": true,
+          "label": "Value",
+          "name": "Value",
+          "show": true
+        },
+        {
+          "group_by": true,
           "label": "DNP",
           "name": "${DNP}",
+          "show": true
+        },
+        {
+          "group_by": true,
+          "label": "Exclude from BOM",
+          "name": "${EXCLUDE_FROM_BOM}",
+          "show": true
+        },
+        {
+          "group_by": true,
+          "label": "Exclude from Board",
+          "name": "${EXCLUDE_FROM_BOARD}",
+          "show": true
+        },
+        {
+          "group_by": true,
+          "label": "Footprint",
+          "name": "Footprint",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Datasheet",
+          "name": "Datasheet",
           "show": true
         }
       ],
       "filter_string": "",
       "group_symbols": true,
-      "include_excluded_from_bom": false,
-      "name": "Grouped By Value",
+      "include_excluded_from_bom": true,
+      "name": "Default Editing",
       "sort_asc": true,
       "sort_field": "Reference"
     },
@@ -614,38 +634,16 @@
     "meta": {
       "version": 1
     },
-    "net_format_name": "",
     "page_layout_descr_file": "",
     "plot_directory": "",
     "reuse_designators": true,
-    "spice_current_sheet_as_root": false,
-    "spice_external_command": "spice \"%I\"",
-    "spice_model_current_sheet_as_root": true,
-    "spice_save_all_currents": false,
-    "spice_save_all_dissipations": false,
-    "spice_save_all_voltages": false,
     "subpart_first_id": 65,
     "subpart_id_separator": 0,
     "top_level_sheets": [
       {
-        "filename": "Senior design Mainboard.kicad_sch",
-        "name": "Senior design Mainboard",
-        "uuid": "1027da72-a2dd-4309-b004-99ab5e04adbe"
-      },
-      {
-        "filename": "testing_pads.kicad_sch",
-        "name": "Testing pads",
-        "uuid": "c9cc4674-6792-4c1f-97b9-bd54481da43f"
-      },
-      {
-        "filename": "hot-end_board.kicad_sch",
-        "name": "Hot-end gantry board",
-        "uuid": "9e0f45cf-0291-4330-9b97-68cc265b006d"
-      },
-      {
-        "filename": "hot-end_swap-in_board.kicad_sch",
-        "name": "Hot-end swap-in board",
-        "uuid": "c958ae3b-534c-402f-b916-3e55a20ef9cd"
+        "filename": "Swapping hotend board.kicad_sch",
+        "name": "Swapping hotend board",
+        "uuid": "d55638fc-8c18-4352-a8d7-1cc5ced4de31"
       }
     ],
     "used_designators": "",
@@ -653,40 +651,8 @@
   },
   "sheets": [
     [
-      "1027da72-a2dd-4309-b004-99ab5e04adbe",
-      "Senior design Mainboard"
-    ],
-    [
-      "f58edf27-511a-495f-a493-6c6b09a9e5ad",
-      "PSU"
-    ],
-    [
-      "4b2fef9b-8f47-474a-ba15-59630a0bd0a3",
-      "Motor controls"
-    ],
-    [
-      "e57217d1-2201-49d8-8d03-8af567809807",
-      "MCU"
-    ],
-    [
-      "9095e8d5-0d3d-4f63-98f2-4261bdd8f9fe",
-      "Peripherals"
-    ],
-    [
-      "f18dec87-6e0c-428b-a76d-65d10c309ce8",
-      "IO"
-    ],
-    [
-      "c9cc4674-6792-4c1f-97b9-bd54481da43f",
-      "Testing pads"
-    ],
-    [
-      "9e0f45cf-0291-4330-9b97-68cc265b006d",
-      "Hot-end gantry board"
-    ],
-    [
-      "c958ae3b-534c-402f-b916-3e55a20ef9cd",
-      "Hot-end swap-in board"
+      "d55638fc-8c18-4352-a8d7-1cc5ced4de31",
+      "Swapping hotend board"
     ]
   ],
   "text_variables": {},
