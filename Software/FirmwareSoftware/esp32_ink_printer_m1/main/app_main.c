@@ -127,7 +127,7 @@
 
 #define RMT_RESOLUTION_HZ       1000000UL
 #define RMT_MEM_BLOCK_SYMBOLS   48
-#define RMT_TRANS_QUEUE_DEPTH   4
+#define RMT_TRANS_QUEUE_DEPTH   1
 #define RMT_MOVE_CHUNK_STEPS    256
 #define RMT_HOME_CHUNK_STEPS    64
 #define RMT_MAX_DURATION_US     32767U
@@ -335,7 +335,6 @@ static uint32_t move_interval_with_ramp(uint32_t base_interval_us, int32_t step_
 
 static rmt_sync_manager_handle_t rmt_get_sync_manager_for_mask(uint32_t mask) {
     if (__builtin_popcount(mask) <= 1) return NULL;
-    if (g_rmt_sync_mgr_cache[mask]) return g_rmt_sync_mgr_cache[mask];
 
     rmt_channel_handle_t channels[AXIS_COUNT];
     size_t count = 0;
@@ -356,7 +355,6 @@ static rmt_sync_manager_handle_t rmt_get_sync_manager_for_mask(uint32_t mask) {
         ESP_LOGW(TAG, "RMT sync manager unavailable for mask 0x%X (%s)", (unsigned)mask, esp_err_to_name(err));
         return NULL;
     }
-    g_rmt_sync_mgr_cache[mask] = mgr;
     return mgr;
 }
 
@@ -371,7 +369,6 @@ static void rmt_abort_all(void) {
 
 static esp_err_t rmt_motion_init(void) {
     rmt_copy_encoder_config_t copy_cfg = {};
-    memset(g_rmt_sync_mgr_cache, 0, sizeof(g_rmt_sync_mgr_cache));
 
     for (int i = 0; i < AXIS_COUNT; ++i) {
         if (!pin_is_valid(g_axes[i].step_pin)) {
@@ -386,6 +383,7 @@ static esp_err_t rmt_motion_init(void) {
             .resolution_hz = RMT_RESOLUTION_HZ,
             .mem_block_symbols = RMT_MEM_BLOCK_SYMBOLS,
             .trans_queue_depth = RMT_TRANS_QUEUE_DEPTH,
+            .intr_priority = 3,
         };
         ESP_RETURN_ON_ERROR(rmt_new_tx_channel(&tx_cfg, &g_rmt_tx_chan[i]), TAG, "RMT TX channel create failed");
         ESP_RETURN_ON_ERROR(rmt_new_copy_encoder(&copy_cfg, &g_rmt_copy_encoder[i]), TAG, "RMT copy encoder create failed");
@@ -425,7 +423,6 @@ static esp_err_t rmt_execute_chunk(const uint32_t chunk_steps[AXIS_COUNT], uint3
 
         tx_cfgs[active_count] = (rmt_transmit_config_t) {
             .loop_count = 0,
-            // .eot_level = 0,
         };
         active_axes[active_count] = (axis_id_t)axis;
         active_mask |= (1U << axis);
@@ -446,13 +443,18 @@ static esp_err_t rmt_execute_chunk(const uint32_t chunk_steps[AXIS_COUNT], uint3
     }
 
     for (int i = 0; i < active_count; ++i) {
-        ret = rmt_tx_wait_all_done(g_rmt_tx_chan[active_axes[i]], -1);
+        ret = rmt_tx_wait_all_done(g_rmt_tx_chan[active_axes[i]], pdMS_TO_TICKS(10000));
+        if (ret == ESP_ERR_TIMEOUT) {
+            ESP_LOGE(TAG, "RMT wait timeout on axis %d", active_axes[i]);
+            goto out;
+        }
         if (ret != ESP_OK) goto out;
     }
 
 out:
     if (sync_mgr) {
         rmt_sync_reset(sync_mgr);
+        rmt_del_sync_manager(sync_mgr);
     }
     return ret;
 }
@@ -461,8 +463,11 @@ static esp_err_t rmt_move_axis_steps(axis_id_t axis, bool positive, uint32_t ste
     if (steps == 0) return ESP_OK;
     if (!g_rmt_tx_chan[axis]) return ESP_ERR_NOT_SUPPORTED;
 
+    esp_err_t ret = ESP_OK;
     uint32_t remaining = steps;
+
     set_axis_enable(axis, true);
+
     bool level = positive;
     if (g_axes[axis].invert_dir) level = !level;
     if (pin_is_valid(g_axes[axis].dir_pin)) {
@@ -473,11 +478,23 @@ static esp_err_t rmt_move_axis_steps(axis_id_t axis, bool positive, uint32_t ste
         uint32_t chunk = remaining > RMT_HOME_CHUNK_STEPS ? RMT_HOME_CHUNK_STEPS : remaining;
         uint32_t counts[AXIS_COUNT] = {0};
         counts[axis] = chunk;
-        ESP_RETURN_ON_ERROR(rmt_execute_chunk(counts, chunk * clamp_period_us(interval_us)), TAG, "RMT home chunk failed");
+
+        ret = rmt_execute_chunk(counts, chunk * clamp_period_us(interval_us));
+        if (ret != ESP_OK) goto cleanup;
+
         remaining -= chunk;
-        if (machine_faulted()) return ESP_FAIL;
+        if (machine_faulted()) {
+            ret = ESP_FAIL;
+            goto cleanup;
+        }
     }
-    return ESP_OK;
+
+cleanup:
+    if (ret != ESP_OK) {
+        rmt_abort_all();
+    }
+    set_axis_enable(axis, false);
+    return ret;
 }
 
 typedef struct {
@@ -572,13 +589,18 @@ static esp_err_t rmt_execute_move_plan(const rmt_move_plan_t *plan) {
 
     for (int axis = 0; axis < AXIS_COUNT; ++axis) {
         if (!(plan->active_mask & (1U << axis))) continue;
-        ret = rmt_tx_wait_all_done(g_rmt_tx_chan[axis], -1);
+        ret = rmt_tx_wait_all_done(g_rmt_tx_chan[axis], pdMS_TO_TICKS(10000));
+        if (ret == ESP_ERR_TIMEOUT) {
+            ESP_LOGE(TAG, "RMT wait timeout on axis %d", axis);
+            goto out;
+        }
         if (ret != ESP_OK) goto out;
     }
 
 out:
     if (sync_mgr) {
         rmt_sync_reset(sync_mgr);
+        rmt_del_sync_manager(sync_mgr);
     }
     return ret;
 }
@@ -750,7 +772,9 @@ static esp_err_t move_linear_steps(const int32_t target_steps[AXIS_COUNT], float
     int32_t delta[AXIS_COUNT];
     int32_t abs_delta[AXIS_COUNT];
     int32_t max_steps = 0;
-    rmt_move_plan_t plan = {0};
+    bool axis_active[AXIS_COUNT] = {false};
+    rmt_move_plan_t plan;
+    bool plan_built = false;
 
     if (machine_faulted()) {
         ret = ESP_FAIL;
@@ -765,6 +789,14 @@ static esp_err_t move_linear_steps(const int32_t target_steps[AXIS_COUNT], float
     for (int i = 0; i < AXIS_COUNT; ++i) {
         delta[i] = target_steps[i] - start[i];
         abs_delta[i] = abs(delta[i]);
+        axis_active[i] = (abs_delta[i] > 0);
+
+        if (axis_active[i] && !g_rmt_tx_chan[i]) {
+            ESP_LOGE(TAG, "Axis %d requested to move but has no STEP pin/RMT channel", i);
+            ret = ESP_ERR_NOT_SUPPORTED;
+            goto cleanup;
+        }
+
         if (abs_delta[i] > max_steps) max_steps = abs_delta[i];
         set_axis_direction((axis_id_t)i, delta[i] >= 0);
     }
@@ -774,39 +806,84 @@ static esp_err_t move_linear_steps(const int32_t target_steps[AXIS_COUNT], float
         goto cleanup;
     }
 
-    if (is_switch_triggered(g_axes[AXIS_X].min_pin) && delta[AXIS_X] < 0) { latch_fault("Hit X min during move"); ret = ESP_FAIL; goto cleanup; }
-    if (is_switch_triggered(g_axes[AXIS_X].max_pin) && delta[AXIS_X] > 0) { latch_fault("Hit X max during move"); ret = ESP_FAIL; goto cleanup; }
-    if (is_switch_triggered(g_axes[AXIS_Y].min_pin) && delta[AXIS_Y] < 0) { latch_fault("Hit Y min during move"); ret = ESP_FAIL; goto cleanup; }
-    if (is_switch_triggered(g_axes[AXIS_Y].max_pin) && delta[AXIS_Y] > 0) { latch_fault("Hit Y max during move"); ret = ESP_FAIL; goto cleanup; }
-    if (is_switch_triggered(g_axes[AXIS_Z].min_pin) && delta[AXIS_Z] < 0) { latch_fault("Hit Z min during move"); ret = ESP_FAIL; goto cleanup; }
-    if (is_switch_triggered(g_axes[AXIS_Z].max_pin) && delta[AXIS_Z] > 0) { latch_fault("Hit Z max during move"); ret = ESP_FAIL; goto cleanup; }
-
     float dx = steps_to_mm(AXIS_X, delta[AXIS_X]);
     float dy = steps_to_mm(AXIS_Y, delta[AXIS_Y]);
     float dz = steps_to_mm(AXIS_Z, delta[AXIS_Z]);
     float de = steps_to_mm(AXIS_E, delta[AXIS_E]);
     float path_mm = sqrtf(dx * dx + dy * dy + dz * dz + de * de);
-    if (path_mm < 0.001f) path_mm = fmaxf(fabsf(dx) + fabsf(dy) + fabsf(dz) + fabsf(de), 0.001f);
-    float move_time_s = path_mm / (feed_mm_min / 60.0f);
-    uint32_t interval_us = clamp_period_us((uint32_t)fmaxf((move_time_s * 1e6f) / (float)max_steps, (float)(STEP_PULSE_US + 1)));
+    if (path_mm < 0.001f) {
+        path_mm = fmaxf(fabsf(dx) + fabsf(dy) + fabsf(dz) + fabsf(de), 0.001f);
+    }
+
+    uint32_t interval_us = clamp_period_us(
+        (uint32_t)fmaxf((path_mm / (feed_mm_min / 60.0f) * 1e6f) / (float)max_steps,
+                        (float)(STEP_PULSE_US + 1))
+    );
 
     ret = rmt_build_move_plan(delta, max_steps, interval_us, &plan);
-    if (ret != ESP_OK) goto cleanup;
+    if (ret != ESP_OK) {
+        goto cleanup;
+    }
+    plan_built = true;
 
-    set_all_axes_enabled(true);
+    for (int i = 0; i < AXIS_COUNT; ++i) {
+        if (axis_active[i]) {
+            set_axis_enable((axis_id_t)i, true);
+        }
+    }
+
+    if (axis_active[AXIS_X] && is_switch_triggered(g_axes[AXIS_X].min_pin) && delta[AXIS_X] < 0) {
+        latch_fault("Hit X min during move");
+        ret = ESP_FAIL;
+        goto cleanup;
+    }
+    if (axis_active[AXIS_X] && is_switch_triggered(g_axes[AXIS_X].max_pin) && delta[AXIS_X] > 0) {
+        latch_fault("Hit X max during move");
+        ret = ESP_FAIL;
+        goto cleanup;
+    }
+    if (axis_active[AXIS_Y] && is_switch_triggered(g_axes[AXIS_Y].min_pin) && delta[AXIS_Y] < 0) {
+        latch_fault("Hit Y min during move");
+        ret = ESP_FAIL;
+        goto cleanup;
+    }
+    if (axis_active[AXIS_Y] && is_switch_triggered(g_axes[AXIS_Y].max_pin) && delta[AXIS_Y] > 0) {
+        latch_fault("Hit Y max during move");
+        ret = ESP_FAIL;
+        goto cleanup;
+    }
+    if (axis_active[AXIS_Z] && is_switch_triggered(g_axes[AXIS_Z].min_pin) && delta[AXIS_Z] < 0) {
+        latch_fault("Hit Z min during move");
+        ret = ESP_FAIL;
+        goto cleanup;
+    }
+    if (axis_active[AXIS_Z] && is_switch_triggered(g_axes[AXIS_Z].max_pin) && delta[AXIS_Z] > 0) {
+        latch_fault("Hit Z max during move");
+        ret = ESP_FAIL;
+        goto cleanup;
+    }
+
     ret = rmt_execute_move_plan(&plan);
-    if (ret != ESP_OK) goto cleanup;
+    if (ret != ESP_OK) {
+        goto cleanup;
+    }
 
     xSemaphoreTake(g_state_mutex, portMAX_DELAY);
     memcpy(g_state.pos_steps, target_steps, sizeof(g_state.pos_steps));
     xSemaphoreGive(g_state_mutex);
 
 cleanup:
+    if (plan_built) {
+        rmt_move_plan_free(&plan);
+    }
     if (ret != ESP_OK) {
         rmt_abort_all();
     }
-    rmt_move_plan_free(&plan);
-    set_all_axes_enabled(false);
+    for (int i = 0; i < AXIS_COUNT; ++i) {
+        if (axis_active[i]) {
+            set_axis_enable((axis_id_t)i, false);
+        }
+    }
     xSemaphoreGiveRecursive(g_motion_mutex);
     return ret;
 }
@@ -1656,7 +1733,7 @@ void app_main(void) {
     if (ui_display_touch_init() != ESP_OK) {
         ESP_LOGW(TAG, "Continuing without touchscreen UI.");
     } else {
-        xTaskCreatePinnedToCore(ui_motion_task, "ui_motion_task", 4096, NULL, 4, NULL, 1);
+        xTaskCreatePinnedToCore(ui_motion_task, "ui_motion_task", 8192, NULL, 4, NULL, 1);
     }
 
     // xTaskCreatePinnedToCore(heater_task, "heater_task", 4096, NULL, 5, NULL, 1);
