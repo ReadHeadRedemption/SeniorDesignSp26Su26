@@ -4,6 +4,7 @@
 #include <stdbool.h>
 #include <math.h>
 #include <ctype.h>
+#include <inttypes.h>
 
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
@@ -33,6 +34,7 @@
 #include "esp_lcd_touch_xpt2046.h"
 #include "esp_lvgl_port.h"
 #include "lvgl.h"
+#include "driver/rmt_tx.h"
 
 // ======== USER PIN CONFIGURATION ========
 // Replace these pins with your actual PCB pins.
@@ -42,9 +44,9 @@
 #define PIN_X_MIN           GPIO_NUM_NC
 #define PIN_X_MAX           GPIO_NUM_NC
 
-#define PIN_Y_STEP          GPIO_NUM_NC
-#define PIN_Y_DIR           GPIO_NUM_NC
-#define PIN_Y_EN            GPIO_NUM_NC
+#define PIN_Y_STEP          GPIO_NUM_5
+#define PIN_Y_DIR           GPIO_NUM_6
+#define PIN_Y_EN            GPIO_NUM_15
 #define PIN_Y_MIN           GPIO_NUM_NC
 #define PIN_Y_MAX           GPIO_NUM_NC
 
@@ -98,7 +100,7 @@
 #define BED_THERM_ATTEN         ADC_ATTEN_DB_12
 
 // ======== MACHINE CONFIGURATION ========
-#define STEPS_PER_MM_X      320.0f
+#define STEPS_PER_MM_X      80.0f
 #define STEPS_PER_MM_Y      80.0f
 #define STEPS_PER_MM_Z      400.0f
 #define STEPS_PER_MM_E      800.0f   // Plunger axis. Replace with your real value.
@@ -122,6 +124,17 @@
 #define MOUNT_POINT         "/sdcard"
 
 #define UI_CMD_QUEUE_LEN    8
+
+#define RMT_RESOLUTION_HZ       1000000UL
+#define RMT_MEM_BLOCK_SYMBOLS   48
+#define RMT_TRANS_QUEUE_DEPTH   4
+#define RMT_MOVE_CHUNK_STEPS    256
+#define RMT_HOME_CHUNK_STEPS    64
+#define RMT_MAX_DURATION_US     32767U
+#define DIR_SETUP_DELAY_US      5U
+#define RMT_RAMP_MIN_STEPS      32
+#define RMT_RAMP_MAX_STEPS      256
+#define RMT_START_SLOWDOWN      1.5f
 
 static const char *TAG = "ink_printer_m1";
 
@@ -209,6 +222,12 @@ static lv_obj_t *g_ui_ta_z;
 static lv_obj_t *g_ui_ta_e;
 static lv_obj_t *g_ui_active_ta;
 
+static rmt_channel_handle_t g_rmt_tx_chan[AXIS_COUNT];
+static rmt_encoder_handle_t g_rmt_copy_encoder[AXIS_COUNT];
+static rmt_sync_manager_handle_t g_rmt_sync_mgr_cache[1 << AXIS_COUNT];
+
+static void rmt_abort_all(void);
+
 // ---------- Utility ----------
 static inline float steps_to_mm(axis_id_t axis, int32_t steps) {
     return (float)steps / g_axes[axis].steps_per_mm;
@@ -234,7 +253,7 @@ static void latch_fault(const char *msg) {
     snprintf(g_state.fault_msg, sizeof(g_state.fault_msg), "%s", msg);
     xSemaphoreGive(g_state_mutex);
 
-    gpio_set_level(PIN_BED_SSR, 0);
+    if (PIN_BED_SSR != GPIO_NUM_NC) gpio_set_level(PIN_BED_SSR, 0);
     for (int i = 0; i < AXIS_COUNT; ++i) {
         const int level = g_axes[i].enabled_low ? 1 : 0;
         gpio_set_level(g_axes[i].en_pin, level);
@@ -260,8 +279,17 @@ static void set_bed_target(float target_c) {
     ESP_LOGI(TAG, "Bed target set to %.1f C", target_c);
 }
 
+static inline bool pin_is_valid(gpio_num_t pin) {
+    return pin != GPIO_NUM_NC;
+}
+
+static uint64_t add_pin_to_mask(uint64_t mask, gpio_num_t pin) {
+    return pin_is_valid(pin) ? (mask | (1ULL << pin)) : mask;
+}
+
 static void set_axis_enable(axis_id_t axis, bool enabled) {
     const axis_hw_t *a = &g_axes[axis];
+    if (!pin_is_valid(a->en_pin)) return;
     const int level = a->enabled_low ? (enabled ? 0 : 1) : (enabled ? 1 : 0);
     gpio_set_level(a->en_pin, level);
 }
@@ -272,10 +300,287 @@ static void set_all_axes_enabled(bool enabled) {
     }
 }
 
-static void pulse_step(gpio_num_t pin) {
-    gpio_set_level(pin, 1);
-    esp_rom_delay_us(STEP_PULSE_US);
-    gpio_set_level(pin, 0);
+static uint32_t clamp_period_us(uint32_t period_us) {
+    if (period_us < (STEP_PULSE_US + 1)) return STEP_PULSE_US + 1;
+    if (period_us > RMT_MAX_DURATION_US) return RMT_MAX_DURATION_US;
+    return period_us;
+}
+
+static uint32_t move_interval_with_ramp(uint32_t base_interval_us, int32_t step_index, int32_t total_steps) {
+    if (total_steps <= 2) return clamp_period_us(base_interval_us);
+
+    int32_t ramp_steps = total_steps / 6;
+    if (ramp_steps > RMT_RAMP_MAX_STEPS) ramp_steps = RMT_RAMP_MAX_STEPS;
+    if (ramp_steps < RMT_RAMP_MIN_STEPS) {
+        if (total_steps >= (RMT_RAMP_MIN_STEPS * 2))
+            ramp_steps = RMT_RAMP_MIN_STEPS;
+        else
+            ramp_steps = total_steps / 2;
+    }
+    if (ramp_steps < 1) return clamp_period_us(base_interval_us);
+
+    float factor = 1.0f;
+    if (step_index < ramp_steps) {
+        float t = (float)step_index / (float)ramp_steps;
+        factor = RMT_START_SLOWDOWN - (RMT_START_SLOWDOWN - 1.0f) * t;
+    }
+    else if (step_index > (total_steps - ramp_steps)) {
+        int32_t remain = total_steps - step_index;
+        float t = (float)remain / (float)ramp_steps;
+        factor = RMT_START_SLOWDOWN - (RMT_START_SLOWDOWN - 1.0f) * t;
+    }
+
+    return clamp_period_us((uint32_t)lroundf((float)base_interval_us * factor));
+}
+
+static rmt_sync_manager_handle_t rmt_get_sync_manager_for_mask(uint32_t mask) {
+    if (__builtin_popcount(mask) <= 1) return NULL;
+    if (g_rmt_sync_mgr_cache[mask]) return g_rmt_sync_mgr_cache[mask];
+
+    rmt_channel_handle_t channels[AXIS_COUNT];
+    size_t count = 0;
+    for (int axis = 0; axis < AXIS_COUNT; ++axis) {
+        if ((mask & (1U << axis)) && g_rmt_tx_chan[axis]) {
+            channels[count++] = g_rmt_tx_chan[axis];
+        }
+    }
+    if (count <= 1) return NULL;
+
+    rmt_sync_manager_config_t sync_cfg = {
+        .tx_channel_array = channels,
+        .array_size = count,
+    };
+    rmt_sync_manager_handle_t mgr = NULL;
+    esp_err_t err = rmt_new_sync_manager(&sync_cfg, &mgr);
+    if (err != ESP_OK) {
+        ESP_LOGW(TAG, "RMT sync manager unavailable for mask 0x%X (%s)", (unsigned)mask, esp_err_to_name(err));
+        return NULL;
+    }
+    g_rmt_sync_mgr_cache[mask] = mgr;
+    return mgr;
+}
+
+static void rmt_abort_all(void) {
+    for (int i = 0; i < AXIS_COUNT; ++i) {
+        if (g_rmt_tx_chan[i]) {
+            rmt_disable(g_rmt_tx_chan[i]);
+            rmt_enable(g_rmt_tx_chan[i]);
+        }
+    }
+}
+
+static esp_err_t rmt_motion_init(void) {
+    rmt_copy_encoder_config_t copy_cfg = {};
+    memset(g_rmt_sync_mgr_cache, 0, sizeof(g_rmt_sync_mgr_cache));
+
+    for (int i = 0; i < AXIS_COUNT; ++i) {
+        if (!pin_is_valid(g_axes[i].step_pin)) {
+            g_rmt_tx_chan[i] = NULL;
+            g_rmt_copy_encoder[i] = NULL;
+            continue;
+        }
+
+        rmt_tx_channel_config_t tx_cfg = {
+            .gpio_num = g_axes[i].step_pin,
+            .clk_src = RMT_CLK_SRC_DEFAULT,
+            .resolution_hz = RMT_RESOLUTION_HZ,
+            .mem_block_symbols = RMT_MEM_BLOCK_SYMBOLS,
+            .trans_queue_depth = RMT_TRANS_QUEUE_DEPTH,
+        };
+        ESP_RETURN_ON_ERROR(rmt_new_tx_channel(&tx_cfg, &g_rmt_tx_chan[i]), TAG, "RMT TX channel create failed");
+        ESP_RETURN_ON_ERROR(rmt_new_copy_encoder(&copy_cfg, &g_rmt_copy_encoder[i]), TAG, "RMT copy encoder create failed");
+        ESP_RETURN_ON_ERROR(rmt_enable(g_rmt_tx_chan[i]), TAG, "RMT enable failed");
+    }
+    return ESP_OK;
+}
+
+static esp_err_t rmt_execute_chunk(const uint32_t chunk_steps[AXIS_COUNT], uint32_t chunk_time_us) {
+    axis_id_t active_axes[AXIS_COUNT];
+    rmt_transmit_config_t tx_cfgs[AXIS_COUNT];
+    rmt_symbol_word_t step_symbols[AXIS_COUNT][RMT_MOVE_CHUNK_STEPS];
+    int active_count = 0;
+    uint32_t active_mask = 0;
+    esp_err_t ret = ESP_OK;
+
+    for (int axis = 0; axis < AXIS_COUNT; ++axis) {
+        if (chunk_steps[axis] == 0) continue;
+        if (!g_rmt_tx_chan[axis] || !g_rmt_copy_encoder[axis]) {
+            ESP_LOGE(TAG, "Axis %d has no RMT backend configured", axis);
+            return ESP_ERR_NOT_SUPPORTED;
+        }
+        if (chunk_steps[axis] > RMT_MOVE_CHUNK_STEPS) {
+            ESP_LOGE(TAG, "Axis %d chunk too large for symbol buffer (%" PRIu32 ")", axis, chunk_steps[axis]);
+            return ESP_ERR_INVALID_ARG;
+        }
+
+        uint32_t period_us = clamp_period_us((chunk_time_us + chunk_steps[axis] / 2) / chunk_steps[axis]);
+        for (uint32_t s = 0; s < chunk_steps[axis]; ++s) {
+            step_symbols[active_count][s] = (rmt_symbol_word_t) {
+                .level0 = 1,
+                .duration0 = STEP_PULSE_US,
+                .level1 = 0,
+                .duration1 = period_us - STEP_PULSE_US,
+            };
+        }
+
+        tx_cfgs[active_count] = (rmt_transmit_config_t) {
+            .loop_count = 0,
+            // .eot_level = 0,
+        };
+        active_axes[active_count] = (axis_id_t)axis;
+        active_mask |= (1U << axis);
+        active_count++;
+    }
+
+    if (active_count == 0) return ESP_OK;
+
+    esp_rom_delay_us(DIR_SETUP_DELAY_US);
+
+    rmt_sync_manager_handle_t sync_mgr = rmt_get_sync_manager_for_mask(active_mask);
+
+    for (int i = 0; i < active_count; ++i) {
+        size_t payload_size = chunk_steps[active_axes[i]] * sizeof(rmt_symbol_word_t);
+        ret = rmt_transmit(g_rmt_tx_chan[active_axes[i]], g_rmt_copy_encoder[active_axes[i]],
+                           step_symbols[i], payload_size, &tx_cfgs[i]);
+        if (ret != ESP_OK) goto out;
+    }
+
+    for (int i = 0; i < active_count; ++i) {
+        ret = rmt_tx_wait_all_done(g_rmt_tx_chan[active_axes[i]], -1);
+        if (ret != ESP_OK) goto out;
+    }
+
+out:
+    if (sync_mgr) {
+        rmt_sync_reset(sync_mgr);
+    }
+    return ret;
+}
+
+static esp_err_t rmt_move_axis_steps(axis_id_t axis, bool positive, uint32_t steps, uint32_t interval_us) {
+    if (steps == 0) return ESP_OK;
+    if (!g_rmt_tx_chan[axis]) return ESP_ERR_NOT_SUPPORTED;
+
+    uint32_t remaining = steps;
+    set_axis_enable(axis, true);
+    bool level = positive;
+    if (g_axes[axis].invert_dir) level = !level;
+    if (pin_is_valid(g_axes[axis].dir_pin)) {
+        gpio_set_level(g_axes[axis].dir_pin, level ? 1 : 0);
+    }
+
+    while (remaining > 0) {
+        uint32_t chunk = remaining > RMT_HOME_CHUNK_STEPS ? RMT_HOME_CHUNK_STEPS : remaining;
+        uint32_t counts[AXIS_COUNT] = {0};
+        counts[axis] = chunk;
+        ESP_RETURN_ON_ERROR(rmt_execute_chunk(counts, chunk * clamp_period_us(interval_us)), TAG, "RMT home chunk failed");
+        remaining -= chunk;
+        if (machine_faulted()) return ESP_FAIL;
+    }
+    return ESP_OK;
+}
+
+typedef struct {
+    uint32_t step_count[AXIS_COUNT];
+    rmt_symbol_word_t *symbols[AXIS_COUNT];
+    uint32_t active_mask;
+} rmt_move_plan_t;
+
+static void rmt_move_plan_free(rmt_move_plan_t *plan) {
+    if (!plan) return;
+    for (int axis = 0; axis < AXIS_COUNT; ++axis) {
+        free(plan->symbols[axis]);
+        plan->symbols[axis] = NULL;
+        plan->step_count[axis] = 0;
+    }
+    plan->active_mask = 0;
+}
+
+static esp_err_t rmt_build_move_plan(const int32_t delta[AXIS_COUNT], int32_t max_steps, uint32_t base_interval_us, rmt_move_plan_t *plan) {
+    if (!plan) return ESP_ERR_INVALID_ARG;
+    memset(plan, 0, sizeof(*plan));
+
+    int32_t abs_delta[AXIS_COUNT] = {0};
+    int32_t err[AXIS_COUNT] = {0};
+    uint32_t write_idx[AXIS_COUNT] = {0};
+
+    for (int axis = 0; axis < AXIS_COUNT; ++axis) {
+        abs_delta[axis] = abs(delta[axis]);
+        if (abs_delta[axis] == 0) continue;
+        if (!g_rmt_tx_chan[axis] || !g_rmt_copy_encoder[axis]) {
+            ESP_LOGE(TAG, "Axis %d requested to move but has no STEP pin/RMT channel", axis);
+            rmt_move_plan_free(plan);
+            return ESP_ERR_NOT_SUPPORTED;
+        }
+
+        plan->symbols[axis] = calloc((size_t)abs_delta[axis], sizeof(rmt_symbol_word_t));
+        if (!plan->symbols[axis]) {
+            ESP_LOGE(TAG, "Failed to allocate RMT symbols for axis %d (%d steps)", axis, abs_delta[axis]);
+            rmt_move_plan_free(plan);
+            return ESP_ERR_NO_MEM;
+        }
+        plan->step_count[axis] = (uint32_t)abs_delta[axis];
+        plan->active_mask |= (1U << axis);
+    }
+
+    for (int32_t master = 0; master < max_steps; ++master) {
+        uint32_t interval_us = move_interval_with_ramp(base_interval_us, master, max_steps);
+        for (int axis = 0; axis < AXIS_COUNT; ++axis) {
+            if (abs_delta[axis] == 0) continue;
+            err[axis] += abs_delta[axis];
+            if (err[axis] >= max_steps) {
+                plan->symbols[axis][write_idx[axis]++] = (rmt_symbol_word_t) {
+                    .level0 = 1,
+                    .duration0 = STEP_PULSE_US,
+                    .level1 = 0,
+                    .duration1 = interval_us - STEP_PULSE_US,
+                };
+                err[axis] -= max_steps;
+            }
+        }
+    }
+
+    for (int axis = 0; axis < AXIS_COUNT; ++axis) {
+        if ((uint32_t)abs_delta[axis] != write_idx[axis]) {
+            ESP_LOGE(TAG, "RMT move plan mismatch on axis %d (%" PRIu32 " != %d)", axis, write_idx[axis], abs_delta[axis]);
+            rmt_move_plan_free(plan);
+            return ESP_FAIL;
+        }
+    }
+
+    return ESP_OK;
+}
+
+static esp_err_t rmt_execute_move_plan(const rmt_move_plan_t *plan) {
+    if (!plan) return ESP_ERR_INVALID_ARG;
+    if (plan->active_mask == 0) return ESP_OK;
+
+    rmt_sync_manager_handle_t sync_mgr = rmt_get_sync_manager_for_mask(plan->active_mask);
+    esp_err_t ret = ESP_OK;
+    rmt_transmit_config_t tx_cfg = {
+        .loop_count = 0,
+    };
+
+    esp_rom_delay_us(DIR_SETUP_DELAY_US);
+
+    for (int axis = 0; axis < AXIS_COUNT; ++axis) {
+        if (!(plan->active_mask & (1U << axis))) continue;
+        size_t payload_size = (size_t)plan->step_count[axis] * sizeof(rmt_symbol_word_t);
+        ret = rmt_transmit(g_rmt_tx_chan[axis], g_rmt_copy_encoder[axis], plan->symbols[axis], payload_size, &tx_cfg);
+        if (ret != ESP_OK) goto out;
+    }
+
+    for (int axis = 0; axis < AXIS_COUNT; ++axis) {
+        if (!(plan->active_mask & (1U << axis))) continue;
+        ret = rmt_tx_wait_all_done(g_rmt_tx_chan[axis], -1);
+        if (ret != ESP_OK) goto out;
+    }
+
+out:
+    if (sync_mgr) {
+        rmt_sync_reset(sync_mgr);
+    }
+    return ret;
 }
 
 // ---------- Thermistor / heater ----------
@@ -381,20 +686,20 @@ static void heater_task(void *arg) {
         xSemaphoreGive(g_state_mutex);
 
         if (faulted) {
-            gpio_set_level(PIN_BED_SSR, 0);
+            if (PIN_BED_SSR != GPIO_NUM_NC) gpio_set_level(PIN_BED_SSR, 0);
             vTaskDelay(pdMS_TO_TICKS(250));
             continue;
         }
 
         if (isnan(temp_c) || temp_c < BED_MIN_VALID_C || temp_c > BED_MAX_VALID_C) {
-            gpio_set_level(PIN_BED_SSR, 0);
+            if (PIN_BED_SSR != GPIO_NUM_NC) gpio_set_level(PIN_BED_SSR, 0);
             latch_fault("Bed thermistor invalid or out of range");
             vTaskDelay(pdMS_TO_TICKS(250));
             continue;
         }
 
         if (!heater_enabled || target_c < 0.1f) {
-            gpio_set_level(PIN_BED_SSR, 0);
+            if (PIN_BED_SSR != GPIO_NUM_NC) gpio_set_level(PIN_BED_SSR, 0);
             heat_start_ms = 0;
             start_temp = temp_c;
             vTaskDelay(pdMS_TO_TICKS(250));
@@ -403,9 +708,9 @@ static void heater_task(void *arg) {
 
         // Starter bang-bang control suitable for a zero-cross SSR; upgrade later if needed.
         if (temp_c < (target_c - BED_BANGBANG_HYST)) {
-            gpio_set_level(PIN_BED_SSR, 1);
+            if (PIN_BED_SSR != GPIO_NUM_NC) gpio_set_level(PIN_BED_SSR, 1);
         } else if (temp_c > (target_c + BED_BANGBANG_HYST)) {
-            gpio_set_level(PIN_BED_SSR, 0);
+            if (PIN_BED_SSR != GPIO_NUM_NC) gpio_set_level(PIN_BED_SSR, 0);
         }
 
         const int64_t now_ms = esp_timer_get_time() / 1000;
@@ -415,12 +720,12 @@ static void heater_task(void *arg) {
         }
 
         if ((now_ms - heat_start_ms) > BED_HEATUP_TIMEOUT_MS && (temp_c - start_temp) < BED_MIN_RISE_C) {
-            gpio_set_level(PIN_BED_SSR, 0);
+            if (PIN_BED_SSR != GPIO_NUM_NC) gpio_set_level(PIN_BED_SSR, 0);
             latch_fault("Bed failed to warm fast enough");
         }
 
         if (temp_c > BED_MAX_C + 5.0f) {
-            gpio_set_level(PIN_BED_SSR, 0);
+            if (PIN_BED_SSR != GPIO_NUM_NC) gpio_set_level(PIN_BED_SSR, 0);
             latch_fault("Bed over-temperature");
         }
 
@@ -430,10 +735,11 @@ static void heater_task(void *arg) {
 
 // ---------- Motion ----------
 static void set_axis_direction(axis_id_t axis, bool positive) {
-    printf("Positive: %d", positive);
+    const axis_hw_t *a = &g_axes[axis];
+    if (!pin_is_valid(a->dir_pin)) return;
     bool level = positive;
-    if (g_axes[axis].invert_dir) level = !level;
-    gpio_set_level(g_axes[axis].dir_pin, level ? 1 : 0);
+    if (a->invert_dir) level = !level;
+    gpio_set_level(a->dir_pin, level ? 1 : 0);
 }
 
 static esp_err_t move_linear_steps(const int32_t target_steps[AXIS_COUNT], float feed_mm_min) {
@@ -444,8 +750,7 @@ static esp_err_t move_linear_steps(const int32_t target_steps[AXIS_COUNT], float
     int32_t delta[AXIS_COUNT];
     int32_t abs_delta[AXIS_COUNT];
     int32_t max_steps = 0;
-    int32_t err[AXIS_COUNT] = {0};
-    int32_t current[AXIS_COUNT];
+    rmt_move_plan_t plan = {0};
 
     if (machine_faulted()) {
         ret = ESP_FAIL;
@@ -469,44 +774,38 @@ static esp_err_t move_linear_steps(const int32_t target_steps[AXIS_COUNT], float
         goto cleanup;
     }
 
+    if (is_switch_triggered(g_axes[AXIS_X].min_pin) && delta[AXIS_X] < 0) { latch_fault("Hit X min during move"); ret = ESP_FAIL; goto cleanup; }
+    if (is_switch_triggered(g_axes[AXIS_X].max_pin) && delta[AXIS_X] > 0) { latch_fault("Hit X max during move"); ret = ESP_FAIL; goto cleanup; }
+    if (is_switch_triggered(g_axes[AXIS_Y].min_pin) && delta[AXIS_Y] < 0) { latch_fault("Hit Y min during move"); ret = ESP_FAIL; goto cleanup; }
+    if (is_switch_triggered(g_axes[AXIS_Y].max_pin) && delta[AXIS_Y] > 0) { latch_fault("Hit Y max during move"); ret = ESP_FAIL; goto cleanup; }
+    if (is_switch_triggered(g_axes[AXIS_Z].min_pin) && delta[AXIS_Z] < 0) { latch_fault("Hit Z min during move"); ret = ESP_FAIL; goto cleanup; }
+    if (is_switch_triggered(g_axes[AXIS_Z].max_pin) && delta[AXIS_Z] > 0) { latch_fault("Hit Z max during move"); ret = ESP_FAIL; goto cleanup; }
+
     float dx = steps_to_mm(AXIS_X, delta[AXIS_X]);
     float dy = steps_to_mm(AXIS_Y, delta[AXIS_Y]);
     float dz = steps_to_mm(AXIS_Z, delta[AXIS_Z]);
     float de = steps_to_mm(AXIS_E, delta[AXIS_E]);
-    float path_mm = sqrtf(dx*dx + dy*dy + dz*dz + de*de);
+    float path_mm = sqrtf(dx * dx + dy * dy + dz * dz + de * de);
     if (path_mm < 0.001f) path_mm = fmaxf(fabsf(dx) + fabsf(dy) + fabsf(dz) + fabsf(de), 0.001f);
     float move_time_s = path_mm / (feed_mm_min / 60.0f);
-    uint32_t interval_us = (uint32_t)fmaxf((move_time_s * 1e6f) / (float)max_steps, (float)STEP_MIN_INTERVAL_US);
+    uint32_t interval_us = clamp_period_us((uint32_t)fmaxf((move_time_s * 1e6f) / (float)max_steps, (float)(STEP_PULSE_US + 1)));
 
-    memcpy(current, start, sizeof(current));
+    ret = rmt_build_move_plan(delta, max_steps, interval_us, &plan);
+    if (ret != ESP_OK) goto cleanup;
+
     set_all_axes_enabled(true);
-
-    for (int32_t i = 0; i < max_steps; ++i) {
-        if (machine_faulted()) { ret = ESP_FAIL; goto cleanup; }
-
-        if (is_switch_triggered(g_axes[AXIS_X].min_pin) && delta[AXIS_X] < 0) { latch_fault("Hit X min during move"); ret = ESP_FAIL; goto cleanup; }
-        if (is_switch_triggered(g_axes[AXIS_X].max_pin) && delta[AXIS_X] > 0) { latch_fault("Hit X max during move"); ret = ESP_FAIL; goto cleanup; }
-        if (is_switch_triggered(g_axes[AXIS_Y].min_pin) && delta[AXIS_Y] < 0) { latch_fault("Hit Y min during move"); ret = ESP_FAIL; goto cleanup; }
-        if (is_switch_triggered(g_axes[AXIS_Y].max_pin) && delta[AXIS_Y] > 0) { latch_fault("Hit Y max during move"); ret = ESP_FAIL; goto cleanup; }
-        if (is_switch_triggered(g_axes[AXIS_Z].min_pin) && delta[AXIS_Z] < 0) { latch_fault("Hit Z min during move"); ret = ESP_FAIL; goto cleanup; }
-        if (is_switch_triggered(g_axes[AXIS_Z].max_pin) && delta[AXIS_Z] > 0) { latch_fault("Hit Z max during move"); ret = ESP_FAIL; goto cleanup; }
-
-        for (int axis = 0; axis < AXIS_COUNT; ++axis) {
-            err[axis] += abs_delta[axis];
-            if (err[axis] >= max_steps) {
-                pulse_step(g_axes[axis].step_pin);
-                err[axis] -= max_steps;
-                current[axis] += (delta[axis] >= 0) ? 1 : -1;
-            }
-        }
-        esp_rom_delay_us(interval_us);
-    }
+    ret = rmt_execute_move_plan(&plan);
+    if (ret != ESP_OK) goto cleanup;
 
     xSemaphoreTake(g_state_mutex, portMAX_DELAY);
     memcpy(g_state.pos_steps, target_steps, sizeof(g_state.pos_steps));
     xSemaphoreGive(g_state_mutex);
 
 cleanup:
+    if (ret != ESP_OK) {
+        rmt_abort_all();
+    }
+    rmt_move_plan_free(&plan);
     set_all_axes_enabled(false);
     xSemaphoreGiveRecursive(g_motion_mutex);
     return ret;
@@ -516,47 +815,33 @@ static esp_err_t home_single_axis(axis_id_t axis) {
     if (axis == AXIS_E) return ESP_OK;
 
     const axis_hw_t *a = &g_axes[axis];
-    if (a->min_pin == GPIO_NUM_NC) {
-        return ESP_ERR_NOT_SUPPORTED;
-    }
+    if (a->min_pin == GPIO_NUM_NC) return ESP_ERR_NOT_SUPPORTED;
+    if (!g_rmt_tx_chan[axis]) return ESP_ERR_NOT_SUPPORTED;
 
-    // Move toward min switch.
     set_axis_enable(axis, true);
-    set_axis_direction(axis, !a->home_to_min);
-    if (a->home_to_min) set_axis_direction(axis, false);
 
     if (is_switch_triggered(a->min_pin)) {
-        // Back off if already on the switch.
-        set_axis_direction(axis, true);
-        for (int i = 0; i < mm_to_steps(axis, HOMING_BACKOFF_MM); ++i) {
-            pulse_step(a->step_pin);
-            esp_rom_delay_us(1200);
-        }
+        ESP_RETURN_ON_ERROR(rmt_move_axis_steps(axis, true, (uint32_t)mm_to_steps(axis, HOMING_BACKOFF_MM), 1200), TAG, "home backoff failed");
     }
 
-    set_axis_direction(axis, false);
-    for (int i = 0; i < mm_to_steps(axis, 400.0f); ++i) {
-        if (is_switch_triggered(a->min_pin)) break;
-        pulse_step(a->step_pin);
-        esp_rom_delay_us(900);
+    uint32_t search_steps = (uint32_t)mm_to_steps(axis, 400.0f);
+    while (!is_switch_triggered(a->min_pin) && search_steps > 0) {
+        uint32_t chunk = search_steps > RMT_HOME_CHUNK_STEPS ? RMT_HOME_CHUNK_STEPS : search_steps;
+        ESP_RETURN_ON_ERROR(rmt_move_axis_steps(axis, false, chunk, 900), TAG, "home seek failed");
+        search_steps -= chunk;
     }
     if (!is_switch_triggered(a->min_pin)) {
         latch_fault("Homing switch not found");
         return ESP_FAIL;
     }
 
-    // Back off and re-home slowly.
-    set_axis_direction(axis, true);
-    for (int i = 0; i < mm_to_steps(axis, HOMING_BACKOFF_MM); ++i) {
-        pulse_step(a->step_pin);
-        esp_rom_delay_us(1200);
-    }
+    ESP_RETURN_ON_ERROR(rmt_move_axis_steps(axis, true, (uint32_t)mm_to_steps(axis, HOMING_BACKOFF_MM), 1200), TAG, "home re-backoff failed");
 
-    set_axis_direction(axis, false);
-    for (int i = 0; i < mm_to_steps(axis, HOMING_BACKOFF_MM * 2.0f); ++i) {
-        if (is_switch_triggered(a->min_pin)) break;
-        pulse_step(a->step_pin);
-        esp_rom_delay_us(2000);
+    uint32_t slow_steps = (uint32_t)mm_to_steps(axis, HOMING_BACKOFF_MM * 2.0f);
+    while (!is_switch_triggered(a->min_pin) && slow_steps > 0) {
+        uint32_t chunk = slow_steps > RMT_HOME_CHUNK_STEPS ? RMT_HOME_CHUNK_STEPS : slow_steps;
+        ESP_RETURN_ON_ERROR(rmt_move_axis_steps(axis, false, chunk, 2000), TAG, "home slow seek failed");
+        slow_steps -= chunk;
     }
     if (!is_switch_triggered(a->min_pin)) {
         latch_fault("Slow homing switch not found");
@@ -568,6 +853,7 @@ static esp_err_t home_single_axis(axis_id_t axis) {
     g_state.homed[axis] = true;
     xSemaphoreGive(g_state_mutex);
 
+    set_axis_enable(axis, false);
     ESP_LOGI(TAG, "Axis %c homed", axis == AXIS_X ? 'X' : axis == AXIS_Y ? 'Y' : 'Z');
     return ESP_OK;
 }
@@ -579,6 +865,10 @@ static esp_err_t home_all_axes(void) {
     if ((ret = home_single_axis(AXIS_X)) != ESP_OK) goto done;
     if ((ret = home_single_axis(AXIS_Y)) != ESP_OK) goto done;
 done:
+    if (ret != ESP_OK) {
+        rmt_abort_all();
+    }
+    set_all_axes_enabled(false);
     xSemaphoreGiveRecursive(g_motion_mutex);
     return ret;
 }
@@ -913,7 +1203,7 @@ static void console_task(void *arg) {
             g_state.heater_enabled = false;
             g_state.bed_target_c = 0.0f;
             xSemaphoreGive(g_state_mutex);
-            gpio_set_level(PIN_BED_SSR, 0);
+            if (PIN_BED_SSR != GPIO_NUM_NC) gpio_set_level(PIN_BED_SSR, 0);
             set_all_axes_enabled(false);
             ESP_LOGW(TAG, "Stop requested");
             // Free buffer
@@ -1158,7 +1448,7 @@ static void ui_motion_task(void *arg) {
             g_state.heater_enabled = false;
             g_state.bed_target_c = 0.0f;
             xSemaphoreGive(g_state_mutex);
-            gpio_set_level(PIN_BED_SSR, 0);
+            if (PIN_BED_SSR != GPIO_NUM_NC) gpio_set_level(PIN_BED_SSR, 0);
             set_all_axes_enabled(false);
             continue;
         }
@@ -1297,38 +1587,47 @@ static esp_err_t ui_display_touch_init(void) {
 
 // ---------- Init ----------
 static void gpio_init_all(void) {
-    gpio_config_t out_cfg = {
-        .pin_bit_mask = (1ULL << PIN_X_STEP) | (1ULL << PIN_X_DIR) | (1ULL << PIN_X_EN), //|
-        //                 (1ULL << PIN_Y_STEP) | (1ULL << PIN_Y_DIR) | (1ULL << PIN_Y_EN) |
-        //                 (1ULL << PIN_Z_STEP) | (1ULL << PIN_Z_DIR) | (1ULL << PIN_Z_EN) |
-        //                 (1ULL << PIN_E_STEP) | (1ULL << PIN_E_DIR) | (1ULL << PIN_E_EN) |
-        //                 (1ULL << PIN_BED_SSR),
-        .mode = GPIO_MODE_OUTPUT,
-        .pull_up_en = GPIO_PULLUP_DISABLE,
-        .pull_down_en = GPIO_PULLDOWN_DISABLE,
-        .intr_type = GPIO_INTR_DISABLE,
-    };
-    ESP_ERROR_CHECK(gpio_config(&out_cfg));
+    uint64_t out_mask = 0;
+    uint64_t in_mask = 0;
 
-    gpio_config_t in_cfg = {
-        .pin_bit_mask = 0ULL,
-        // .pin_bit_mask = (1ULL << PIN_X_MIN) | (1ULL << PIN_X_MAX) |
-        //                 (1ULL << PIN_Y_MIN) | (1ULL << PIN_Y_MAX) |
-        //                 (1ULL << PIN_Z_MIN) | (1ULL << PIN_Z_MAX) |
-        //                 (1ULL << PIN_Z_PROBE),
-        .mode = GPIO_MODE_INPUT,
-        .pull_up_en = GPIO_PULLUP_ENABLE,
-        .pull_down_en = GPIO_PULLDOWN_DISABLE,
-        .intr_type = GPIO_INTR_DISABLE,
-    };
-    // ESP_ERROR_CHECK(gpio_config(&in_cfg));
+    for (int i = 0; i < AXIS_COUNT; ++i) {
+        out_mask = add_pin_to_mask(out_mask, g_axes[i].step_pin);
+        out_mask = add_pin_to_mask(out_mask, g_axes[i].dir_pin);
+        out_mask = add_pin_to_mask(out_mask, g_axes[i].en_pin);
+        in_mask = add_pin_to_mask(in_mask, g_axes[i].min_pin);
+        in_mask = add_pin_to_mask(in_mask, g_axes[i].max_pin);
+    }
+    out_mask = add_pin_to_mask(out_mask, PIN_BED_SSR);
+    in_mask = add_pin_to_mask(in_mask, PIN_Z_PROBE);
+
+    if (out_mask) {
+        gpio_config_t out_cfg = {
+            .pin_bit_mask = out_mask,
+            .mode = GPIO_MODE_OUTPUT,
+            .pull_up_en = GPIO_PULLUP_DISABLE,
+            .pull_down_en = GPIO_PULLDOWN_DISABLE,
+            .intr_type = GPIO_INTR_DISABLE,
+        };
+        ESP_ERROR_CHECK(gpio_config(&out_cfg));
+    }
+
+    if (in_mask) {
+        gpio_config_t in_cfg = {
+            .pin_bit_mask = in_mask,
+            .mode = GPIO_MODE_INPUT,
+            .pull_up_en = GPIO_PULLUP_ENABLE,
+            .pull_down_en = GPIO_PULLDOWN_DISABLE,
+            .intr_type = GPIO_INTR_DISABLE,
+        };
+        ESP_ERROR_CHECK(gpio_config(&in_cfg));
+    }
 
     for (int i = 0; i < AXIS_COUNT; ++i) {
         set_axis_enable((axis_id_t)i, false);
-        gpio_set_level(g_axes[i].step_pin, 0);
-        gpio_set_level(g_axes[i].dir_pin, 0);
+        if (pin_is_valid(g_axes[i].step_pin)) gpio_set_level(g_axes[i].step_pin, 0);
+        if (pin_is_valid(g_axes[i].dir_pin)) gpio_set_level(g_axes[i].dir_pin, 0);
     }
-    gpio_set_level(PIN_BED_SSR, 0);
+    if (pin_is_valid(PIN_BED_SSR)) gpio_set_level(PIN_BED_SSR, 0);
 }
 
 #define BLINK_GPIO GPIO_NUM_48
@@ -1347,6 +1646,7 @@ void app_main(void) {
     g_state.absolute_mode = true;
 
     gpio_init_all();
+    ESP_ERROR_CHECK(rmt_motion_init());
     ESP_ERROR_CHECK(thermistor_adc_init());
 
     if (sdcard_init() != ESP_OK) {
