@@ -7847,6 +7847,16 @@
 		)
 		(uuid "6c129f35-abb3-4687-9a87-41370b92ecd6")
 	)
+	(text "Find new potentiometer footprint, I dont think I want a massive and horizontal one"
+		(exclude_from_sim no)
+		(at 480.314 294.64 0)
+		(effects
+			(font
+				(size 3.81 3.81)
+			)
+		)
+		(uuid "6e5a8a3c-8457-4a18-b770-8637793972f4")
+	)
 	(text "Max 8 ma"
 		(exclude_from_sim no)
 		(at 154.432 308.356 0)

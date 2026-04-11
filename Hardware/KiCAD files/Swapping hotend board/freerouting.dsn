@@ -1,0 +1,207 @@
+(pcb freerouting.dsn
+  (parser
+    (string_quote ")
+    (space_in_quoted_tokens on)
+    (host_cad "KiCad's Pcbnew")
+    (host_version "10.0.0")
+  )
+  (resolution um 10)
+  (unit um)
+  (structure
+    (layer F.Cu
+      (type signal)
+      (property
+        (index 0)
+      )
+    )
+    (layer B.Cu
+      (type signal)
+      (property
+        (index 1)
+      )
+    )
+    (boundary
+      (path pcb 0  87488.2 -62883.2  35574.8 -62883.2  35574.8 -33566.8
+            87488.2 -33566.8  87488.2 -62883.2)
+    )
+    (via "Via[0-1]_600:300_um")
+    (rule
+      (width 200)
+      (clearance 200)
+      (clearance 50 (type smd_smd))
+    )
+  )
+  (placement
+    (component "Package_DIP:DIP-8_W7.62mm"
+      (place U2 76690 -47310 front 90 (PN ~))
+    )
+    (component "PCM_SparkFun-Connector:JST_1x04_P1.0mm_Vertical_SMD"
+      (place J24 56000 -44500 front -90 (PN JST_SMD_1.0mm_Vertical))
+    )
+    (component Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical
+      (place J19 42295 -36795 front 0 (PN PINHD_1x10_Male))
+    )
+  )
+  (library
+    (image "Package_DIP:DIP-8_W7.62mm"
+      (outline (polygon signal 0  -1055 -9135  -1055 1515  8665 1515  8665 -9135))
+      (outline (path signal 120  1160 1330  1160 -8950))
+      (outline (path signal 120  1160 -8950  6460 -8950))
+      (outline (path signal 120  2810 1330  1160 1330))
+      (outline (path signal 120  6460 1330  4810 1330))
+      (outline (path signal 120  6460 -8950  6460 1330))
+      (outline (polygon signal 0  4750 1330  4761.46 1365.27  4791.46 1387.06  4828.54 1387.06
+            4858.54 1365.27  4870 1330  4851.95 1135.23  4798.42 947.084
+            4711.23 771.982  4593.35 615.883  4448.79 484.102  4282.48 381.127
+            4100.08 310.465  3907.8 274.522  3712.2 274.522  3519.92 310.465
+            3337.52 381.127  3171.21 484.102  3026.65 615.883  2908.77 771.982
+            2821.58 947.084  2768.05 1135.23  2750 1330  2761.46 1365.27
+            2791.46 1387.06  2828.54 1387.06  2858.54 1365.27  2870 1330
+            2870 1237.42  2906.12 1055.81  2976.98 884.743  3079.86 730.785
+            3210.78 599.855  3364.74 496.983  3535.81 426.124  3717.42 390
+            3902.58 390  4084.19 426.124  4255.26 496.983  4409.22 599.855
+            4540.15 730.785  4643.02 884.743  4713.88 1055.81  4750 1237.42
+            4750 1330))
+      (outline (path signal 100  635 270  1635 1270))
+      (outline (path signal 100  635 -8890  635 270))
+      (outline (path signal 100  1635 1270  6985 1270))
+      (outline (path signal 100  6985 1270  6985 -8890))
+      (outline (path signal 100  6985 -8890  635 -8890))
+      (pin RoundRect[A]Pad_1600.000000x1600.000000_250.951000_um_0.000000_0 1 0 0)
+      (pin Round[A]Pad_1600.000000_um 2 0 -2540)
+      (pin Round[A]Pad_1600.000000_um 3 0 -5080)
+      (pin Round[A]Pad_1600.000000_um 4 0 -7620)
+      (pin Round[A]Pad_1600.000000_um 5 7620 -7620)
+      (pin Round[A]Pad_1600.000000_um 6 7620 -5080)
+      (pin Round[A]Pad_1600.000000_um 7 7620 -2540)
+      (pin Round[A]Pad_1600.000000_um 8 7620 0)
+    )
+    (image "PCM_SparkFun-Connector:JST_1x04_P1.0mm_Vertical_SMD"
+      (outline (polygon signal 0  3495 1995  3495 -195  3395 -195  3395 -1845  1895 -1845
+            1895 -2395  -1895 -2395  -1895 -1845  -3395 -1845  -3395 -195
+            -3495 -195  -3495 1995))
+      (outline (path signal 254  -3175 -889  -3175 -1651))
+      (outline (path signal 254  -3175 -1651  -2413 -1651))
+      (outline (path signal 254  1905 1651  -1905 1651))
+      (outline (path signal 254  3175 -889  3175 -1651))
+      (outline (path signal 254  3175 -1651  2413 -1651))
+      (outline (path signal 100  -3300 1214  -3300 714))
+      (outline (path signal 100  -3300 714  -3000 714))
+      (outline (path signal 100  -3000 1214  -3300 1214))
+      (outline (path signal 100  3000 714  3300 714))
+      (outline (path signal 100  3300 1214  3000 1214))
+      (outline (path signal 100  3300 714  3300 1214))
+      (pin Rect[T]Pad_600.000000x1550.000000_um 1 -1500 -1511)
+      (pin Rect[T]Pad_600.000000x1550.000000_um 2 -500 -1511)
+      (pin Rect[T]Pad_600.000000x1550.000000_um 3 500 -1511)
+      (pin Rect[T]Pad_600.000000x1550.000000_um 4 1500 -1511)
+      (pin Rect[T]Pad_1200.000000x2000.000000_um NC1 -2800 914)
+      (pin Rect[T]Pad_1200.000000x2000.000000_um NC2 2800 914)
+    )
+    (image Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical
+      (outline (polygon signal 0  1765 -24625  -1765 -24625  -1765 1765  1765 1765))
+      (outline (path signal 120  -1380 1380  0 1380))
+      (outline (path signal 120  -1380 0  -1380 1380))
+      (outline (path signal 120  -1380 -1270  -1380 -24240))
+      (outline (path signal 120  -1380 -1270  1380 -1270))
+      (outline (path signal 120  -1380 -24240  1380 -24240))
+      (outline (path signal 120  1380 -1270  1380 -24240))
+      (outline (path signal 100  -1270 635  -635 1270))
+      (outline (path signal 100  -1270 -24130  -1270 635))
+      (outline (path signal 100  -635 1270  1270 1270))
+      (outline (path signal 100  1270 1270  1270 -24130))
+      (outline (path signal 100  1270 -24130  -1270 -24130))
+      (pin Rect[A]Pad_1700.000000x1700.000000_um 1 0 0)
+      (pin Round[A]Pad_1700.000000_um 2 0 -2540)
+      (pin Round[A]Pad_1700.000000_um 3 0 -5080)
+      (pin Round[A]Pad_1700.000000_um 4 0 -7620)
+      (pin Round[A]Pad_1700.000000_um 5 0 -10160)
+      (pin Round[A]Pad_1700.000000_um 6 0 -12700)
+      (pin Round[A]Pad_1700.000000_um 7 0 -15240)
+      (pin Round[A]Pad_1700.000000_um 8 0 -17780)
+      (pin Round[A]Pad_1700.000000_um 9 0 -20320)
+      (pin Round[A]Pad_1700.000000_um 10 0 -22860)
+    )
+    (padstack Round[A]Pad_1600.000000_um
+      (shape (circle F.Cu 1600))
+      (shape (circle B.Cu 1600))
+      (attach off)
+    )
+    (padstack Round[A]Pad_1700.000000_um
+      (shape (circle F.Cu 1700))
+      (shape (circle B.Cu 1700))
+      (attach off)
+    )
+    (padstack RoundRect[A]Pad_1600.000000x1600.000000_250.951000_um_0.000000_0
+      (shape (polygon F.Cu 0  -800.951 550  -781.848 646.035  -727.449 727.449  -646.035 781.848
+            -549.999 800.95  550 800.951  646.035 781.848  727.449 727.449
+            781.848 646.035  800.95 549.999  800.951 -550  781.848 -646.035
+            727.449 -727.449  646.035 -781.848  549.999 -800.95  -550 -800.951
+            -646.035 -781.848  -727.449 -727.449  -781.848 -646.035  -800.95 -549.999
+            -800.951 550))
+      (shape (polygon B.Cu 0  -800.951 550  -781.848 646.035  -727.449 727.449  -646.035 781.848
+            -549.999 800.95  550 800.951  646.035 781.848  727.449 727.449
+            781.848 646.035  800.95 549.999  800.951 -550  781.848 -646.035
+            727.449 -727.449  646.035 -781.848  549.999 -800.95  -550 -800.951
+            -646.035 -781.848  -727.449 -727.449  -781.848 -646.035  -800.95 -549.999
+            -800.951 550))
+      (attach off)
+    )
+    (padstack Rect[T]Pad_600.000000x1550.000000_um
+      (shape (rect F.Cu -300 -775 300 775))
+      (attach off)
+    )
+    (padstack Rect[T]Pad_1200.000000x2000.000000_um
+      (shape (rect F.Cu -600 -1000 600 1000))
+      (attach off)
+    )
+    (padstack Rect[A]Pad_1700.000000x1700.000000_um
+      (shape (rect F.Cu -850 -850 850 850))
+      (shape (rect B.Cu -850 -850 850 850))
+      (attach off)
+    )
+    (padstack "Via[0-1]_600:300_um"
+      (shape (circle F.Cu 600))
+      (shape (circle B.Cu 600))
+      (attach off)
+    )
+  )
+  (network
+    (net "Net-(U2-SW2-P1)"
+      (pins U2-3 U2-4 J19-10)
+    )
+    (net "Net-(J24-Pin_2)"
+      (pins J24-2 J19-4)
+    )
+    (net GND
+      (pins J19-2 J19-7 J19-8)
+    )
+    (net "Net-(U2-SW1-P1-input)"
+      (pins U2-5 U2-6 U2-7 U2-8 J19-1)
+    )
+    (net "Net-(U2-SW1-P1)"
+      (pins U2-1 U2-2 J19-9)
+    )
+    (net "Net-(J24-Pin_1)"
+      (pins J24-1 J19-3)
+    )
+    (net "Net-(J24-Pin_4)"
+      (pins J24-4 J19-6)
+    )
+    (net "Net-(J24-Pin_3)"
+      (pins J24-3 J19-5)
+    )
+    (class kicad_default GND "Net-(J24-Pin_1)" "Net-(J24-Pin_2)" "Net-(J24-Pin_3)"
+      "Net-(J24-Pin_4)" "Net-(U2-SW1-P1)" "Net-(U2-SW1-P1-input)" "Net-(U2-SW2-P1)"
+      (circuit
+        (use_via "Via[0-1]_600:300_um")
+      )
+      (rule
+        (width 200)
+        (clearance 200)
+      )
+    )
+  )
+  (wiring
+  )
+)

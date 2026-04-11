@@ -1879,7 +1879,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
 			(at 92.71 29.21 0)
 			(hide yes)
 			(show_name no)
