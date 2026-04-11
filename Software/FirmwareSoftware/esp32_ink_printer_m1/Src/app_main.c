@@ -25,43 +25,7 @@
 #include "esp_console.h"
 #include "linenoise/linenoise.h"
 
-// ======== USER PIN CONFIGURATION ========
-// Replace these pins with your actual PCB pins.
-#define PIN_X_STEP          GPIO_NUM_2
-#define PIN_X_DIR           GPIO_NUM_4
-#define PIN_X_EN            GPIO_NUM_1
-#define PIN_X_MIN           GPIO_NUM_NC
-#define PIN_X_MAX           GPIO_NUM_NC
 
-#define PIN_Y_STEP          GPIO_NUM_NC
-#define PIN_Y_DIR           GPIO_NUM_NC
-#define PIN_Y_EN            GPIO_NUM_NC
-#define PIN_Y_MIN           GPIO_NUM_NC
-#define PIN_Y_MAX           GPIO_NUM_NC
-
-#define PIN_Z_STEP          GPIO_NUM_NC
-#define PIN_Z_DIR           GPIO_NUM_NC
-#define PIN_Z_EN            GPIO_NUM_NC
-#define PIN_Z_MIN           GPIO_NUM_NC
-#define PIN_Z_MAX           GPIO_NUM_NC
-
-#define PIN_E_STEP          GPIO_NUM_NC
-#define PIN_E_DIR           GPIO_NUM_NC
-#define PIN_E_EN            GPIO_NUM_NC
-
-#define PIN_Z_PROBE         GPIO_NUM_NC
-#define PIN_BED_SSR         GPIO_NUM_NC
-
-#define PIN_SD_MISO         GPIO_NUM_NC
-#define PIN_SD_MOSI         GPIO_NUM_NC
-#define PIN_SD_SCLK         GPIO_NUM_NC
-#define PIN_SD_CS           GPIO_NUM_NC
-
-// Thermistor on ADC1 channel 6 => GPIO34 on classic ESP32.
-// Change both if you use a different ESP32 variant / pin.
-#define BED_THERM_ADC_UNIT      ADC_UNIT_1
-#define BED_THERM_ADC_CHANNEL   ADC_CHANNEL_6
-#define BED_THERM_ATTEN         ADC_ATTEN_DB_12
 
 // ======== MACHINE CONFIGURATION ========
 #define STEPS_PER_MM_X      80.0f
