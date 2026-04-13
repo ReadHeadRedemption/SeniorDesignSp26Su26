@@ -50,9 +50,9 @@
 #define PIN_Y_MIN           GPIO_NUM_NC
 #define PIN_Y_MAX           GPIO_NUM_NC
 
-#define PIN_Z_STEP          GPIO_NUM_NC
-#define PIN_Z_DIR           GPIO_NUM_NC
-#define PIN_Z_EN            GPIO_NUM_NC
+#define PIN_Z_STEP          GPIO_NUM_41
+#define PIN_Z_DIR           GPIO_NUM_40
+#define PIN_Z_EN            GPIO_NUM_39
 #define PIN_Z_MIN           GPIO_NUM_NC
 #define PIN_Z_MAX           GPIO_NUM_NC
 
@@ -100,9 +100,9 @@
 #define BED_THERM_ATTEN         ADC_ATTEN_DB_12
 
 // ======== MACHINE CONFIGURATION ========
-#define STEPS_PER_MM_X      80.0f
+#define STEPS_PER_MM_X      40.0f
 #define STEPS_PER_MM_Y      80.0f
-#define STEPS_PER_MM_Z      400.0f
+#define STEPS_PER_MM_Z      80.0f
 #define STEPS_PER_MM_E      800.0f   // Plunger axis. Replace with your real value.
 
 #define HOMING_FEED_MM_MIN  600.0f
@@ -134,7 +134,7 @@
 #define DIR_SETUP_DELAY_US      5U
 #define RMT_RAMP_MIN_STEPS      32
 #define RMT_RAMP_MAX_STEPS      256
-#define RMT_START_SLOWDOWN      1.5f
+#define RMT_START_SLOWDOWN      2.5f
 
 static const char *TAG = "ink_printer_m1";
 
@@ -198,6 +198,9 @@ static const axis_hw_t g_axes[AXIS_COUNT] = {
     [AXIS_E] = { PIN_E_STEP, PIN_E_DIR, PIN_E_EN, GPIO_NUM_NC, GPIO_NUM_NC, STEPS_PER_MM_E, false, true, true },
 };
 
+static SemaphoreHandle_t stop_semaphore;
+static SemaphoreHandle_t move_semaphore;
+
 static SemaphoreHandle_t g_state_mutex;
 static machine_state_t g_state;
 static sdmmc_card_t *g_sdcard;
@@ -225,6 +228,8 @@ static lv_obj_t *g_ui_active_ta;
 static rmt_channel_handle_t g_rmt_tx_chan[AXIS_COUNT];
 static rmt_encoder_handle_t g_rmt_copy_encoder[AXIS_COUNT];
 static rmt_sync_manager_handle_t g_rmt_sync_mgr_cache[1 << AXIS_COUNT];
+
+ui_cmd_t ui_cmd;
 
 static void rmt_abort_all(void);
 
@@ -443,11 +448,7 @@ static esp_err_t rmt_execute_chunk(const uint32_t chunk_steps[AXIS_COUNT], uint3
     }
 
     for (int i = 0; i < active_count; ++i) {
-        ret = rmt_tx_wait_all_done(g_rmt_tx_chan[active_axes[i]], pdMS_TO_TICKS(10000));
-        if (ret == ESP_ERR_TIMEOUT) {
-            ESP_LOGE(TAG, "RMT wait timeout on axis %d", active_axes[i]);
-            goto out;
-        }
+        ret = rmt_tx_wait_all_done(g_rmt_tx_chan[active_axes[i]], -1);
         if (ret != ESP_OK) goto out;
     }
 
@@ -589,11 +590,7 @@ static esp_err_t rmt_execute_move_plan(const rmt_move_plan_t *plan) {
 
     for (int axis = 0; axis < AXIS_COUNT; ++axis) {
         if (!(plan->active_mask & (1U << axis))) continue;
-        ret = rmt_tx_wait_all_done(g_rmt_tx_chan[axis], pdMS_TO_TICKS(10000));
-        if (ret == ESP_ERR_TIMEOUT) {
-            ESP_LOGE(TAG, "RMT wait timeout on axis %d", axis);
-            goto out;
-        }
+        ret = rmt_tx_wait_all_done(g_rmt_tx_chan[axis], -1);
         if (ret != ESP_OK) goto out;
     }
 
@@ -1233,6 +1230,45 @@ static void print_help(void) {
     printf("  Any supported G-code: G0/G1/G28/G90/G91/G92/M105/M140/M190/M112/M18/M84\n\n");
 }
 
+static void move_task(void *arg)
+{
+    while (1)
+    {
+        if (xSemaphoreTake(move_semaphore, portMAX_DELAY) == pdTRUE)
+        {
+            int32_t target[AXIS_COUNT];
+            xSemaphoreTake(g_state_mutex, portMAX_DELAY);
+            memcpy(target, g_state.pos_steps, sizeof(target));
+            xSemaphoreGive(g_state_mutex);
+
+            if (!isnan(ui_cmd.x)) target[AXIS_X] = mm_to_steps(AXIS_X, ui_cmd.x);
+            if (!isnan(ui_cmd.y)) target[AXIS_Y] = mm_to_steps(AXIS_Y, ui_cmd.y);
+            if (!isnan(ui_cmd.z)) target[AXIS_Z] = mm_to_steps(AXIS_Z, ui_cmd.z);
+            if (!isnan(ui_cmd.e)) target[AXIS_E] = mm_to_steps(AXIS_E, ui_cmd.e);
+
+            move_linear_steps(target, ui_cmd.f > 0 ? ui_cmd.f : DEFAULT_FEED_MM_MIN);
+        }
+    }
+}
+
+static void stop_task(void *arg)
+{
+    while (1)
+    {
+        if (xSemaphoreTake(stop_semaphore, portMAX_DELAY) == pdTRUE)
+        {
+            xSemaphoreTake(g_state_mutex, portMAX_DELAY);
+            g_state.stop_requested = true;
+            g_state.printing = false;
+            g_state.heater_enabled = false;
+            g_state.bed_target_c = 0.0f;
+            xSemaphoreGive(g_state_mutex);
+            if (PIN_BED_SSR != GPIO_NUM_NC) gpio_set_level(PIN_BED_SSR, 0);
+            set_all_axes_enabled(false);
+        }
+    }
+}
+
 static void console_task(void *arg) {
     (void)arg;
     char* line;
@@ -1274,14 +1310,7 @@ static void console_task(void *arg) {
             continue;
         }
         if (strcasecmp(cmd, "stop") == 0) {
-            xSemaphoreTake(g_state_mutex, portMAX_DELAY);
-            g_state.stop_requested = true;
-            g_state.printing = false;
-            g_state.heater_enabled = false;
-            g_state.bed_target_c = 0.0f;
-            xSemaphoreGive(g_state_mutex);
-            if (PIN_BED_SSR != GPIO_NUM_NC) gpio_set_level(PIN_BED_SSR, 0);
-            set_all_axes_enabled(false);
+            xSemaphoreGive(stop_semaphore);
             ESP_LOGW(TAG, "Stop requested");
             // Free buffer
             linenoiseFree(line);
@@ -1514,39 +1543,21 @@ static void ui_build_screen(void) {
 
 static void ui_motion_task(void *arg) {
     (void)arg;
-    ui_cmd_t cmd;
     while (1) {
-        if (xQueueReceive(g_ui_cmd_queue, &cmd, portMAX_DELAY) != pdTRUE) continue;
+        if (xQueueReceive(g_ui_cmd_queue, &ui_cmd, portMAX_DELAY) != pdTRUE) continue;
 
-        if (cmd.type == UI_CMD_STOP) {
-            xSemaphoreTake(g_state_mutex, portMAX_DELAY);
-            g_state.stop_requested = true;
-            g_state.printing = false;
-            g_state.heater_enabled = false;
-            g_state.bed_target_c = 0.0f;
-            xSemaphoreGive(g_state_mutex);
-            if (PIN_BED_SSR != GPIO_NUM_NC) gpio_set_level(PIN_BED_SSR, 0);
-            set_all_axes_enabled(false);
+        if (ui_cmd.type == UI_CMD_STOP) {
+            xSemaphoreGive(stop_semaphore);
             continue;
         }
 
-        if (cmd.type == UI_CMD_HOME) {
+        if (ui_cmd.type == UI_CMD_HOME) {
             home_all_axes();
             continue;
         }
 
-        if (cmd.type == UI_CMD_MOVE_ABS) {
-            int32_t target[AXIS_COUNT];
-            xSemaphoreTake(g_state_mutex, portMAX_DELAY);
-            memcpy(target, g_state.pos_steps, sizeof(target));
-            xSemaphoreGive(g_state_mutex);
-
-            if (!isnan(cmd.x)) target[AXIS_X] = mm_to_steps(AXIS_X, cmd.x);
-            if (!isnan(cmd.y)) target[AXIS_Y] = mm_to_steps(AXIS_Y, cmd.y);
-            if (!isnan(cmd.z)) target[AXIS_Z] = mm_to_steps(AXIS_Z, cmd.z);
-            if (!isnan(cmd.e)) target[AXIS_E] = mm_to_steps(AXIS_E, cmd.e);
-
-            move_linear_steps(target, cmd.f > 0 ? cmd.f : DEFAULT_FEED_MM_MIN);
+        if (ui_cmd.type == UI_CMD_MOVE_ABS) {
+            xSemaphoreGive(move_semaphore);
         }
     }
 }
@@ -1716,6 +1727,8 @@ void app_main(void) {
     esp_console_dev_uart_config_t uart_config = ESP_CONSOLE_DEV_UART_CONFIG_DEFAULT();
     esp_console_new_repl_uart(&uart_config, &repl_config, &repl);
 
+    stop_semaphore = xSemaphoreCreateBinary();
+    move_semaphore = xSemaphoreCreateBinary();
     g_state_mutex = xSemaphoreCreateMutex();
     g_motion_mutex = xSemaphoreCreateRecursiveMutex();
     g_ui_cmd_queue = xQueueCreate(UI_CMD_QUEUE_LEN, sizeof(ui_cmd_t));
@@ -1738,6 +1751,8 @@ void app_main(void) {
 
     // xTaskCreatePinnedToCore(heater_task, "heater_task", 4096, NULL, 5, NULL, 1);
     xTaskCreatePinnedToCore(console_task, "console_task", 8192, NULL, 4, NULL, 0);
+    xTaskCreatePinnedToCore(stop_task, "stop_task", 4096, NULL, 4, NULL, 0);
+    xTaskCreatePinnedToCore(move_task, "move_task", 4096, NULL, 4, NULL, 0);
 
     ESP_LOGI(TAG, "Ink printer milestone firmware ready");
 }
