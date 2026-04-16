@@ -7041,10 +7041,6 @@
 		(uuid "853c3074-1067-4254-9062-39a37da16288")
 	)
 	(no_connect
-		(at 797.56 91.44)
-		(uuid "85da7950-9450-4d16-959f-343065643bf8")
-	)
-	(no_connect
 		(at 797.56 45.72)
 		(uuid "870e1c9e-bcbb-4341-9489-ec7ed181adef")
 	)
@@ -10606,30 +10602,6 @@
 			)
 		)
 	)
-	(global_label "AXIS_X_ENDSTOP"
-		(shape output)
-		(at 797.56 88.9 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "4c18ea3d-b949-4b69-a0a1-29273d561489")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 778.7906 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
 	(global_label "SSR_Switch"
 		(shape input)
 		(at 601.98 96.52 180)
@@ -11939,30 +11911,6 @@
 		(uuid "a0c1901a-3e67-4120-be91-0ff3176fe82f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 96.6796 388.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
-	(global_label "+3.3V"
-		(shape input)
-		(at 797.56 93.98 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "a0f13c0c-19d8-45fb-b48f-7eeb1a14f929")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 788.89 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14149,90 +14097,6 @@
 			(project "Mainboard layout"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "R6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "PCM_SL_Connectors:JST_03")
-		(at 801.37 91.44 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "20c9ba96-95a6-4365-9387-b2917ef1d545")
-		(property "Reference" "J39"
-			(at 803.91 90.1699 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "JST_03"
-			(at 803.91 92.7099 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Connector_JST:JST_EH_B3B-EH-A_1x03_P2.50mm_Vertical"
-			(at 801.37 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 801.37 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "JST Connector  3 pins"
-			(at 801.37 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "e77aa2d3-384f-42e9-9dfb-1e4f4f8f2f41")
-		)
-		(pin "1"
-			(uuid "c03e725c-5bb4-45cd-b6e1-89fa572d0279")
-		)
-		(pin "3"
-			(uuid "376eac38-c5c7-4b48-bd2a-8e06041a93f1")
-		)
-		(instances
-			(project "Mainboard layout"
-				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
-					(reference "J39")
 					(unit 1)
 				)
 			)
