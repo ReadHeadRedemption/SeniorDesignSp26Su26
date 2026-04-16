@@ -1,0 +1,107 @@
+(footprint "Conn_01x03_10A+"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "Power 1x03 conn_"
+		(at 0.5 4.5 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "629366fe-4582-4ff3-b439-fe8ea957efe4")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "5.08 mm pad diam, .8mm inner diam"
+		(at 0.5 6 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "68e16212-abb4-433c-8723-d91893679932")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0bcad871-bb70-4895-9bc5-d04993af57e4")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "84b20294-ef4d-4c14-80f1-1b327ff0af0a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_poly
+		(pts
+			(xy -10 -3.5) (xy 10 -3.5) (xy 10 3.5) (xy -10 3.5)
+		)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "Margin")
+		(uuid "353d3293-c9ec-4af1-b542-0a26e608a58b")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0.5 7.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "f1a1f391-fba2-4eb4-bc53-efabbe75ed8e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole circle
+		(at -6 0)
+		(size 5.08 5.08)
+		(drill 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "a06499b7-133c-4702-9cd0-61b2e0b6f99d")
+	)
+	(pad "2" thru_hole circle
+		(at 0 0)
+		(size 5.08 5.08)
+		(drill 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "6286dd92-f3f5-4431-be37-5cbdc58f7ce0")
+	)
+	(pad "3" thru_hole circle
+		(at 6 0)
+		(size 5.08 5.08)
+		(drill 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "926cdd5f-a162-4ef1-a3e1-ae15f5c83ad1")
+	)
+	(embedded_fonts no)
+)
