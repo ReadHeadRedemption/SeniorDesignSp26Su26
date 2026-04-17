@@ -6584,7 +6584,7 @@
 	)
 	(text "reset"
 		(exclude_from_sim no)
-		(at 183.134 21.082 0)
+		(at 185.166 25.146 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6774,6 +6774,16 @@
 		)
 		(uuid "cf1a7853-80ca-42e3-b297-30d2eb246ca4")
 	)
+	(text "Not in layout "
+		(exclude_from_sim no)
+		(at 302.26 67.564 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "d0d9cc28-ef3b-47df-a441-d3df81bd4312")
+	)
 	(text "verify that esp interrupt is on this pin\n"
 		(exclude_from_sim no)
 		(at 135.128 58.674 90)
@@ -6877,6 +6887,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "77ea99e9-b595-4312-95a0-353c182b7fcc")
+	)
+	(junction
+		(at 317.5 67.31)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7b115a2a-fdf4-4b1e-9644-f70ccc6c1115")
 	)
 	(junction
 		(at 118.11 38.1)
@@ -8270,6 +8286,16 @@
 	)
 	(wire
 		(pts
+			(xy 320.04 67.31) (xy 317.5 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "77c4d261-6715-4f14-a565-f58eaa4200f4")
+	)
+	(wire
+		(pts
 			(xy 246.38 90.17) (xy 304.8 90.17)
 		)
 		(stroke
@@ -8287,6 +8313,16 @@
 			(type default)
 		)
 		(uuid "7943e282-8049-4a75-b64d-9f265fd82f40")
+	)
+	(wire
+		(pts
+			(xy 311.15 67.31) (xy 317.5 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "797aeb37-08ac-48b3-9ffd-9fce979e0ad5")
 	)
 	(wire
 		(pts
@@ -8650,6 +8686,16 @@
 	)
 	(wire
 		(pts
+			(xy 246.38 69.85) (xy 311.15 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a87938c3-c19c-46be-875c-c69612a7abc3")
+	)
+	(wire
+		(pts
 			(xy 154.94 59.69) (xy 142.24 59.69)
 		)
 		(stroke
@@ -8970,6 +9016,16 @@
 	)
 	(wire
 		(pts
+			(xy 311.15 69.85) (xy 311.15 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ce0d5bc0-105f-47da-9320-da53043ed4d8")
+	)
+	(wire
+		(pts
 			(xy 246.38 67.31) (xy 271.78 67.31)
 		)
 		(stroke
@@ -9007,6 +9063,16 @@
 			(type default)
 		)
 		(uuid "d1528120-6c41-4b00-ac5b-ceb01218c7bc")
+	)
+	(wire
+		(pts
+			(xy 317.5 72.39) (xy 317.5 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d276dcfd-e679-4917-b4dd-5b2b837fa024")
 	)
 	(wire
 		(pts
@@ -9765,30 +9831,6 @@
 			)
 		)
 	)
-	(global_label "TEMP_HOTPLATE"
-		(shape input)
-		(at 288.29 68.58 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "21539743-a272-4095-bcf1-3cfafc7f3939")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 306.2127 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
 	(global_label "DIR0"
 		(shape input)
 		(at 68.58 281.94 180)
@@ -10098,6 +10140,30 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+			)
+		)
+	)
+	(global_label "+3.3V"
+		(shape input)
+		(at 325.12 67.31 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "35953b8b-4911-4a5c-9ca2-564ab7e29026")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 333.79 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 	)
@@ -10575,6 +10641,30 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+	)
+	(global_label "StepE"
+		(shape output)
+		(at 317.5 72.39 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "4b0ef9f1-27f0-4f70-9f2b-10f920320819")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 317.5 80.697 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 	)
@@ -20126,6 +20216,100 @@
 			(project "Mainboard layout"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "J6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_SparkFun-Resistor:10k_0603")
+		(at 322.58 67.31 0)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e2aff791-7d63-4270-a58d-c3cf5a4688e0")
+		(property "Reference" "R56"
+			(at 323.8501 64.77 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10k"
+			(at 321.3101 64.77 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "PCM_SparkFun-Resistor:R_0603_1608Metric"
+			(at 322.58 62.992 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/20035/dcrcwe3.pdf"
+			(at 322.58 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 322.58 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PROD_ID" "RES-00824"
+			(at 322.58 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "fe0f89b6-fa91-4972-9b69-47d99c068ed7")
+		)
+		(pin "2"
+			(uuid "b97a2da1-f551-4519-ba18-1f1a9409adc9")
+		)
+		(instances
+			(project "Mainboard layout"
+				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
+					(reference "R56")
 					(unit 1)
 				)
 			)

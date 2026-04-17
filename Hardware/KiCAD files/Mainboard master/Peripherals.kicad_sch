@@ -4098,7 +4098,7 @@
 	)
 	(text "confirm fan wiring and connector on ender3\n\n"
 		(exclude_from_sim no)
-		(at 238.252 94.742 0)
+		(at 282.702 24.892 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4305,11 +4305,11 @@
 		(uuid "d03a5834-907e-4021-85c9-001202d65e8c")
 	)
 	(no_connect
-		(at 237.49 105.41)
+		(at 281.94 35.56)
 		(uuid "d64779b5-53e5-4e85-a1d7-de306df9069a")
 	)
 	(no_connect
-		(at 237.49 116.84)
+		(at 281.94 46.99)
 		(uuid "df11c2f0-a864-4648-ad70-833f3dab8005")
 	)
 	(no_connect
@@ -4362,7 +4362,7 @@
 	)
 	(polyline
 		(pts
-			(xy 244.475 178.435) (xy 244.475 262.255)
+			(xy 229.87 178.435) (xy 229.87 262.255)
 		)
 		(stroke
 			(width 0)
@@ -4450,6 +4450,16 @@
 		)
 		(uuid "1adf3425-be77-45e7-a2a2-cdd7f4e73544")
 	)
+	(polyline
+		(pts
+			(xy 130.81 178.435) (xy 147.955 178.435)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1b9fb9b0-6a9d-4bd8-bab4-ff8b7ff6a632")
+	)
 	(wire
 		(pts
 			(xy 180.34 38.1) (xy 189.23 38.1)
@@ -4472,7 +4482,7 @@
 	)
 	(polyline
 		(pts
-			(xy 244.475 262.255) (xy 13.335 262.255)
+			(xy 229.87 262.255) (xy 13.335 262.255)
 		)
 		(stroke
 			(width 0)
@@ -4502,7 +4512,7 @@
 	)
 	(polyline
 		(pts
-			(xy 268.605 87.63) (xy 268.605 119.38)
+			(xy 313.055 17.78) (xy 313.055 49.53)
 		)
 		(stroke
 			(width 0)
@@ -4552,7 +4562,7 @@
 	)
 	(polyline
 		(pts
-			(xy 80.01 91.44) (xy 147.32 91.44)
+			(xy 80.01 91.44) (xy 130.81 91.44)
 		)
 		(stroke
 			(width 0)
@@ -4572,7 +4582,7 @@
 	)
 	(polyline
 		(pts
-			(xy 147.32 178.435) (xy 244.475 178.435)
+			(xy 147.32 178.435) (xy 229.87 178.435)
 		)
 		(stroke
 			(width 0)
@@ -4592,7 +4602,7 @@
 	)
 	(polyline
 		(pts
-			(xy 210.185 88.265) (xy 268.605 88.265)
+			(xy 254.635 18.415) (xy 313.055 18.415)
 		)
 		(stroke
 			(width 0)
@@ -4762,7 +4772,7 @@
 	)
 	(polyline
 		(pts
-			(xy 268.605 119.38) (xy 210.185 119.38)
+			(xy 313.055 49.53) (xy 254.635 49.53)
 		)
 		(stroke
 			(width 0)
@@ -4822,7 +4832,7 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 102.87) (xy 237.49 102.87)
+			(xy 274.32 33.02) (xy 281.94 33.02)
 		)
 		(stroke
 			(width 0)
@@ -5052,7 +5062,7 @@
 	)
 	(polyline
 		(pts
-			(xy 147.32 91.44) (xy 147.32 178.435)
+			(xy 130.81 91.44) (xy 130.81 178.435)
 		)
 		(stroke
 			(width 0)
@@ -5172,7 +5182,7 @@
 	)
 	(polyline
 		(pts
-			(xy 210.185 119.38) (xy 210.185 88.265)
+			(xy 254.635 49.53) (xy 254.635 18.415)
 		)
 		(stroke
 			(width 0)
@@ -5192,7 +5202,7 @@
 	)
 	(polyline
 		(pts
-			(xy 268.605 88.265) (xy 268.605 88.9)
+			(xy 313.055 18.415) (xy 313.055 19.05)
 		)
 		(stroke
 			(width 0)
@@ -5352,7 +5362,7 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 114.3) (xy 237.49 114.3)
+			(xy 274.32 44.45) (xy 281.94 44.45)
 		)
 		(stroke
 			(width 0)
@@ -5866,7 +5876,7 @@
 	)
 	(global_label "+3.3V"
 		(shape input)
-		(at 237.49 100.33 180)
+		(at 281.94 30.48 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5876,7 +5886,7 @@
 		)
 		(uuid "2383813f-7a33-42e4-abed-1a14d40f47dd")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 228.82 100.33 0)
+			(at 273.27 30.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6729,7 +6739,7 @@
 	)
 	(global_label "+3.3V"
 		(shape input)
-		(at 237.49 111.76 180)
+		(at 281.94 41.91 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6739,7 +6749,7 @@
 		)
 		(uuid "f5171022-ee0f-44e4-8107-a0130ef4e33d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 228.82 111.76 0)
+			(at 273.27 41.91 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7748,7 +7758,7 @@
 	)
 	(symbol
 		(lib_id "PCM_SparkFun-PowerSymbol:GND")
-		(at 229.87 102.87 270)
+		(at 274.32 33.02 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7759,7 +7769,7 @@
 		(fields_autoplaced yes)
 		(uuid "1f27d375-fd49-44a5-8fae-8d2efd00c9a1")
 		(property "Reference" "#PWR021"
-			(at 223.52 102.87 0)
+			(at 267.97 33.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7770,7 +7780,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 226.06 102.87 0)
+			(at 270.51 33.02 0)
 			(show_name no)
 			(do_not_autoplace yes)
 			(effects
@@ -7780,7 +7790,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 229.87 102.87 0)
+			(at 274.32 33.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7791,7 +7801,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 229.87 102.87 0)
+			(at 274.32 33.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7802,7 +7812,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 220.98 102.87 0)
+			(at 265.43 33.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8313,7 +8323,7 @@
 	)
 	(symbol
 		(lib_id "PCM_Optocoupler_Gate_Driver_AKL:ACNW3130")
-		(at 43.18 62.23 0)
+		(at 33.02 160.02 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8324,7 +8334,7 @@
 		(fields_autoplaced yes)
 		(uuid "6d4f2aca-2d6c-4f03-8b2d-dc873db201fc")
 		(property "Reference" "OC1"
-			(at 43.18 49.53 0)
+			(at 33.02 147.32 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8334,7 +8344,7 @@
 			)
 		)
 		(property "Value" "ACNW3130"
-			(at 43.18 52.07 0)
+			(at 33.02 149.86 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8344,7 +8354,7 @@
 			)
 		)
 		(property "Footprint" "PCM_Package_DIP_AKL:DIP-8_W7.62mm_LongPads"
-			(at 38.1 64.77 0)
+			(at 27.94 162.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8357,7 +8367,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.tme.eu/Document/8c4fd4552f89c48db87c694efad37ef3/ACNW3130-000E.pdf"
-			(at 40.64 62.23 0)
+			(at 30.48 160.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8369,7 +8379,7 @@
 			)
 		)
 		(property "Description" "DIP-8 Optocoupler, Gate Driver output, 5kV, 2.5A, 100ns, Alternate KiCAD Library"
-			(at 43.18 62.23 0)
+			(at 33.02 160.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9073,7 +9083,7 @@
 	)
 	(symbol
 		(lib_id "PCM_SparkFun-PowerSymbol:GND")
-		(at 229.87 114.3 270)
+		(at 274.32 44.45 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9084,7 +9094,7 @@
 		(fields_autoplaced yes)
 		(uuid "a210c9f3-9bec-42e0-9ec0-fdeeadcdcd52")
 		(property "Reference" "#PWR020"
-			(at 223.52 114.3 0)
+			(at 267.97 44.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9095,7 +9105,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 226.06 114.3 0)
+			(at 270.51 44.45 0)
 			(show_name no)
 			(do_not_autoplace yes)
 			(effects
@@ -9105,7 +9115,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 229.87 114.3 0)
+			(at 274.32 44.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9116,7 +9126,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 229.87 114.3 0)
+			(at 274.32 44.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9127,7 +9137,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 220.98 114.3 0)
+			(at 265.43 44.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9769,7 +9779,7 @@
 	)
 	(symbol
 		(lib_id "PCM_SL_Connectors:JST_03")
-		(at 241.3 114.3 0)
+		(at 285.75 44.45 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9780,7 +9790,7 @@
 		(fields_autoplaced yes)
 		(uuid "d077e05a-8cc5-412b-8781-adc8d75287a1")
 		(property "Reference" "J34"
-			(at 243.84 113.0299 0)
+			(at 288.29 43.1799 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9791,7 +9801,7 @@
 			)
 		)
 		(property "Value" "JST_03"
-			(at 243.84 115.5699 0)
+			(at 288.29 45.7199 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9802,7 +9812,7 @@
 			)
 		)
 		(property "Footprint" "Connector_JST:JST_EH_B3B-EH-A_1x03_P2.50mm_Vertical"
-			(at 241.3 106.68 0)
+			(at 285.75 36.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9813,7 +9823,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 241.3 106.68 0)
+			(at 285.75 36.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9824,7 +9834,7 @@
 			)
 		)
 		(property "Description" "JST Connector  3 pins"
-			(at 241.3 114.3 0)
+			(at 285.75 44.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9985,7 +9995,7 @@
 	)
 	(symbol
 		(lib_id "PCM_SL_Connectors:JST_03")
-		(at 241.3 102.87 0)
+		(at 285.75 33.02 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9996,7 +10006,7 @@
 		(fields_autoplaced yes)
 		(uuid "d8aecbe8-6126-4b9d-a5c1-a1829c189307")
 		(property "Reference" "J31"
-			(at 243.84 101.5999 0)
+			(at 288.29 31.7499 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10007,7 +10017,7 @@
 			)
 		)
 		(property "Value" "JST_03"
-			(at 243.84 104.1399 0)
+			(at 288.29 34.2899 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10018,7 +10028,7 @@
 			)
 		)
 		(property "Footprint" "Connector_JST:JST_EH_B3B-EH-A_1x03_P2.50mm_Vertical"
-			(at 241.3 95.25 0)
+			(at 285.75 25.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10029,7 +10039,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 241.3 95.25 0)
+			(at 285.75 25.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10040,7 +10050,7 @@
 			)
 		)
 		(property "Description" "JST Connector  3 pins"
-			(at 241.3 102.87 0)
+			(at 285.75 33.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
