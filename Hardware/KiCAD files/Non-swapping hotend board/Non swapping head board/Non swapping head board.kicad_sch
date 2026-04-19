@@ -5,6 +5,326 @@
 	(uuid "dff84501-92d8-46b4-b4b1-b21350f7bd61")
 	(paper "A4")
 	(lib_symbols
+		(symbol "PCM_SL_Connectors:JST_06"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 0 12.7 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "JST_06"
+				(at 0 10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Connector_JST:JST_EH_B6B-EH-A_1x06_P2.50mm_Vertical"
+				(at 0 11.43 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 11.43 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "JST Connector  6 pins"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "JST"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Connector_JST:JST_EH_S6B-EH_1x06_P2.50mm_Horizontal"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "JST_06_0_1"
+				(rectangle
+					(start -1.27 7.62)
+					(end 1.27 -7.62)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -6.858) (xy -1.27 -7.62) (xy 1.27 -7.62) (xy 1.27 -6.858) (xy 1.016 -6.858) (xy 1.016 -7.366)
+						(xy -1.016 -7.366) (xy -1.016 -6.858) (xy -1.27 -6.858)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 0 6.35)
+					(radius 0.381)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 0 3.81)
+					(radius 0.381)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 0 1.27)
+					(radius 0.381)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 0 -1.27)
+					(radius 0.381)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 0 -3.81)
+					(radius 0.381)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 0 -6.35)
+					(radius 0.381)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 1.016 -6.858)
+					(end 1.27 6.858)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 1.016 -6.858)
+					(end 1.27 -6.858)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 6.858) (xy 1.27 7.62) (xy -1.27 7.62) (xy -1.27 6.858) (xy -1.016 6.858) (xy -1.016 7.366)
+						(xy 1.016 7.366) (xy 1.016 6.858) (xy 1.27 6.858)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+			)
+			(symbol "JST_06_1_1"
+				(pin passive line
+					(at -3.81 6.35 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -3.81 3.81 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -3.81 1.27 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -3.81 -1.27 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -3.81 -3.81 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -3.81 -6.35 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "PCM_SL_Pin_Headers:PINHD_1x10_Female"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -1375,6 +1695,24 @@
 		)
 		(uuid "cb8bbdf8-7d9d-447a-b258-d28b6edb0446")
 	)
+	(no_connect
+		(at 81.28 58.42)
+		(uuid "121ae20b-a32d-4c8c-86d8-2f44f8b735c1")
+	)
+	(no_connect
+		(at 81.28 66.04)
+		(uuid "8e4e5f1b-9b86-4dab-b67e-786fb4e9934d")
+	)
+	(wire
+		(pts
+			(xy 81.28 60.96) (xy 38.1 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0cbd1dc3-8fe0-4169-9dda-2c2b7e95c4f9")
+	)
 	(wire
 		(pts
 			(xy 46.99 46.99) (xy 46.99 26.67)
@@ -1397,6 +1735,16 @@
 	)
 	(wire
 		(pts
+			(xy 39.37 55.88) (xy 39.37 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2b33e22e-2f52-43cb-ae6f-c6b464048413")
+	)
+	(wire
+		(pts
 			(xy 33.02 49.53) (xy 49.53 49.53)
 		)
 		(stroke
@@ -1404,6 +1752,26 @@
 			(type default)
 		)
 		(uuid "3021e4f2-d9a7-4767-9b3f-57744a9681b3")
+	)
+	(wire
+		(pts
+			(xy 39.37 55.88) (xy 81.28 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "425ea295-179a-4d69-9f52-0e45487ea7ee")
+	)
+	(wire
+		(pts
+			(xy 81.28 63.5) (xy 38.1 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5b3e422f-4d38-476d-affb-54d29a45dc88")
 	)
 	(wire
 		(pts
@@ -1427,6 +1795,16 @@
 	)
 	(wire
 		(pts
+			(xy 33.02 59.69) (xy 38.1 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "817c6fa3-9620-437e-b62b-5880e7d1749c")
+	)
+	(wire
+		(pts
 			(xy 71.12 52.07) (xy 71.12 69.85)
 		)
 		(stroke
@@ -1437,6 +1815,26 @@
 	)
 	(wire
 		(pts
+			(xy 67.31 64.77) (xy 33.02 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9168f78d-f64c-49c7-8792-6d7882c96971")
+	)
+	(wire
+		(pts
+			(xy 39.37 57.15) (xy 33.02 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9d265cba-8469-48a3-92b2-6093ecda7a84")
+	)
+	(wire
+		(pts
 			(xy 68.58 69.85) (xy 68.58 54.61)
 		)
 		(stroke
@@ -1444,6 +1842,26 @@
 			(type default)
 		)
 		(uuid "b7b0ea80-1a79-443c-a23b-f28793238d4c")
+	)
+	(wire
+		(pts
+			(xy 81.28 68.58) (xy 67.31 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b80e2079-4f06-480d-8fac-8bf443d81452")
+	)
+	(wire
+		(pts
+			(xy 67.31 68.58) (xy 67.31 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bcb2386c-42a0-45dd-8c4e-e5703ed26c58")
 	)
 	(wire
 		(pts
@@ -1475,101 +1893,75 @@
 		)
 		(uuid "dc1a2636-e1cc-4241-9421-02d858212075")
 	)
-	(global_label "Phase_A2"
-		(shape input)
-		(at 33.02 64.77 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
+	(wire
+		(pts
+			(xy 33.02 62.23) (xy 38.1 62.23)
 		)
-		(uuid "71a0eb75-0883-452b-875c-ec88cdcbd2f5")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 44.9556 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
+		(stroke
+			(width 0)
+			(type default)
 		)
+		(uuid "e484f735-cd2c-40b8-b676-9cf9ce8cc619")
 	)
-	(global_label "Phase_B2"
-		(shape input)
-		(at 33.02 57.15 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
+	(wire
+		(pts
+			(xy 38.1 60.96) (xy 38.1 59.69)
 		)
-		(uuid "73d3ab02-f88d-43f8-a7f3-a69b3f017027")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 45.137 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
+		(stroke
+			(width 0)
+			(type default)
 		)
+		(uuid "f2670555-bcdf-4cba-b324-d9d70d0f6471")
 	)
-	(global_label "Phase_B1"
-		(shape input)
-		(at 33.02 59.69 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
+	(wire
+		(pts
+			(xy 38.1 63.5) (xy 38.1 62.23)
 		)
-		(uuid "767893bf-2cbe-44e3-897f-d99132bc06f0")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 45.137 59.69 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
+		(stroke
+			(width 0)
+			(type default)
 		)
+		(uuid "f3f3794d-603f-46ac-aa6d-a2feb5b16044")
 	)
-	(global_label "Phase_A1"
-		(shape input)
-		(at 33.02 62.23 0)
-		(fields_autoplaced yes)
+	(label "B2"
+		(at 77.47 55.88 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify left bottom)
 		)
-		(uuid "7a14e674-a54a-4385-a5b9-63818ecf5ab8")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 44.9556 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
+		(uuid "36ed1f2e-c1b3-4462-8306-087fa815a654")
+	)
+	(label "B1"
+		(at 77.47 63.5 0)
+		(effects
+			(font
+				(size 1.27 1.27)
 			)
+			(justify left bottom)
 		)
+		(uuid "40aaa7a8-3e76-4d79-8d66-695198057325")
+	)
+	(label "A2"
+		(at 77.47 60.96 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4b36b37f-6595-4628-9d38-25c1b61108c1")
+	)
+	(label "A1"
+		(at 77.47 68.58 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e102dba7-9a6d-47dd-ad09-25a3b468befa")
 	)
 	(symbol
 		(lib_id "PCM_SparkFun-Connector:Conn_01x02_P2.54mm")
@@ -1685,7 +2077,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x10_P2.54mm_Vertical"
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x10_P2.54mm_Horizontal"
 			(at 26.67 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -1848,6 +2240,100 @@
 			(project "Non swapping head board"
 				(path "/dff84501-92d8-46b4-b4b1-b21350f7bd61"
 					(reference "J18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_SL_Connectors:JST_06")
+		(at 85.09 62.23 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "99f50156-4728-4be0-8453-d98ab5ffefa3")
+		(property "Reference" "J1"
+			(at 87.63 60.9599 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "JST_06"
+			(at 87.63 63.4999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_JST:JST_EH_B6B-EH-A_1x06_P2.50mm_Vertical"
+			(at 85.09 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 85.09 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "JST Connector  6 pins"
+			(at 85.09 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "4"
+			(uuid "2442c5ba-5afc-46a2-8978-38b95dcc2b20")
+		)
+		(pin "1"
+			(uuid "5cfd557f-2ab1-49ee-b825-fb79074b7623")
+		)
+		(pin "2"
+			(uuid "2ed17129-9cb9-4ae1-aab9-5355692a8213")
+		)
+		(pin "6"
+			(uuid "b10ebc41-b2ec-4d19-a8c8-3ce8e1a816a2")
+		)
+		(pin "3"
+			(uuid "bfa87d54-8f79-4ff9-892b-1b425e5b8a23")
+		)
+		(pin "5"
+			(uuid "c8c72bc7-eafb-49fe-8764-fbeeabb494c0")
+		)
+		(instances
+			(project "Non swapping head board"
+				(path "/dff84501-92d8-46b4-b4b1-b21350f7bd61"
+					(reference "J1")
 					(unit 1)
 				)
 			)
