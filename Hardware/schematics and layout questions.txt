@@ -1,0 +1,9 @@
+Questions for doctor weeks:
+
+Routing 3.3V confirming that I might want to keep direct outputs of the 3.3V regulators seperate or not.
+
+ask about star method for grounding.
+
+if there is any specific times to place and not place vias when crossing other traces. 
+
+should I keep island fills? what are the effects? 
