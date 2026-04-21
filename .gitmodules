@@ -1,0 +1,3 @@
+[submodule "Software/CIPFirmware"]
+	path = Software/CIPFirmware
+	url = https://github.com/ReadHeadRedemption/CIPFirmware.git
