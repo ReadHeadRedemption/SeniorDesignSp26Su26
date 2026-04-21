@@ -1,0 +1,9 @@
+Manufacturer=Bourns
+PartNumber=2100LL-221H-RC
+PartCategory=Inductor
+PackageCategory=Other
+PinCount=2
+Version=1.2
+Released=2022-03-12 06:34:32
+Downloaded=2026-04-21 20:28:19
+3D=Y

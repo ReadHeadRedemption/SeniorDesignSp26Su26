@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--/2056660/2021378/2.50/2/3/Inductor/-->
+<quadcept_library>
+  <setting unit="mil" />
+  <textstyle name="Default" height="47.244094488189" strokewidth="7.8740157480315" charwidth="47.244094488189" />
+  <textstyle name="Dimension" height="19.6850393700787" strokewidth="0" charwidth="19.6850393700787" />
+  <textstyle name="H127W0635TH00762" height="50" strokewidth="3" charwidth="25" />
+  <textstyle name="H15W15TH02" height="59.0551181102362" strokewidth="7.8740157480315" charwidth="59.0551181102362" />
+  <padstyle name="s159.6_h106.4" surface="False" plated="True" isvia="False" nopaste="True" nomask="True" complex="False" holesize="41.889763779527">
+    <padshape layer="TOP" shape="square" width="62.834645669291" height="62.834645669291" />
+    <padshape layer="TOP_SOLDER_MASK" shape="square" width="70.708661417322" height="70.708661417322" />
+    <padshape layer="INNER" shape="square" width="62.834645669291" height="62.834645669291" />
+    <padshape layer="BOTTOM" shape="square" width="62.834645669291" height="62.834645669291" />
+    <padshape layer="BOTTOM_SOLDER_MASK" shape="square" width="70.708661417322" height="70.708661417322" />
+  </padstyle>
+  <padstyle name="c159.6_h106.4" surface="False" plated="True" isvia="False" nopaste="True" nomask="True" complex="False" holesize="41.889763779527">
+    <padshape layer="TOP" shape="round" width="62.834645669291" height="62.834645669291" />
+    <padshape layer="TOP_SOLDER_MASK" shape="round" width="70.708661417322" height="70.708661417322" />
+    <padshape layer="INNER" shape="round" width="62.834645669291" height="62.834645669291" />
+    <padshape layer="BOTTOM" shape="round" width="62.834645669291" height="62.834645669291" />
+    <padshape layer="BOTTOM_SOLDER_MASK" shape="round" width="70.708661417322" height="70.708661417322" />
+  </padstyle>
+  <footprint name="2100LL221HRC" originx="0" originy="0" pickpointx="0" pickpointy="0">
+    <pcbpin number="1" name="1" style="s159.6_h106.4" originx="0" originy="0" rotation="90" />
+    <pcbpin number="2" name="2" style="c159.6_h106.4" originx="759.99999999999" originy="0" rotation="90" />
+    <line layer="TOP_ASSEMBLY" originx="-49.999999999999" originy="-225" endx="809.99999999999" endy="-225" width="3.9370078740157" />
+    <line layer="TOP_ASSEMBLY" originx="809.99999999999" originy="-225" endx="809.99999999999" endy="225" width="3.9370078740157" />
+    <line layer="TOP_ASSEMBLY" originx="809.99999999999" originy="225" endx="-49.999999999999" endy="225" width="3.9370078740157" />
+    <line layer="TOP_ASSEMBLY" originx="-49.999999999999" originy="225" endx="-49.999999999999" endy="-225" width="3.9370078740157" />
+    <line layer="TOP_SILKSCREEN" originx="-49.999999999999" originy="225" endx="809.99999999999" endy="225" width="7.8740157480314" />
+    <line layer="TOP_SILKSCREEN" originx="809.99999999999" originy="225" endx="809.99999999999" endy="-225" width="7.8740157480314" />
+    <line layer="TOP_SILKSCREEN" originx="809.99999999999" originy="-225" endx="-49.999999999999" endy="-225" width="7.8740157480314" />
+    <line layer="TOP_SILKSCREEN" originx="-49.999999999999" originy="-225" endx="-49.999999999999" endy="225" width="7.8740157480314" />
+    <line layer="TOP_PLACE_BOUND" originx="-89.370078740156" originy="264.37007874015" endx="849.37007874015" endy="264.37007874015" width="3.9370078740157" />
+    <line layer="TOP_PLACE_BOUND" originx="849.37007874015" originy="264.37007874015" endx="849.37007874015" endy="-264.37007874015" width="3.9370078740157" />
+    <line layer="TOP_PLACE_BOUND" originx="849.37007874015" originy="-264.37007874015" endx="-89.370078740156" endy="-264.37007874015" width="3.9370078740157" />
+    <line layer="TOP_PLACE_BOUND" originx="-89.370078740156" originy="-264.37007874015" endx="-89.370078740156" endy="264.37007874015" width="3.9370078740157" />
+    <line layer="TOP_SILKSCREEN" originx="-70.866141732283" originy="0" endx="-70.866141732283" endy="0" width="3.9370078740157" />
+    <arc layer="TOP_SILKSCREEN" originx="-68.897637795275" originy="0" startangle="180.0" sweepangle="180.0" radius="1.9685039370079" width="3.9370078740157" />
+    <line layer="TOP_SILKSCREEN" originx="-66.929133858267" originy="0" endx="-66.929133858267" endy="0" width="3.9370078740157" />
+    <arc layer="TOP_SILKSCREEN" originx="-68.897637795275" originy="0" startangle=".0" sweepangle="180.0" radius="1.9685039370079" width="3.9370078740157" />
+  </footprint>
+  <symbol name="2100LL-221H-RC" originx="0" originy="0">
+    <arc originx="250" originy="-2" startangle="177.7" sweepangle="-175.4" radius="50" width="0" />
+    <arc originx="350" originy="-2" startangle="177.7" sweepangle="-175.4" radius="50" width="0" />
+    <arc originx="450" originy="-2" startangle="177.7" sweepangle="-175.4" radius="50" width="0" />
+    <arc originx="550" originy="-2" startangle="177.7" sweepangle="-175.4" radius="50" width="0" />
+    <sympin number="1" originx="200" originy="0" rotation="180" length="100" width="7.8740157480315" flipped="False">
+      <text name="pinname" originx="0" originy="-10" style="Default" rotation="0" justify="upperleft" flipped="False" hidden="True" data="1" />
+      <text name="pindes" originx="0" originy="10" style="Default" rotation="0" justify="lowerleft" flipped="False" hidden="False" data="1" />
+    </sympin>
+    <sympin number="2" originx="600" originy="0" rotation="0" length="100" width="7.8740157480315" flipped="False">
+      <text name="pinname" originx="800" originy="-10" style="Default" rotation="0" justify="upperright" flipped="False" hidden="True" data="2" />
+      <text name="pindes" originx="800" originy="10" style="Default" rotation="0" justify="lowerright" flipped="False" hidden="False" data="2" />
+    </sympin>
+  </symbol>
+  <component name="2100LL-221H-RC" designatorprefix="L" height="449.99999999999" footprint="2100LL221HRC">
+    <comppin designator="1" sympin="1" pinswap="0" gateswap="0" gate="1" group="1" side="" type="Any" name="1" />
+    <comppin designator="2" sympin="2" pinswap="0" gateswap="0" gate="1" group="1" side="" type="Any" name="2" />
+    <attached_symbol gate="1" name="2100LL-221H-RC" />
+    <pinmap designator="1" footprintpin="1" />
+    <pinmap designator="2" footprintpin="2" />
+    <text name="Datasheet" originx="0" originy="0" style="Default" rotation="0" justify="" flipped="False" hidden="True" data="https://www.bourns.com/products/magnetic-products/j.w.-miller-through-hole-toroid-inductors" />
+    <text name="Description" originx="0" originy="0" style="Default" rotation="0" justify="" flipped="False" hidden="True" data="Ind High Current Toroid 220uH 15% 1KHz 3.5A RDL - Boxed Product (Development Kits)" />
+    <text name="Manufacturer_Name" originx="0" originy="0" style="Default" rotation="0" justify="" flipped="False" hidden="True" data="Bourns" />
+    <text name="Manufacturer_Part_Number" originx="650" originy="150" style="Default" rotation="0" justify="left" flipped="False" hidden="False" data="2100LL-221H-RC" />
+    <text name="Mouser Part Number" originx="0" originy="0" style="Default" rotation="0" justify="" flipped="False" hidden="True" data="" />
+    <text name="Mouser Price/Stock" originx="0" originy="0" style="Default" rotation="0" justify="" flipped="False" hidden="True" data="" />
+    <text name="Arrow Part Number" originx="0" originy="0" style="Default" rotation="0" justify="" flipped="False" hidden="True" data="" />
+    <text name="Arrow Price/Stock" originx="0" originy="0" style="Default" rotation="0" justify="" flipped="False" hidden="True" data="" />
+  </component>
+</quadcept_library>

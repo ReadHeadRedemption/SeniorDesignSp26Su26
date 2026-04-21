@@ -1,9 +1,13 @@
 Questions for doctor weeks:
 
-Routing 3.3V confirming that I might want to keep direct outputs of the 3.3V regulators seperate or not.
+Routing 3.3V confirming that I might want to keep direct outputs of the 3.3V regulators seperate or not. keep seperate
 
-ask about star method for grounding.
+ask about star method for grounding. dw about it
 
 if there is any specific times to place and not place vias when crossing other traces. 
 
-should I keep island fills? what are the effects? 
+should I keep island fills? what are the effects? keep gnd plane connected as much as possible even just through VIA's
+
+Vias are extensivly useed in the process of routing, how many vias are too many?
+
+Distance of traces should be 3x width of trace before "crosstalk occurs" 

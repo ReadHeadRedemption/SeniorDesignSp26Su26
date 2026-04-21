@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART '2100LL_221H_RC'
+CLASS = DISCRETE
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "ARROW_PART_NUMBER", "ARROW_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Bourns", "2100LL-221H-RC" (!) = "", "2100LL221HRC", "Other", "", "", "", "", "Ind High Current Toroid 220uH 15% 1KHz 3.5A RDL - Boxed Product (Development Kits)", "https://www.bourns.com/products/magnetic-products/j.w.-miller-through-hole-toroid-inductors", "11.43 mm"
+END_PART
+
+END.

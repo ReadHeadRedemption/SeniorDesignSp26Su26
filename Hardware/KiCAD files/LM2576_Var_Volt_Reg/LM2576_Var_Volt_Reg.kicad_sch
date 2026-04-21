@@ -5,7 +5,8 @@
 	(uuid "05ad55a9-73a4-4419-8d6d-9b068d5aca56")
 	(paper "A4")
 	(lib_symbols
-		(symbol "1N5822:1N5822"
+		(symbol "2026-04-06_22-20-55:1N5825"
+			(body_styles demorgan)
 			(pin_names
 				(offset 0.254)
 			)
@@ -15,7 +16,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "CR"
-				(at 0 0 0)
+				(at 5.08 4.445 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -24,8 +25,8 @@
 					)
 				)
 			)
-			(property "Value" "1N5822"
-				(at 0 0 0)
+			(property "Value" "1N5825"
+				(at 5.08 -3.81 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -34,7 +35,7 @@
 					)
 				)
 			)
-			(property "Footprint" "DO-201AD_STM"
+			(property "Footprint" "1N5825_MCH"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -46,7 +47,7 @@
 					)
 				)
 			)
-			(property "Datasheet" "https://www.st.com/resource/en/datasheet/1n5822.pdf"
+			(property "Datasheet" "1N5825"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -79,7 +80,7 @@
 					)
 				)
 			)
-			(property "ki_keywords" "1N5822"
+			(property "ki_keywords" "1N5825"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -90,7 +91,7 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "DO-201AD_STM"
+			(property "ki_fp_filters" "1N5825_MCH"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -101,10 +102,10 @@
 					)
 				)
 			)
-			(symbol "1N5822_0_1"
+			(symbol "1N5825_1_1"
 				(polyline
 					(pts
-						(xy 2.54 0) (xy 3.81 0)
+						(xy 2.54 0) (xy 3.4798 0)
 					)
 					(stroke
 						(width 0.2032)
@@ -116,7 +117,7 @@
 				)
 				(polyline
 					(pts
-						(xy 3.175 1.905) (xy 3.81 1.27)
+						(xy 3.175 0) (xy 3.81 0)
 					)
 					(stroke
 						(width 0.2032)
@@ -128,7 +129,7 @@
 				)
 				(polyline
 					(pts
-						(xy 3.81 1.27) (xy 3.81 -1.27)
+						(xy 3.81 1.905) (xy 3.81 -1.905)
 					)
 					(stroke
 						(width 0.2032)
@@ -140,7 +141,7 @@
 				)
 				(polyline
 					(pts
-						(xy 3.81 0) (xy 6.35 -1.905)
+						(xy 3.81 -1.905) (xy 6.35 0)
 					)
 					(stroke
 						(width 0.2032)
@@ -152,7 +153,7 @@
 				)
 				(polyline
 					(pts
-						(xy 3.81 -1.27) (xy 4.445 -1.905)
+						(xy 6.35 0) (xy 3.81 1.905)
 					)
 					(stroke
 						(width 0.2032)
@@ -164,7 +165,7 @@
 				)
 				(polyline
 					(pts
-						(xy 6.35 1.905) (xy 3.81 0)
+						(xy 6.35 0) (xy 7.62 0)
 					)
 					(stroke
 						(width 0.2032)
@@ -186,20 +187,8 @@
 						(type none)
 					)
 				)
-				(polyline
-					(pts
-						(xy 7.62 0) (xy 6.35 0)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
 				(pin unspecified line
-					(at 0 0 0)
+					(at 10.16 0 180)
 					(length 2.54)
 					(name ""
 						(effects
@@ -217,7 +206,129 @@
 					)
 				)
 				(pin unspecified line
-					(at 10.16 0 180)
+					(at 0 0 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "1N5825_1_2"
+				(polyline
+					(pts
+						(xy -1.905 3.81) (xy 1.905 3.81)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 6.35) (xy -1.905 3.81)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 6.35) (xy 0 7.62)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 3.175) (xy 0 3.81)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0 3.4798)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.905 6.35) (xy -1.905 6.35)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.905 3.81) (xy 0 6.35)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin unspecified line
+					(at 0 10.16 270)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 0 0 90)
 					(length 2.54)
 					(name ""
 						(effects
@@ -2539,7 +2650,7 @@
 				)
 			)
 		)
-		(property "Value" "200uH"
+		(property "Value" "100uH"
 			(at 138.43 59.69 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3652,89 +3763,6 @@
 		)
 	)
 	(symbol
-		(lib_id "1N5822:1N5822")
-		(at 133.35 67.31 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "8fbeccad-fc19-4cfe-ae71-4dd6bda673cc")
-		(property "Reference" "CR1"
-			(at 135.128 65.278 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1N5822"
-			(at 136.652 72.898 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "1N5822:DO-201AD_STM"
-			(at 133.35 67.31 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.st.com/resource/en/datasheet/1n5822.pdf"
-			(at 133.35 67.31 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 133.35 67.31 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "6ca50309-bd71-49b8-8201-6c0e2b74ac54")
-		)
-		(pin "2"
-			(uuid "b33153e5-d68d-4929-8568-9f036cc8b32c")
-		)
-		(instances
-			(project "LM2576_Var_Volt_Reg"
-				(path "/05ad55a9-73a4-4419-8d6d-9b068d5aca56"
-					(reference "CR1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C_Polarized")
 		(at 144.78 69.85 0)
 		(unit 1)
@@ -3973,6 +4001,89 @@
 			(project "LM2576_Var_Volt_Reg"
 				(path "/05ad55a9-73a4-4419-8d6d-9b068d5aca56"
 					(reference "C4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "2026-04-06_22-20-55:1N5825")
+		(at 133.35 77.47 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "dec921bf-cca1-4f47-86b7-1e00079b8933")
+		(property "Reference" "CR2"
+			(at 135.382 76.2 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "1N5825"
+			(at 135.382 78.74 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "1N5825_MCH"
+			(at 133.35 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "1N5825"
+			(at 133.35 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 133.35 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "792de50e-169a-4d55-9a5c-d5f8a0e88292")
+		)
+		(pin "2"
+			(uuid "e9a72a85-7f9f-4d74-bd8a-912fe1f2ab9a")
+		)
+		(instances
+			(project "LM2576_Var_Volt_Reg"
+				(path "/05ad55a9-73a4-4419-8d6d-9b068d5aca56"
+					(reference "CR2")
 					(unit 1)
 				)
 			)

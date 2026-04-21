@@ -236,6 +236,326 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "PCM_SL_Connectors:JST_06"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 0 12.7 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "JST_06"
+				(at 0 10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Connector_JST:JST_EH_B6B-EH-A_1x06_P2.50mm_Vertical"
+				(at 0 11.43 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 11.43 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "JST Connector  6 pins"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "JST"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Connector_JST:JST_EH_S6B-EH_1x06_P2.50mm_Horizontal"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "JST_06_0_1"
+				(rectangle
+					(start -1.27 7.62)
+					(end 1.27 -7.62)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -6.858) (xy -1.27 -7.62) (xy 1.27 -7.62) (xy 1.27 -6.858) (xy 1.016 -6.858) (xy 1.016 -7.366)
+						(xy -1.016 -7.366) (xy -1.016 -6.858) (xy -1.27 -6.858)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 0 6.35)
+					(radius 0.381)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 0 3.81)
+					(radius 0.381)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 0 1.27)
+					(radius 0.381)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 0 -1.27)
+					(radius 0.381)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 0 -3.81)
+					(radius 0.381)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 0 -6.35)
+					(radius 0.381)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 1.016 -6.858)
+					(end 1.27 6.858)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 1.016 -6.858)
+					(end 1.27 -6.858)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 6.858) (xy 1.27 7.62) (xy -1.27 7.62) (xy -1.27 6.858) (xy -1.016 6.858) (xy -1.016 7.366)
+						(xy 1.016 7.366) (xy 1.016 6.858) (xy 1.27 6.858)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+			)
+			(symbol "JST_06_1_1"
+				(pin passive line
+					(at -3.81 6.35 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -3.81 3.81 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -3.81 1.27 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -3.81 -1.27 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -3.81 -3.81 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -3.81 -6.35 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "PCM_SL_Pin_Headers:PINHD_1x10_Male"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -742,233 +1062,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "PCM_SparkFun-Connector:Conn_01x04_JST_P1.0mm_Vertical_SMD"
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "J"
-				(at 0 5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "JST_SMD_1.0mm_Vertical"
-				(at 0 -7.62 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "PCM_SparkFun-Connector:JST_1x04_P1.0mm_Vertical_SMD"
-				(at 0 -10.16 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 -12.7 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "4 pin JST 1mm polarized connector for I2C"
-				(at 0 -15.24 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "PROD_ID" "CONN-14483"
-				(at 0 -17.78 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "SparkFun connector"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "Connector*:*_1x??_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "Conn_01x04_JST_P1.0mm_Vertical_SMD_1_1"
-				(rectangle
-					(start -1.27 3.81)
-					(end 1.27 -6.35)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(rectangle
-					(start -1.27 2.667)
-					(end 0 2.413)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 0.127)
-					(end 0 -0.127)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -2.413)
-					(end 0 -2.667)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -4.953)
-					(end 0 -5.207)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -5.08 2.54 0)
-					(length 3.81)
-					(name "Pin_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 3.81)
-					(name "Pin_2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -2.54 0)
-					(length 3.81)
-					(name "Pin_3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -5.08 0)
-					(length 3.81)
-					(name "Pin_4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "PCM_SparkFun-PowerSymbol:GND"
 			(power global)
 			(pin_names
@@ -1144,6 +1237,16 @@
 	)
 	(wire
 		(pts
+			(xy 60.96 92.71) (xy 43.18 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0404b8d0-421b-4ed1-8222-c6c160ffadbe")
+	)
+	(wire
+		(pts
 			(xy 77.47 27.94) (xy 80.01 27.94)
 		)
 		(stroke
@@ -1184,16 +1287,6 @@
 	)
 	(wire
 		(pts
-			(xy 54.61 82.55) (xy 45.72 82.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "28656903-adb9-40b6-80ba-c78e086591e2")
-	)
-	(wire
-		(pts
 			(xy 44.45 59.69) (xy 120.65 59.69)
 		)
 		(stroke
@@ -1201,6 +1294,16 @@
 			(type default)
 		)
 		(uuid "2f183e53-3613-4354-8326-66d95a31bc76")
+	)
+	(wire
+		(pts
+			(xy 57.15 87.63) (xy 43.18 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "37e1a361-96ad-4d1d-a145-c9cdc1b4e9b5")
 	)
 	(wire
 		(pts
@@ -1234,13 +1337,13 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 87.63) (xy 45.72 87.63)
+			(xy 54.61 85.09) (xy 43.18 85.09)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "4b3e1bfe-4af4-4e93-bc7a-8dd648a07114")
+		(uuid "50c657ad-cb4b-4e3c-9f20-4f785daf69a6")
 	)
 	(wire
 		(pts
@@ -1284,17 +1387,7 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 80.01) (xy 45.72 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7c0a2899-03d5-4fb7-99bd-854b01541bda")
-	)
-	(wire
-		(pts
-			(xy 57.15 49.53) (xy 57.15 85.09)
+			(xy 57.15 49.53) (xy 57.15 87.63)
 		)
 		(stroke
 			(width 0)
@@ -1304,7 +1397,7 @@
 	)
 	(wire
 		(pts
-			(xy 54.61 52.07) (xy 54.61 82.55)
+			(xy 54.61 52.07) (xy 54.61 85.09)
 		)
 		(stroke
 			(width 0)
@@ -1321,6 +1414,16 @@
 			(type default)
 		)
 		(uuid "ad1336af-d0e4-45b6-b6d5-651d9a0a90e9")
+	)
+	(wire
+		(pts
+			(xy 43.18 80.01) (xy 50.8 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c87663d9-5687-4151-ab4c-18fcaae95119")
 	)
 	(wire
 		(pts
@@ -1374,16 +1477,6 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 85.09) (xy 57.15 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ecf69740-295b-4d3b-a5a4-f4ef29ddec5d")
-	)
-	(wire
-		(pts
 			(xy 77.47 36.83) (xy 77.47 27.94)
 		)
 		(stroke
@@ -1404,13 +1497,53 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 46.99) (xy 60.96 87.63)
+			(xy 60.96 46.99) (xy 60.96 92.71)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "f479c221-2b5b-4b42-858c-5609b2f2a812")
+	)
+	(label "A1"
+		(at 46.99 92.71 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "09803012-86e1-4ce1-a895-c1c88a418c11")
+	)
+	(label "A2"
+		(at 46.99 85.09 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "19ddd62f-2aa6-4f5a-9d67-d0937fd8d7b8")
+	)
+	(label "B2"
+		(at 46.99 80.01 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a0d14e1b-8e34-4ae1-9bc6-cd1acc0c91f6")
+	)
+	(label "B1"
+		(at 46.99 87.63 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ac965b52-74d4-4def-9550-1de6dbf55c0d")
 	)
 	(symbol
 		(lib_id "PCM_SparkFun-PowerSymbol:GND")
@@ -1485,103 +1618,6 @@
 			(project "Swapping hotend board"
 				(path "/d55638fc-8c18-4352-a8d7-1cc5ced4de31"
 					(reference "#PWR070")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "PCM_SparkFun-Connector:Conn_01x04_JST_P1.0mm_Vertical_SMD")
-		(at 40.64 82.55 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "39152626-ae5f-4110-9167-0d13a88a27dd")
-		(property "Reference" "J24"
-			(at 40.64 93.98 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "JST_SMD_1.0mm_Vertical"
-			(at 40.64 91.44 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "PCM_SparkFun-Connector:JST_1x04_P1.0mm_Vertical_SMD"
-			(at 40.64 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 40.64 95.25 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "4 pin JST 1mm polarized connector for I2C"
-			(at 40.64 97.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PROD_ID" "CONN-14483"
-			(at 40.64 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "3"
-			(uuid "85f86f67-9088-412d-831e-4d4414114d92")
-		)
-		(pin "1"
-			(uuid "6c2eed10-b91e-4a14-8505-33d537c79b68")
-		)
-		(pin "4"
-			(uuid "52db4a83-8d8c-47fe-ab87-7123988c28a8")
-		)
-		(pin "2"
-			(uuid "79c363d4-7c9d-435b-a718-a354fc317c22")
-		)
-		(instances
-			(project "Swapping hotend board"
-				(path "/d55638fc-8c18-4352-a8d7-1cc5ced4de31"
-					(reference "J24")
 					(unit 1)
 				)
 			)
@@ -1754,8 +1790,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "6cc51708-641c-42d4-bba0-3cfabd7ab24e")
-		(property "Reference" "J19"
+		(uuid "71772300-5960-4bbc-9cac-f8cf83422177")
+		(property "Reference" "J2"
 			(at 40.765 30.48 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1775,7 +1811,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Horizontal"
 			(at 41.91 67.31 0)
 			(hide yes)
 			(show_name no)
@@ -1808,40 +1844,132 @@
 				)
 			)
 		)
-		(pin "3"
-			(uuid "b4eeb88b-0a6c-4f6d-a1db-79766f89e029")
-		)
-		(pin "2"
-			(uuid "8cdb79c5-6f01-433c-9fc8-8e8946b1dc17")
+		(pin "4"
+			(uuid "b53306cf-7ecd-41ac-a8d0-6eaebd4d6fea")
 		)
 		(pin "5"
-			(uuid "a6ae7111-ca25-4f44-8f6c-bb9ff1325fab")
-		)
-		(pin "1"
-			(uuid "0ee86e40-16f7-461b-8ce4-df9b5803a0fd")
-		)
-		(pin "7"
-			(uuid "f5f184f1-16f2-4da8-adf8-766b6c2bf6ed")
-		)
-		(pin "8"
-			(uuid "8bbb85a8-ecd8-4964-af79-038631750de9")
-		)
-		(pin "4"
-			(uuid "88321eb5-574f-475a-bee3-08c77b4e5d82")
+			(uuid "ba9b7be3-ce1a-4db1-8873-dedf9db11663")
 		)
 		(pin "9"
-			(uuid "3ca39128-237f-4f14-936c-160dafd332d2")
+			(uuid "87ac8a34-e440-440e-86e7-42e1314f18b7")
 		)
 		(pin "6"
-			(uuid "bd427cc5-1c30-4b04-be07-bae5b5eea5fa")
+			(uuid "ee197232-4c05-4b2e-af5e-b2f75265b78c")
+		)
+		(pin "7"
+			(uuid "f05d4cd5-a07f-4ff0-941d-b81622ff4558")
 		)
 		(pin "10"
-			(uuid "487cb2af-3682-4f97-aacb-df719f9b67ff")
+			(uuid "8186f20d-3e9b-4432-b45a-2514369001c0")
+		)
+		(pin "1"
+			(uuid "d7f28a77-98b9-4982-a8c2-34498ef219cd")
+		)
+		(pin "8"
+			(uuid "cecc73b9-8aed-469b-a9ae-dcb4b9608252")
+		)
+		(pin "2"
+			(uuid "d4b6e50e-3856-40e9-980d-79dd43694d2b")
+		)
+		(pin "3"
+			(uuid "3be2d215-a45f-4afe-a89e-11f2d33b9dca")
 		)
 		(instances
 			(project "Swapping hotend board"
 				(path "/d55638fc-8c18-4352-a8d7-1cc5ced4de31"
-					(reference "J19")
+					(reference "J2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_SL_Connectors:JST_06")
+		(at 39.37 86.36 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ab28641c-d3a8-442b-8022-b1de84ea3eb7")
+		(property "Reference" "J3"
+			(at 39.37 73.66 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "JST_06"
+			(at 39.37 76.2 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_JST:JST_EH_S6B-EH_1x06_P2.50mm_Horizontal"
+			(at 39.37 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 39.37 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "JST Connector  6 pins"
+			(at 39.37 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b9ce7274-c4fa-43a9-be35-6b354e4d99c9")
+		)
+		(pin "5"
+			(uuid "5cc99264-6387-4a10-a0e1-e0ce0d16b4c8")
+		)
+		(pin "2"
+			(uuid "ad82d379-f1ef-4b3a-87f2-dfc1f4e79530")
+		)
+		(pin "6"
+			(uuid "724c4ef0-cebe-486c-b817-89b82cbc8ba1")
+		)
+		(pin "4"
+			(uuid "2ae16d85-2076-4057-ae8c-c92741f7bda7")
+		)
+		(pin "3"
+			(uuid "a4ddbb57-484d-4ef8-9083-e8450db27cdf")
+		)
+		(instances
+			(project "Swapping hotend board"
+				(path "/d55638fc-8c18-4352-a8d7-1cc5ced4de31"
+					(reference "J3")
 					(unit 1)
 				)
 			)

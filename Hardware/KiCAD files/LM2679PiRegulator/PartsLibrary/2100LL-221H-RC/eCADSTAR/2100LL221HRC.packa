@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "2100LL-221H-RC"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2022-03-12-06:34:32)
+    (mountForm default
+        (footprintRef "2100LL221HRC")
+        (spec "System")
+    )
+)

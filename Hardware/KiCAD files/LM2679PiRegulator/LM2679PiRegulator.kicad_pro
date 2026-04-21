@@ -195,7 +195,12 @@
       ],
       "track_widths": [
         0.0,
-        1.0
+        0.5,
+        1.0,
+        1.25,
+        1.5,
+        1.75,
+        2.0
       ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
@@ -656,16 +661,16 @@
       {
         "filename": "LM2679PiRegulator.kicad_sch",
         "name": "LM2679PiRegulator",
-        "uuid": "00000000-0000-0000-0000-000000000000"
+        "uuid": "71783e17-06bf-42e4-a28a-432b66bad3e6"
       }
     ],
-    "used_designators": "",
+    "used_designators": "L2",
     "variants": []
   },
   "sheets": [
     [
       "71783e17-06bf-42e4-a28a-432b66bad3e6",
-      "Root"
+      "LM2679PiRegulator"
     ]
   ],
   "text_variables": {},

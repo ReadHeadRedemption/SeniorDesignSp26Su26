@@ -1,0 +1,18 @@
+.2100LL-221H-RC :1 ;Ind High Current Toroid 220uH 15% 1KHz 3.5A RDL - Boxed Product (Development Kits)
+"2100LL221HRC"
+*STM L
+*NGS
+*PLB 1="1" 2="2"
+*MXP 2
+*DFN 2100LL-221H-RC
+~!Manufacturer_Name (Bourns)
+~!Manufacturer_Part_Number (2100LL-221H-RC)
+~!Mouser Part Number (-)
+~!Mouser Price/Stock (-)
+~!Arrow Part Number (-)
+~!Arrow Price/Stock (-)
+~!Link Datasheet (https://www.bourns.com/products/magnetic-products/j.w.-miller-through-hole-toroid-inductors)
+~!Height (11.43mm)
+~!3D_Model (2100LL-221H-RC)
+"2100LL-221H-RC"
+1.1!U 2.1!U 

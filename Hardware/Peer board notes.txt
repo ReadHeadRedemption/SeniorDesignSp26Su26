@@ -1,0 +1,9 @@
+add higher value diode 1N5825 on pi regulator swapped in
+
+double check inductor device on pi regulator value and higher current value checked and concurred, 3.5A device found.
+
+send short list of things on MCU done
+
+check machanical size of the motor driver to match pololu done
+
+take screenshots of data passages and typed description done
