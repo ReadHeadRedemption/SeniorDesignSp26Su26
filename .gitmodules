@@ -1,3 +1,6 @@
 [submodule "Software/CIPFirmware"]
 	path = Software/CIPFirmware
 	url = https://github.com/ReadHeadRedemption/CIPFirmware.git
+[submodule "Software/CIPSlicerSoftware"]
+	path = Software/CIPSlicerSoftware
+	url = https://github.com/Jeji0/CIPSlicerSoftware.git

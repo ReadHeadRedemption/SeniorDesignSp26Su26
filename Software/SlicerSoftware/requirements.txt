@@ -1,2 +1,0 @@
-pygerber==3.0.0a4
-gscrib==1.2.0
