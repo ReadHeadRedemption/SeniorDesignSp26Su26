@@ -11,3 +11,13 @@ should I keep island fills? what are the effects? keep gnd plane connected as mu
 Vias are extensivly useed in the process of routing, how many vias are too many?
 
 Distance of traces should be 3x width of trace before "crosstalk occurs" 
+
+Confirm that we need a 4th GND pin
+
+confirm motor driver
+
+"anything before purchase?"
+
+confirm previous requests done after re-asking
+
+

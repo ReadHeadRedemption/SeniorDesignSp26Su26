@@ -3736,16 +3736,6 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "NoteMeausure impedance of the lines in layout ISA and ISB are .20 ohm, do with wire parasitics"
-		(exclude_from_sim no)
-		(at 146.05 148.844 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "5bf995e1-c70e-4027-8cde-206b7b34d5f0")
-	)
 	(text "This is designed to be integrated only leaving a connector output to the stepper"
 		(exclude_from_sim no)
 		(at 140.716 144.272 0)
@@ -3765,16 +3755,6 @@
 			)
 		)
 		(uuid "929df255-704a-4bb0-b357-b6738c6dca84")
-	)
-	(text "Replace all generics for specific componenets\n"
-		(exclude_from_sim no)
-		(at 139.954 154.686 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "a7bcef3d-3a0a-4887-b8fe-4bbf84d0a083")
 	)
 	(text "verify that board phase wiring is switched to match jst connector"
 		(exclude_from_sim no)
@@ -3806,7 +3786,7 @@
 		)
 		(uuid "f2bee3d3-75fc-4d42-96e5-58852788dd22")
 	)
-	(text "Stand-alone DRV8825 1.0 D0"
+	(text "Stand-alone DRV8825 1.2 D0"
 		(exclude_from_sim no)
 		(at 84.074 22.606 0)
 		(effects
@@ -3818,7 +3798,7 @@
 	)
 	(text "Verify the coil Physically"
 		(exclude_from_sim no)
-		(at 139.7 151.892 0)
+		(at 139.7 147.574 0)
 		(effects
 			(font
 				(size 1.27 1.27)
