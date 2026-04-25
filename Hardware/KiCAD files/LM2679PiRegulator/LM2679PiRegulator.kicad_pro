@@ -529,7 +529,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "../../manuracturing outputs/V1 boards/LM2679_Pi_Reg/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",

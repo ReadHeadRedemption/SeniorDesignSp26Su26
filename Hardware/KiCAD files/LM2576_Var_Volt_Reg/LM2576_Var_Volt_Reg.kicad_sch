@@ -1782,12 +1782,6 @@
 		)
 	)
 	(junction
-		(at 162.56 62.23)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0ef6bc3d-1414-4cbf-ac47-bbd9a99389f3")
-	)
-	(junction
 		(at 162.56 85.09)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1822,6 +1816,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "81a9a66d-f58a-4a2a-ad88-7160b3e4611d")
+	)
+	(junction
+		(at 162.56 62.23)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "96e1e24a-4b3f-43dd-8386-e6046618904b")
 	)
 	(junction
 		(at 152.4 62.23)
@@ -2013,6 +2013,16 @@
 	)
 	(wire
 		(pts
+			(xy 162.56 62.23) (xy 162.56 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "74abddd6-a751-463e-b37c-e891945355f5")
+	)
+	(wire
+		(pts
 			(xy 101.6 57.15) (xy 101.6 58.42)
 		)
 		(stroke
@@ -2060,16 +2070,6 @@
 			(type default)
 		)
 		(uuid "924f5971-d0be-4ecb-8213-b27388957f43")
-	)
-	(wire
-		(pts
-			(xy 162.56 62.23) (xy 162.56 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "97ddfa0c-d5db-4410-aee4-392f8f6ae1cd")
 	)
 	(wire
 		(pts
@@ -2143,16 +2143,6 @@
 	)
 	(wire
 		(pts
-			(xy 152.4 62.23) (xy 162.56 62.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c2e8680a-9c40-4f09-82b1-b9974c6443cc")
-	)
-	(wire
-		(pts
 			(xy 144.78 77.47) (xy 144.78 81.28)
 		)
 		(stroke
@@ -2193,13 +2183,23 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 62.23) (xy 173.99 62.23)
+			(xy 152.4 62.23) (xy 162.56 62.23)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "d9869e5d-0b95-4716-846c-9f06f61cbbb4")
+	)
+	(wire
+		(pts
+			(xy 162.56 62.23) (xy 173.99 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dbaccf96-898e-4251-a689-3436f1ff81aa")
 	)
 	(wire
 		(pts
@@ -2230,6 +2230,16 @@
 			(type default)
 		)
 		(uuid "e4948738-4197-4db9-ab19-ed200cad8b17")
+	)
+	(wire
+		(pts
+			(xy 162.56 72.39) (xy 162.56 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ee103100-3494-4a8b-a523-6a4b50de9252")
 	)
 	(label "Vin"
 		(at 88.9 57.15 0)
@@ -3909,6 +3919,88 @@
 			(project "LM2576_Var_Volt_Reg"
 				(path "/05ad55a9-73a4-4419-8d6d-9b068d5aca56"
 					(reference "C4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 162.56 68.58 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "babdd045-da17-4ad9-841f-794247434f08")
+		(property "Reference" "R5"
+			(at 165.1 67.3099 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "RVar"
+			(at 165.1 69.8499 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
+			(at 163.576 68.834 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 162.56 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 162.56 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "81458651-309a-4f77-bb47-962dc1e584cb")
+		)
+		(pin "2"
+			(uuid "8f7942f4-3f18-47e3-b126-a38be5900304")
+		)
+		(instances
+			(project "LM2576_Var_Volt_Reg"
+				(path "/05ad55a9-73a4-4419-8d6d-9b068d5aca56"
+					(reference "R5")
 					(unit 1)
 				)
 			)

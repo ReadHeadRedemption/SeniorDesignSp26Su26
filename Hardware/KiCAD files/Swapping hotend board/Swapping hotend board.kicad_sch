@@ -1177,7 +1177,7 @@
 	)
 	(text "preserve orientation accross boards\n"
 		(exclude_from_sim no)
-		(at 33.02 62.992 0)
+		(at 87.122 51.054 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1234,6 +1234,14 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a9e29438-eb6e-41b7-af38-c9ec2c8e6a41")
+	)
+	(no_connect
+		(at 43.18 90.17)
+		(uuid "2605d5d6-47dd-465c-b48b-7c14952b95fc")
+	)
+	(no_connect
+		(at 43.18 82.55)
+		(uuid "3ed0e103-8fa3-4683-b9c9-9b335cee7fe1")
 	)
 	(wire
 		(pts
