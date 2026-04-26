@@ -4080,14 +4080,6 @@
 		(uuid "c6cd5a46-3341-4810-a2a3-b6385882a1e6")
 	)
 	(segment
-		(start 129.19 87.122)
-		(end 129.19 87)
-		(width 1.25)
-		(layer "F.Cu")
-		(net "/Vout")
-		(uuid "cd46e35a-d70c-483a-bfcb-0bd6fb97cef8")
-	)
-	(segment
 		(start 168 108)
 		(end 171 108)
 		(width 1.25)
