@@ -17,3 +17,4 @@ dependencies:
   espressif/esp_lcd_ili9341: ^2.0.2
   espressif/esp_lvgl_port: ^2.7.2
   atanisoft/esp_lcd_touch_xpt2046: ^1.0.6
+  esp-idf-lib/max31865: ^1.0.8

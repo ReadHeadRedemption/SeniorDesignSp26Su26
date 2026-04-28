@@ -132,8 +132,8 @@
 #define RMT_HOME_CHUNK_STEPS    64
 #define RMT_MAX_DURATION_US     32767U
 #define DIR_SETUP_DELAY_US      5U
-#define RMT_RAMP_MIN_STEPS      32
-#define RMT_RAMP_MAX_STEPS      256
+#define RMT_RAMP_MIN_STEPS      0
+#define RMT_RAMP_MAX_STEPS      0
 #define RMT_START_SLOWDOWN      2.5f
 
 static const char *TAG = "ink_printer_m1";

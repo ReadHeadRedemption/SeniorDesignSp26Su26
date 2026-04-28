@@ -13,6 +13,24 @@ dependencies:
       registry_url: https://components.espressif.com/
       type: service
     version: 1.0.6
+  esp-idf-lib/max31865:
+    component_hash: c7a027843a3f9cf4b06e7e216b25b2089115568f288c8682defd84c018a5b80f
+    dependencies: []
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    targets:
+    - esp32
+    - esp32c2
+    - esp32c3
+    - esp32c5
+    - esp32c6
+    - esp32c61
+    - esp32h2
+    - esp32p4
+    - esp32s2
+    - esp32s3
+    version: 1.0.8
   espressif/cmake_utilities:
     component_hash: 351350613ceafba240b761b4ea991e0f231ac7a9f59a9ee901f751bddc0bb18f
     dependencies:
@@ -66,17 +84,18 @@ dependencies:
       type: idf
     version: 6.0.0
   lvgl/lvgl:
-    component_hash: b702d642e03e95928046d5c6726558e6444e112420c77efa5fdb6650b0a13c5d
+    component_hash: 17e68bfd21f0edf4c3ee838e2273da840bf3930e5dbc3bfa6c1190c3aed41f9f
     dependencies: []
     source:
       registry_url: https://components.espressif.com
       type: service
-    version: 9.3.0
+    version: 9.4.0
 direct_dependencies:
 - atanisoft/esp_lcd_touch_xpt2046
+- esp-idf-lib/max31865
 - espressif/esp_lcd_ili9341
 - espressif/esp_lvgl_port
 - idf
-manifest_hash: aa58ef9849bb5451d6a270ac394ac271e13336605800c32e6939bb341cc57139
+manifest_hash: b51c2fa8dff5c65e898cd14022322418c4e3937f66d8d24dede997eed51ff111
 target: esp32s3
 version: 3.0.0
