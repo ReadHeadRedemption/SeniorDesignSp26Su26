@@ -59,9 +59,9 @@
 #define PIN_Z_MIN           GPIO_NUM_NC
 #define PIN_Z_MAX           GPIO_NUM_NC
 
-#define PIN_E_STEP          GPIO_NUM_NC
-#define PIN_E_DIR           GPIO_NUM_NC
-#define PIN_E_EN            GPIO_NUM_NC
+#define PIN_E_STEP          GPIO_NUM_17
+#define PIN_E_DIR           GPIO_NUM_18
+#define PIN_E_EN            GPIO_NUM_16
 
 #define PIN_Z_PROBE         GPIO_NUM_NC
 #define PIN_BED_SSR         GPIO_NUM_38
@@ -103,7 +103,7 @@
 #define BED_THERM_ATTEN         ADC_ATTEN_DB_12
 
 #define RTD_CONNECTION MAX31865_3WIRE
-#define RTD_STANDARD MAX31865_ITS90
+#define RTD_STANDARD MAX31865_US_INDUSTRIAL
 #define FILTER MAX31865_FILTER_60HZ
 
 static max31865_config_t config = {
@@ -1755,10 +1755,12 @@ static void temperature_task(void *pvParameter)
     // Configure device
     ESP_ERROR_CHECK(max31865_set_config(&dev, &config));
 
-    float temperature;
+    float temperatureUncal;
     while (1)
     {
-        esp_err_t res = max31865_measure(&dev, &temperature);
+        esp_err_t res = max31865_measure(&dev, &temperatureUncal);
+
+        float temperature = temperatureUncal;
 
         // Two checks: check if there is any result, and if so, a sanity check for temperature. Below 18 C is not sane
         if (res != ESP_OK || temperature < 18)
@@ -1771,53 +1773,68 @@ static void temperature_task(void *pvParameter)
         {
             ESP_LOGI(TAG, "Temperature: %.4f C (%.4f F)", temperature, temperature * 1.8 + 32);
 
-            // if (temperature > 40)
+            // if (temperature > 30)
             // {
             //     if (PIN_BED_SSR != GPIO_NUM_NC) gpio_set_level(PIN_BED_SSR, 0);
             // }
-            // else if (temperature < 38)
-            // {
-            //     if (PIN_BED_SSR != GPIO_NUM_NC) gpio_set_level(PIN_BED_SSR, 1);
-            //     vTaskDelay(pdMS_TO_TICKS(5000));
-            // }
-
-            if (temperature < 160)
+            // else 
+            if (temperature < 180)
             {
                 if (PIN_BED_SSR != GPIO_NUM_NC) gpio_set_level(PIN_BED_SSR, 1);
-                vTaskDelay(pdMS_TO_TICKS(15000));
-
+                int time = (int)(1000 * (180 - temperature));
+                if (time > 50)
+                    vTaskDelay(pdMS_TO_TICKS(time));
+                else
+                    vTaskDelay(pdMS_TO_TICKS(50));
                 if (PIN_BED_SSR != GPIO_NUM_NC) gpio_set_level(PIN_BED_SSR, 0);
-                vTaskDelay(pdMS_TO_TICKS(15000));
             }
-
-            else if (temperature < 180)
+            int waitTime = 16000 * (180 - temperature) / 160 + 4000;
+            if (waitTime < 4000)
             {
-                while (temperature < 182)
-                {
-                    if (PIN_BED_SSR != GPIO_NUM_NC) gpio_set_level(PIN_BED_SSR, 1);
-                    vTaskDelay(pdMS_TO_TICKS(1000));
-
-                    if (PIN_BED_SSR != GPIO_NUM_NC) gpio_set_level(PIN_BED_SSR, 0);
-                    vTaskDelay(pdMS_TO_TICKS(3000));
-
-                    printf("\a");
-                    
-                     res = max31865_measure(&dev, &temperature);
-                    if (res != ESP_OK || temperature < 18)
-                    {
-                        ESP_LOGE(TAG, "Failed to measure: %d (%s)", res, esp_err_to_name(res));
-                        if (PIN_BED_SSR != GPIO_NUM_NC) gpio_set_level(PIN_BED_SSR, 0);
-                        vTaskDelete(NULL);
-                    }
-                    else
-                    {
-                        ESP_LOGI(TAG, "Temperature: %.4f C (%.4f F)", temperature, temperature * 1.8 + 32);
-                    }
-                }
+                vTaskDelay(pdMS_TO_TICKS(4000));
             }
+            else
+            {
+                vTaskDelay(pdMS_TO_TICKS(waitTime));
+            }
+
+            // if (temperature < 160)
+            // {
+            //     if (PIN_BED_SSR != GPIO_NUM_NC) gpio_set_level(PIN_BED_SSR, 1);
+            //     vTaskDelay(pdMS_TO_TICKS(15000));
+
+            //     if (PIN_BED_SSR != GPIO_NUM_NC) gpio_set_level(PIN_BED_SSR, 0);
+            //     vTaskDelay(pdMS_TO_TICKS(15000));
+            // }
+
+            // else if (temperature < 180)
+            // {
+            //     while (temperature < 182)
+            //     {
+            //         if (PIN_BED_SSR != GPIO_NUM_NC) gpio_set_level(PIN_BED_SSR, 1);
+            //         vTaskDelay(pdMS_TO_TICKS(1000));
+
+            //         if (PIN_BED_SSR != GPIO_NUM_NC) gpio_set_level(PIN_BED_SSR, 0);
+            //         vTaskDelay(pdMS_TO_TICKS(3000));
+
+            //         printf("\a");
+                    
+            //          res = max31865_measure(&dev, &temperature);
+            //         if (res != ESP_OK || temperature < 18)
+            //         {
+            //             ESP_LOGE(TAG, "Failed to measure: %d (%s)", res, esp_err_to_name(res));
+            //             if (PIN_BED_SSR != GPIO_NUM_NC) gpio_set_level(PIN_BED_SSR, 0);
+            //             vTaskDelete(NULL);
+            //         }
+            //         else
+            //         {
+            //             ESP_LOGI(TAG, "Temperature: %.4f C (%.4f F)", temperature, temperature * 1.8 + 32);
+            //         }
+            //     }
+            // }
         }
 
-        vTaskDelay(pdMS_TO_TICKS(2000));
+        // vTaskDelay(pdMS_TO_TICKS(2000));
     }
 }
 
@@ -1844,17 +1861,17 @@ void app_main(void) {
         ESP_LOGW(TAG, "Continuing without SD card. You can still jog/home over serial.");
     }
 
-    if (ui_display_touch_init() != ESP_OK) {
-        ESP_LOGW(TAG, "Continuing without touchscreen UI.");
-    } else {
-        xTaskCreatePinnedToCore(ui_motion_task, "ui_motion_task", 8192, NULL, 4, NULL, 1);
-    }
+    // if (ui_display_touch_init() != ESP_OK) {
+    //     ESP_LOGW(TAG, "Continuing without touchscreen UI.");
+    // } else {
+    //     xTaskCreatePinnedToCore(ui_motion_task, "ui_motion_task", 8192, NULL, 4, NULL, 1);
+    // }
 
     // xTaskCreatePinnedToCore(heater_task, "heater_task", 4096, NULL, 5, NULL, 1);
     xTaskCreatePinnedToCore(console_task, "console_task", 8192, NULL, 4, NULL, 0);
     xTaskCreatePinnedToCore(stop_task, "stop_task", 4096, NULL, 4, NULL, 0);
     xTaskCreatePinnedToCore(move_task, "move_task", 4096, NULL, 4, NULL, 0);
-    // xTaskCreatePinnedToCore(temperature_task, "temperature_task", 4096, NULL, 4, NULL, 0);
+    xTaskCreatePinnedToCore(temperature_task, "temperature_task", 4096, NULL, 4, NULL, 0);
 
     ESP_LOGI(TAG, "Ink printer milestone firmware ready");
 }
