@@ -50,32 +50,10 @@
         "silk_text_thickness": 0.1,
         "silk_text_upright": false,
         "zones": {
-          "border_display_style": 2,
-          "border_hatch_pitch": 0.5,
-          "corner_radius": 0.0,
-          "corner_smoothing": 0,
-          "fill_mode": 0,
-          "hatch_gap": 1.5,
-          "hatch_orientation": 0.0,
-          "hatch_smoothing_level": 0,
-          "hatch_smoothing_value": 0.1,
-          "hatch_thickness": 1.0,
-          "min_clearance": 1.0,
-          "min_island_area": 10.0,
-          "min_thickness": 0.25,
-          "pad_connection": 1,
-          "remove_islands": 0,
-          "thermal_relief_gap": 0.5,
-          "thermal_relief_spoke_width": 0.5
+          "min_clearance": 0.5
         }
       },
-      "diff_pair_dimensions": [
-        {
-          "gap": 0.0,
-          "via_gap": 0.0,
-          "width": 0.0
-        }
-      ],
+      "diff_pair_dimensions": [],
       "drc_exclusions": [],
       "meta": {
         "version": 2
@@ -159,7 +137,7 @@
         "min_text_height": 0.8,
         "min_text_thickness": 0.08,
         "min_through_hole_diameter": 0.3,
-        "min_track_width": 0.2032,
+        "min_track_width": 0.2,
         "min_via_annular_width": 0.1,
         "min_via_diameter": 0.5,
         "solder_mask_to_copper_clearance": 0.0,
@@ -209,18 +187,7 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [
-        0.0,
-        0.2032,
-        0.254,
-        0.3048,
-        0.4572,
-        0.508,
-        1.0,
-        1.5,
-        2.0,
-        3.7
-      ],
+      "track_widths": [],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
           "corner_radius_percentage": 80,
@@ -247,20 +214,7 @@
           "spacing": 0.6
         }
       },
-      "via_dimensions": [
-        {
-          "diameter": 0.0,
-          "drill": 0.0
-        },
-        {
-          "diameter": 0.6,
-          "drill": 0.3
-        },
-        {
-          "diameter": 2.0,
-          "drill": 0.6
-        }
-      ],
+      "via_dimensions": [],
       "zones_allow_external_fillets": false
     },
     "ipc2581": {
@@ -272,13 +226,7 @@
       "mpn": "",
       "sch_revision": ""
     },
-    "layer_pairs": [
-      {
-        "bottomLayer": 2,
-        "enabled": true,
-        "topLayer": 0
-      }
-    ],
+    "layer_pairs": [],
     "layer_presets": [],
     "viewports": []
   },
@@ -524,7 +472,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "Mainboard layout.kicad_pro",
+    "filename": "Max temperature V1.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -547,21 +495,6 @@
         "via_diameter": 0.6,
         "via_drill": 0.3,
         "wire_width": 6
-      },
-      {
-        "clearance": 0.2,
-        "diff_pair_gap": 0.25,
-        "diff_pair_width": 0.2,
-        "microvia_diameter": 0.3,
-        "microvia_drill": 0.1,
-        "name": "recommended width",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 0,
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.508,
-        "tuning_profile": "",
-        "via_diameter": 0.6,
-        "via_drill": 0.3
       }
     ],
     "meta": {
@@ -569,20 +502,7 @@
     },
     "net_colors": null,
     "netclass_assignments": null,
-    "netclass_patterns": [
-      {
-        "netclass": "Default",
-        "pattern": "+3.3V"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "GND"
-      },
-      {
-        "netclass": "Default",
-        "pattern": ""
-      }
-    ]
+    "netclass_patterns": []
   },
   "pcbnew": {
     "last_paths": {
@@ -707,24 +627,21 @@
     "subpart_id_separator": 0,
     "top_level_sheets": [
       {
-        "filename": "Mainboard layout.kicad_sch",
-        "name": "Mainboard layout",
-        "uuid": "322d2c9f-d9a6-40cc-b638-389f55be9478"
+        "filename": "Max temperature V1.kicad_sch",
+        "name": "Root",
+        "uuid": "dc06dc2b-0280-40dd-90df-7f4a11b6c433"
       }
     ],
-    "used_designators": "J15,R9",
+    "used_designators": "",
     "variants": []
   },
   "sheets": [
     [
-      "322d2c9f-d9a6-40cc-b638-389f55be9478",
-      "Mainboard layout"
+      "dc06dc2b-0280-40dd-90df-7f4a11b6c433",
+      "Root"
     ]
   ],
-  "text_variables": {
-    "Regulator_Length": "20mm",
-    "Regulator_Width": "20mm"
-  },
+  "text_variables": {},
   "tuning_profiles": {
     "meta": {
       "version": 0

@@ -1,0 +1,4 @@
+Distance between communication traces are to be 3x dialetric width of trace inlcuding layer width
+
+Shield connections should have lowest impedance to specifically machine Ground
+Digital Ground to shield ground should occur at 1 point.

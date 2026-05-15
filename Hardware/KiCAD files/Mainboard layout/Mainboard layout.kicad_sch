@@ -9731,16 +9731,6 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "change val\n"
-		(exclude_from_sim no)
-		(at 176.53 36.83 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "10e76eb9-2342-4f2f-83ef-035caf27b2c1")
-	)
 	(text "DIP switch head Identifier pins"
 		(exclude_from_sim no)
 		(at 358.902 97.536 0)
@@ -9801,6 +9791,16 @@
 			)
 		)
 		(uuid "35038409-8ef3-40ab-968e-be576220e5c5")
+	)
+	(text "IN CASE FOR SHIELDING\n"
+		(exclude_from_sim no)
+		(at 645.16 214.376 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "3a7749c3-d079-4faf-b3e6-a779bf40693b")
 	)
 	(text "Female connector to place on mainboard"
 		(exclude_from_sim no)
@@ -10014,16 +10014,6 @@
 		)
 		(uuid "b3e37144-8ac4-4653-b1ed-7f494b4a5d1a")
 	)
-	(text "Check"
-		(exclude_from_sim no)
-		(at 442.722 69.342 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "bb3684ca-8232-40fe-b7d2-774dbd833976")
-	)
 	(text "TVS diode array or equivalent to \n\nSP0502BAHTG equivalent\n"
 		(exclude_from_sim no)
 		(at 701.548 105.664 0)
@@ -10033,16 +10023,6 @@
 			)
 		)
 		(uuid "c00fd3f0-faca-48e5-88d3-f84a0e7ff2f7")
-	)
-	(text "rasberry pi connector"
-		(exclude_from_sim no)
-		(at 356.87 110.236 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "cf1a7853-80ca-42e3-b297-30d2eb246ca4")
 	)
 	(text "verify that esp interrupt is on this pin\n"
 		(exclude_from_sim no)
@@ -10217,12 +10197,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7719ff76-2343-428a-91d4-e8e54d2bf892")
-	)
-	(junction
-		(at 133.35 179.07)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "77ea99e9-b595-4312-95a0-353c182b7fcc")
 	)
 	(junction
 		(at 556.26 73.66)
@@ -10481,6 +10455,10 @@
 		(uuid "2bfaaa90-591e-4ad9-9a61-2c11adea7846")
 	)
 	(no_connect
+		(at 637.54 222.25)
+		(uuid "2dcbabc8-7f23-41ab-9116-8e1e0ea94bd5")
+	)
+	(no_connect
 		(at 157.48 390.2532)
 		(uuid "345022a5-b942-4e30-91b5-6cdd84563f26")
 	)
@@ -10569,10 +10547,6 @@
 		(uuid "dd2efcb8-b30a-42e3-b8dd-b57b35dd8b40")
 	)
 	(no_connect
-		(at 38.1 46.99)
-		(uuid "e7318c43-3fa8-41b8-b607-dcc376e0c990")
-	)
-	(no_connect
 		(at 57.15 118.11)
 		(uuid "e7ee784a-0a2f-4d28-9a2a-1dbbf9dfe4a3")
 	)
@@ -10583,6 +10557,10 @@
 	(no_connect
 		(at 162.3704 246.495)
 		(uuid "f24f6811-3d40-44d7-b8b9-5918772d4557")
+	)
+	(no_connect
+		(at 637.54 219.71)
+		(uuid "f4c72b79-0b5f-48b3-a223-4cab5cae6ef4")
 	)
 	(polyline
 		(pts
@@ -11886,6 +11864,16 @@
 	)
 	(wire
 		(pts
+			(xy 147.32 187.96) (xy 151.13 187.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5e6195dd-f3fd-4eb2-b31c-6a0186cbbfb2")
+	)
+	(wire
+		(pts
 			(xy 292.1 147.32) (xy 292.1 151.13)
 		)
 		(stroke
@@ -11956,7 +11944,7 @@
 	)
 	(polyline
 		(pts
-			(xy 80.645 198.755) (xy 34.925 198.755)
+			(xy 163.83 198.755) (xy 34.925 198.755)
 		)
 		(stroke
 			(width 0)
@@ -12176,7 +12164,7 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 180.34) (xy 107.95 180.34)
+			(xy 106.68 187.96) (xy 139.7 187.96)
 		)
 		(stroke
 			(width 0)
@@ -12706,7 +12694,7 @@
 	)
 	(polyline
 		(pts
-			(xy 34.925 157.48) (xy 80.645 157.48)
+			(xy 34.925 157.48) (xy 163.83 157.48)
 		)
 		(stroke
 			(width 0)
@@ -13156,16 +13144,6 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 179.07) (xy 130.81 179.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c0d3320f-5cb5-43b5-ad3c-f1463e87a780")
-	)
-	(wire
-		(pts
 			(xy 130.81 179.07) (xy 130.81 176.53)
 		)
 		(stroke
@@ -13446,16 +13424,6 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 180.34) (xy 133.35 179.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d6706766-2dc9-418d-a569-07f138cf8e09")
-	)
-	(wire
-		(pts
 			(xy 92.71 102.87) (xy 102.87 102.87)
 		)
 		(stroke
@@ -13506,7 +13474,7 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 179.07) (xy 139.7 179.07)
+			(xy 130.81 179.07) (xy 139.7 179.07)
 		)
 		(stroke
 			(width 0)
@@ -14096,7 +14064,7 @@
 	)
 	(polyline
 		(pts
-			(xy 80.645 157.48) (xy 80.645 198.755)
+			(xy 163.83 157.48) (xy 163.83 198.755)
 		)
 		(stroke
 			(width 0)
@@ -14737,7 +14705,7 @@
 			)
 		)
 	)
-	(global_label "Step"
+	(global_label "STEP"
 		(shape output)
 		(at 328.93 93.98 270)
 		(fields_autoplaced yes)
@@ -14749,7 +14717,7 @@
 		)
 		(uuid "16d7c5a5-5fe5-40d1-92c9-973b18b1f76d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 328.93 101.138 90)
+			(at 328.93 101.5613 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15382,6 +15350,30 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+			)
+		)
+	)
+	(global_label "STEPE"
+		(shape input)
+		(at 151.13 187.96 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "3a7b4cef-e0bd-47e4-842a-b1bb547a0144")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 159.8603 187.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 	)
@@ -16356,6 +16348,30 @@
 		(uuid "620c5336-fd25-4b14-a7cb-692c3384023a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 99.2114 245.225 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "STEPE"
+		(shape output)
+		(at 38.1 46.99 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "6292cac2-b8e1-43c0-bca7-5bd9aebcde6b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 29.3697 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18745,7 +18761,7 @@
 	)
 	(global_label "DRIVER_E_STEP"
 		(shape output)
-		(at 107.95 180.34 180)
+		(at 106.68 187.96 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -18755,7 +18771,7 @@
 		)
 		(uuid "e594f714-e5c0-45c3-8863-da7c28ba7412")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 90.6321 180.34 0)
+			(at 89.3621 187.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21713,7 +21729,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "PCM_SparkFun-Resistor:R_0603_1608Metric"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
 			(at 131.572 30.48 0)
 			(hide yes)
 			(show_name no)
@@ -25511,7 +25527,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PCM_SparkFun-Capacitor:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 105.41 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -26085,7 +26101,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "PCM_SparkFun-Resistor:R_0603_1608Metric"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
 			(at 139.192 27.94 0)
 			(hide yes)
 			(show_name no)
@@ -26262,7 +26278,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PCM_SparkFun-Resistor:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 127.508 39.37 0)
 			(hide yes)
 			(show_name no)
@@ -27563,7 +27579,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PCA9534PW_118:SOP65P640X110-16N"
+		(property "Footprint" "PCA9534PW:SOP65P640X110-16N"
 			(at 55.88 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -27904,7 +27920,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PCM_SparkFun-Resistor:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 127.508 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -28726,7 +28742,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "PCM_SparkFun-Resistor:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 101.092 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -29260,6 +29276,86 @@
 		)
 	)
 	(symbol
+		(lib_id "PCM_SL_Resistors:1k")
+		(at 143.51 187.96 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d1f099f6-e8e6-4378-816b-fc0c54fb108d")
+		(property "Reference" "R9"
+			(at 143.51 181.61 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1k"
+			(at 143.51 184.15 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 144.399 192.278 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 144.018 187.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "1kΩ, 1/4W Resistor"
+			(at 143.51 187.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6c9654a3-86a2-4791-b8ce-c73cb6af93ec")
+		)
+		(pin "2"
+			(uuid "c990372a-ee52-4b18-87c5-9245951ffa6b")
+		)
+		(instances
+			(project "Mainboard layout"
+				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
+					(reference "R9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 109.22 106.68 90)
 		(unit 1)
@@ -29449,7 +29545,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PCM_SparkFun-Capacitor:C_0603_1608Metric"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
 			(at 87.63 13.97 0)
 			(hide yes)
 			(show_name no)
@@ -29888,7 +29984,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PCA9534PW_118:SOP65P640X110-16N"
+		(property "Footprint" "PCA9534PW:SOP65P640X110-16N"
 			(at 74.93 105.41 0)
 			(hide yes)
 			(show_name no)
@@ -31122,6 +31218,88 @@
 			(project "Mainboard layout"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "D11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_SL_Screw_Terminal:Screw_Terminal_2_P5.00mm")
+		(at 641.35 220.98 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fe156389-ff44-4de5-8bdd-0eb398621659")
+		(property "Reference" "J15"
+			(at 645.16 219.7099 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Screw_Terminal_2_P5.00mm"
+			(at 645.16 222.2499 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-5.0-H_1x02_P5.00mm_Horizontal"
+			(at 642.62 227.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 641.35 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 641.35 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "c1414c0d-d564-4b23-a827-daff79020dbc")
+		)
+		(pin "1"
+			(uuid "4eaa55e3-558c-430f-8490-879d3f799f8f")
+		)
+		(instances
+			(project "Mainboard layout"
+				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
+					(reference "J15")
 					(unit 1)
 				)
 			)

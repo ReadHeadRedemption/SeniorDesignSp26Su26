@@ -1,0 +1,18 @@
+shotkey differences 
+1N5825
+Series
+TJ lower at 125 C
+Junction capacitence is higher at 1470 pF
+Temp per W is lower at 12 C/W
+Much lower peak forward voltage at .35 V
+
+SB530
+Series
+Junction capacitence is lower at 500 pF
+Temp per W is higher at 25 C/W
+TJ is higher at 150 C
+much higher peak forward voltage at .55V
+
+conclusion
+1N series is good if I am not cooling down enough or getting too much feedback voltage.
+Also too much capacitence causing sudden current peaks to pop the diode (high transients).
