@@ -9974,6 +9974,16 @@
 		)
 		(uuid "925280d9-60dd-470b-bd4f-80dccbb17c3c")
 	)
+	(text "Pre-lim idea on muting backfeed onn 3.3V line\n"
+		(exclude_from_sim no)
+		(at 29.464 218.186 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "964349e1-899e-4b73-b11c-1d44e9b5511e")
+	)
 	(text "ENDSTOP INPUTS"
 		(exclude_from_sim no)
 		(at 482.346 146.812 0)
@@ -20825,6 +20835,94 @@
 		)
 	)
 	(symbol
+		(lib_id "PCM_Diode_TVS_AKL:SP0503BAHT")
+		(at 24.13 243.84 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp yes)
+		(fields_autoplaced yes)
+		(uuid "1f0e0fbc-568e-4cf0-9e71-df111394c35d")
+		(property "Reference" "D3"
+			(at 31.75 242.5699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "SP0503BAHT"
+			(at 31.75 245.1099 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "PCM_Package_TO_SOT_SMD_AKL:SOT-143"
+			(at 24.13 243.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.tme.eu/Document/ca7ed7e840192927c2f50631891ac6c9/SP05xxBA.pdf"
+			(at 24.13 243.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "SOT-143 TVS Diode array, 3xUnidirectional, 5.5V, Alternate KiCAD Library"
+			(at 24.13 243.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ddc07579-6b0b-41bc-a3d6-433137552a4c")
+		)
+		(pin "2"
+			(uuid "da4e0f2e-a9e3-4e9f-bba8-3af8f03f0622")
+		)
+		(pin "4"
+			(uuid "3e8c95a5-1340-48d1-983b-8141e4c07698")
+		)
+		(pin "3"
+			(uuid "98ef8cca-7a5c-4006-8f67-e2a86d3e5c72")
+		)
+		(instances
+			(project "Mainboard layout"
+				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
+					(reference "D3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "PCM_SparkFun-Connector:Conn_01x04_P2.54mm")
 		(at 417.83 341.63 270)
 		(unit 1)
@@ -26413,6 +26511,94 @@
 			(project "Mainboard layout"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_Diode_TVS_AKL:SP0503BAHT")
+		(at 24.13 227.33 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp yes)
+		(fields_autoplaced yes)
+		(uuid "9edbe4b3-62f8-4c8a-8b08-b53111627174")
+		(property "Reference" "D2"
+			(at 31.75 226.0599 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "SP0503BAHT"
+			(at 31.75 228.5999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "PCM_Package_TO_SOT_SMD_AKL:SOT-143"
+			(at 24.13 227.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.tme.eu/Document/ca7ed7e840192927c2f50631891ac6c9/SP05xxBA.pdf"
+			(at 24.13 227.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "SOT-143 TVS Diode array, 3xUnidirectional, 5.5V, Alternate KiCAD Library"
+			(at 24.13 227.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2242ef24-2930-4c93-961d-e0596c850436")
+		)
+		(pin "2"
+			(uuid "9c373293-a0db-464a-bf6b-2af445282efc")
+		)
+		(pin "4"
+			(uuid "1070a5db-6d1e-4ad5-9dc7-131b27aca1ca")
+		)
+		(pin "3"
+			(uuid "4efd0858-56bf-4a88-9deb-dec3ce788c63")
+		)
+		(instances
+			(project "Mainboard layout"
+				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
+					(reference "D2")
 					(unit 1)
 				)
 			)
