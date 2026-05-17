@@ -513,68 +513,220 @@ cleanup:
 }
 
 typedef struct {
-    uint32_t step_count[AXIS_COUNT];
+    uint32_t symbol_count[AXIS_COUNT];   // Number of RMT symbols, not motor steps.
+    uint32_t symbol_cap[AXIS_COUNT];
     rmt_symbol_word_t *symbols[AXIS_COUNT];
     uint32_t active_mask;
 } rmt_move_plan_t;
 
 static void rmt_move_plan_free(rmt_move_plan_t *plan) {
     if (!plan) return;
+
     for (int axis = 0; axis < AXIS_COUNT; ++axis) {
         free(plan->symbols[axis]);
         plan->symbols[axis] = NULL;
-        plan->step_count[axis] = 0;
+        plan->symbol_count[axis] = 0;
+        plan->symbol_cap[axis] = 0;
     }
+
     plan->active_mask = 0;
 }
 
-static esp_err_t rmt_build_move_plan(const int32_t delta[AXIS_COUNT], int32_t max_steps, uint32_t base_interval_us, rmt_move_plan_t *plan) {
-    if (!plan) return ESP_ERR_INVALID_ARG;
+static esp_err_t rmt_plan_reserve_axis(rmt_move_plan_t *plan, int axis, uint32_t extra_symbols) {
+    uint32_t needed = plan->symbol_count[axis] + extra_symbols;
+
+    if (needed <= plan->symbol_cap[axis]) {
+        return ESP_OK;
+    }
+
+    uint32_t new_cap = plan->symbol_cap[axis] ? plan->symbol_cap[axis] * 2U : 64U;
+
+    while (new_cap < needed) {
+        if (new_cap > UINT32_MAX / 2U) {
+            return ESP_ERR_NO_MEM;
+        }
+        new_cap *= 2U;
+    }
+
+    rmt_symbol_word_t *new_buf = realloc(
+        plan->symbols[axis],
+        (size_t)new_cap * sizeof(rmt_symbol_word_t)
+    );
+
+    if (!new_buf) {
+        return ESP_ERR_NO_MEM;
+    }
+
+    plan->symbols[axis] = new_buf;
+    plan->symbol_cap[axis] = new_cap;
+
+    return ESP_OK;
+}
+
+static esp_err_t rmt_plan_append_symbol(rmt_move_plan_t *plan, int axis, rmt_symbol_word_t sym) {
+    esp_err_t ret = rmt_plan_reserve_axis(plan, axis, 1);
+    if (ret != ESP_OK) {
+        return ret;
+    }
+
+    plan->symbols[axis][plan->symbol_count[axis]++] = sym;
+    return ESP_OK;
+}
+
+static esp_err_t rmt_plan_append_idle_us(rmt_move_plan_t *plan, int axis, uint64_t idle_us) {
+    while (idle_us > 0) {
+        uint32_t chunk;
+
+        if (idle_us > (uint64_t)RMT_MAX_DURATION_US * 2ULL) {
+            chunk = RMT_MAX_DURATION_US * 2U;
+            idle_us -= chunk;
+        } else {
+            chunk = (uint32_t)idle_us;
+            idle_us = 0;
+        }
+
+        // Avoid zero-duration halves. Normal planner intervals should never be 1 us,
+        // because clamp_period_us() enforces at least STEP_PULSE_US + 1.
+        if (chunk < 2U) {
+            chunk = 2U;
+        }
+
+        uint32_t d0 = chunk / 2U;
+        uint32_t d1 = chunk - d0;
+
+        rmt_symbol_word_t idle_sym = {
+            .level0 = 0,
+            .duration0 = d0,
+            .level1 = 0,
+            .duration1 = d1,
+        };
+
+        esp_err_t ret = rmt_plan_append_symbol(plan, axis, idle_sym);
+        if (ret != ESP_OK) {
+            return ret;
+        }
+    }
+
+    return ESP_OK;
+}
+
+static esp_err_t rmt_plan_append_step_tick(rmt_move_plan_t *plan, int axis, uint32_t interval_us) {
+    interval_us = clamp_period_us(interval_us);
+
+    rmt_symbol_word_t step_sym = {
+        .level0 = 1,
+        .duration0 = STEP_PULSE_US,
+        .level1 = 0,
+        .duration1 = interval_us - STEP_PULSE_US,
+    };
+
+    return rmt_plan_append_symbol(plan, axis, step_sym);
+}
+
+static esp_err_t rmt_build_move_plan(
+    const int32_t delta[AXIS_COUNT],
+    int32_t max_steps,
+    uint32_t base_interval_us,
+    rmt_move_plan_t *plan
+) {
+    if (!plan || max_steps <= 0) {
+        return ESP_ERR_INVALID_ARG;
+    }
+
     memset(plan, 0, sizeof(*plan));
 
     int32_t abs_delta[AXIS_COUNT] = {0};
     int32_t err[AXIS_COUNT] = {0};
-    uint32_t write_idx[AXIS_COUNT] = {0};
+    uint32_t actual_step_count[AXIS_COUNT] = {0};
+    uint64_t pending_idle_us[AXIS_COUNT] = {0};
 
     for (int axis = 0; axis < AXIS_COUNT; ++axis) {
         abs_delta[axis] = abs(delta[axis]);
-        if (abs_delta[axis] == 0) continue;
+
+        if (abs_delta[axis] == 0) {
+            continue;
+        }
+
         if (!g_rmt_tx_chan[axis] || !g_rmt_copy_encoder[axis]) {
             ESP_LOGE(TAG, "Axis %d requested to move but has no STEP pin/RMT channel", axis);
             rmt_move_plan_free(plan);
             return ESP_ERR_NOT_SUPPORTED;
         }
 
-        plan->symbols[axis] = calloc((size_t)abs_delta[axis], sizeof(rmt_symbol_word_t));
-        if (!plan->symbols[axis]) {
-            ESP_LOGE(TAG, "Failed to allocate RMT symbols for axis %d (%d steps)", axis, abs_delta[axis]);
-            rmt_move_plan_free(plan);
-            return ESP_ERR_NO_MEM;
-        }
-        plan->step_count[axis] = (uint32_t)abs_delta[axis];
         plan->active_mask |= (1U << axis);
     }
 
+    if (plan->active_mask == 0) {
+        return ESP_OK;
+    }
+
+    /*
+     * Walk through max_steps master ticks. The dominant axis steps nearly every
+     * tick, while shorter axes only step on selected ticks. The important fix is
+     * preserving each no-step tick as idle-low RMT time. Without those idle
+     * durations, a shorter axis emits its pulses back-to-back and finishes early.
+     */
     for (int32_t master = 0; master < max_steps; ++master) {
         uint32_t interval_us = move_interval_with_ramp(base_interval_us, master, max_steps);
+
         for (int axis = 0; axis < AXIS_COUNT; ++axis) {
-            if (abs_delta[axis] == 0) continue;
+            if (abs_delta[axis] == 0) {
+                continue;
+            }
+
             err[axis] += abs_delta[axis];
+
             if (err[axis] >= max_steps) {
-                plan->symbols[axis][write_idx[axis]++] = (rmt_symbol_word_t) {
-                    .level0 = 1,
-                    .duration0 = STEP_PULSE_US,
-                    .level1 = 0,
-                    .duration1 = interval_us - STEP_PULSE_US,
-                };
+                if (pending_idle_us[axis] > 0) {
+                    esp_err_t ret = rmt_plan_append_idle_us(plan, axis, pending_idle_us[axis]);
+                    if (ret != ESP_OK) {
+                        rmt_move_plan_free(plan);
+                        return ret;
+                    }
+                    pending_idle_us[axis] = 0;
+                }
+
+                esp_err_t ret = rmt_plan_append_step_tick(plan, axis, interval_us);
+                if (ret != ESP_OK) {
+                    rmt_move_plan_free(plan);
+                    return ret;
+                }
+
+                actual_step_count[axis]++;
                 err[axis] -= max_steps;
+            } else {
+                pending_idle_us[axis] += interval_us;
             }
         }
     }
 
+    // Add the final idle tail so all active RMT channels last the same move time.
     for (int axis = 0; axis < AXIS_COUNT; ++axis) {
-        if ((uint32_t)abs_delta[axis] != write_idx[axis]) {
-            ESP_LOGE(TAG, "RMT move plan mismatch on axis %d (%" PRIu32 " != %d)", axis, write_idx[axis], abs_delta[axis]);
+        if (abs_delta[axis] == 0) {
+            continue;
+        }
+
+        if (pending_idle_us[axis] > 0) {
+            esp_err_t ret = rmt_plan_append_idle_us(plan, axis, pending_idle_us[axis]);
+            if (ret != ESP_OK) {
+                rmt_move_plan_free(plan);
+                return ret;
+            }
+            pending_idle_us[axis] = 0;
+        }
+
+        if (actual_step_count[axis] != (uint32_t)abs_delta[axis]) {
+            ESP_LOGE(TAG,
+                     "RMT move plan mismatch on axis %d: wrote %" PRIu32 " steps, expected %d",
+                     axis,
+                     actual_step_count[axis],
+                     abs_delta[axis]);
+            rmt_move_plan_free(plan);
+            return ESP_FAIL;
+        }
+
+        if (plan->symbol_count[axis] == 0) {
+            ESP_LOGE(TAG, "Axis %d has no RMT symbols after planning", axis);
             rmt_move_plan_free(plan);
             return ESP_FAIL;
         }
@@ -597,7 +749,7 @@ static esp_err_t rmt_execute_move_plan(const rmt_move_plan_t *plan) {
 
     for (int axis = 0; axis < AXIS_COUNT; ++axis) {
         if (!(plan->active_mask & (1U << axis))) continue;
-        size_t payload_size = (size_t)plan->step_count[axis] * sizeof(rmt_symbol_word_t);
+        size_t payload_size = (size_t)plan->symbol_count[axis] * sizeof(rmt_symbol_word_t);
         ret = rmt_transmit(g_rmt_tx_chan[axis], g_rmt_copy_encoder[axis], plan->symbols[axis], payload_size, &tx_cfg);
         if (ret != ESP_OK) goto out;
     }
