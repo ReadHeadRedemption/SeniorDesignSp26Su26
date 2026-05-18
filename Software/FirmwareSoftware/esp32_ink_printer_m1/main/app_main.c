@@ -44,19 +44,19 @@
 #define PIN_X_STEP          GPIO_NUM_2
 #define PIN_X_DIR           GPIO_NUM_4
 #define PIN_X_EN            GPIO_NUM_1
-#define PIN_X_MIN           GPIO_NUM_NC
+#define PIN_X_MIN           GPIO_NUM_19
 #define PIN_X_MAX           GPIO_NUM_NC
 
 #define PIN_Y_STEP          GPIO_NUM_5
 #define PIN_Y_DIR           GPIO_NUM_6
 #define PIN_Y_EN            GPIO_NUM_15
-#define PIN_Y_MIN           GPIO_NUM_NC
+#define PIN_Y_MIN           GPIO_NUM_20
 #define PIN_Y_MAX           GPIO_NUM_NC
 
 #define PIN_Z_STEP          GPIO_NUM_41
 #define PIN_Z_DIR           GPIO_NUM_40
 #define PIN_Z_EN            GPIO_NUM_39
-#define PIN_Z_MIN           GPIO_NUM_NC
+#define PIN_Z_MIN           GPIO_NUM_8
 #define PIN_Z_MAX           GPIO_NUM_NC
 
 #define PIN_E_STEP          GPIO_NUM_17
@@ -114,14 +114,14 @@ static max31865_config_t config = {
 };
 
 // ======== MACHINE CONFIGURATION ========
-#define STEPS_PER_MM_X      40.0f
-#define STEPS_PER_MM_Y      80.0f
-#define STEPS_PER_MM_Z      80.0f
+#define STEPS_PER_MM_X      160.0f
+#define STEPS_PER_MM_Y      160.0f
+#define STEPS_PER_MM_Z      400.0f
 #define STEPS_PER_MM_E      800.0f   // Plunger axis. Replace with your real value.
 
 #define HOMING_FEED_MM_MIN  600.0f
 #define JOG_FEED_MM_MIN     1200.0f
-#define DEFAULT_FEED_MM_MIN 1200.0f
+#define DEFAULT_FEED_MM_MIN 600.0f
 #define HOMING_BACKOFF_MM   3.0f
 
 #define BED_MAX_C           180.0f
@@ -259,12 +259,12 @@ static inline int32_t mm_to_steps(axis_id_t axis, float mm) {
 static inline bool is_switch_triggered(gpio_num_t pin) {
     if (pin == GPIO_NUM_NC) return false;
     // Starter assumption: switch pulls low when triggered.
-    return gpio_get_level(pin) == 0;
+    return gpio_get_level(pin) == 1;
 }
 
 static void latch_fault(const char *msg) {
     xSemaphoreTake(g_state_mutex, portMAX_DELAY);
-    g_state.faulted = true;
+    g_state.faulted = true; // TO DO: HANDLE FaULTING BEHAvOIOR
     g_state.printing = false;
     g_state.stop_requested = true;
     g_state.heater_enabled = false;
@@ -938,6 +938,7 @@ static esp_err_t move_linear_steps(const int32_t target_steps[AXIS_COUNT], float
     bool axis_active[AXIS_COUNT] = {false};
     rmt_move_plan_t plan;
     bool plan_built = false;
+    float slope[AXIS_COUNT];
 
     if (machine_faulted()) {
         ret = ESP_FAIL;
@@ -983,6 +984,29 @@ static esp_err_t move_linear_steps(const int32_t target_steps[AXIS_COUNT], float
                         (float)(STEP_PULSE_US + 1))
     );
 
+    if (dx == 0 || dy == 0)
+    {
+        slope[AXIS_X] = 1;
+        slope[AXIS_Y] = 1;
+    }
+    // else if (dy > dx)
+    // {
+    //     slope[AXIS_X] = 1;
+    //     slope[AXIS_Y] = fabsf(dx / dy);
+    // }
+    else
+    {
+        slope[AXIS_X] = fabsf(dy / dx);
+        slope[AXIS_Y] = 1;
+
+        if (slope[AXIS_X] < 0.1)
+        {
+            slope[AXIS_X] = 0.1;
+        }
+    }
+    slope[AXIS_Z] = 1;
+    slope[AXIS_E] = 1;
+
     ret = rmt_build_move_plan(delta, max_steps, interval_us, &plan);
     if (ret != ESP_OK) {
         goto cleanup;
@@ -995,36 +1019,36 @@ static esp_err_t move_linear_steps(const int32_t target_steps[AXIS_COUNT], float
         }
     }
 
-    if (axis_active[AXIS_X] && is_switch_triggered(g_axes[AXIS_X].min_pin) && delta[AXIS_X] < 0) {
-        latch_fault("Hit X min during move");
-        ret = ESP_FAIL;
-        goto cleanup;
-    }
-    if (axis_active[AXIS_X] && is_switch_triggered(g_axes[AXIS_X].max_pin) && delta[AXIS_X] > 0) {
-        latch_fault("Hit X max during move");
-        ret = ESP_FAIL;
-        goto cleanup;
-    }
-    if (axis_active[AXIS_Y] && is_switch_triggered(g_axes[AXIS_Y].min_pin) && delta[AXIS_Y] < 0) {
-        latch_fault("Hit Y min during move");
-        ret = ESP_FAIL;
-        goto cleanup;
-    }
-    if (axis_active[AXIS_Y] && is_switch_triggered(g_axes[AXIS_Y].max_pin) && delta[AXIS_Y] > 0) {
-        latch_fault("Hit Y max during move");
-        ret = ESP_FAIL;
-        goto cleanup;
-    }
-    if (axis_active[AXIS_Z] && is_switch_triggered(g_axes[AXIS_Z].min_pin) && delta[AXIS_Z] < 0) {
-        latch_fault("Hit Z min during move");
-        ret = ESP_FAIL;
-        goto cleanup;
-    }
-    if (axis_active[AXIS_Z] && is_switch_triggered(g_axes[AXIS_Z].max_pin) && delta[AXIS_Z] > 0) {
-        latch_fault("Hit Z max during move");
-        ret = ESP_FAIL;
-        goto cleanup;
-    }
+    // if (axis_active[AXIS_X] && is_switch_triggered(g_axes[AXIS_X].min_pin) && delta[AXIS_X] < 0) {
+    //     latch_fault("Hit X min during move");
+    //     ret = ESP_FAIL;
+    //     goto cleanup;
+    // }
+    // if (axis_active[AXIS_X] && is_switch_triggered(g_axes[AXIS_X].max_pin) && delta[AXIS_X] > 0) {
+    //     latch_fault("Hit X max during move");
+    //     ret = ESP_FAIL;
+    //     goto cleanup;
+    // }
+    // if (axis_active[AXIS_Y] && is_switch_triggered(g_axes[AXIS_Y].min_pin) && delta[AXIS_Y] < 0) {
+    //     latch_fault("Hit Y min during move");
+    //     ret = ESP_FAIL;
+    //     goto cleanup;
+    // }
+    // if (axis_active[AXIS_Y] && is_switch_triggered(g_axes[AXIS_Y].max_pin) && delta[AXIS_Y] > 0) {
+    //     latch_fault("Hit Y max during move");
+    //     ret = ESP_FAIL;
+    //     goto cleanup;
+    // }
+    // if (axis_active[AXIS_Z] && is_switch_triggered(g_axes[AXIS_Z].min_pin) && delta[AXIS_Z] < 0) {
+    //     latch_fault("Hit Z min during move");
+    //     ret = ESP_FAIL;
+    //     goto cleanup;
+    // }
+    // if (axis_active[AXIS_Z] && is_switch_triggered(g_axes[AXIS_Z].max_pin) && delta[AXIS_Z] > 0) {
+    //     latch_fault("Hit Z max during move");
+    //     ret = ESP_FAIL;
+    //     goto cleanup;
+    // }
 
     ret = rmt_execute_move_plan(&plan);
     if (ret != ESP_OK) {
@@ -1465,32 +1489,22 @@ static void console_task(void *arg) {
 
         if (strcasecmp(cmd, "help") == 0) {
             print_help();
-            // Free buffer
-            linenoiseFree(line);
-            continue;
         }
-        if (strcasecmp(cmd, "status") == 0) {
+        else if (strcasecmp(cmd, "status") == 0) {
             print_status();
-            // Free buffer
-            linenoiseFree(line);
-            continue;
         }
-        if (strcasecmp(cmd, "stop") == 0) {
+        else if (strcasecmp(cmd, "stop") == 0) {
             xSemaphoreGive(stop_semaphore);
             ESP_LOGW(TAG, "Stop requested");
-            // Free buffer
-            linenoiseFree(line);
-            continue;
         }
-        if (strncasecmp(cmd, "run ", 4) == 0) {
+        else if (strncasecmp(cmd, "run ", 4) == 0) {
             char *path = skip_ws(cmd + 4);
             run_gcode_file(path);
-            // Free buffer
-            linenoiseFree(line);
-            continue;
         }
-
-        execute_gcode_line(cmd);
+        else
+        {
+            execute_gcode_line(cmd);
+        }
 
         // Add to history
         linenoiseHistoryAdd(line);
