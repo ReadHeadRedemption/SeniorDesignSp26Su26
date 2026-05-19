@@ -524,7 +524,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "Mainboard layout.kicad_pro",
+    "filename": "Mainboard layout Daisy chain removed.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -707,7 +707,7 @@
     "subpart_id_separator": 0,
     "top_level_sheets": [
       {
-        "filename": "Mainboard layout.kicad_sch",
+        "filename": "Mainboard layout Daisy chain removed.kicad_sch",
         "name": "Mainboard layout",
         "uuid": "322d2c9f-d9a6-40cc-b638-389f55be9478"
       }

@@ -10704,6 +10704,10 @@
 		(uuid "52711ad1-f4c9-4334-ac73-dd9240340d55")
 	)
 	(no_connect
+		(at 255.27 106.68)
+		(uuid "5797da73-e796-4108-aa71-6001382ff702")
+	)
+	(no_connect
 		(at 233.68 218.44)
 		(uuid "5b11c12c-db92-4643-bbae-420d6bfd5520")
 	)
@@ -10736,16 +10740,8 @@
 		(uuid "881c8453-9a5a-4f9b-9e60-e7948a85d513")
 	)
 	(no_connect
-		(at 63.5 127)
-		(uuid "9cafe019-3173-407c-909c-8d08f3bb50c0")
-	)
-	(no_connect
 		(at 163.83 393.7)
 		(uuid "aad5989b-c91c-4627-8483-052695d4197e")
-	)
-	(no_connect
-		(at 44.45 71.12)
-		(uuid "b3e97b5f-1360-421c-b1c6-c5c21e3118ef")
 	)
 	(no_connect
 		(at 166.37 293.37)
@@ -10770,10 +10766,6 @@
 	(no_connect
 		(at 233.68 266.7)
 		(uuid "dd2efcb8-b30a-42e3-b8dd-b57b35dd8b40")
-	)
-	(no_connect
-		(at 63.5 124.46)
-		(uuid "e7ee784a-0a2f-4d28-9a2a-1dbbf9dfe4a3")
 	)
 	(no_connect
 		(at 485.14 274.32)
@@ -12336,16 +12328,6 @@
 			(type default)
 		)
 		(uuid "6a4bbcf9-53af-42c2-9a87-5456a3e1a2e6")
-	)
-	(wire
-		(pts
-			(xy 255.27 106.68) (xy 275.59 106.68)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6b8e199e-05c1-4082-a2ef-c5d6a96fab9c")
 	)
 	(wire
 		(pts
@@ -14803,30 +14785,6 @@
 			)
 		)
 	)
-	(global_label "SPI4_CS"
-		(shape output)
-		(at 275.59 106.68 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "072c2398-5f22-4039-8778-bdb19703ad5c")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 286.3161 106.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
 	(global_label "+24V"
 		(shape input)
 		(at 490.22 325.12 90)
@@ -15906,6 +15864,30 @@
 			)
 		)
 	)
+	(global_label "SPI4_0SS"
+		(shape output)
+		(at 44.45 71.12 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "3c592d61-7e6a-450e-b45b-5f32a3b62b55")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 32.5749 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
 	(global_label "MODE_2_GPIO0"
 		(shape input)
 		(at 233.68 185.42 0)
@@ -16530,7 +16512,7 @@
 	)
 	(global_label "Suspend"
 		(shape input)
-		(at 44.45 60.96 180)
+		(at 44.45 53.34 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -16540,7 +16522,7 @@
 		)
 		(uuid "56e6ff57-cbc8-424f-b9b4-2e83217d1221")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 33.5426 60.96 0)
+			(at 33.5426 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16842,7 +16824,7 @@
 	)
 	(global_label "STEPE"
 		(shape output)
-		(at 44.45 53.34 180)
+		(at 44.45 60.96 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -16852,7 +16834,7 @@
 		)
 		(uuid "6292cac2-b8e1-43c0-bca7-5bd9aebcde6b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 35.7197 53.34 0)
+			(at 35.7197 60.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18280,6 +18262,30 @@
 			)
 		)
 	)
+	(global_label "SPI1_0SS"
+		(shape output)
+		(at 63.5 124.46 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b58f15fa-7b4e-4ec8-a8fb-9bef823128f7")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 51.6249 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
 	(global_label "DIR1"
 		(shape output)
 		(at 63.5 111.76 180)
@@ -18592,6 +18598,30 @@
 			)
 		)
 	)
+	(global_label "SPI1_1SS"
+		(shape output)
+		(at 63.5 127 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "cbd64dec-f4c9-4326-be6e-04296b3a2799")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 51.6249 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
 	(global_label "A1_DRV2"
 		(shape input)
 		(at 163.83 351.79 180)
@@ -18677,30 +18707,6 @@
 		(uuid "cfe312aa-521d-4fa4-8a95-f5a18c604851")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 318.55 97.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
-	(global_label "SPI1_CS"
-		(shape output)
-		(at 314.96 102.87 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "d2166e5e-5ee0-4077-a133-e906bc2cfa8f")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 325.6861 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19109,6 +19115,30 @@
 		(uuid "e164a0ec-99bc-47d0-926b-9ead75832c24")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 116.84 369.1248 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "SPI4_1SS"
+		(shape input)
+		(at 314.96 102.87 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e17d0f93-c5a5-47ec-956c-09a80b448ed8")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 326.8351 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20054,7 +20084,7 @@
 			(uuid "0aa657d5-25b3-4b82-a796-b07de1c19eba")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR022")
 					(unit 1)
@@ -20132,7 +20162,7 @@
 			(uuid "672edf21-9fd3-432c-85a7-8ec072552c92")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR0106")
 					(unit 1)
@@ -20211,7 +20241,7 @@
 			(uuid "ef08b4ef-cf22-46cc-9254-7b83194ecfc7")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR067")
 					(unit 1)
@@ -20326,7 +20356,7 @@
 			(uuid "608e018c-069e-44f7-8372-a44bc204ce1f")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "C11")
 					(unit 1)
@@ -20441,7 +20471,7 @@
 			(uuid "6c890e40-4e9d-47af-a577-8842c4a5617a")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "C1")
 					(unit 1)
@@ -20604,7 +20634,7 @@
 			(uuid "483c97f0-b7de-48c9-9e70-aa5803253fe6")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "U1")
 					(unit 1)
@@ -20704,7 +20734,7 @@
 			(uuid "710f1d7c-5978-4f3f-bb0a-4145d4122172")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "J13")
 					(unit 1)
@@ -20782,7 +20812,7 @@
 			(uuid "10e04722-5539-4447-a105-ba09ea59f328")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR038")
 					(unit 1)
@@ -20863,7 +20893,7 @@
 			(uuid "5723a9ec-556d-47fe-949c-34faf2759f32")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "R7")
 					(unit 1)
@@ -20941,7 +20971,7 @@
 			(uuid "f577ed9c-9edc-4be6-89fc-8f43fcc0e278")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR024")
 					(unit 1)
@@ -21019,7 +21049,7 @@
 			(uuid "92128ed9-90ea-4447-b574-f60e48150787")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR015")
 					(unit 1)
@@ -21109,7 +21139,7 @@
 			(uuid "f53b237e-4499-416b-a308-a6651468cb13")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "R91")
 					(unit 1)
@@ -21194,7 +21224,7 @@
 			(uuid "8d9e834a-f011-47f0-9733-34dc3b7af019")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "J31")
 					(unit 1)
@@ -21304,7 +21334,7 @@
 			(uuid "a0a50259-cc73-4945-a46b-6562a2cf532d")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "C3")
 					(unit 1)
@@ -21382,7 +21412,7 @@
 			(uuid "d31a4273-6be5-4918-84b8-4f55c0be308b")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR027")
 					(unit 1)
@@ -21473,7 +21503,7 @@
 			(uuid "0cc266ec-fe30-486e-8a55-1e099da1e948")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "R3")
 					(unit 1)
@@ -21561,7 +21591,7 @@
 			(uuid "98ef8cca-7a5c-4006-8f67-e2a86d3e5c72")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "D3")
 					(unit 1)
@@ -21647,7 +21677,7 @@
 			(uuid "569e8b71-a363-43bd-b90b-518367223371")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "J25")
 					(unit 1)
@@ -21729,7 +21759,7 @@
 			(uuid "f2295b67-ec92-49f7-bc5c-dcd1b90ef85a")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "J2")
 					(unit 1)
@@ -21807,7 +21837,7 @@
 			(uuid "73ebd50a-6ae6-454d-8296-c078500dfb92")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR06")
 					(unit 1)
@@ -21885,7 +21915,7 @@
 			(uuid "8509a03a-5ee1-4da2-b814-a91842b9aa9c")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR035")
 					(unit 1)
@@ -21965,7 +21995,7 @@
 			(uuid "40b6a406-0c0d-445e-bac0-560b2b5f3db7")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "JP2")
 					(unit 1)
@@ -22043,7 +22073,7 @@
 			(uuid "3faae13b-0c1f-4378-b23b-00be8bef6148")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR096")
 					(unit 1)
@@ -22122,7 +22152,7 @@
 			(uuid "8ba97dec-858a-4c73-a242-43f8951c895d")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR071")
 					(unit 1)
@@ -22200,7 +22230,7 @@
 			(uuid "d474b965-664d-4379-9b87-aeea102f7798")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR036")
 					(unit 1)
@@ -22294,7 +22324,7 @@
 			(uuid "c7a44799-2ecf-4d9c-8e93-e0d9ed897484")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "J12")
 					(unit 1)
@@ -22425,7 +22455,7 @@
 			(uuid "3648a62e-428c-44ba-8f78-9497b2f1eb49")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "J30")
 					(unit 1)
@@ -22510,7 +22540,7 @@
 			(uuid "f64faaa7-1d13-47a6-ab36-9b05611fde35")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "D1")
 					(unit 1)
@@ -22603,7 +22633,7 @@
 			(uuid "aa9c1f99-eeba-49d6-a79a-b3385eceb872")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "R53")
 					(unit 1)
@@ -22703,7 +22733,7 @@
 			(uuid "a5179de6-1a08-4d6c-8883-761b7be3fde8")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "J18")
 					(unit 1)
@@ -22781,7 +22811,7 @@
 			(uuid "a2f61ec2-3018-4afe-a708-302ba1852087")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR020")
 					(unit 1)
@@ -22874,7 +22904,7 @@
 			(uuid "d019efa4-b424-4d45-a747-39ae7e1329a8")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "D9")
 					(unit 1)
@@ -22952,7 +22982,7 @@
 			(uuid "2724e379-dd33-4fdd-8aff-d1743aa89acb")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR032")
 					(unit 1)
@@ -23052,7 +23082,7 @@
 			(uuid "5d87dca2-d894-4175-87ad-0210ccd1460f")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "J23")
 					(unit 1)
@@ -23146,7 +23176,7 @@
 			(uuid "2cc7d5f9-393f-40c3-8d1d-e15616422531")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "J4")
 					(unit 1)
@@ -23261,7 +23291,7 @@
 			(uuid "8ec60909-6208-427e-b51e-dcafa45d6c1a")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "C5")
 					(unit 1)
@@ -23346,7 +23376,7 @@
 			(uuid "c13def4f-28a5-4532-8698-b67717045109")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "J35")
 					(unit 1)
@@ -23424,7 +23454,7 @@
 			(uuid "ec0cf01b-4a2d-4d55-a6c8-86cf09ed15c5")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR013")
 					(unit 1)
@@ -23502,7 +23532,7 @@
 			(uuid "1a092e32-118a-4c7d-b7af-f2d4aa1f565f")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR019")
 					(unit 1)
@@ -23582,7 +23612,7 @@
 			(uuid "f22bc415-2225-40a3-8074-1ab9e700bf21")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "R5")
 					(unit 1)
@@ -23660,7 +23690,7 @@
 			(uuid "7000eb20-2f66-435a-9784-77b9011020f9")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR0105")
 					(unit 1)
@@ -23738,7 +23768,7 @@
 			(uuid "dbdc59f1-33d1-4906-bbe9-f88e6d877d3a")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR03")
 					(unit 1)
@@ -23818,7 +23848,7 @@
 			(uuid "36e7d35a-309b-4355-b7fc-c418b35ce6c3")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "R6")
 					(unit 1)
@@ -23896,7 +23926,7 @@
 			(uuid "2b554233-5642-4233-8864-44d51c6fbd6b")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR039")
 					(unit 1)
@@ -23974,7 +24004,7 @@
 			(uuid "3e57c6a3-b597-4aa3-8ad4-a27f8136e80e")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR0104")
 					(unit 1)
@@ -24053,7 +24083,7 @@
 			(uuid "d32432df-13f1-4fa5-af67-a2e32f89be45")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR069")
 					(unit 1)
@@ -24131,7 +24161,7 @@
 			(uuid "91b5136f-95c0-4eb6-9b19-ad4b48120b23")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR033")
 					(unit 1)
@@ -24231,7 +24261,7 @@
 			(uuid "c9747071-28ae-4145-93c3-4d42861168ef")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "J14")
 					(unit 1)
@@ -24337,7 +24367,7 @@
 			(uuid "28be6de2-70b9-44a7-92aa-162a36129eda")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "J9")
 					(unit 1)
@@ -24419,7 +24449,7 @@
 			(uuid "1cf2e67c-813a-4b80-ab2d-bf5edf5a1911")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "J3")
 					(unit 1)
@@ -24497,7 +24527,7 @@
 			(uuid "c6492e94-35d9-4a4f-985c-3a2c82f9ed91")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR04")
 					(unit 1)
@@ -24587,7 +24617,7 @@
 			(uuid "035d48af-d998-4b5c-b8be-fa90c1b16803")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "R90")
 					(unit 1)
@@ -24675,7 +24705,7 @@
 			(uuid "9dce1bcc-bf4f-45c2-ad8f-0c9c901788d3")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "D10")
 					(unit 1)
@@ -24775,7 +24805,7 @@
 			(uuid "93b8bae6-102c-46bf-a7a9-57592f3a3242")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "J17")
 					(unit 1)
@@ -24860,7 +24890,7 @@
 			(uuid "1b0c290b-58e7-4230-bc95-8f1294dd0cfa")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "J37")
 					(unit 1)
@@ -24938,7 +24968,7 @@
 			(uuid "e45d6612-b6d4-477f-869a-9c36dfa2c143")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR018")
 					(unit 1)
@@ -25024,7 +25054,7 @@
 			(uuid "6b37e819-bc6c-45bf-a162-bdb84b2954f7")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "J5")
 					(unit 1)
@@ -25124,7 +25154,7 @@
 			(uuid "a631e647-d55e-4bf5-a68b-8e3f981acd7f")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "SW1")
 					(unit 1)
@@ -25206,7 +25236,7 @@
 			(uuid "6e970439-e151-4384-b872-b5e75e4ca877")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "R36")
 					(unit 1)
@@ -25284,7 +25314,7 @@
 			(uuid "78a0e58a-3320-4292-b7c4-507f674c7817")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR029")
 					(unit 1)
@@ -25362,7 +25392,7 @@
 			(uuid "d45e06ea-264d-4fc4-8406-844b2310e9b9")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR05")
 					(unit 1)
@@ -25440,7 +25470,7 @@
 			(uuid "2d34f1de-ad81-4322-a2a5-bdbe48337f7d")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR014")
 					(unit 1)
@@ -25554,7 +25584,7 @@
 			(uuid "5fc0376b-2c49-4c8c-8514-b249768a463f")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "C4")
 					(unit 1)
@@ -25632,7 +25662,7 @@
 			(uuid "a43c29bc-afdf-4557-b3f3-4cc546e008c9")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR01")
 					(unit 1)
@@ -25710,7 +25740,7 @@
 			(uuid "9067b7c9-8287-44c3-a5ec-e0c03f68c989")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR088")
 					(unit 1)
@@ -25789,7 +25819,7 @@
 			(uuid "e622fed0-5764-47a9-8650-b3c47d8aaf36")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR070")
 					(unit 1)
@@ -25889,7 +25919,7 @@
 			(uuid "7dfa3122-6e05-4cf4-81af-0a0a1c26c111")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "J20")
 					(unit 1)
@@ -26004,7 +26034,7 @@
 			(uuid "35910910-616f-4318-806c-61ac46faaabb")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "C9")
 					(unit 1)
@@ -26097,7 +26127,7 @@
 			(uuid "ef9c975a-1969-4094-850e-78b8fd7048d6")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "R49")
 					(unit 1)
@@ -26191,7 +26221,7 @@
 			(uuid "8ac8f6f3-2762-45bf-aa95-5bedf4b0fa8f")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "J7")
 					(unit 1)
@@ -26270,7 +26300,7 @@
 			(uuid "ffdd1b16-f76a-4488-b4b4-2e9afcefa3fd")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR068")
 					(unit 1)
@@ -26380,7 +26410,7 @@
 			(uuid "4236b3bc-4638-470a-90fe-1287b58c94bb")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "C23")
 					(unit 1)
@@ -26511,7 +26541,7 @@
 			(uuid "beb09be8-be52-49a1-8e8c-b1b3759e4906")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "J32")
 					(unit 1)
@@ -26601,7 +26631,7 @@
 			(uuid "4a75631c-acda-4996-ad1d-51e46b49f624")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "R4")
 					(unit 1)
@@ -26680,7 +26710,7 @@
 			(uuid "1a5d592f-0b23-4dcf-8298-5bc4d74140e9")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR099")
 					(unit 1)
@@ -26762,7 +26792,7 @@
 			(uuid "a9daa78b-6931-4915-8ad8-ae0b5e235dbf")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "R40")
 					(unit 1)
@@ -26840,7 +26870,7 @@
 			(uuid "d6552ecb-0f3e-4d38-b6c5-c6b1976fdaf8")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR010")
 					(unit 1)
@@ -26934,7 +26964,7 @@
 			(uuid "7e51dfa0-7da0-419a-b679-a1631ab431b4")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "R52")
 					(unit 1)
@@ -27020,7 +27050,7 @@
 			(uuid "4ee0cbce-da0c-41b5-9a25-b0a23a645104")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "J27")
 					(unit 1)
@@ -27111,7 +27141,7 @@
 			(uuid "4e3ee818-603a-42bb-8d84-bbb0567be728")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "R55")
 					(unit 1)
@@ -27192,7 +27222,7 @@
 			(uuid "d25922b4-f224-46a1-b6c6-f5331fa9d66c")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "R2")
 					(unit 1)
@@ -27280,7 +27310,7 @@
 			(uuid "4efd0858-56bf-4a88-9deb-dec3ce788c63")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "D2")
 					(unit 1)
@@ -27363,7 +27393,7 @@
 			(uuid "a3e930c9-6041-4366-894d-d45ce209b065")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "Q1")
 					(unit 1)
@@ -27443,7 +27473,7 @@
 			(uuid "c5e9abe4-87c0-4c7e-bc90-3235f871b76c")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "R8")
 					(unit 1)
@@ -27533,7 +27563,7 @@
 			(uuid "3ba4a19e-ee88-4d08-b7ca-df4a543cd7ed")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "R89")
 					(unit 1)
@@ -27611,7 +27641,7 @@
 			(uuid "50b630ab-7a7d-4547-81ec-3d3e93647860")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR0100")
 					(unit 1)
@@ -27711,7 +27741,7 @@
 			(uuid "0bea0c2b-02bf-44ac-8400-bdbdafdf1193")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "J19")
 					(unit 1)
@@ -27826,7 +27856,7 @@
 			(uuid "a8b460af-7722-4e6a-abe6-e67fe4d23c73")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "C7")
 					(unit 1)
@@ -27904,7 +27934,7 @@
 			(uuid "a9471458-04f3-4078-9e57-152098d49fd9")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR011")
 					(unit 1)
@@ -27996,7 +28026,7 @@
 			(uuid "49bfcc79-582a-443d-9703-f2f044785775")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "R50")
 					(unit 1)
@@ -28081,7 +28111,7 @@
 			(uuid "bd1273f3-16b0-4a11-99aa-8c1940ced231")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "Q2")
 					(unit 1)
@@ -28167,7 +28197,7 @@
 			(uuid "26bf647d-bc25-465f-b198-5864c2abaa5a")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "J26")
 					(unit 1)
@@ -28253,7 +28283,7 @@
 			(uuid "e1d508ac-2286-4163-ade3-48aad6b90c16")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "J11")
 					(unit 1)
@@ -28331,7 +28361,7 @@
 			(uuid "f37e5159-2b4b-40fa-9936-0a70f530550c")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR017")
 					(unit 1)
@@ -28409,7 +28439,7 @@
 			(uuid "8b19c619-45bd-4aeb-9856-4b83538a08cd")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR090")
 					(unit 1)
@@ -28592,7 +28622,7 @@
 			(uuid "0f96f564-f214-4964-a28b-2d88326f6f16")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "U4")
 					(unit 1)
@@ -28670,7 +28700,7 @@
 			(uuid "4a7a5fae-d758-41fe-a9dc-bc9d7a9b2b74")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR021")
 					(unit 1)
@@ -28750,7 +28780,7 @@
 			(uuid "fd79a382-c0f2-4c3c-abb6-eb303c23dbef")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "R1")
 					(unit 1)
@@ -28841,7 +28871,7 @@
 			(uuid "baaf1f76-b215-4786-9e86-b843e23d9bf5")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "R57")
 					(unit 1)
@@ -28923,7 +28953,7 @@
 			(uuid "3190b405-b116-4cf7-b2bf-b9327a08fba6")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "R41")
 					(unit 1)
@@ -29001,7 +29031,7 @@
 			(uuid "addd9e4e-8471-4396-a09a-db51eca4a88d")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR026")
 					(unit 1)
@@ -29095,7 +29125,7 @@
 			(uuid "35dcbe96-6d16-4fd6-9f0f-3f7958cc7e88")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "J8")
 					(unit 1)
@@ -29173,7 +29203,7 @@
 			(uuid "5fd29e70-2827-47e8-ab48-3e9080f258d3")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR031")
 					(unit 1)
@@ -29255,7 +29285,7 @@
 			(uuid "740db5cf-ab88-4065-9c55-4247e82af66b")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "J10")
 					(unit 1)
@@ -29355,7 +29385,7 @@
 			(uuid "6135b512-f581-487e-aa77-c6b827395e77")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "J22")
 					(unit 1)
@@ -29470,7 +29500,7 @@
 			(uuid "34c0d1da-01cb-4a21-9905-535f739f3fdf")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "C2")
 					(unit 1)
@@ -29570,7 +29600,7 @@
 			(uuid "9686df69-0e36-4e4a-a2ab-061b8e2b7837")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "SW3")
 					(unit 1)
@@ -29663,7 +29693,7 @@
 			(uuid "ab5e16b9-8590-4cf2-abf8-44c34f7654cd")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "R56")
 					(unit 1)
@@ -29753,7 +29783,7 @@
 			(uuid "8988c1f1-9e3d-45b8-911b-09b3df9dde05")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "R107")
 					(unit 1)
@@ -29853,7 +29883,7 @@
 			(uuid "329ddadf-464b-4667-b001-5c5ea632a5d5")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "SW2")
 					(unit 1)
@@ -29938,7 +29968,7 @@
 			(uuid "2f7f3976-970e-4e73-9685-a59dfe7debb2")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "J34")
 					(unit 1)
@@ -30137,7 +30167,7 @@
 			(uuid "15354cab-d44f-4794-ab19-4967b5d4260f")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "U12")
 					(unit 1)
@@ -30215,7 +30245,7 @@
 			(uuid "18bda6d8-266a-499c-a920-ae129252c578")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR034")
 					(unit 1)
@@ -30295,7 +30325,7 @@
 			(uuid "c990372a-ee52-4b18-87c5-9245951ffa6b")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "R9")
 					(unit 1)
@@ -30374,7 +30404,7 @@
 			(uuid "75a5694e-b813-4dd4-86e8-840c4208a1b2")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR072")
 					(unit 1)
@@ -30454,7 +30484,7 @@
 			(uuid "c93d69d4-385f-46a8-8a94-a86ebaba0553")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "JP1")
 					(unit 1)
@@ -30564,7 +30594,7 @@
 			(uuid "d4cee2bf-d1e4-4255-970c-4ffd9e3603c6")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "C16")
 					(unit 1)
@@ -30642,7 +30672,7 @@
 			(uuid "f57d6f1a-d6cb-44af-9c62-51f3ce317a3b")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR061")
 					(unit 1)
@@ -30720,7 +30750,7 @@
 			(uuid "f8b3b58c-7682-4635-b58e-4114e9b7b994")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR028")
 					(unit 1)
@@ -30814,7 +30844,7 @@
 			(uuid "51643614-49ee-4356-abfc-410834bdadb9")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "J6")
 					(unit 1)
@@ -30892,7 +30922,7 @@
 			(uuid "44f6b7a7-d97d-460a-bc2b-8596ddadf67f")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR016")
 					(unit 1)
@@ -31075,7 +31105,7 @@
 			(uuid "e36049ad-dd62-4009-bd33-781002a911e5")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "U2")
 					(unit 1)
@@ -31175,7 +31205,7 @@
 			(uuid "c3137bda-bbaf-41f9-9569-dbf0321aed87")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "SW4")
 					(unit 1)
@@ -31290,7 +31320,7 @@
 			(uuid "0daaffd8-f317-4056-a6e1-519585b5d824")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "C10")
 					(unit 1)
@@ -31368,7 +31398,7 @@
 			(uuid "3d075587-c84a-4bcc-b636-a541d7189c58")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR030")
 					(unit 1)
@@ -31453,7 +31483,7 @@
 			(uuid "d04f8678-97b1-4b46-a800-03ff73830608")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "J38")
 					(unit 1)
@@ -31531,7 +31561,7 @@
 			(uuid "9d5d16f6-e0c0-4e9b-a328-be685b63f4aa")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR023")
 					(unit 1)
@@ -31622,7 +31652,7 @@
 			(uuid "524b348c-53cc-433c-b807-b86e2835876e")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "R48")
 					(unit 1)
@@ -31704,7 +31734,7 @@
 			(uuid "44e678ab-6e9c-448b-9548-f8ab7f92c3ff")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "SW9")
 					(unit 1)
@@ -31819,7 +31849,7 @@
 			(uuid "6f82ea92-140b-4e2f-b892-306076ac44be")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "C6")
 					(unit 1)
@@ -31897,7 +31927,7 @@
 			(uuid "102a85b3-4157-4b53-a3f0-41e2b6e74c86")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR0102")
 					(unit 1)
@@ -31975,7 +32005,7 @@
 			(uuid "284dd022-a94a-466c-b7a4-f8e9e9fce8f8")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR02")
 					(unit 1)
@@ -32075,7 +32105,7 @@
 			(uuid "8d8fa514-dbf0-4ff3-befe-1886bd6751ff")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "J28")
 					(unit 1)
@@ -32190,7 +32220,7 @@
 			(uuid "6e68f254-ccaf-4dfd-b3d4-0a6f70eceece")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "C8")
 					(unit 1)
@@ -32268,7 +32298,7 @@
 			(uuid "5a6e7f70-9e87-4151-8790-fbcfcd402f68")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR07")
 					(unit 1)
@@ -32356,7 +32386,7 @@
 			(uuid "44d3e725-586c-4e6b-a489-c9c8694f1ab5")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "D11")
 					(unit 1)
@@ -32438,7 +32468,7 @@
 			(uuid "4eaa55e3-558c-430f-8490-879d3f799f8f")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "J15")
 					(unit 1)
@@ -32538,7 +32568,7 @@
 			(uuid "5031d6bb-9911-40bc-ad39-b2a54587a8d9")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "J24")
 					(unit 1)
@@ -32618,7 +32648,7 @@
 			(uuid "9dc5343a-7ae3-43b2-97f5-c14dcefc8d1d")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "SW8")
 					(unit 1)
@@ -32696,7 +32726,7 @@
 			(uuid "2133437a-6ddb-42b0-95f0-354b38f047b9")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "#PWR025")
 					(unit 1)
@@ -32781,7 +32811,7 @@
 			(uuid "731c98fe-b61c-4459-9008-d701cf7fc1e5")
 		)
 		(instances
-			(project "Mainboard layout"
+			(project "Mainboard layout Daisy chain removed"
 				(path "/322d2c9f-d9a6-40cc-b638-389f55be9478"
 					(reference "J36")
 					(unit 1)

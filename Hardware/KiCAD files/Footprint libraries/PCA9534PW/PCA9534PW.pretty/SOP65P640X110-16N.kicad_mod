@@ -6,7 +6,7 @@
 	(property "Reference" "REF**"
 		(at 1.75328 -4.21801 0)
 		(layer "F.SilkS")
-		(uuid "224bfaa5-fb74-4767-bb78-f32db781fb1a")
+		(uuid "b3cfd593-318e-4a63-b4cd-c8f2560aefa3")
 		(effects
 			(font
 				(size 1.64063 1.64063)
@@ -17,7 +17,7 @@
 	(property "Value" "SOP65P640X110-16N"
 		(at 14.26759 4.04377 0)
 		(layer "F.Fab")
-		(uuid "a34595f0-7e82-4863-b633-6f2902beae98")
+		(uuid "575968cd-861c-41e9-8f12-98d1381d149d")
 		(effects
 			(font
 				(size 1.642094 1.642094)
@@ -29,7 +29,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "3080b44d-a011-49bb-be25-59e76e8a1714")
+		(uuid "713ef782-5d87-4453-9342-17f18284cf7f")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -40,7 +40,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "dee4d1a8-cd43-4c4e-b90c-f8e18f231aa6")
+		(uuid "2973e43b-44cf-4d90-a925-f6e3530efd0b")
 		(effects
 			(font
 				(size 1.27 1.27)

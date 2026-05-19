@@ -1,19 +1,19 @@
 {
   "board": {
-    "active_layer": 35,
+    "active_layer": 0,
     "active_layer_preset": "",
-    "auto_track_width": true,
+    "auto_track_width": false,
     "hidden_netclasses": [],
     "hidden_nets": [],
     "high_contrast_mode": 0,
     "net_color_mode": 1,
     "opacity": {
-      "images": 0.6,
+      "images": 1.0,
       "pads": 1.0,
       "shapes": 1.0,
       "tracks": 1.0,
       "vias": 1.0,
-      "zones": 0.6
+      "zones": 1.0
     },
     "prototype_zone_fills": false,
     "selection_filter": {
@@ -44,7 +44,6 @@
       "drawing_sheet",
       "bitmaps",
       "pads",
-      "zones",
       "drc_warnings",
       "drc_exclusions",
       "locked_item_shadows",
@@ -63,7 +62,7 @@
     "ssh_key": ""
   },
   "meta": {
-    "filename": "Standalone DRV8825.kicad_prl",
+    "filename": "Mainboard layout Daisy chain removed.kicad_prl",
     "version": 5
   },
   "net_inspector_panel": {
@@ -92,16 +91,16 @@
       9
     ],
     "col_widths": [
-      186,
-      171,
-      113,
+      222,
+      207,
+      136,
       92,
-      112,
-      115,
-      112,
+      136,
+      136,
+      136,
       98,
-      112,
-      112
+      136,
+      136
     ],
     "custom_group_rules": [],
     "expanded_rows": [],
