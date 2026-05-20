@@ -150,6 +150,16 @@ static max31865_config_t config = {
 #define RMT_RAMP_MAX_STEPS      0
 #define RMT_START_SLOWDOWN      2.5f
 
+// G2/G3 arc interpolation.  Arcs are currently generated in the XY plane.
+// Tune ARC_SEGMENT_MM smaller for smoother circles or larger for fewer segments.
+#define ARC_SEGMENT_MM          0.10f
+#define ARC_MIN_SEGMENTS        4U
+#define ARC_MAX_SEGMENTS        720U
+#define ARC_RADIUS_TOL_MM       0.05f
+#define ARC_FULL_CIRCLE_EPS_MM  0.001f
+#define ARC_PI_F                3.14159265358979323846f
+#define ARC_TWO_PI_F            (2.0f * ARC_PI_F)
+
 static const char *TAG = "ink_printer_m1";
 
 typedef enum {
@@ -187,7 +197,9 @@ typedef struct {
 
 typedef struct {
     bool has_x, has_y, has_z, has_e, has_f;
+    bool has_i, has_j, has_r;
     float x, y, z, e, f;
+    float i, j, r;
 } move_words_t;
 
 typedef enum {
@@ -1177,7 +1189,224 @@ static move_words_t parse_move_words(const char *line) {
     m.has_z = read_word_value(line, 'Z', &m.z);
     m.has_e = read_word_value(line, 'E', &m.e);
     m.has_f = read_word_value(line, 'F', &m.f);
+    m.has_i = read_word_value(line, 'I', &m.i);
+    m.has_j = read_word_value(line, 'J', &m.j);
+    m.has_r = read_word_value(line, 'R', &m.r);
     return m;
+}
+
+static float arc_sweep_radians(float start_angle, float end_angle, bool clockwise) {
+    float sweep = end_angle - start_angle;
+
+    if (clockwise) {
+        while (sweep >= 0.0f) sweep -= ARC_TWO_PI_F;
+    } else {
+        while (sweep <= 0.0f) sweep += ARC_TWO_PI_F;
+    }
+
+    return sweep;
+}
+
+static uint32_t arc_segment_count(float radius_mm, float sweep_rad) {
+    float arc_len_mm = fabsf(radius_mm * sweep_rad);
+    uint32_t segments = (uint32_t)ceilf(arc_len_mm / ARC_SEGMENT_MM);
+
+    if (segments < ARC_MIN_SEGMENTS) segments = ARC_MIN_SEGMENTS;
+    if (segments > ARC_MAX_SEGMENTS) segments = ARC_MAX_SEGMENTS;
+
+    return segments;
+}
+
+static esp_err_t execute_arc_move(bool clockwise, const move_words_t *m) {
+    if (!m) return ESP_ERR_INVALID_ARG;
+
+    esp_err_t ret = ESP_OK;
+    int32_t start_steps[AXIS_COUNT];
+    int32_t final_steps[AXIS_COUNT];
+    bool absolute;
+
+    xSemaphoreTakeRecursive(g_motion_mutex, portMAX_DELAY);
+
+    if (machine_faulted()) {
+        ret = ESP_FAIL;
+        goto cleanup;
+    }
+
+    xSemaphoreTake(g_state_mutex, portMAX_DELAY);
+    memcpy(start_steps, g_state.pos_steps, sizeof(start_steps));
+    absolute = g_state.absolute_mode;
+    xSemaphoreGive(g_state_mutex);
+
+    memcpy(final_steps, start_steps, sizeof(final_steps));
+
+    const float start_x = steps_to_mm(AXIS_X, start_steps[AXIS_X]);
+    const float start_y = steps_to_mm(AXIS_Y, start_steps[AXIS_Y]);
+    const float start_z = steps_to_mm(AXIS_Z, start_steps[AXIS_Z]);
+    const float start_e = steps_to_mm(AXIS_E, start_steps[AXIS_E]);
+
+    if (absolute) {
+        if (m->has_x) final_steps[AXIS_X] = mm_to_steps(AXIS_X, m->x);
+        if (m->has_y) final_steps[AXIS_Y] = mm_to_steps(AXIS_Y, m->y);
+        if (m->has_z) final_steps[AXIS_Z] = mm_to_steps(AXIS_Z, m->z);
+        if (m->has_e) final_steps[AXIS_E] = mm_to_steps(AXIS_E, m->e);
+    } else {
+        if (m->has_x) final_steps[AXIS_X] += mm_to_steps(AXIS_X, m->x);
+        if (m->has_y) final_steps[AXIS_Y] += mm_to_steps(AXIS_Y, m->y);
+        if (m->has_z) final_steps[AXIS_Z] += mm_to_steps(AXIS_Z, m->z);
+        if (m->has_e) final_steps[AXIS_E] += mm_to_steps(AXIS_E, m->e);
+    }
+
+    const float end_x = steps_to_mm(AXIS_X, final_steps[AXIS_X]);
+    const float end_y = steps_to_mm(AXIS_Y, final_steps[AXIS_Y]);
+    const float end_z = steps_to_mm(AXIS_Z, final_steps[AXIS_Z]);
+    const float end_e = steps_to_mm(AXIS_E, final_steps[AXIS_E]);
+
+    const float chord_dx = end_x - start_x;
+    const float chord_dy = end_y - start_y;
+    const float chord_len = hypotf(chord_dx, chord_dy);
+    const bool full_circle = (chord_len <= ARC_FULL_CIRCLE_EPS_MM);
+
+    float center_x = 0.0f;
+    float center_y = 0.0f;
+    float radius = 0.0f;
+
+    if (m->has_r) {
+        if (full_circle) {
+            ESP_LOGE(TAG, "G2/G3 with R cannot describe a full circle; use I/J instead");
+            ret = ESP_ERR_INVALID_ARG;
+            goto cleanup;
+        }
+
+        const float requested_r = fabsf(m->r);
+        const float half_chord = chord_len * 0.5f;
+
+        if (requested_r < half_chord - ARC_RADIUS_TOL_MM) {
+            ESP_LOGE(TAG, "G2/G3 R radius too small for endpoint chord");
+            ret = ESP_ERR_INVALID_ARG;
+            goto cleanup;
+        }
+
+        float h_sq = requested_r * requested_r - half_chord * half_chord;
+        if (h_sq < 0.0f) h_sq = 0.0f;
+        const float h = sqrtf(h_sq);
+
+        const float mid_x = (start_x + end_x) * 0.5f;
+        const float mid_y = (start_y + end_y) * 0.5f;
+        const float perp_x = -chord_dy / chord_len;
+        const float perp_y =  chord_dx / chord_len;
+
+        float best_cx = mid_x;
+        float best_cy = mid_y;
+        int best_score = 999;
+
+        for (int candidate = 0; candidate < 2; ++candidate) {
+            const float sign = candidate == 0 ? 1.0f : -1.0f;
+            const float cx = mid_x + sign * perp_x * h;
+            const float cy = mid_y + sign * perp_y * h;
+            const float start_ang = atan2f(start_y - cy, start_x - cx);
+            const float end_ang = atan2f(end_y - cy, end_x - cx);
+            const float sweep = arc_sweep_radians(start_ang, end_ang, clockwise);
+            const bool is_major = fabsf(sweep) > (ARC_PI_F + 0.0001f);
+            const bool want_major = m->r < 0.0f;
+            const int score = (is_major == want_major) ? 0 : 1;
+
+            if (score < best_score) {
+                best_score = score;
+                best_cx = cx;
+                best_cy = cy;
+            }
+        }
+
+        center_x = best_cx;
+        center_y = best_cy;
+        radius = requested_r;
+    } else {
+        if (!m->has_i && !m->has_j) {
+            ESP_LOGE(TAG, "G2/G3 requires I/J center offsets or R radius");
+            ret = ESP_ERR_INVALID_ARG;
+            goto cleanup;
+        }
+
+        center_x = start_x + (m->has_i ? m->i : 0.0f);
+        center_y = start_y + (m->has_j ? m->j : 0.0f);
+        radius = hypotf(start_x - center_x, start_y - center_y);
+
+        if (radius <= ARC_FULL_CIRCLE_EPS_MM) {
+            ESP_LOGE(TAG, "G2/G3 I/J center offset gives zero radius");
+            ret = ESP_ERR_INVALID_ARG;
+            goto cleanup;
+        }
+
+        if (!full_circle) {
+            const float end_radius = hypotf(end_x - center_x, end_y - center_y);
+            const float radius_err = fabsf(end_radius - radius);
+            const float allowed_err = fmaxf(ARC_RADIUS_TOL_MM, radius * 0.01f);
+
+            if (radius_err > allowed_err) {
+                ESP_LOGE(TAG, "G2/G3 endpoint is not on the I/J arc radius");
+                ret = ESP_ERR_INVALID_ARG;
+                goto cleanup;
+            }
+        }
+    }
+
+    const float start_angle = atan2f(start_y - center_y, start_x - center_x);
+    float sweep = 0.0f;
+
+    if (full_circle) {
+        sweep = clockwise ? -ARC_TWO_PI_F : ARC_TWO_PI_F;
+    } else {
+        const float end_angle = atan2f(end_y - center_y, end_x - center_x);
+        sweep = arc_sweep_radians(start_angle, end_angle, clockwise);
+    }
+
+    const uint32_t segments = arc_segment_count(radius, sweep);
+    const float feed = (m->has_f && m->f > 0.0f) ? m->f : DEFAULT_FEED_MM_MIN;
+
+    ESP_LOGI(TAG,
+             "G%c arc: radius=%.4f mm, sweep=%.2f deg, segments=%" PRIu32,
+             clockwise ? '2' : '3',
+             radius,
+             sweep * 180.0f / ARC_PI_F,
+             segments);
+
+    for (uint32_t seg = 1; seg <= segments; ++seg) {
+        bool stop = false;
+        xSemaphoreTake(g_state_mutex, portMAX_DELAY);
+        stop = g_state.stop_requested || g_state.faulted;
+        xSemaphoreGive(g_state_mutex);
+        if (stop) {
+            ret = ESP_FAIL;
+            goto cleanup;
+        }
+
+        int32_t seg_target[AXIS_COUNT];
+
+        if (seg == segments) {
+            memcpy(seg_target, final_steps, sizeof(seg_target));
+        } else {
+            const float t = (float)seg / (float)segments;
+            const float angle = start_angle + sweep * t;
+            const float x = center_x + cosf(angle) * radius;
+            const float y = center_y + sinf(angle) * radius;
+            const float z = start_z + (end_z - start_z) * t;
+            const float e = start_e + (end_e - start_e) * t;
+
+            seg_target[AXIS_X] = mm_to_steps(AXIS_X, x);
+            seg_target[AXIS_Y] = mm_to_steps(AXIS_Y, y);
+            seg_target[AXIS_Z] = mm_to_steps(AXIS_Z, z);
+            seg_target[AXIS_E] = mm_to_steps(AXIS_E, e);
+        }
+
+        ret = move_linear_steps(seg_target, feed);
+        if (ret != ESP_OK) {
+            goto cleanup;
+        }
+    }
+
+cleanup:
+    xSemaphoreGiveRecursive(g_motion_mutex);
+    return ret;
 }
 
 static esp_err_t execute_gcode_line(char *line) {
@@ -1215,6 +1444,18 @@ static esp_err_t execute_gcode_line(char *line) {
                 }
                 return move_linear_steps(target, m.has_f ? m.f : DEFAULT_FEED_MM_MIN);
             }
+            case 2:
+            case 3: {
+                move_words_t m = parse_move_words(line);
+                return execute_arc_move(g == 2, &m);
+            }
+            case 17:
+                // G17 selects the XY plane. This firmware currently supports XY arcs only.
+                return ESP_OK;
+            case 18:
+            case 19:
+                ESP_LOGW(TAG, "G18/G19 arc planes are not supported; only G17/XY arcs are implemented");
+                return ESP_ERR_NOT_SUPPORTED;
             case 28:
                 return home_all_axes();
             case 90:
@@ -1414,6 +1655,7 @@ static void print_help(void) {
     printf("  status\n");
     printf("  home\n");
     printf("  jog X10 Y0 Z0 E0.5 F1200\n");
+    printf("  G2/G3 X10 Y0 I5 J0 F600   ; XY arcs, I/J center offsets, optional R\n");
     printf("  temp 60        or  M140 S60\n");
     printf("  run /sdcard/job.gcode\n");
     printf("  stop\n");
