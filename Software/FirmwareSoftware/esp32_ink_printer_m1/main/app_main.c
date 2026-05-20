@@ -102,17 +102,6 @@
 #define BED_THERM_ADC_CHANNEL   ADC_CHANNEL_6
 #define BED_THERM_ATTEN         ADC_ATTEN_DB_12
 
-#define RTD_CONNECTION MAX31865_3WIRE
-#define RTD_STANDARD MAX31865_US_INDUSTRIAL
-#define FILTER MAX31865_FILTER_60HZ
-
-static max31865_config_t config = {
-    .v_bias = true,
-    .filter = FILTER,
-    .mode = MAX31865_MODE_SINGLE,
-    .connection = RTD_CONNECTION
-};
-
 // ======== MACHINE CONFIGURATION ========
 #define STEPS_PER_MM_X      160.0f
 #define STEPS_PER_MM_Y      160.0f
@@ -2140,8 +2129,21 @@ static void gpio_init_all(void) {
     if (pin_is_valid(PIN_BED_SSR)) gpio_set_level(PIN_BED_SSR, 0);
 }
 
+// I USED THE MAX31865 esp-idf-lib library
+
+// MAX31865 Configuration
+static max31865_config_t config = {
+    .v_bias = true,
+    .filter = MAX31865_FILTER_60HZ,
+    .mode = MAX31865_MODE_SINGLE,
+    .connection = MAX31865_3WIRE
+};
+
 static void temperature_task(void *pvParameter)
 {
+    // MUTEX FOR set_temperature WHICH SHOULD BE A GLOBAL VARIABLE
+
+    // IF THE SPI BUS IS ALREADY INITIALIZED SKIP THESE COMMANDS
     spi_bus_config_t buscfg = {
         .mosi_io_num = GPIO_NUM_47,
         .miso_io_num = GPIO_NUM_48,
@@ -2150,11 +2152,11 @@ static void temperature_task(void *pvParameter)
         .quadhd_io_num = -1,
        .max_transfer_sz = 4000,
     };
-    spi_bus_initialize(SPI3_HOST, &buscfg, SPI_DMA_CH_AUTO);
+    spi_bus_initialize(SPI3_HOST, &buscfg, SPI_DMA_CH_AUTO); 
 
-    // Init device
+    // Initialize device
     max31865_t dev = {
-        .standard = RTD_STANDARD,
+        .standard = MAX31865_US_INDUSTRIAL,
         .r_ref = 430,
         .rtd_nominal = 100,
     };
@@ -2163,12 +2165,11 @@ static void temperature_task(void *pvParameter)
     // Configure device
     ESP_ERROR_CHECK(max31865_set_config(&dev, &config));
 
-    float temperatureUncal;
+    float temperature;
     while (1)
     {
-        esp_err_t res = max31865_measure(&dev, &temperatureUncal);
-
-        float temperature = temperatureUncal;
+        // NEED A MUTEX AROUND THE SPI BUS
+        esp_err_t res = max31865_measure(&dev, &temperature);
 
         // Two checks: check if there is any result, and if so, a sanity check for temperature. Below 18 C is not sane
         if (res != ESP_OK || temperature < 18)
@@ -2181,68 +2182,49 @@ static void temperature_task(void *pvParameter)
         {
             ESP_LOGI(TAG, "Temperature: %.4f C (%.4f F)", temperature, temperature * 1.8 + 32);
 
-            // if (temperature > 30)
-            // {
-            //     if (PIN_BED_SSR != GPIO_NUM_NC) gpio_set_level(PIN_BED_SSR, 0);
-            // }
-            // else 
-            if (temperature < 180)
+            // If the temperature is less than the desired, heat up to the desired temperature
+            if (temperature < set_temperature)
             {
-                if (PIN_BED_SSR != GPIO_NUM_NC) gpio_set_level(PIN_BED_SSR, 1);
-                int time = (int)(1000 * (180 - temperature));
-                if (time > 50)
-                    vTaskDelay(pdMS_TO_TICKS(time));
+                // Turn on SSR to conduct power through heater
+                if (PIN_BED_SSR != GPIO_NUM_NC) 
+                    gpio_set_level(PIN_BED_SSR, 1);
+                
+                // Generally, the hot plate heats up at 1 degree C per second when on, so wait a number of seconds equal to the difference in set and real temperatures
+                int onTime = (int)(1000 * (set_temperature - temperature));
+
+                // If this time is greater than 50 ms, wait for 50 ms
+                if (onTime > 50)
+                    vTaskDelay(pdMS_TO_TICKS(onTime));
+                    
+                // If this time is too short (the temperature is already very close to the set temperature), clamp waiting at 50 ms to not strain the SSR
+                // CONSIDER REMOVING THIS AND TO NOT HEAT AT ALL; NEEDS TESTING; WORKS ANYWAY
                 else
                     vTaskDelay(pdMS_TO_TICKS(50));
-                if (PIN_BED_SSR != GPIO_NUM_NC) gpio_set_level(PIN_BED_SSR, 0);
+
+                // Turn off SSR
+                if (PIN_BED_SSR != GPIO_NUM_NC) 
+                    gpio_set_level(PIN_BED_SSR, 0);
             }
-            int waitTime = 16000 * (180 - temperature) / 160 + 4000;
+
+            /* 
+                If heating, both the hot plate and RTD need time to fully absorb the heat and temperature change
+                If not heating, we should still wait a certain interval to prevent rapid switching and because temperature does not change that quickly (perhaps at -0.1 degree C/s)
+                Generally, it was observed that RTDs needed some base amount of time (we give four seconds) to pick up to changes in temperature and extra time for larger changes in temperature (we give 100 ms for each difference in degrees C)
+            */
+            int waitTime = 100 * (set_temperature - temperature) + 4000;
+
+            // If the wait time is less than 4 seconds (real temperature is greater than set temperature), clamp at four seconds
             if (waitTime < 4000)
             {
                 vTaskDelay(pdMS_TO_TICKS(4000));
             }
+            
+            // Otherwise, wait the calculated time
             else
             {
                 vTaskDelay(pdMS_TO_TICKS(waitTime));
             }
-
-            // if (temperature < 160)
-            // {
-            //     if (PIN_BED_SSR != GPIO_NUM_NC) gpio_set_level(PIN_BED_SSR, 1);
-            //     vTaskDelay(pdMS_TO_TICKS(15000));
-
-            //     if (PIN_BED_SSR != GPIO_NUM_NC) gpio_set_level(PIN_BED_SSR, 0);
-            //     vTaskDelay(pdMS_TO_TICKS(15000));
-            // }
-
-            // else if (temperature < 180)
-            // {
-            //     while (temperature < 182)
-            //     {
-            //         if (PIN_BED_SSR != GPIO_NUM_NC) gpio_set_level(PIN_BED_SSR, 1);
-            //         vTaskDelay(pdMS_TO_TICKS(1000));
-
-            //         if (PIN_BED_SSR != GPIO_NUM_NC) gpio_set_level(PIN_BED_SSR, 0);
-            //         vTaskDelay(pdMS_TO_TICKS(3000));
-
-            //         printf("\a");
-                    
-            //          res = max31865_measure(&dev, &temperature);
-            //         if (res != ESP_OK || temperature < 18)
-            //         {
-            //             ESP_LOGE(TAG, "Failed to measure: %d (%s)", res, esp_err_to_name(res));
-            //             if (PIN_BED_SSR != GPIO_NUM_NC) gpio_set_level(PIN_BED_SSR, 0);
-            //             vTaskDelete(NULL);
-            //         }
-            //         else
-            //         {
-            //             ESP_LOGI(TAG, "Temperature: %.4f C (%.4f F)", temperature, temperature * 1.8 + 32);
-            //         }
-            //     }
-            // }
         }
-
-        // vTaskDelay(pdMS_TO_TICKS(2000));
     }
 }
 
