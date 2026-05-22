@@ -160,175 +160,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Adafruit MAX31865-eagle-import:DIODESOD-323"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "D"
-				(at 0 2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.0795)
-					)
-				)
-			)
-			(property "Value" ""
-				(at 0 -2.5 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.0795)
-					)
-				)
-			)
-			(property "Footprint" "Adafruit MAX31865:SOD-323"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Diode\n\nSMA     Model   Volts   Amps   Type   Vf   Ir   Digikey #   Notes     SSA34-E3   40V   3A   Schottky   480mV @ 3A   200uA @ 40V   SSA34-E3/61TGITR-ND        CDBA120-G   20V   1A   Schottky   500mV @ 1A   500uA @ 20V   641-1014-6-ND   REEL     MBRA210   10V   2A   Schottky   350mV @ 2A   700uA @ 10V   MBRA210LT3      SOD-123     Model   Volts   Amps   Type   Vf   Ir   Order #   Notes     BAT54T1G   30V   200mA   Schottky   800mV @ 200mA   2uA @ 25V   BAT54T1GOSTR-ND        B0530W   30V   500mA   Schottky   430mV @ 500mA   130uA @ 30V   B0530W-FDICT-ND   REEL     MBR120   20V   1A   Schottky   340mV @ 1A      MBR120VLSFT1GOSCT-ND      SOD-323     Model   Volts   Amps   Type   Vf   Ir   Order #   Notes     PMEG2005EJ   20V   500mA   Schottky   355mV @ 500mA      568-4110-1-ND        ZLLS410   10V   570mA   Schottky   380mV @ 570mA      ZLLS410CT-ND        1N4148WS   75V   150mA   Silicon/Simple   1V      1N4148WSFSCT-ND   REEL   SOD-523     Model   Volts   Amps   Type   Vf   Ir   Order #   Notes     BAT54XV2   30V   200mA   Schottky   0.8V @ 100mA      BAT54XV2CT-ND        TB751S   30V   30mA   Schottky         RB751S-40TE61CT-ND      SOT23-R/W(R = Solder Paste/Reflow Ovens, W = Hand-Soldering)      Model   Volts   Amps   Type   Vf   Ir   Order #   Notes     BAT54FILM   40V   300mA   Schottky         497-7162-1-ND       POWERDI-5      Model   Volts   Amps   Type   Vf   Ir   Order #   Notes     PDS560   60V   5A   Schottky   670mV @ 5A   150uA @ 60V   PDS560DICT-ND"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "DIODESOD-323_1_0"
-				(polyline
-					(pts
-						(xy -1.27 1.27) (xy -1.27 -1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 -1.27) (xy 1.27 0)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 1.27) (xy 1.27 0)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 0) (xy -1.27 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 0) (xy 1.27 -1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -2.54 0 0)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "A"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 0 180)
-					(length 2.54)
-					(name "C"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "C"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Adafruit MAX31865-eagle-import:FERRITE-0805NO"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -1772,6 +1603,160 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "PCM_4ms_Diode:D_Generic"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "D_Generic"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Diode"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "diode"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "TO-???* *SingleDiode *_Diode_* *SingleDiode* D_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "D_Generic_0_1"
+				(polyline
+					(pts
+						(xy -1.27 1.27) (xy -1.27 -1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "D_Generic_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "PCM_SparkFun-Connector:Conn_01x06_P2.54mm"
 			(pin_names
 				(offset 1.016)
@@ -2473,6 +2458,16 @@
 	)
 	(wire
 		(pts
+			(xy 91.44 86.36) (xy 93.98 86.36)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "3dbe68c2-54a6-4f15-8c65-8989571c72ea")
+	)
+	(wire
+		(pts
 			(xy 157.48 127) (xy 160.02 127)
 		)
 		(stroke
@@ -2843,16 +2838,6 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 91.44) (xy 91.44 91.44)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "92ce3782-b8a3-4061-b9eb-b9b9dc8fd2df")
-	)
-	(wire
-		(pts
 			(xy 54.61 86.36) (xy 54.61 81.28)
 		)
 		(stroke
@@ -2870,6 +2855,16 @@
 			(type solid)
 		)
 		(uuid "9bdd6029-8f1e-4e08-960c-fa0de9fa3381")
+	)
+	(wire
+		(pts
+			(xy 91.44 81.28) (xy 96.52 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9ddace7b-dfdc-4525-8d33-7b889f641f5e")
 	)
 	(wire
 		(pts
@@ -2940,16 +2935,6 @@
 			(type solid)
 		)
 		(uuid "b8aa8b96-b45c-4333-829a-f9e035d58d5f")
-	)
-	(wire
-		(pts
-			(xy 88.9 86.36) (xy 93.98 86.36)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "b8f5c518-2271-4188-9aa5-0798765f0ea4")
 	)
 	(wire
 		(pts
@@ -3133,7 +3118,7 @@
 	)
 	(wire
 		(pts
-			(xy 124.46 88.9) (xy 111.76 88.9)
+			(xy 124.46 88.9) (xy 115.57 88.9)
 		)
 		(stroke
 			(width 0.1524)
@@ -3150,16 +3135,6 @@
 			(type solid)
 		)
 		(uuid "f1a93f0a-2d76-46dd-9ed5-4d027431e9a2")
-	)
-	(wire
-		(pts
-			(xy 96.52 81.28) (xy 88.9 81.28)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "f532c2ef-3663-43be-b955-3473f1f7e183")
 	)
 	(wire
 		(pts
@@ -3243,7 +3218,7 @@
 	)
 	(global_label "DRDY_ALOW"
 		(shape output)
-		(at 111.76 88.9 90)
+		(at 115.57 88.9 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3253,7 +3228,7 @@
 		)
 		(uuid "0a25fde2-fdd2-4cee-8b3c-85dc307e4a0a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 111.76 75.15 90)
+			(at 115.57 75.15 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3362,85 +3337,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Adafruit MAX31865-eagle-import:DIODESOD-323")
-		(at 86.36 81.28 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00e8e360-d679-404e-b759-8ffc7ff68fbd")
-		(property "Reference" "D2"
-			(at 86.36 83.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.0795)
-				)
-			)
-		)
-		(property "Value" "1N4148"
-			(at 86.36 78.78 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.0795)
-				)
-			)
-		)
-		(property "Footprint" "Adafruit MAX31865:SOD-323"
-			(at 86.36 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 86.36 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 86.36 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "A"
-			(uuid "43dab0bb-14c0-47bf-8527-0d37a893e3ff")
-		)
-		(pin "C"
-			(uuid "7cdd68a9-e61d-46bf-8a3e-fbac3eb4c017")
-		)
-		(instances
-			(project "Max temperature V1"
-				(path "/dc06dc2b-0280-40dd-90df-7f4a11b6c433"
-					(reference "D2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Adafruit MAX31865-eagle-import:CAP_CERAMIC0805-NOOUTLINE")
 		(at 129.54 60.96 0)
 		(unit 1)
@@ -3471,7 +3367,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Adafruit MAX31865:0805-NO"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 129.54 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -3630,7 +3526,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Adafruit MAX31865:0805-NO"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 104.14 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -3709,7 +3605,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Adafruit MAX31865:0805-NO"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 172.72 121.92 0)
 			(hide yes)
 			(show_name no)
@@ -3791,7 +3687,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "Adafruit MAX31865:TERMBLOCK_1X2-3.5MM"
+		(property "Footprint" "TerminalBlock_4Ucon:TerminalBlock_4Ucon_1x02_P3.50mm_Horizontal"
 			(at 200.66 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -3918,85 +3814,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Adafruit MAX31865-eagle-import:DIODESOD-323")
-		(at 86.36 91.44 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "381a7630-3a4c-4ff3-b3c0-18e75b168e12")
-		(property "Reference" "D10"
-			(at 86.36 93.98 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.0795)
-				)
-			)
-		)
-		(property "Value" "1N4148"
-			(at 86.36 88.94 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.0795)
-				)
-			)
-		)
-		(property "Footprint" "Adafruit MAX31865:SOD-323"
-			(at 86.36 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 86.36 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 86.36 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "C"
-			(uuid "fd7cd8c8-41f8-4d98-be60-a40cc56ca15f")
-		)
-		(pin "A"
-			(uuid "541c7464-f8c2-4f3e-a45b-d6f0fb915a9e")
-		)
-		(instances
-			(project "Max temperature V1"
-				(path "/dc06dc2b-0280-40dd-90df-7f4a11b6c433"
-					(reference "D10")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Adafruit MAX31865-eagle-import:FERRITE-0805NO")
 		(at 142.24 55.88 90)
 		(unit 1)
@@ -4030,7 +3847,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "Adafruit MAX31865:0805-NO"
+		(property "Footprint" "PCM_Ferrite_SMD_AKL:Ferrite_0805_2012Metric"
 			(at 142.24 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -4109,7 +3926,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Adafruit MAX31865:0805-NO"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 149.86 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -4190,7 +4007,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Adafruit MAX31865:0805-NO"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 101.6 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -4233,6 +4050,85 @@
 			(project "Max temperature V1"
 				(path "/dc06dc2b-0280-40dd-90df-7f4a11b6c433"
 					(reference "R17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_4ms_Diode:D_Generic")
+		(at 87.63 91.44 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "5821d66b-7783-4edd-b512-ecd573c26e7d")
+		(property "Reference" "D3"
+			(at 84.074 92.71 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148 eq."
+			(at 84.074 95.25 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_THT:D_A-405_P10.16mm_Horizontal"
+			(at 87.63 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 87.63 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Diode"
+			(at 87.63 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "efefa753-4338-4de6-a4fe-b423e89dea8d")
+		)
+		(pin "2"
+			(uuid "b276be79-6b43-4d6b-8e57-9af96d548961")
+		)
+		(instances
+			(project "Max temperature V1"
+				(path "/dc06dc2b-0280-40dd-90df-7f4a11b6c433"
+					(reference "D3")
 					(unit 1)
 				)
 			)
@@ -4350,7 +4246,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "Adafruit MAX31865:SOLDERJUMPER_2WAY_OPEN_NOPASTE"
+		(property "Footprint" "Jumper:SolderJumper-3_P1.3mm_Open_Pad1.0x1.5mm_NumberLabels"
 			(at 165.1 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -4396,85 +4292,6 @@
 			(project "Max temperature V1"
 				(path "/dc06dc2b-0280-40dd-90df-7f4a11b6c433"
 					(reference "SJ1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Adafruit MAX31865-eagle-import:DIODESOD-323")
-		(at 86.36 86.36 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "7b25df12-1eb9-478f-bb30-4d1de1ae420c")
-		(property "Reference" "D7"
-			(at 86.36 88.9 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.0795)
-				)
-			)
-		)
-		(property "Value" "1N4148"
-			(at 86.36 83.86 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.0795)
-				)
-			)
-		)
-		(property "Footprint" "Adafruit MAX31865:SOD-323"
-			(at 86.36 86.36 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 86.36 86.36 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 86.36 86.36 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "C"
-			(uuid "2de9c123-dccc-47f9-a38e-039fe4eb6571")
-		)
-		(pin "A"
-			(uuid "99116f04-fa3c-4c7e-9025-b0aab9308d08")
-		)
-		(instances
-			(project "Max temperature V1"
-				(path "/dc06dc2b-0280-40dd-90df-7f4a11b6c433"
-					(reference "D7")
 					(unit 1)
 				)
 			)
@@ -4573,6 +4390,86 @@
 		)
 	)
 	(symbol
+		(lib_id "PCM_4ms_Diode:D_Generic")
+		(at 87.63 81.28 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "83f55d67-92cf-47bc-9e7a-6c66ba97220a")
+		(property "Reference" "D1"
+			(at 87.63 74.93 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148 eq."
+			(at 87.63 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_THT:D_A-405_P10.16mm_Horizontal"
+			(at 87.63 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 87.63 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Diode"
+			(at 87.63 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4705f42a-e302-41da-858f-a3e43abd1e9b")
+		)
+		(pin "2"
+			(uuid "0e9ca139-48a7-4c97-a1da-fca61cd85ba8")
+		)
+		(instances
+			(project "Max temperature V1"
+				(path "/dc06dc2b-0280-40dd-90df-7f4a11b6c433"
+					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Adafruit MAX31865-eagle-import:TERMBLOCK_1X2")
 		(at 200.66 104.14 0)
 		(mirror x)
@@ -4606,7 +4503,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "Adafruit MAX31865:TERMBLOCK_1X2-3.5MM"
+		(property "Footprint" "TerminalBlock_4Ucon:TerminalBlock_4Ucon_1x02_P3.50mm_Horizontal"
 			(at 200.66 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -4688,7 +4585,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "Adafruit MAX31865:SOLDERJUMPER_ARROW_NOPASTE"
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm"
 			(at 187.96 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -4847,7 +4744,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Adafruit MAX31865:0805-NO"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 109.22 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -4890,6 +4787,85 @@
 			(project "Max temperature V1"
 				(path "/dc06dc2b-0280-40dd-90df-7f4a11b6c433"
 					(reference "R35")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_4ms_Diode:D_Generic")
+		(at 87.63 86.36 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e6147924-72fc-4bb9-aedb-f26456ccef91")
+		(property "Reference" "D2"
+			(at 81.534 83.312 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148 eq."
+			(at 81.534 85.852 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_THT:D_A-405_P10.16mm_Horizontal"
+			(at 87.63 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 87.63 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Diode"
+			(at 87.63 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "259b75cb-559a-421b-bda5-51c1e1c85756")
+		)
+		(pin "2"
+			(uuid "e3fb0b6a-a50c-486c-917e-9801e147792c")
+		)
+		(instances
+			(project "Max temperature V1"
+				(path "/dc06dc2b-0280-40dd-90df-7f4a11b6c433"
+					(reference "D2")
 					(unit 1)
 				)
 			)
@@ -5006,7 +4982,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "Adafruit MAX31865:QFN20_4MM_0.65MM"
+		(property "Footprint" "footprints:21-0056C_20_MXM"
 			(at 142.24 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -5144,7 +5120,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Adafruit MAX31865:0805-NO"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 177.8 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -5226,7 +5202,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "Adafruit MAX31865:SOLDERJUMPER_ARROW_NOPASTE"
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm"
 			(at 187.96 129.54 0)
 			(hide yes)
 			(show_name no)

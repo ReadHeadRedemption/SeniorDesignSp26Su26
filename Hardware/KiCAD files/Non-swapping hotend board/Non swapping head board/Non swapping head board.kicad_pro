@@ -538,7 +538,7 @@
     "last_paths": {
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "../../../Review PDF's/Initial PCB review/",
       "specctra_dsn": "",
       "vrml": ""
     },

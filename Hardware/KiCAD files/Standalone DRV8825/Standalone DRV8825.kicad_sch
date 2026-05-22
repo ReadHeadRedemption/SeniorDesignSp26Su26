@@ -5096,7 +5096,7 @@
 			)
 		)
 	)
-	(global_label "+12V"
+	(global_label "+3V3"
 		(shape input)
 		(at 180.34 128.27 270)
 		(fields_autoplaced yes)

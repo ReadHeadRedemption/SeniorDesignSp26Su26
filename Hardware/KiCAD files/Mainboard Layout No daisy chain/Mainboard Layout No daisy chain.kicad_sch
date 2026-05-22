@@ -10256,12 +10256,12 @@
 		(uuid "340d4250-b560-45e3-bb41-e735af426cda")
 	)
 	(no_connect
-		(at 264.16 105.41)
-		(uuid "36b64821-7e30-4d3c-8c8a-2d6051a433bc")
-	)
-	(no_connect
 		(at 72.39 125.73)
 		(uuid "3d933569-d521-4259-ae5c-edc11836d91c")
+	)
+	(no_connect
+		(at 172.72 87.63)
+		(uuid "42a744a3-caf8-44e1-b902-5b3d4b5aa74c")
 	)
 	(no_connect
 		(at 494.03 273.05)
@@ -14424,7 +14424,7 @@
 			)
 		)
 	)
-	(global_label "SPI1_0SS"
+	(global_label "SPI1_1SS"
 		(shape input)
 		(at 438.15 134.62 180)
 		(fields_autoplaced yes)
@@ -15552,7 +15552,7 @@
 			)
 		)
 	)
-	(global_label "MOSI_4"
+	(global_label "MISO_4"
 		(shape input)
 		(at 443.23 209.55 180)
 		(fields_autoplaced yes)
@@ -15669,30 +15669,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-			)
-		)
-	)
-	(global_label "TFT_interrupt"
-		(shape output)
-		(at 172.72 87.63 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "4bb26b4b-4925-4456-9878-505d093bd87b")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 157.5792 87.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
 			)
 		)
 	)
@@ -17327,6 +17303,30 @@
 			)
 		)
 	)
+	(global_label "SPI1_1SS"
+		(shape output)
+		(at 264.16 105.41 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9881df5d-c7e7-46f1-a29b-3ac5024a0cd2")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 276.0351 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
 	(global_label "SSR_Switch2"
 		(shape input)
 		(at 486.41 93.98 270)
@@ -18526,7 +18526,7 @@
 			)
 		)
 	)
-	(global_label "MOSI_1"
+	(global_label "MISO_1"
 		(shape output)
 		(at 431.8 251.46 180)
 		(fields_autoplaced yes)
