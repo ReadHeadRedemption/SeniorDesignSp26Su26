@@ -584,165 +584,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Adafruit MAX31865-eagle-import:SOLDERJUMPER"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "SJ"
-				(at -2.54 2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.778 1.5113)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Value" ""
-				(at -2.54 -3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.778 1.5113)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Footprint" "Adafruit MAX31865:SOLDERJUMPER_ARROW_NOPASTE"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "SMD Solder JUMPER\n\nSolder the two pads together to create a connection, or remove the solder to break it.\n\nREFLOW - Use this footprint for solder paste and reflow ovens. WAVE - Use this footprint for hand-soldering (larger pads).\n\nCLOSED - Has a trace between the two pads to ensure it is closed by default.  The trace needs to be cut to disable the jumper, and can be closed again by creating a solder bridge between the two pads."
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "SOLDERJUMPER_1_0"
-				(polyline
-					(pts
-						(xy -2.54 0) (xy -1.651 0)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -0.381 -0.635)
-					(mid -1.0159 0.0001)
-					(end -0.3808 0.635)
-					(stroke
-						(width 1.27)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0.381 0.635)
-					(mid 1.0159 -0.0001)
-					(end 0.3808 -0.635)
-					(stroke
-						(width 1.27)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 0) (xy 1.651 0)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.524 1.524)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 0 180)
-					(length 2.54)
-					(name "2"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.524 1.524)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Adafruit MAX31865-eagle-import:SOLDERJUMPER_2WAY"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -1757,6 +1598,140 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "PCM_SL_Resistors:0ohm"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "0ohm"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+				(at 0.889 -4.318 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0.508 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "0Ω, 1/4W Resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "Resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "0ohm_0_1"
+				(rectangle
+					(start -2.286 0.889)
+					(end 2.286 -0.889)
+					(stroke
+						(width 0.24)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "0ohm_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 1.5)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 1.5)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "PCM_SparkFun-Connector:Conn_01x06_P2.54mm"
 			(pin_names
 				(offset 1.016)
@@ -2195,6 +2170,12 @@
 		(uuid "018a0f04-12c8-4970-a3c0-be967c696f89")
 	)
 	(junction
+		(at 187.96 114.3)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "020ce86d-b892-45b9-960f-a07e4fefafa7")
+	)
+	(junction
 		(at 162.56 83.82)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2205,12 +2186,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "21550bde-8240-4bac-ad4f-c42e77aded50")
-	)
-	(junction
-		(at 187.96 104.14)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "3b9dc78d-419a-4902-9df6-eeda49e75292")
 	)
 	(junction
 		(at 109.22 91.44)
@@ -2225,16 +2200,16 @@
 		(uuid "6ed850ab-9e5e-455a-8d43-d31cae758db1")
 	)
 	(junction
-		(at 187.96 134.62)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "78fb25cc-bcee-4b6e-ad3a-8e00b931d948")
-	)
-	(junction
 		(at 165.1 104.14)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "94b29dd7-c41f-4237-8617-5b8eeb8b168b")
+	)
+	(junction
+		(at 187.96 134.62)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9f59fed3-9ac8-47c6-a3a3-8eddc60805b2")
 	)
 	(junction
 		(at 172.72 127)
@@ -2255,22 +2230,28 @@
 		(uuid "aa1bed4b-4a18-4e60-9c8b-970f4c720006")
 	)
 	(junction
+		(at 187.96 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b4d0ec88-b95e-44fb-97b2-baacf54a4c34")
+	)
+	(junction
 		(at 104.14 96.52)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b801905c-6386-46f8-bc80-a21694db91f1")
 	)
 	(junction
-		(at 187.96 114.3)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c27fc73d-3c05-44de-b14d-73a8e230a79c")
-	)
-	(junction
 		(at 101.6 93.98)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c976128a-71cb-45c5-9e20-301f7bbaab89")
+	)
+	(junction
+		(at 187.96 124.46)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cdc9fc98-07ff-47c7-a484-e834a2f034af")
 	)
 	(junction
 		(at 137.16 53.34)
@@ -2285,26 +2266,10 @@
 		(uuid "df38b268-5945-4c81-b707-0f0c42826ef1")
 	)
 	(junction
-		(at 187.96 124.46)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ea0ea66f-29e9-4bd2-bbbd-82512e5e72fe")
-	)
-	(junction
 		(at 104.14 71.12)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "efb16ea6-6362-4309-9cba-2fdab80f0879")
-	)
-	(wire
-		(pts
-			(xy 187.96 114.3) (xy 193.04 114.3)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "00e15c39-e881-44c3-ab0d-bfdd9263cd22")
 	)
 	(wire
 		(pts
@@ -2325,6 +2290,16 @@
 			(type solid)
 		)
 		(uuid "07fce72b-84d8-49cd-94be-da64bbf84d77")
+	)
+	(wire
+		(pts
+			(xy 187.96 124.46) (xy 195.58 124.46)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "0b791dd3-a837-4664-8340-0d78950d0d2b")
 	)
 	(wire
 		(pts
@@ -2445,6 +2420,16 @@
 			(type solid)
 		)
 		(uuid "34ae4c1f-10e4-4a78-87bf-f27bb985d9ea")
+	)
+	(wire
+		(pts
+			(xy 187.96 104.14) (xy 195.58 104.14)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "37027b74-f0ee-4a65-8e24-b745244285ba")
 	)
 	(wire
 		(pts
@@ -2638,7 +2623,7 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 134.62) (xy 193.04 134.62)
+			(xy 160.02 134.62) (xy 187.96 134.62)
 		)
 		(stroke
 			(width 0.1524)
@@ -2748,16 +2733,6 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 124.46) (xy 195.58 124.46)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "7aa6811b-0692-4054-9003-6253631539e0")
-	)
-	(wire
-		(pts
 			(xy 83.82 81.28) (xy 69.85 81.28)
 		)
 		(stroke
@@ -2838,6 +2813,16 @@
 	)
 	(wire
 		(pts
+			(xy 187.96 111.76) (xy 187.96 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9b07cb02-7eec-4ded-85e3-185c8b47d493")
+	)
+	(wire
+		(pts
 			(xy 54.61 86.36) (xy 54.61 81.28)
 		)
 		(stroke
@@ -2865,6 +2850,16 @@
 			(type default)
 		)
 		(uuid "9ddace7b-dfdc-4525-8d33-7b889f641f5e")
+	)
+	(wire
+		(pts
+			(xy 187.96 114.3) (xy 193.04 114.3)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "9ddf0d75-eb95-4794-840a-339d9154d386")
 	)
 	(wire
 		(pts
@@ -3018,7 +3013,7 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 104.14) (xy 195.58 104.14)
+			(xy 165.1 104.14) (xy 187.96 104.14)
 		)
 		(stroke
 			(width 0.1524)
@@ -3055,16 +3050,6 @@
 			(type solid)
 		)
 		(uuid "da300ec3-df5f-4bb4-bd6a-b6e9ecec010f")
-	)
-	(wire
-		(pts
-			(xy 165.1 104.14) (xy 187.96 104.14)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "dc5c1f8b-db93-40d4-b644-d6aa62101254")
 	)
 	(wire
 		(pts
@@ -3108,13 +3093,13 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 134.62) (xy 187.96 134.62)
+			(xy 187.96 132.08) (xy 187.96 134.62)
 		)
 		(stroke
-			(width 0.1524)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "eaf4f231-484d-4fd9-9020-c6eee047db89")
+		(uuid "e79b7939-d213-447d-a3be-71b13252194d")
 	)
 	(wire
 		(pts
@@ -3148,7 +3133,17 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 124.46) (xy 175.26 124.46)
+			(xy 187.96 134.62) (xy 193.04 134.62)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "fdb5dfc6-138d-481f-9aba-ca778aa7286a")
+	)
+	(wire
+		(pts
+			(xy 175.26 124.46) (xy 187.96 124.46)
 		)
 		(stroke
 			(width 0.1524)
@@ -4552,8 +4547,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Adafruit MAX31865-eagle-import:SOLDERJUMPER")
-		(at 187.96 109.22 90)
+		(lib_id "PCM_SL_Resistors:0ohm")
+		(at 187.96 128.27 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4561,32 +4556,32 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "ad712da0-e77c-4554-86e2-2ad4977934a2")
-		(property "Reference" "SJ3"
-			(at 185.42 111.76 0)
+		(fields_autoplaced yes)
+		(uuid "b88a5f40-b7a7-46d8-ac75-a25eb5d8634a")
+		(property "Reference" "R2"
+			(at 190.5 126.9999 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
-				(justify left bottom)
+				(justify right)
 			)
 		)
-		(property "Value" "SOLDERJUMPER"
-			(at 191.77 111.76 0)
-			(hide yes)
+		(property "Value" "0ohm"
+			(at 190.5 129.5399 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
-				(justify left bottom)
+				(justify right)
 			)
 		)
-		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm"
-			(at 187.96 109.22 0)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 192.278 127.381 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4597,7 +4592,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 187.96 109.22 0)
+			(at 187.96 127.762 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4607,8 +4602,8 @@
 				)
 			)
 		)
-		(property "Description" ""
-			(at 187.96 109.22 0)
+		(property "Description" "0Ω, 1/4W Resistor"
+			(at 187.96 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4619,15 +4614,97 @@
 			)
 		)
 		(pin "2"
-			(uuid "50845d97-4c04-4d16-9c87-f222d216aea3")
+			(uuid "28965e9b-6f6c-4e65-9a75-57207df97c17")
 		)
 		(pin "1"
-			(uuid "e23ff8fc-b4ea-4600-970c-d6660a563b50")
+			(uuid "8cff8de8-2e1c-4da8-b51a-52d78a1f66b9")
 		)
 		(instances
 			(project "Max temperature V1"
 				(path "/dc06dc2b-0280-40dd-90df-7f4a11b6c433"
-					(reference "SJ3")
+					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_SL_Resistors:0ohm")
+		(at 187.96 107.95 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c69caa46-11f1-446c-b36f-c4ae96fe6b26")
+		(property "Reference" "R1"
+			(at 190.5 106.6799 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "0ohm"
+			(at 190.5 109.2199 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 192.278 107.061 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 187.96 107.442 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "0Ω, 1/4W Resistor"
+			(at 187.96 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "59dbfe79-f2cd-404e-8565-27cf2d543016")
+		)
+		(pin "1"
+			(uuid "2b1588a3-2dfd-49d0-97c2-6aa183c3dc62")
+		)
+		(instances
+			(project "Max temperature V1"
+				(path "/dc06dc2b-0280-40dd-90df-7f4a11b6c433"
+					(reference "R1")
 					(unit 1)
 				)
 			)
@@ -5163,88 +5240,6 @@
 			(project "Max temperature V1"
 				(path "/dc06dc2b-0280-40dd-90df-7f4a11b6c433"
 					(reference "R44")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Adafruit MAX31865-eagle-import:SOLDERJUMPER")
-		(at 187.96 129.54 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "fbd2aea5-a196-47d2-9594-97a331435802")
-		(property "Reference" "SJ4"
-			(at 185.42 132.08 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.778 1.5113)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Value" "SOLDERJUMPER"
-			(at 191.77 132.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.778 1.5113)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm"
-			(at 187.96 129.54 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 187.96 129.54 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 187.96 129.54 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "8b279e79-869d-40de-bdf3-f4ef80ad5841")
-		)
-		(pin "1"
-			(uuid "e92f1c9b-02bf-4bf5-94f1-a9fa7e23cdb4")
-		)
-		(instances
-			(project "Max temperature V1"
-				(path "/dc06dc2b-0280-40dd-90df-7f4a11b6c433"
-					(reference "SJ4")
 					(unit 1)
 				)
 			)

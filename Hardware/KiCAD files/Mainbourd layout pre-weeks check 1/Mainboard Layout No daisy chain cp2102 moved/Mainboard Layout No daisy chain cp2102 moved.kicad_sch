@@ -3786,500 +3786,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "PCM_Optocoupler_Gate_Driver_AKL:Optocoupler_Driver_Dual_Generic_Sep"
-			(pin_names
-				(offset 1.016)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "OC"
-				(at -7.62 12.7 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "Optocoupler_Driver_Dual_Generic_Sep"
-				(at -7.62 10.16 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" ""
-				(at -5.08 -2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-						(italic yes)
-					)
-					(justify left)
-				)
-			)
-			(property "Datasheet" ""
-				(at -2.54 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Description" "Optocoupler, Dual Gate Driver output, Generic symbol, Alternate KiCAD Library"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "Optocoupler gate driver output dual generic"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "DIP*W7.62mm*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "Optocoupler_Driver_Dual_Generic_Sep_0_0"
-				(rectangle
-					(start -7.62 7.62)
-					(end 7.62 -7.62)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -2.54) (xy 0 -2.54) (xy 0 2.54) (xy 1.27 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 6.35 0) (xy 1.27 3.81) (xy 1.27 -3.81) (xy 6.35 0)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 0) (xy 6.35 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Optocoupler_Driver_Dual_Generic_Sep_0_1"
-				(polyline
-					(pts
-						(xy -7.62 2.54) (xy -5.08 2.54) (xy -5.08 -0.635)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -5.715 -0.635) (xy -4.445 -0.635)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -5.08 -0.635) (xy -5.08 -2.54) (xy -7.62 -2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -5.08 -0.635) (xy -5.715 0.635) (xy -4.445 0.635) (xy -5.08 -0.635)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy -3.048 0.508) (xy -1.778 0.508) (xy -2.159 0.381) (xy -2.159 0.635) (xy -1.778 0.508)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -3.048 -0.508) (xy -1.778 -0.508) (xy -2.159 -0.635) (xy -2.159 -0.381) (xy -1.778 -0.508)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Optocoupler_Driver_Dual_Generic_Sep_1_1"
-				(polyline
-					(pts
-						(xy 0 0.635) (xy 0.635 -0.635) (xy -0.635 -0.635) (xy 0 0.635)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.635 0.635) (xy -0.635 0.635)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin free line
-					(at -6.35 -5.08 0)
-					(length 2.54)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -10.16 2.54 0)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -10.16 -2.54 0)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 10.16 -5.08 180)
-					(length 2.54)
-					(name "GND1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "14"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 10.16 0 180)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "15"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 10.16 5.08 180)
-					(length 2.54)
-					(name "VCC1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "Optocoupler_Driver_Dual_Generic_Sep_2_1"
-				(polyline
-					(pts
-						(xy 0 0.635) (xy 0.635 -0.635) (xy -0.635 -0.635) (xy 0 0.635)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.635 0.635) (xy -0.635 0.635)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -10.16 2.54 0)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -10.16 -2.54 0)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin free line
-					(at -6.35 -5.08 0)
-					(length 2.54)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 10.16 -5.08 180)
-					(length 2.54)
-					(name "GND2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 10.16 0 180)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 10.16 5.08 180)
-					(length 2.54)
-					(name "VCC2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "PCM_Resistor_AKL:R_0805"
 			(body_styles demorgan)
 			(pin_numbers
@@ -10876,6 +10382,16 @@
 	)
 	(wire
 		(pts
+			(xy 650.24 190.5) (xy 671.83 190.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "23178bdc-608f-4a3f-8899-f9f03ffd4cad")
+	)
+	(wire
+		(pts
 			(xy 143.51 194.31) (xy 143.51 190.5)
 		)
 		(stroke
@@ -10943,16 +10459,6 @@
 			(type default)
 		)
 		(uuid "28f9ec2c-5e63-4a47-ac16-e6a2e6ba2d97")
-	)
-	(wire
-		(pts
-			(xy 642.62 190.5) (xy 671.83 190.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "290d530b-8ac7-4900-b119-438528228578")
 	)
 	(wire
 		(pts
@@ -22157,119 +21663,6 @@
 		)
 	)
 	(symbol
-		(lib_id "PCM_Optocoupler_Gate_Driver_AKL:Optocoupler_Driver_Dual_Generic_Sep")
-		(at 36.83 109.22 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "39dcb964-75b1-4975-9337-41b38de40924")
-		(property "Reference" "OC1"
-			(at 36.83 96.52 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Optocoupler_Driver_Dual_Generic_Sep"
-			(at 36.83 99.06 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 31.75 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-			)
-		)
-		(property "Datasheet" ""
-			(at 34.29 109.22 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Description" "Optocoupler, Dual Gate Driver output, Generic symbol, Alternate KiCAD Library"
-			(at 36.83 109.22 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "3"
-			(uuid "d5210d1f-b31b-4a12-abd0-807d5c998875")
-		)
-		(pin "11"
-			(uuid "495dc976-e8d1-4705-b159-069318c0983e")
-		)
-		(pin "1"
-			(uuid "4112e9b0-4c9b-4db3-abee-9a77c5824968")
-		)
-		(pin "14"
-			(uuid "17207bd1-0b5d-471f-bbcd-fac4a9d5bfde")
-		)
-		(pin "6"
-			(uuid "4db213ae-4c4e-437b-bc7b-f5ee8496354f")
-		)
-		(pin "8"
-			(uuid "2858a1c0-9563-42bd-a8bc-69d26dbf08eb")
-		)
-		(pin "15"
-			(uuid "7eac9b7e-574c-4b2d-a4e0-21910cb232e4")
-		)
-		(pin "9"
-			(uuid "ee1d81f8-5e1a-4f87-9288-775f201270c1")
-		)
-		(pin "16"
-			(uuid "cc6c4f6a-7eaf-4b20-be27-f71ce60417bf")
-		)
-		(pin "2"
-			(uuid "63a2fe75-3984-46b6-8093-c6ec346e7fda")
-		)
-		(pin "10"
-			(uuid "ccd06a67-4c0a-49a5-886b-f5ca179e66b6")
-		)
-		(pin "7"
-			(uuid "b7809c3f-683a-4bac-9b58-954e01aaba04")
-		)
-		(instances
-			(project "Mainboard Layout No daisy chain cp2102 moved"
-				(path "/2053dd8c-5f84-476d-9658-863c94910b2d"
-					(reference "OC1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "PCA9534PW_118:PCA9534PW_118")
 		(at 87.63 123.19 0)
 		(mirror y)
@@ -25383,119 +24776,6 @@
 				(path "/2053dd8c-5f84-476d-9658-863c94910b2d"
 					(reference "#PWR041")
 					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "PCM_Optocoupler_Gate_Driver_AKL:Optocoupler_Driver_Dual_Generic_Sep")
-		(at 30.48 210.82 0)
-		(unit 2)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "715c8bce-cf65-43cf-8f7a-1ec39edbfc78")
-		(property "Reference" "OC3"
-			(at 30.48 198.12 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Optocoupler_Driver_Dual_Generic_Sep"
-			(at 30.48 200.66 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 25.4 213.36 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-			)
-		)
-		(property "Datasheet" ""
-			(at 27.94 210.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Description" "Optocoupler, Dual Gate Driver output, Generic symbol, Alternate KiCAD Library"
-			(at 30.48 210.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "3"
-			(uuid "d5210d1f-b31b-4a12-abd0-807d5c998876")
-		)
-		(pin "11"
-			(uuid "fc6b7544-5ef7-48d0-8bbe-c364480772e6")
-		)
-		(pin "1"
-			(uuid "4112e9b0-4c9b-4db3-abee-9a77c5824969")
-		)
-		(pin "14"
-			(uuid "17207bd1-0b5d-471f-bbcd-fac4a9d5bfdf")
-		)
-		(pin "6"
-			(uuid "5f0efe27-6af0-4cc8-a4c8-b2d542031e3c")
-		)
-		(pin "8"
-			(uuid "8d342a4d-8435-4dad-859d-d6f39d4e1857")
-		)
-		(pin "15"
-			(uuid "7eac9b7e-574c-4b2d-a4e0-21910cb232e5")
-		)
-		(pin "9"
-			(uuid "4195857b-ca0e-440f-8112-331bf138b42d")
-		)
-		(pin "16"
-			(uuid "cc6c4f6a-7eaf-4b20-be27-f71ce60417c0")
-		)
-		(pin "2"
-			(uuid "63a2fe75-3984-46b6-8093-c6ec346e7fdb")
-		)
-		(pin "10"
-			(uuid "6781e723-030e-40d0-9df0-61e4f0233604")
-		)
-		(pin "7"
-			(uuid "fcec4a96-66b0-4b20-b844-872e849975f0")
-		)
-		(instances
-			(project "Mainboard Layout No daisy chain cp2102 moved"
-				(path "/2053dd8c-5f84-476d-9658-863c94910b2d"
-					(reference "OC3")
-					(unit 2)
 				)
 			)
 		)
@@ -29452,119 +28732,6 @@
 		)
 	)
 	(symbol
-		(lib_id "PCM_Optocoupler_Gate_Driver_AKL:Optocoupler_Driver_Dual_Generic_Sep")
-		(at 30.48 175.26 0)
-		(unit 2)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b99a1dba-99ba-447f-9d1b-fc996447d06e")
-		(property "Reference" "OC2"
-			(at 30.48 162.56 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Optocoupler_Driver_Dual_Generic_Sep"
-			(at 30.48 165.1 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 25.4 177.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-			)
-		)
-		(property "Datasheet" ""
-			(at 27.94 175.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Description" "Optocoupler, Dual Gate Driver output, Generic symbol, Alternate KiCAD Library"
-			(at 30.48 175.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "3"
-			(uuid "d5210d1f-b31b-4a12-abd0-807d5c998877")
-		)
-		(pin "11"
-			(uuid "3527c43c-f21a-4faf-97b9-f748bd2fe862")
-		)
-		(pin "1"
-			(uuid "4112e9b0-4c9b-4db3-abee-9a77c582496a")
-		)
-		(pin "14"
-			(uuid "17207bd1-0b5d-471f-bbcd-fac4a9d5bfe0")
-		)
-		(pin "6"
-			(uuid "13373878-fae7-4e0b-9354-0e18a8fbe6a0")
-		)
-		(pin "8"
-			(uuid "0dfbc48e-177c-4412-bd56-b62594f5b6a8")
-		)
-		(pin "15"
-			(uuid "7eac9b7e-574c-4b2d-a4e0-21910cb232e6")
-		)
-		(pin "9"
-			(uuid "c2dddd04-bd28-4c38-b0a0-30fcec3a86a2")
-		)
-		(pin "16"
-			(uuid "cc6c4f6a-7eaf-4b20-be27-f71ce60417c1")
-		)
-		(pin "2"
-			(uuid "63a2fe75-3984-46b6-8093-c6ec346e7fdc")
-		)
-		(pin "10"
-			(uuid "5c4cb69d-4050-45af-846d-8a1bb22e9171")
-		)
-		(pin "7"
-			(uuid "2d89b281-84d2-45f3-9a2b-dbbc77f8779d")
-		)
-		(instances
-			(project "Mainboard Layout No daisy chain cp2102 moved"
-				(path "/2053dd8c-5f84-476d-9658-863c94910b2d"
-					(reference "OC2")
-					(unit 2)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "PCM_SparkFun-Resistor:10k_0603")
 		(at 135.89 57.15 90)
 		(mirror x)
@@ -30766,119 +29933,6 @@
 				(path "/2053dd8c-5f84-476d-9658-863c94910b2d"
 					(reference "J28")
 					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "PCM_Optocoupler_Gate_Driver_AKL:Optocoupler_Driver_Dual_Generic_Sep")
-		(at 31.75 138.43 0)
-		(unit 2)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "cbbe97c0-2b52-4108-922a-28f53652dbbe")
-		(property "Reference" "OC1"
-			(at 31.75 125.73 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Optocoupler_Driver_Dual_Generic_Sep"
-			(at 31.75 128.27 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 26.67 140.97 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-			)
-		)
-		(property "Datasheet" ""
-			(at 29.21 138.43 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Description" "Optocoupler, Dual Gate Driver output, Generic symbol, Alternate KiCAD Library"
-			(at 31.75 138.43 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "3"
-			(uuid "d5210d1f-b31b-4a12-abd0-807d5c998878")
-		)
-		(pin "11"
-			(uuid "495dc976-e8d1-4705-b159-069318c0983f")
-		)
-		(pin "1"
-			(uuid "4112e9b0-4c9b-4db3-abee-9a77c582496b")
-		)
-		(pin "14"
-			(uuid "17207bd1-0b5d-471f-bbcd-fac4a9d5bfe1")
-		)
-		(pin "6"
-			(uuid "4db213ae-4c4e-437b-bc7b-f5ee84963550")
-		)
-		(pin "8"
-			(uuid "2858a1c0-9563-42bd-a8bc-69d26dbf08ec")
-		)
-		(pin "15"
-			(uuid "7eac9b7e-574c-4b2d-a4e0-21910cb232e7")
-		)
-		(pin "9"
-			(uuid "ee1d81f8-5e1a-4f87-9288-775f201270c2")
-		)
-		(pin "16"
-			(uuid "cc6c4f6a-7eaf-4b20-be27-f71ce60417c2")
-		)
-		(pin "2"
-			(uuid "63a2fe75-3984-46b6-8093-c6ec346e7fdd")
-		)
-		(pin "10"
-			(uuid "ccd06a67-4c0a-49a5-886b-f5ca179e66b7")
-		)
-		(pin "7"
-			(uuid "b7809c3f-683a-4bac-9b58-954e01aaba05")
-		)
-		(instances
-			(project "Mainboard Layout No daisy chain cp2102 moved"
-				(path "/2053dd8c-5f84-476d-9658-863c94910b2d"
-					(reference "OC1")
-					(unit 2)
 				)
 			)
 		)
@@ -33778,6 +32832,86 @@
 			(project "Mainboard Layout No daisy chain cp2102 moved"
 				(path "/2053dd8c-5f84-476d-9658-863c94910b2d"
 					(reference "R8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_4ms_Diode:D_Generic")
+		(at 646.43 190.5 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f52a06ec-c099-4015-8945-c902789cdbd5")
+		(property "Reference" "D2"
+			(at 646.43 184.15 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "D_Generic"
+			(at 646.43 186.69 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_THT:D_DO-201AD_P15.24mm_Horizontal"
+			(at 646.43 190.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 646.43 190.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Diode"
+			(at 646.43 190.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "45e0ac85-a1fc-4adb-ae1b-ec58563bbea3")
+		)
+		(pin "2"
+			(uuid "917b4c02-45bb-4f50-a639-a94f58ea619c")
+		)
+		(instances
+			(project "Mainboard Layout No daisy chain cp2102 moved"
+				(path "/2053dd8c-5f84-476d-9658-863c94910b2d"
+					(reference "D2")
 					(unit 1)
 				)
 			)
