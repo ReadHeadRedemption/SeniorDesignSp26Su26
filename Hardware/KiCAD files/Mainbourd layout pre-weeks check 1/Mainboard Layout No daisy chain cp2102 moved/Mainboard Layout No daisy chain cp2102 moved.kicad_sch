@@ -1111,6 +1111,298 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "2026-05-24_23-29-04:ADuM1200ARZ"
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at 30.48 10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Value" "ADuM1200ARZ"
+				(at 30.48 7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Footprint" "R_8_ADI"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/ADuM1200-EP.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "ADuM1200ARZ"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "R_8_ADI R_8_ADI-M R_8_ADI-L"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "ADuM1200ARZ_0_1"
+				(polyline
+					(pts
+						(xy 7.62 5.08) (xy 7.62 -20.32)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 -20.32) (xy 53.34 -20.32)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 53.34 5.08) (xy 7.62 5.08)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 53.34 -20.32) (xy 53.34 5.08)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin unspecified line
+					(at 0 0 0)
+					(length 7.62)
+					(name "VDD1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 0 -5.08 0)
+					(length 7.62)
+					(name "VIA"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 60.96 -10.16 180)
+					(length 7.62)
+					(name "VIB"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 0 -15.24 0)
+					(length 7.62)
+					(name "GND1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 60.96 0 180)
+					(length 7.62)
+					(name "GND2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 60.96 -5.08 180)
+					(length 7.62)
+					(name "VOB"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 0 -10.16 0)
+					(length 7.62)
+					(name "VOA"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 60.96 -15.24 180)
+					(length 7.62)
+					(name "VDD2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:LED"
 			(pin_numbers
 				(hide yes)
@@ -2176,6 +2468,495 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "PCM_4ms_Capacitor:10uF_1210_35V"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 1.905 1.27 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "10uF_1210_35V"
+				(at 0.635 4.445 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "4ms_Capacitor:C_1210"
+				(at -2.54 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "10uF, Min. 35V, 20%, X5R or X7S or similar, 1210, MLCC"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Specifications" "10uF, Min. 35V, 20%, X5R or X7S or similar, 1210, MLCC"
+				(at -2.54 -7.874 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Manufacturer" "Taiyo Yuden"
+				(at -2.54 -9.398 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Part Number" "GMK325BJ106MN-T"
+				(at -2.54 -10.922 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Display" "10uF/50V"
+				(at 1.905 -1.27 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "JLCPCB ID" "C172721"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "10uF_1210_35V"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "10uF_1210_35V_1_1"
+				(polyline
+					(pts
+						(xy -1.524 0.508) (xy 1.524 0.508)
+					)
+					(stroke
+						(width 0.3048)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 -0.508) (xy 1.524 -0.508)
+					)
+					(stroke
+						(width 0.3302)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 0 2.54 270)
+					(length 2.032)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 2.032)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "PCM_4ms_Connector:TestPoint"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "TP"
+				(at 0 6.858 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TestPoint_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "PCM_4ms_Diode:D_Generic"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "D_Generic"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Diode"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "diode"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "TO-???* *SingleDiode *_Diode_* *SingleDiode* D_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "D_Generic_0_1"
+				(polyline
+					(pts
+						(xy -1.27 1.27) (xy -1.27 -1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "D_Generic_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "PCM_Espressif:ESP32-S3-WROOM-1"
 			(pin_names
 				(offset 1.016)
@@ -3000,6 +3781,500 @@
 					)
 					(fill
 						(type background)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "PCM_Optocoupler_Gate_Driver_AKL:Optocoupler_Driver_Dual_Generic_Sep"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "OC"
+				(at -7.62 12.7 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "Optocoupler_Driver_Dual_Generic_Sep"
+				(at -7.62 10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at -5.08 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(justify left)
+				)
+			)
+			(property "Datasheet" ""
+				(at -2.54 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Description" "Optocoupler, Dual Gate Driver output, Generic symbol, Alternate KiCAD Library"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "Optocoupler gate driver output dual generic"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "DIP*W7.62mm*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Optocoupler_Driver_Dual_Generic_Sep_0_0"
+				(rectangle
+					(start -7.62 7.62)
+					(end 7.62 -7.62)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -2.54) (xy 0 -2.54) (xy 0 2.54) (xy 1.27 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 6.35 0) (xy 1.27 3.81) (xy 1.27 -3.81) (xy 6.35 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 0) (xy 6.35 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Optocoupler_Driver_Dual_Generic_Sep_0_1"
+				(polyline
+					(pts
+						(xy -7.62 2.54) (xy -5.08 2.54) (xy -5.08 -0.635)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.715 -0.635) (xy -4.445 -0.635)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 -0.635) (xy -5.08 -2.54) (xy -7.62 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 -0.635) (xy -5.715 0.635) (xy -4.445 0.635) (xy -5.08 -0.635)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.048 0.508) (xy -1.778 0.508) (xy -2.159 0.381) (xy -2.159 0.635) (xy -1.778 0.508)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.048 -0.508) (xy -1.778 -0.508) (xy -2.159 -0.635) (xy -2.159 -0.381) (xy -1.778 -0.508)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Optocoupler_Driver_Dual_Generic_Sep_1_1"
+				(polyline
+					(pts
+						(xy 0 0.635) (xy 0.635 -0.635) (xy -0.635 -0.635) (xy 0 0.635)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 0.635) (xy -0.635 0.635)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin free line
+					(at -6.35 -5.08 0)
+					(length 2.54)
+					(hide yes)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -10.16 2.54 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -10.16 -2.54 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 10.16 -5.08 180)
+					(length 2.54)
+					(name "GND1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 10.16 0 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 10.16 5.08 180)
+					(length 2.54)
+					(name "VCC1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "Optocoupler_Driver_Dual_Generic_Sep_2_1"
+				(polyline
+					(pts
+						(xy 0 0.635) (xy 0.635 -0.635) (xy -0.635 -0.635) (xy 0 0.635)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 0.635) (xy -0.635 0.635)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -10.16 2.54 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -10.16 -2.54 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin free line
+					(at -6.35 -5.08 0)
+					(length 2.54)
+					(hide yes)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 10.16 -5.08 180)
+					(length 2.54)
+					(name "GND2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 10.16 0 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 10.16 5.08 180)
+					(length 2.54)
+					(name "VCC2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
 					)
 				)
 			)
@@ -6929,344 +8204,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "PCM_SparkFun-Jumper:SolderJumper_2_Open"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "JP"
-				(at 0 2.032 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" ""
-				(at 0 -2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "PCM_SparkFun-Jumper:Jumper_2_NO"
-				(at 0 -3.302 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 -6.35 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Solder Jumper, 2-pole, open"
-				(at 0 -8.89 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "SparkFun solder jumper SPST"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "SolderJumper*Open*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "SolderJumper_2_Open_0_1"
-				(polyline
-					(pts
-						(xy -0.254 1.016) (xy -0.254 -1.016)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -0.254 -1.016)
-					(mid -1.2656 0)
-					(end -0.254 1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -0.254 -1.016)
-					(mid -1.2656 0)
-					(end -0.254 1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(arc
-					(start 0.254 1.016)
-					(mid 1.2656 0)
-					(end 0.254 -1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0.254 1.016)
-					(mid 1.2656 0)
-					(end 0.254 -1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.254 1.016) (xy 0.254 -1.016)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "SolderJumper_2_Open_1_1"
-				(pin passive line
-					(at -2.54 0 0)
-					(length 1.27)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 0 180)
-					(length 1.27)
-					(name "B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "PCM_SparkFun-PowerSymbol:3.3V"
-			(power global)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "#PWR"
-				(at 0 -3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "3.3V"
-				(at 0 3.81 0)
-				(show_name no)
-				(do_not_autoplace yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Power symbol creates a global label with name \"3.3V\""
-				(at 0 -6.35 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "SparkFun global power"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "3.3V_0_1"
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "3.3V_1_1"
-				(pin power_in line
-					(at 0 0 90)
-					(length 0)
-					(hide yes)
-					(name "3.3V"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "PCM_SparkFun-PowerSymbol:GND"
 			(power global)
 			(pin_names
@@ -8518,15 +9455,15 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "TVS diode array or equivalent to \n\nSP0502BAHTG equivalent\n"
+	(text "ISOLATION"
 		(exclude_from_sim no)
-		(at 713.74 123.19 0)
+		(at 267.97 390.144 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 		)
-		(uuid "0c21c5a6-4198-4ffa-9d26-c448856a7d85")
+		(uuid "1449140f-37ba-4440-80a8-1148287b43d2")
 	)
 	(text "HOTPLATE PERIPHERAL CONNECTIONS"
 		(exclude_from_sim no)
@@ -8538,29 +9475,9 @@
 		)
 		(uuid "16fcb466-2e98-43d8-98ef-76a6ceb48222")
 	)
-	(text "may want to have parralel interrupts"
-		(exclude_from_sim no)
-		(at 135.89 107.95 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "1706f7db-7389-4d2b-bd8c-2d7d7f28528f")
-	)
-	(text "verify that esp interrupt is on this pin\n"
-		(exclude_from_sim no)
-		(at 149.86 83.82 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "1c6f9fd3-5b63-41bf-8dff-50ff0e3d7ce5")
-	)
 	(text "boot start\n"
 		(exclude_from_sim no)
-		(at 303.022 53.848 0)
+		(at 298.704 78.232 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8639,26 +9556,6 @@
 			)
 		)
 		(uuid "7c2b188b-7ab1-4cb3-bd3c-84025e29fac4")
-	)
-	(text "Verify diodes"
-		(exclude_from_sim no)
-		(at 656.59 149.86 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "85e255d9-0eda-484f-bc8a-603b4e11b176")
-	)
-	(text "Pre-lim idea on muting backfeed onn 3.3V line\n"
-		(exclude_from_sim no)
-		(at 41.91 236.22 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "9515819e-7e83-46d7-9b44-ae63a46c4707")
 	)
 	(text "DIP SWITCHES"
 		(exclude_from_sim no)
@@ -8838,6 +9735,18 @@
 		(uuid "011b68a6-1817-481c-8a92-4aa040628c65")
 	)
 	(junction
+		(at 501.65 344.17)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "095002bb-40ae-4deb-8290-27403412c80b")
+	)
+	(junction
+		(at 469.9 344.17)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0aa563e9-2fd5-48a8-9502-9f2dbd39ed14")
+	)
+	(junction
 		(at 607.06 83.82)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -8862,6 +9771,12 @@
 		(uuid "119b6a69-2494-4c11-8e24-b50b676319a9")
 	)
 	(junction
+		(at 433.07 344.17)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "15a8d1fd-7651-46d6-9f40-d9fcc22951fb")
+	)
+	(junction
 		(at 160.02 43.18)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -8878,18 +9793,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "256046b9-b872-41a3-8ca3-0aedd2129e19")
-	)
-	(junction
-		(at 280.67 161.29)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "2729bc2c-9734-4845-b117-8efc6b88feb9")
-	)
-	(junction
-		(at 501.65 347.98)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "28bd6813-1d45-4b29-ba3a-ecef297a4332")
 	)
 	(junction
 		(at 170.18 48.26)
@@ -8976,6 +9879,18 @@
 		(uuid "544b328b-5e2d-4219-84dd-4c2f4d673df7")
 	)
 	(junction
+		(at 135.89 76.2)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "54d413a8-097e-447a-b64c-8d4d89d7ea11")
+	)
+	(junction
+		(at 280.67 161.29)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5a970b03-b461-48a0-9735-c0a9e95df296")
+	)
+	(junction
 		(at 205.74 196.85)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9018,6 +9933,12 @@
 		(uuid "779a0ffd-5d4a-43dc-bbbe-5dac896c8a55")
 	)
 	(junction
+		(at 443.23 99.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "85190539-e42a-4e67-bd3f-1815b89df6f4")
+	)
+	(junction
 		(at 607.06 93.98)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9058,6 +9979,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9be2790a-63d2-449b-8424-a6efccef7ef9")
+	)
+	(junction
+		(at 392.43 341.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9c6a100e-769f-4b4b-a7a0-3ffe73818554")
 	)
 	(junction
 		(at 205.74 229.87)
@@ -9209,12 +10136,6 @@
 		(color 0 0 0 0)
 		(uuid "fd09cbe2-6e7d-431c-a4be-2678dc42c009")
 	)
-	(junction
-		(at 135.89 76.2)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "fd7bdd63-fe33-4dcd-96c6-f46a76fc10bf")
-	)
 	(no_connect
 		(at 435.61 134.62)
 		(uuid "0449d7e8-cd3c-497f-8c93-fe9b30bd7fde")
@@ -9238,6 +10159,10 @@
 	(no_connect
 		(at 170.18 143.51)
 		(uuid "31971280-22aa-466d-b418-2e205cbe469f")
+	)
+	(no_connect
+		(at 261.62 148.59)
+		(uuid "32af4a86-ccf0-40be-a0fe-2a606d2d128d")
 	)
 	(no_connect
 		(at 694.69 93.98)
@@ -9328,10 +10253,6 @@
 		(uuid "bd3483b7-f6f6-478f-afa7-56dd2a3da2d5")
 	)
 	(no_connect
-		(at 261.62 105.41)
-		(uuid "c2a7d8be-eba0-4453-8b57-50249a5b4332")
-	)
-	(no_connect
 		(at 240.03 229.87)
 		(uuid "c3c214ee-848b-4f6c-9f90-481e7ff917bc")
 	)
@@ -9358,10 +10279,6 @@
 	(no_connect
 		(at 172.72 304.8)
 		(uuid "e6df788a-1db3-433b-abad-2dbd592e1bf8")
-	)
-	(no_connect
-		(at 261.62 107.95)
-		(uuid "e70a8367-dd25-4a3d-a55a-5e4260138187")
 	)
 	(no_connect
 		(at 170.18 358.14)
@@ -9569,6 +10486,16 @@
 	)
 	(wire
 		(pts
+			(xy 443.23 99.06) (xy 443.23 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0d1e7f7e-bec1-4002-9438-00bcc6b2cdf9")
+	)
+	(wire
+		(pts
 			(xy 675.64 166.37) (xy 675.64 171.45)
 		)
 		(stroke
@@ -9599,6 +10526,16 @@
 	)
 	(wire
 		(pts
+			(xy 448.31 99.06) (xy 443.23 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "11f10e75-b8c2-4bb9-be0f-f91791b43e72")
+	)
+	(wire
+		(pts
 			(xy 427.99 266.7) (xy 427.99 267.97)
 		)
 		(stroke
@@ -9616,16 +10553,6 @@
 			(type default)
 		)
 		(uuid "126e954f-143f-4600-80c0-7320710421f9")
-	)
-	(wire
-		(pts
-			(xy 422.91 251.46) (xy 438.15 251.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1280fea0-8de7-433e-8ae6-b2f099a87cd6")
 	)
 	(wire
 		(pts
@@ -9656,16 +10583,6 @@
 			(type default)
 		)
 		(uuid "13b37a75-bc72-434d-8a3e-97d9581e34b5")
-	)
-	(wire
-		(pts
-			(xy 261.62 87.63) (xy 266.7 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1419ea9b-6cd5-4f64-80f4-d16bf1f1d71a")
 	)
 	(wire
 		(pts
@@ -9719,6 +10636,16 @@
 	)
 	(wire
 		(pts
+			(xy 273.05 87.63) (xy 275.59 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "19b50efa-dfa2-4e67-a42d-f5500ae3a474")
+	)
+	(wire
+		(pts
 			(xy 111.76 289.56) (xy 111.76 287.02)
 		)
 		(stroke
@@ -9756,6 +10683,16 @@
 			(type default)
 		)
 		(uuid "1b61ca93-0001-4c9b-98f0-cecf9260a847")
+	)
+	(wire
+		(pts
+			(xy 142.24 76.2) (xy 135.89 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1b9232eb-162c-4c2a-9249-17638e5088eb")
 	)
 	(wire
 		(pts
@@ -10319,6 +11256,16 @@
 	)
 	(wire
 		(pts
+			(xy 433.07 344.17) (xy 433.07 354.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3bab25a8-c078-456f-b2cf-f74ef37e1e3b")
+	)
+	(wire
+		(pts
 			(xy 666.75 163.83) (xy 675.64 163.83)
 		)
 		(stroke
@@ -10326,6 +11273,16 @@
 			(type default)
 		)
 		(uuid "3bac6ae0-d07e-4aeb-aee7-e072448330f6")
+	)
+	(wire
+		(pts
+			(xy 261.62 105.41) (xy 265.43 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3bc1a3a6-c4d6-406a-a85a-8f109914a4b1")
 	)
 	(wire
 		(pts
@@ -10456,16 +11413,6 @@
 			(type default)
 		)
 		(uuid "43ee6933-7e4b-4aaf-9cea-2635f7c27b95")
-	)
-	(wire
-		(pts
-			(xy 648.97 158.75) (xy 675.64 158.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "443e5e65-e80d-47fe-bc73-58b3301e515c")
 	)
 	(wire
 		(pts
@@ -10609,16 +11556,6 @@
 	)
 	(wire
 		(pts
-			(xy 261.62 85.09) (xy 266.7 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "54394461-6f8b-4ae5-a5ea-2d763cbca7ee")
-	)
-	(wire
-		(pts
 			(xy 135.89 71.12) (xy 135.89 67.31)
 		)
 		(stroke
@@ -10689,6 +11626,16 @@
 	)
 	(wire
 		(pts
+			(xy 280.67 157.48) (xy 280.67 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5a699769-675c-48bb-9158-5f059fb0cb0b")
+	)
+	(wire
+		(pts
 			(xy 113.03 123.19) (xy 113.03 125.73)
 		)
 		(stroke
@@ -10719,7 +11666,7 @@
 	)
 	(wire
 		(pts
-			(xy 416.56 254) (xy 425.45 254)
+			(xy 416.56 254) (xy 424.18 254)
 		)
 		(stroke
 			(width 0)
@@ -10896,16 +11843,6 @@
 			(type default)
 		)
 		(uuid "66440f48-329c-4ce7-82b2-f96d74f38dc4")
-	)
-	(wire
-		(pts
-			(xy 264.16 148.59) (xy 261.62 148.59)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6681ee20-ca6d-4cc3-93ac-d881188fedcf")
 	)
 	(wire
 		(pts
@@ -11119,7 +12056,7 @@
 	)
 	(wire
 		(pts
-			(xy 615.95 157.48) (xy 648.97 157.48)
+			(xy 615.95 157.48) (xy 650.24 157.48)
 		)
 		(stroke
 			(width 0)
@@ -11349,6 +12286,16 @@
 	)
 	(wire
 		(pts
+			(xy 281.94 157.48) (xy 280.67 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "820982ca-3f57-492f-b836-9484b053e334")
+	)
+	(wire
+		(pts
 			(xy 261.62 143.51) (xy 269.24 143.51)
 		)
 		(stroke
@@ -11549,7 +12496,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 76.2) (xy 144.78 76.2)
+			(xy 142.24 87.63) (xy 144.78 87.63)
 		)
 		(stroke
 			(width 0)
@@ -11619,16 +12566,6 @@
 	)
 	(wire
 		(pts
-			(xy 648.97 158.75) (xy 648.97 157.48)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9509ef9f-2395-47b6-84f3-01252fde626f")
-	)
-	(wire
-		(pts
 			(xy 187.96 58.42) (xy 187.96 66.04)
 		)
 		(stroke
@@ -11679,7 +12616,7 @@
 	)
 	(wire
 		(pts
-			(xy 280.67 158.75) (xy 280.67 161.29)
+			(xy 281.94 156.21) (xy 281.94 157.48)
 		)
 		(stroke
 			(width 0)
@@ -11879,6 +12816,16 @@
 	)
 	(wire
 		(pts
+			(xy 469.9 344.17) (xy 469.9 354.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a4bcca6d-cd01-4d95-b569-b4b7d2024568")
+	)
+	(wire
+		(pts
 			(xy 601.98 106.68) (xy 607.06 106.68)
 		)
 		(stroke
@@ -11916,6 +12863,16 @@
 			(type default)
 		)
 		(uuid "a6fc0084-91fd-4063-aaaa-7a89dadd8a10")
+	)
+	(wire
+		(pts
+			(xy 392.43 341.63) (xy 392.43 355.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a7333cad-5a3e-4047-805c-1b5684cf49f1")
 	)
 	(wire
 		(pts
@@ -11989,7 +12946,7 @@
 	)
 	(wire
 		(pts
-			(xy 501.65 336.55) (xy 501.65 347.98)
+			(xy 501.65 336.55) (xy 501.65 344.17)
 		)
 		(stroke
 			(width 0)
@@ -12109,7 +13066,7 @@
 	)
 	(wire
 		(pts
-			(xy 443.23 95.25) (xy 443.23 102.87)
+			(xy 443.23 95.25) (xy 443.23 99.06)
 		)
 		(stroke
 			(width 0)
@@ -12149,7 +13106,17 @@
 	)
 	(wire
 		(pts
-			(xy 433.07 336.55) (xy 433.07 354.33)
+			(xy 657.86 158.75) (xy 675.64 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b30492f3-2a68-473d-a2cc-c5cd6ea26ce2")
+	)
+	(wire
+		(pts
+			(xy 433.07 336.55) (xy 433.07 344.17)
 		)
 		(stroke
 			(width 0)
@@ -12196,6 +13163,16 @@
 			(type default)
 		)
 		(uuid "b799eaa7-e94f-4514-a2f5-ce6eb1f409a5")
+	)
+	(wire
+		(pts
+			(xy 425.45 251.46) (xy 438.15 251.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b8d8daa4-7c02-4b63-a12a-4a7632e6d8ca")
 	)
 	(wire
 		(pts
@@ -12336,6 +13313,16 @@
 			(type default)
 		)
 		(uuid "c22b90e5-f0d0-4d14-9cbb-b2c6109774c4")
+	)
+	(wire
+		(pts
+			(xy 261.62 85.09) (xy 265.43 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c2394a5a-f8c4-4606-beca-ee1e822c9786")
 	)
 	(wire
 		(pts
@@ -12547,16 +13534,6 @@
 		)
 		(uuid "cde385e3-ec0b-4414-a941-c1f2ac648a9a")
 	)
-	(wire
-		(pts
-			(xy 501.65 347.98) (xy 501.65 353.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ce85276a-d26e-4007-926b-c71a8e11b352")
-	)
 	(polyline
 		(pts
 			(xy 45.72 241.3) (xy 45.72 243.84)
@@ -12589,16 +13566,6 @@
 	)
 	(wire
 		(pts
-			(xy 264.16 154.94) (xy 264.16 148.59)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d3947365-89cf-44f6-b6cb-bda55d0b60c4")
-	)
-	(wire
-		(pts
 			(xy 115.57 267.97) (xy 123.19 267.97)
 		)
 		(stroke
@@ -12606,6 +13573,16 @@
 			(type default)
 		)
 		(uuid "d4259ee7-7168-4890-858b-6e2dc0b04203")
+	)
+	(wire
+		(pts
+			(xy 650.24 157.48) (xy 650.24 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d49789a4-4d33-4f4c-aab3-ae5d883cca06")
 	)
 	(wire
 		(pts
@@ -12849,23 +13826,23 @@
 	)
 	(wire
 		(pts
-			(xy 430.53 254) (xy 438.15 254)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e71a686c-1889-4303-980b-c86b87f26999")
-	)
-	(wire
-		(pts
-			(xy 392.43 339.09) (xy 392.43 355.6)
+			(xy 392.43 339.09) (xy 392.43 341.63)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "e7f64c7b-679a-414b-a89a-d301e9a97384")
+	)
+	(wire
+		(pts
+			(xy 261.62 87.63) (xy 265.43 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e87d7d3d-ad13-4914-87dd-bc482015f47e")
 	)
 	(wire
 		(pts
@@ -12886,6 +13863,16 @@
 			(type default)
 		)
 		(uuid "e9c960de-a200-4b15-987a-341bcb8b05dd")
+	)
+	(wire
+		(pts
+			(xy 273.05 85.09) (xy 275.59 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eb01a970-9f51-4172-828e-22cc7a56a6be")
 	)
 	(wire
 		(pts
@@ -12989,6 +13976,16 @@
 	)
 	(wire
 		(pts
+			(xy 142.24 87.63) (xy 142.24 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f1f4e132-a3b2-4ab6-a515-285525a4455e")
+	)
+	(wire
+		(pts
 			(xy 144.78 54.61) (xy 135.89 54.61)
 		)
 		(stroke
@@ -12996,6 +13993,16 @@
 			(type default)
 		)
 		(uuid "f2787ead-c20f-44e3-af5a-d1496ab1385c")
+	)
+	(wire
+		(pts
+			(xy 261.62 107.95) (xy 265.43 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f42681d4-f746-4f2e-a550-90535eac0d41")
 	)
 	(wire
 		(pts
@@ -13079,6 +14086,16 @@
 	)
 	(wire
 		(pts
+			(xy 431.8 254) (xy 438.15 254)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fc9f76ef-bdb0-4365-96e6-e4dee0a9714d")
+	)
+	(wire
+		(pts
 			(xy 111.76 128.27) (xy 111.76 125.73)
 		)
 		(stroke
@@ -13109,7 +14126,17 @@
 	)
 	(wire
 		(pts
-			(xy 469.9 336.55) (xy 469.9 354.33)
+			(xy 501.65 344.17) (xy 501.65 353.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fd14b20c-261e-4d50-89b9-5995d78915e2")
+	)
+	(wire
+		(pts
+			(xy 469.9 336.55) (xy 469.9 344.17)
 		)
 		(stroke
 			(width 0)
@@ -13148,7 +14175,7 @@
 		(uuid "ff5a6a88-b430-4c3e-9fab-427ffe0fa798")
 	)
 	(label "3.3V"
-		(at 431.8 251.46 0)
+		(at 433.07 251.46 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -13178,7 +14205,7 @@
 		(uuid "4763d058-c4dd-4dbb-ad77-dfc944f0de76")
 	)
 	(label "gnd"
-		(at 431.8 248.92 0)
+		(at 433.07 248.92 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -13257,8 +14284,18 @@
 		)
 		(uuid "a76eab5a-c974-40e5-8230-92a6d5ffe0af")
 	)
+	(label "D-"
+		(at 262.89 87.63 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "bf6c395f-d0e9-41de-80e0-7c7fdbe180fa")
+	)
 	(label "5V"
-		(at 431.8 254 0)
+		(at 433.07 254 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -13266,6 +14303,16 @@
 			(justify left bottom)
 		)
 		(uuid "cb2040b1-84b0-40ea-89bd-cefd1c364f0d")
+	)
+	(label "D+"
+		(at 262.89 85.09 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d33456b9-e3b1-437c-bc52-6da5ebfb1394")
 	)
 	(global_label "DRIVER_0_STEP"
 		(shape input)
@@ -13293,7 +14340,7 @@
 	)
 	(global_label "N_ENBL"
 		(shape output)
-		(at 280.67 158.75 90)
+		(at 281.94 156.21 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13303,7 +14350,7 @@
 		)
 		(uuid "02d89e09-a28a-4489-8c28-cf453c3442d8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 280.67 148.6891 90)
+			(at 292.0009 156.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13531,30 +14578,6 @@
 			)
 		)
 	)
-	(global_label "+12V"
-		(shape input)
-		(at 123.19 388.62 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "107aac97-b496-43da-9f8f-3e696ef5b6ed")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 123.19 380.5548 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
 	(global_label "+24V"
 		(shape input)
 		(at 496.57 336.55 90)
@@ -13747,6 +14770,30 @@
 			)
 		)
 	)
+	(global_label "M+3.3V"
+		(shape input)
+		(at 236.22 414.02 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "1c710110-3a6b-4388-ad8a-6a9e8a0ae5c3")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 226.0986 414.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
 	(global_label "+5V"
 		(shape output)
 		(at 358.14 337.82 90)
@@ -13773,17 +14820,17 @@
 	)
 	(global_label "IO_Interupter2"
 		(shape output)
-		(at 144.78 76.2 270)
+		(at 144.78 87.63 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "1dfe2797-cf01-485a-8331-a726619fe42a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 144.78 92.5504 90)
+			(at 161.1304 87.63 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13791,7 +14838,7 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 	)
@@ -13915,7 +14962,7 @@
 			)
 		)
 	)
-	(global_label "+12V"
+	(global_label "M+3.3V"
 		(shape output)
 		(at 469.9 336.55 90)
 		(fields_autoplaced yes)
@@ -13927,7 +14974,7 @@
 		)
 		(uuid "27d26aef-8f1f-4e7e-8478-a8cc465ed281")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 469.9 328.4848 90)
+			(at 469.9 326.4286 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14176,6 +15223,30 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+			)
+		)
+	)
+	(global_label "+3.3V"
+		(shape input)
+		(at 297.18 429.26 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "2fb9c914-eaef-45b3-82c3-7ed036d870b4")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 305.85 429.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 	)
@@ -14732,7 +15803,7 @@
 	)
 	(global_label "PI_D-"
 		(shape output)
-		(at 266.7 87.63 0)
+		(at 275.59 87.63 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -14742,7 +15813,7 @@
 		)
 		(uuid "4b15890a-5462-4e22-bba1-f40637c80b92")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 275.37 87.63 0)
+			(at 284.26 87.63 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14767,6 +15838,30 @@
 		(uuid "4b71142b-62ce-41e7-9d17-5fa8319dd9a3")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 464.82 329.7548 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "+24V"
+		(shape input)
+		(at 121.92 347.98 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "4baf8c9a-b779-4891-b98e-fbd41014841f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 121.92 339.9148 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14922,7 +16017,7 @@
 			)
 		)
 	)
-	(global_label "+12V"
+	(global_label "+24V"
 		(shape input)
 		(at 119.38 248.92 90)
 		(fields_autoplaced yes)
@@ -15038,6 +16133,30 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+	)
+	(global_label "+24V"
+		(shape input)
+		(at 118.11 289.56 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "5b8743bc-0055-4373-9f2b-b224d01dbcea")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 118.11 281.4948 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 	)
@@ -16555,7 +17674,7 @@
 	)
 	(global_label "SSR_Switch2"
 		(shape output)
-		(at 443.23 99.06 0)
+		(at 448.31 99.06 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -16565,7 +17684,7 @@
 		)
 		(uuid "a52c3bc9-75db-4adb-a211-784b6aaada64")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 458.1894 99.06 0)
+			(at 463.2694 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16710,6 +17829,30 @@
 		(uuid "a9eb0d1b-ba1c-4ba0-8ad3-325ffd2aac31")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 290.6704 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "+24V"
+		(shape input)
+		(at 123.19 388.62 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "aa481ad1-b3ff-457f-9e86-baa4392dec59")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 123.19 380.5548 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17093,30 +18236,6 @@
 		(uuid "c4f27a42-92e5-4297-84c1-d27d832039db")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 299.3185 128.27 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
-	(global_label "+12V"
-		(shape input)
-		(at 118.11 289.56 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "c586e1f4-d2b4-4a81-af30-c6f167876c37")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 118.11 281.4948 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17608,30 +18727,6 @@
 			)
 		)
 	)
-	(global_label "+12V"
-		(shape input)
-		(at 121.92 347.98 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "e0f75eb4-4fb7-45aa-b20a-ff4b7ed79ac8")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 121.92 339.9148 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
 	(global_label "nFault"
 		(shape input)
 		(at 125.73 364.49 180)
@@ -17848,30 +18943,6 @@
 			)
 		)
 	)
-	(global_label "+3.3V"
-		(shape input)
-		(at 430.53 90.17 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "f00d7a4a-41df-4c08-bae1-22df95fc005a")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 430.53 81.5 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
 	(global_label "+24V"
 		(shape input)
 		(at 387.35 339.09 90)
@@ -18042,7 +19113,7 @@
 	)
 	(global_label "PI_D+"
 		(shape output)
-		(at 266.7 85.09 0)
+		(at 275.59 85.09 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -18052,7 +19123,7 @@
 		)
 		(uuid "fae09929-42c1-46ce-a825-9e62a2a7cd54")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 275.37 85.09 0)
+			(at 284.26 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18263,84 +19334,6 @@
 		)
 	)
 	(symbol
-		(lib_id "PCM_SparkFun-PowerSymbol:3.3V")
-		(at 501.65 347.98 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0377e3b5-bead-4477-8c54-1856f00b9123")
-		(property "Reference" "#PWR01"
-			(at 497.84 347.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "3.3V"
-			(at 505.46 347.98 0)
-			(show_name no)
-			(do_not_autoplace yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 501.65 347.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 501.65 347.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"3.3V\""
-			(at 495.3 347.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "4860a554-a9f2-4fa6-bbe3-8b74f0d89adc")
-		)
-		(instances
-			(project "Mainboard Layout No daisy chain cp2102 moved"
-				(path "/2053dd8c-5f84-476d-9658-863c94910b2d"
-					(reference "#PWR01")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "PCM_SparkFun-Connector:Conn_01x04_P2.54mm")
 		(at 467.36 359.41 270)
 		(unit 1)
@@ -18538,7 +19531,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "PCM_SparkFun-Capacitor:Panasonic_D"
+		(property "Footprint" "Capacitor_THT:C_Rect_L11.0mm_W3.5mm_P10.00mm_MKT"
 			(at 102.87 307.34 0)
 			(hide yes)
 			(show_name no)
@@ -18582,7 +19575,7 @@
 				)
 			)
 		)
-		(property "Voltage" "25V"
+		(property "Voltage" "50V"
 			(at 105.41 290.3981 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18705,6 +19698,87 @@
 			(project "Mainboard Layout No daisy chain cp2102 moved"
 				(path "/2053dd8c-5f84-476d-9658-863c94910b2d"
 					(reference "R57")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_Resistor_AKL:R_0805")
+		(at 269.24 85.09 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "1060eaf0-8f4b-4c41-a75e-2836f126691c")
+		(property "Reference" "R15"
+			(at 272.796 82.042 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0 ohmR_0805"
+			(at 261.112 79.756 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "PCM_Resistor_SMD_AKL:R_0805_2012Metric"
+			(at 257.81 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 269.24 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "SMD 0805 Chip Resistor, European Symbol, Alternate KiCad Library"
+			(at 269.24 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "59074878-c79a-41e0-b6a9-1c0251786ef6")
+		)
+		(pin "2"
+			(uuid "11cea5bc-aca0-4f3f-95b0-46834067797b")
+		)
+		(instances
+			(project "Mainboard Layout No daisy chain cp2102 moved"
+				(path "/2053dd8c-5f84-476d-9658-863c94910b2d"
+					(reference "R15")
 					(unit 1)
 				)
 			)
@@ -19217,6 +20291,84 @@
 		)
 	)
 	(symbol
+		(lib_id "PCM_SparkFun-PowerSymbol:GND")
+		(at 430.53 90.17 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1a932d11-c5f6-4f5e-be85-d9372569dfc1")
+		(property "Reference" "#PWR08"
+			(at 430.53 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 430.53 86.36 0)
+			(show_name no)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 430.53 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 430.53 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 430.53 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6035efdf-39f0-49c6-bb9b-d62b7c36bfde")
+		)
+		(instances
+			(project "Mainboard Layout No daisy chain cp2102 moved"
+				(path "/2053dd8c-5f84-476d-9658-863c94910b2d"
+					(reference "#PWR08")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "PCM_SL_Resistors:1k")
 		(at 156.21 205.74 0)
 		(unit 1)
@@ -19238,7 +20390,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "0"
 			(at 156.21 201.93 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19560,6 +20712,84 @@
 			(project "Mainboard Layout No daisy chain cp2102 moved"
 				(path "/2053dd8c-5f84-476d-9658-863c94910b2d"
 					(reference "J4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_4ms_Connector:TestPoint")
+		(at 265.43 107.95 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "1fb3a192-e393-4b63-9399-5426fe5c1549")
+		(property "Reference" "TP2"
+			(at 270.256 107.95 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 274.828 107.95 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Loop_D3.80mm_Drill2.5mm"
+			(at 265.43 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 265.43 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 265.43 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2efc4728-f95c-43bf-bf4c-0bd9d9cafca6")
+		)
+		(instances
+			(project "Mainboard Layout No daisy chain cp2102 moved"
+				(path "/2053dd8c-5f84-476d-9658-863c94910b2d"
+					(reference "TP2")
 					(unit 1)
 				)
 			)
@@ -20927,6 +22157,119 @@
 		)
 	)
 	(symbol
+		(lib_id "PCM_Optocoupler_Gate_Driver_AKL:Optocoupler_Driver_Dual_Generic_Sep")
+		(at 36.83 109.22 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "39dcb964-75b1-4975-9337-41b38de40924")
+		(property "Reference" "OC1"
+			(at 36.83 96.52 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Optocoupler_Driver_Dual_Generic_Sep"
+			(at 36.83 99.06 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 31.75 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" ""
+			(at 34.29 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Description" "Optocoupler, Dual Gate Driver output, Generic symbol, Alternate KiCAD Library"
+			(at 36.83 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "d5210d1f-b31b-4a12-abd0-807d5c998875")
+		)
+		(pin "11"
+			(uuid "495dc976-e8d1-4705-b159-069318c0983e")
+		)
+		(pin "1"
+			(uuid "4112e9b0-4c9b-4db3-abee-9a77c5824968")
+		)
+		(pin "14"
+			(uuid "17207bd1-0b5d-471f-bbcd-fac4a9d5bfde")
+		)
+		(pin "6"
+			(uuid "4db213ae-4c4e-437b-bc7b-f5ee8496354f")
+		)
+		(pin "8"
+			(uuid "2858a1c0-9563-42bd-a8bc-69d26dbf08eb")
+		)
+		(pin "15"
+			(uuid "7eac9b7e-574c-4b2d-a4e0-21910cb232e4")
+		)
+		(pin "9"
+			(uuid "ee1d81f8-5e1a-4f87-9288-775f201270c1")
+		)
+		(pin "16"
+			(uuid "cc6c4f6a-7eaf-4b20-be27-f71ce60417bf")
+		)
+		(pin "2"
+			(uuid "63a2fe75-3984-46b6-8093-c6ec346e7fda")
+		)
+		(pin "10"
+			(uuid "ccd06a67-4c0a-49a5-886b-f5ca179e66b6")
+		)
+		(pin "7"
+			(uuid "b7809c3f-683a-4bac-9b58-954e01aaba04")
+		)
+		(instances
+			(project "Mainboard Layout No daisy chain cp2102 moved"
+				(path "/2053dd8c-5f84-476d-9658-863c94910b2d"
+					(reference "OC1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "PCA9534PW_118:PCA9534PW_118")
 		(at 87.63 123.19 0)
 		(mirror y)
@@ -21529,6 +22872,106 @@
 		)
 	)
 	(symbol
+		(lib_id "2026-05-24_23-29-04:ADuM1200ARZ")
+		(at 297.18 429.26 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp yes)
+		(fields_autoplaced yes)
+		(uuid "49a9ba9a-9ed6-456e-960e-2bf1a71e2c0c")
+		(property "Reference" "U3"
+			(at 266.7 403.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "ADuM1200ARZ"
+			(at 266.7 406.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "ADUM:R_8_ADI"
+			(at 297.18 429.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/ADuM1200-EP.pdf"
+			(at 297.18 429.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 297.18 429.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "2038b7d4-5e38-435a-a18b-232a87ea380d")
+		)
+		(pin "8"
+			(uuid "5f5ab239-6465-4bc7-af9d-eee9456a68a7")
+		)
+		(pin "3"
+			(uuid "f5f14672-1a8a-4c9c-a3b6-08ece9040fc8")
+		)
+		(pin "7"
+			(uuid "382a6333-c703-4ba3-b617-c1bf1dcb1ce8")
+		)
+		(pin "4"
+			(uuid "ab5574b9-c78f-4bd8-b8dd-b1e1fac8f004")
+		)
+		(pin "1"
+			(uuid "10d36b93-d735-413b-a976-1eed04f2ba0e")
+		)
+		(pin "5"
+			(uuid "083b38f1-386e-45b8-a142-9a6ad700e04a")
+		)
+		(pin "6"
+			(uuid "b6852fea-52d6-4eee-9c8c-7bf1f2c1d115")
+		)
+		(instances
+			(project "Mainboard Layout No daisy chain cp2102 moved"
+				(path "/2053dd8c-5f84-476d-9658-863c94910b2d"
+					(reference "U3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "PCM_Resistor_AKL:R_0805")
 		(at 270.51 72.39 180)
 		(unit 1)
@@ -22059,7 +23502,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "PCM_SparkFun-Capacitor:Panasonic_D"
+		(property "Footprint" "Capacitor_THT:C_Rect_L11.0mm_W3.5mm_P10.00mm_MKT"
 			(at 104.14 266.7 0)
 			(hide yes)
 			(show_name no)
@@ -22103,7 +23546,7 @@
 				)
 			)
 		)
-		(property "Voltage" "25V"
+		(property "Voltage" "50V"
 			(at 106.68 249.7581 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22477,6 +23920,84 @@
 		)
 	)
 	(symbol
+		(lib_id "PCM_SparkFun-PowerSymbol:GND")
+		(at 506.73 344.17 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "55de9b12-959b-470e-93b3-731c42f7f9bc")
+		(property "Reference" "#PWR039"
+			(at 506.73 350.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 506.73 347.98 0)
+			(show_name no)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 506.73 344.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 506.73 344.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 506.73 353.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c3346e49-77db-49cd-b53f-17a6fb98ec7c")
+		)
+		(instances
+			(project "Mainboard Layout No daisy chain cp2102 moved"
+				(path "/2053dd8c-5f84-476d-9658-863c94910b2d"
+					(reference "#PWR039")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "2026-04-20_20-31-56:CP2102-GM")
 		(at 623.57 78.74 0)
 		(unit 1)
@@ -22739,7 +24260,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "0"
 			(at 156.21 193.04 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22892,6 +24413,84 @@
 			(project "Mainboard Layout No daisy chain cp2102 moved"
 				(path "/2053dd8c-5f84-476d-9658-863c94910b2d"
 					(reference "J14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_4ms_Connector:TestPoint")
+		(at 265.43 105.41 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "5f8482fc-e5a9-4fea-8d9d-2e8745121eca")
+		(property "Reference" "TP1"
+			(at 270.51 104.1399 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 274.574 104.394 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Loop_D3.80mm_Drill2.5mm"
+			(at 265.43 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 265.43 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 265.43 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "648b983a-d05e-4f02-aa23-677d7cb73e70")
+		)
+		(instances
+			(project "Mainboard Layout No daisy chain cp2102 moved"
+				(path "/2053dd8c-5f84-476d-9658-863c94910b2d"
+					(reference "TP1")
 					(unit 1)
 				)
 			)
@@ -23712,6 +25311,197 @@
 	)
 	(symbol
 		(lib_id "PCM_SparkFun-PowerSymbol:GND")
+		(at 474.98 344.17 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "70de65fb-5b1a-4219-b59d-a4ff6b3989ad")
+		(property "Reference" "#PWR041"
+			(at 474.98 350.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 474.98 347.98 0)
+			(show_name no)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 474.98 344.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 474.98 344.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 474.98 353.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "317b3316-49ea-47db-bbb2-c816504fe242")
+		)
+		(instances
+			(project "Mainboard Layout No daisy chain cp2102 moved"
+				(path "/2053dd8c-5f84-476d-9658-863c94910b2d"
+					(reference "#PWR041")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_Optocoupler_Gate_Driver_AKL:Optocoupler_Driver_Dual_Generic_Sep")
+		(at 30.48 210.82 0)
+		(unit 2)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "715c8bce-cf65-43cf-8f7a-1ec39edbfc78")
+		(property "Reference" "OC3"
+			(at 30.48 198.12 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Optocoupler_Driver_Dual_Generic_Sep"
+			(at 30.48 200.66 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 25.4 213.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" ""
+			(at 27.94 210.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Description" "Optocoupler, Dual Gate Driver output, Generic symbol, Alternate KiCAD Library"
+			(at 30.48 210.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "d5210d1f-b31b-4a12-abd0-807d5c998876")
+		)
+		(pin "11"
+			(uuid "fc6b7544-5ef7-48d0-8bbe-c364480772e6")
+		)
+		(pin "1"
+			(uuid "4112e9b0-4c9b-4db3-abee-9a77c5824969")
+		)
+		(pin "14"
+			(uuid "17207bd1-0b5d-471f-bbcd-fac4a9d5bfdf")
+		)
+		(pin "6"
+			(uuid "5f0efe27-6af0-4cc8-a4c8-b2d542031e3c")
+		)
+		(pin "8"
+			(uuid "8d342a4d-8435-4dad-859d-d6f39d4e1857")
+		)
+		(pin "15"
+			(uuid "7eac9b7e-574c-4b2d-a4e0-21910cb232e5")
+		)
+		(pin "9"
+			(uuid "4195857b-ca0e-440f-8112-331bf138b42d")
+		)
+		(pin "16"
+			(uuid "cc6c4f6a-7eaf-4b20-be27-f71ce60417c0")
+		)
+		(pin "2"
+			(uuid "63a2fe75-3984-46b6-8093-c6ec346e7fdb")
+		)
+		(pin "10"
+			(uuid "6781e723-030e-40d0-9df0-61e4f0233604")
+		)
+		(pin "7"
+			(uuid "fcec4a96-66b0-4b20-b844-872e849975f0")
+		)
+		(instances
+			(project "Mainboard Layout No daisy chain cp2102 moved"
+				(path "/2053dd8c-5f84-476d-9658-863c94910b2d"
+					(reference "OC3")
+					(unit 2)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_SparkFun-PowerSymbol:GND")
 		(at 278.13 71.12 90)
 		(unit 1)
 		(body_style 1)
@@ -24355,6 +26145,145 @@
 		)
 	)
 	(symbol
+		(lib_id "PCM_4ms_Capacitor:10uF_1210_35V")
+		(at 435.61 344.17 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8470e209-24c2-4bc1-9e42-31d434aaeddd")
+		(property "Reference" "C19"
+			(at 435.6163 337.82 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10uF_1210_35V"
+			(at 431.165 343.535 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_1210_3225Metric"
+			(at 440.69 346.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" ""
+			(at 435.61 344.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "10uF, Min. 35V, 20%, X5R or X7S or similar, 1210, MLCC"
+			(at 435.61 344.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Specifications" "10uF, Min. 35V, 20%, X5R or X7S or similar, 1210, MLCC"
+			(at 443.484 346.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Manufacturer" "Taiyo Yuden"
+			(at 445.008 346.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Part Number" "GMK325BJ106MN-T"
+			(at 446.532 346.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Display" "10uF/16V"
+			(at 435.6163 340.36 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB ID" "C172721"
+			(at 435.61 344.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "654a2e6b-9463-41ba-b8e5-3bf1a4b5a212")
+		)
+		(pin "1"
+			(uuid "600b1367-c626-4b56-b948-43eb8a1d1c26")
+		)
+		(instances
+			(project "Mainboard Layout No daisy chain cp2102 moved"
+				(path "/2053dd8c-5f84-476d-9658-863c94910b2d"
+					(reference "C19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "PCM_SparkFun-Resistor:10k_0603")
 		(at 323.85 146.05 0)
 		(mirror x)
@@ -24628,6 +26557,225 @@
 			(project "Mainboard Layout No daisy chain cp2102 moved"
 				(path "/2053dd8c-5f84-476d-9658-863c94910b2d"
 					(reference "#PWR026")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_SL_Resistors:1k")
+		(at 427.99 254 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "91aec97c-394d-4596-8ee7-ff85da6881ac")
+		(property "Reference" "R18"
+			(at 427.99 247.65 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0"
+			(at 427.99 250.19 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 428.879 258.318 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 428.498 254 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "1kΩ, 1/4W Resistor"
+			(at 427.99 254 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b2edeb3c-bfb7-45da-be8e-75d789aed7bf")
+		)
+		(pin "2"
+			(uuid "69d6c432-f9b9-4a80-9b8e-c70e02d02131")
+		)
+		(instances
+			(project "Mainboard Layout No daisy chain cp2102 moved"
+				(path "/2053dd8c-5f84-476d-9658-863c94910b2d"
+					(reference "R18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_4ms_Capacitor:10uF_1210_35V")
+		(at 394.97 341.63 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "93a911fc-f9bb-4326-b4cc-6260d8883db9")
+		(property "Reference" "C17"
+			(at 394.9763 335.28 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10uF_1210_35V"
+			(at 390.525 340.995 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_1210_3225Metric"
+			(at 400.05 344.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" ""
+			(at 394.97 341.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "10uF, Min. 35V, 20%, X5R or X7S or similar, 1210, MLCC"
+			(at 394.97 341.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Specifications" "10uF, Min. 35V, 20%, X5R or X7S or similar, 1210, MLCC"
+			(at 402.844 344.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Manufacturer" "Taiyo Yuden"
+			(at 404.368 344.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Part Number" "GMK325BJ106MN-T"
+			(at 405.892 344.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Display" "10uF/16V"
+			(at 394.9763 337.82 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB ID" "C172721"
+			(at 394.97 341.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "a6d8064d-1a89-4272-90f8-4fcaf647d7d2")
+		)
+		(pin "1"
+			(uuid "03b28346-d4f6-44dc-b6cf-0f57f66bf4a0")
+		)
+		(instances
+			(project "Mainboard Layout No daisy chain cp2102 moved"
+				(path "/2053dd8c-5f84-476d-9658-863c94910b2d"
+					(reference "C17")
 					(unit 1)
 				)
 			)
@@ -25025,7 +27173,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "PCM_SparkFun-Capacitor:Panasonic_D"
+		(property "Footprint" "Capacitor_THT:C_Rect_L11.0mm_W3.5mm_P10.00mm_MKT"
 			(at 106.68 365.76 0)
 			(hide yes)
 			(show_name no)
@@ -25069,7 +27217,7 @@
 				)
 			)
 		)
-		(property "Voltage" "25V"
+		(property "Voltage" "50V"
 			(at 109.22 348.8181 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -26061,6 +28209,86 @@
 			(project "Mainboard Layout No daisy chain cp2102 moved"
 				(path "/2053dd8c-5f84-476d-9658-863c94910b2d"
 					(reference "R52")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_4ms_Diode:D_Generic")
+		(at 654.05 158.75 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a2538023-7f10-40f6-bd7f-13d017854ea9")
+		(property "Reference" "D1"
+			(at 654.05 152.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "D_Generic"
+			(at 654.05 154.94 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_THT:D_DO-201AD_P15.24mm_Horizontal"
+			(at 654.05 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 654.05 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Diode"
+			(at 654.05 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "72a0d12b-a21c-48c1-9d27-b9f794fea490")
+		)
+		(pin "2"
+			(uuid "a9628a71-ebc7-4a0c-9384-94806a3bb39b")
+		)
+		(instances
+			(project "Mainboard Layout No daisy chain cp2102 moved"
+				(path "/2053dd8c-5f84-476d-9658-863c94910b2d"
+					(reference "D1")
 					(unit 1)
 				)
 			)
@@ -27224,6 +29452,119 @@
 		)
 	)
 	(symbol
+		(lib_id "PCM_Optocoupler_Gate_Driver_AKL:Optocoupler_Driver_Dual_Generic_Sep")
+		(at 30.48 175.26 0)
+		(unit 2)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b99a1dba-99ba-447f-9d1b-fc996447d06e")
+		(property "Reference" "OC2"
+			(at 30.48 162.56 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Optocoupler_Driver_Dual_Generic_Sep"
+			(at 30.48 165.1 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 25.4 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" ""
+			(at 27.94 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Description" "Optocoupler, Dual Gate Driver output, Generic symbol, Alternate KiCAD Library"
+			(at 30.48 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "d5210d1f-b31b-4a12-abd0-807d5c998877")
+		)
+		(pin "11"
+			(uuid "3527c43c-f21a-4faf-97b9-f748bd2fe862")
+		)
+		(pin "1"
+			(uuid "4112e9b0-4c9b-4db3-abee-9a77c582496a")
+		)
+		(pin "14"
+			(uuid "17207bd1-0b5d-471f-bbcd-fac4a9d5bfe0")
+		)
+		(pin "6"
+			(uuid "13373878-fae7-4e0b-9354-0e18a8fbe6a0")
+		)
+		(pin "8"
+			(uuid "0dfbc48e-177c-4412-bd56-b62594f5b6a8")
+		)
+		(pin "15"
+			(uuid "7eac9b7e-574c-4b2d-a4e0-21910cb232e6")
+		)
+		(pin "9"
+			(uuid "c2dddd04-bd28-4c38-b0a0-30fcec3a86a2")
+		)
+		(pin "16"
+			(uuid "cc6c4f6a-7eaf-4b20-be27-f71ce60417c1")
+		)
+		(pin "2"
+			(uuid "63a2fe75-3984-46b6-8093-c6ec346e7fdc")
+		)
+		(pin "10"
+			(uuid "5c4cb69d-4050-45af-846d-8a1bb22e9171")
+		)
+		(pin "7"
+			(uuid "2d89b281-84d2-45f3-9a2b-dbbc77f8779d")
+		)
+		(instances
+			(project "Mainboard Layout No daisy chain cp2102 moved"
+				(path "/2053dd8c-5f84-476d-9658-863c94910b2d"
+					(reference "OC2")
+					(unit 2)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "PCM_SparkFun-Resistor:10k_0603")
 		(at 135.89 57.15 90)
 		(mirror x)
@@ -28080,6 +30421,86 @@
 		)
 	)
 	(symbol
+		(lib_id "PCM_SL_Resistors:1k")
+		(at 421.64 251.46 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c6535400-7006-4041-96f3-6f8d6911d189")
+		(property "Reference" "R17"
+			(at 421.64 245.11 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0"
+			(at 421.64 247.65 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 422.529 255.778 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 422.148 251.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "1kΩ, 1/4W Resistor"
+			(at 421.64 251.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "89b59739-8465-4f83-9255-d9eea6aa1c8d")
+		)
+		(pin "2"
+			(uuid "53f879b4-af52-4163-8faf-8aa81fad673a")
+		)
+		(instances
+			(project "Mainboard Layout No daisy chain cp2102 moved"
+				(path "/2053dd8c-5f84-476d-9658-863c94910b2d"
+					(reference "R17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "PCM_SparkFun-Resistor:100_0603")
 		(at 304.8 125.73 0)
 		(unit 1)
@@ -28345,6 +30766,119 @@
 				(path "/2053dd8c-5f84-476d-9658-863c94910b2d"
 					(reference "J28")
 					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_Optocoupler_Gate_Driver_AKL:Optocoupler_Driver_Dual_Generic_Sep")
+		(at 31.75 138.43 0)
+		(unit 2)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cbbe97c0-2b52-4108-922a-28f53652dbbe")
+		(property "Reference" "OC1"
+			(at 31.75 125.73 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Optocoupler_Driver_Dual_Generic_Sep"
+			(at 31.75 128.27 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 26.67 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" ""
+			(at 29.21 138.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Description" "Optocoupler, Dual Gate Driver output, Generic symbol, Alternate KiCAD Library"
+			(at 31.75 138.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "d5210d1f-b31b-4a12-abd0-807d5c998878")
+		)
+		(pin "11"
+			(uuid "495dc976-e8d1-4705-b159-069318c0983f")
+		)
+		(pin "1"
+			(uuid "4112e9b0-4c9b-4db3-abee-9a77c582496b")
+		)
+		(pin "14"
+			(uuid "17207bd1-0b5d-471f-bbcd-fac4a9d5bfe1")
+		)
+		(pin "6"
+			(uuid "4db213ae-4c4e-437b-bc7b-f5ee84963550")
+		)
+		(pin "8"
+			(uuid "2858a1c0-9563-42bd-a8bc-69d26dbf08ec")
+		)
+		(pin "15"
+			(uuid "7eac9b7e-574c-4b2d-a4e0-21910cb232e7")
+		)
+		(pin "9"
+			(uuid "ee1d81f8-5e1a-4f87-9288-775f201270c2")
+		)
+		(pin "16"
+			(uuid "cc6c4f6a-7eaf-4b20-be27-f71ce60417c2")
+		)
+		(pin "2"
+			(uuid "63a2fe75-3984-46b6-8093-c6ec346e7fdd")
+		)
+		(pin "10"
+			(uuid "ccd06a67-4c0a-49a5-886b-f5ca179e66b7")
+		)
+		(pin "7"
+			(uuid "b7809c3f-683a-4bac-9b58-954e01aaba05")
+		)
+		(instances
+			(project "Mainboard Layout No daisy chain cp2102 moved"
+				(path "/2053dd8c-5f84-476d-9658-863c94910b2d"
+					(reference "OC1")
+					(unit 2)
 				)
 			)
 		)
@@ -29011,7 +31545,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "PCM_SparkFun-Capacitor:Panasonic_D"
+		(property "Footprint" "Capacitor_THT:C_Rect_L11.0mm_W3.5mm_P10.00mm_MKT"
 			(at 107.95 406.4 0)
 			(hide yes)
 			(show_name no)
@@ -29055,7 +31589,7 @@
 				)
 			)
 		)
-		(property "Voltage" "25V"
+		(property "Voltage" "50V"
 			(at 110.49 389.4581 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29352,6 +31886,84 @@
 		)
 	)
 	(symbol
+		(lib_id "PCM_SparkFun-PowerSymbol:GND")
+		(at 397.51 341.63 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d2709ae7-2bc2-46cd-8492-81898c5267d1")
+		(property "Reference" "#PWR037"
+			(at 397.51 347.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 397.51 345.44 0)
+			(show_name no)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 397.51 341.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 397.51 341.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 397.51 350.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "35a6e11a-7214-45cb-afd5-68c8751df638")
+		)
+		(instances
+			(project "Mainboard Layout No daisy chain cp2102 moved"
+				(path "/2053dd8c-5f84-476d-9658-863c94910b2d"
+					(reference "#PWR037")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 121.92 124.46 90)
 		(unit 1)
@@ -29595,86 +32207,6 @@
 		)
 	)
 	(symbol
-		(lib_id "PCM_SparkFun-Jumper:SolderJumper_2_Open")
-		(at 420.37 251.46 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d5eb3180-3a6f-465a-973b-8caabae2d399")
-		(property "Reference" "JP1"
-			(at 420.37 247.65 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" ""
-			(at 420.37 254 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "PCM_SparkFun-Jumper:Jumper_2_NO"
-			(at 420.37 254.762 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 420.37 257.81 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Solder Jumper, 2-pole, open"
-			(at 420.37 260.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "5a1d39bc-1c96-4067-b376-ee8f966ce89e")
-		)
-		(pin "1"
-			(uuid "05ee57fa-c7b0-4a6b-afa7-d02206ca312a")
-		)
-		(instances
-			(project "Mainboard Layout No daisy chain cp2102 moved"
-				(path "/2053dd8c-5f84-476d-9658-863c94910b2d"
-					(reference "JP1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "PCM_SL_Pin_Headers:PINHD_1x8_Male")
 		(at 85.09 300.99 0)
 		(unit 1)
@@ -29775,6 +32307,145 @@
 		)
 	)
 	(symbol
+		(lib_id "PCM_4ms_Capacitor:10uF_1210_35V")
+		(at 472.44 344.17 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d89c9ef7-7171-492a-b0bd-f9c0857b6394")
+		(property "Reference" "C20"
+			(at 472.4463 337.82 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10uF_1210_35V"
+			(at 467.995 343.535 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_1210_3225Metric"
+			(at 477.52 346.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" ""
+			(at 472.44 344.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "10uF, Min. 35V, 20%, X5R or X7S or similar, 1210, MLCC"
+			(at 472.44 344.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Specifications" "10uF, Min. 35V, 20%, X5R or X7S or similar, 1210, MLCC"
+			(at 480.314 346.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Manufacturer" "Taiyo Yuden"
+			(at 481.838 346.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Part Number" "GMK325BJ106MN-T"
+			(at 483.362 346.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Display" "10uF/16V"
+			(at 472.4463 340.36 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB ID" "C172721"
+			(at 472.44 344.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "f7c47bb2-4836-4685-800a-6ee15876a178")
+		)
+		(pin "1"
+			(uuid "30078af7-5b19-4955-a2fd-b0dc77a97ba0")
+		)
+		(instances
+			(project "Mainboard Layout No daisy chain cp2102 moved"
+				(path "/2053dd8c-5f84-476d-9658-863c94910b2d"
+					(reference "C20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "PCM_SparkFun-PowerSymbol:GND")
 		(at 426.72 137.16 270)
 		(unit 1)
@@ -29847,6 +32518,84 @@
 			(project "Mainboard Layout No daisy chain cp2102 moved"
 				(path "/2053dd8c-5f84-476d-9658-863c94910b2d"
 					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_SparkFun-PowerSymbol:GND")
+		(at 438.15 344.17 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "db3e6bba-75db-480e-bddb-e04a7d925cfb")
+		(property "Reference" "#PWR040"
+			(at 438.15 350.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 438.15 347.98 0)
+			(show_name no)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 438.15 344.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 438.15 344.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 438.15 353.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "20beab60-4ab7-4113-b19e-fa1a7eb0ee1f")
+		)
+		(instances
+			(project "Mainboard Layout No daisy chain cp2102 moved"
+				(path "/2053dd8c-5f84-476d-9658-863c94910b2d"
+					(reference "#PWR040")
 					(unit 1)
 				)
 			)
@@ -30359,7 +33108,7 @@
 				)
 			)
 		)
-		(property "Value" "10uF"
+		(property "Value" "22uF"
 			(at 213.3536 40.64 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -31035,6 +33784,144 @@
 		)
 	)
 	(symbol
+		(lib_id "PCM_4ms_Capacitor:10uF_1210_35V")
+		(at 504.19 344.17 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "f5a3de12-2f9d-43cd-9f75-1bd12073468a")
+		(property "Reference" "C18"
+			(at 507.238 337.82 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10uF_1210_35V"
+			(at 499.745 343.535 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_1210_3225Metric"
+			(at 509.27 346.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" ""
+			(at 504.19 344.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "10uF, Min. 35V, 20%, X5R or X7S or similar, 1210, MLCC"
+			(at 504.19 344.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Specifications" "10uF, Min. 35V, 20%, X5R or X7S or similar, 1210, MLCC"
+			(at 512.064 346.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Manufacturer" "Taiyo Yuden"
+			(at 513.588 346.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Part Number" "GMK325BJ106MN-T"
+			(at 515.112 346.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Display" "10uF/16V"
+			(at 507.238 340.36 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB ID" "C172721"
+			(at 504.19 344.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "17e5211c-5a5a-45f2-96b6-ec9fe9e520cc")
+		)
+		(pin "1"
+			(uuid "b805b613-fe16-40d5-9ac1-dfcb985ec1f9")
+		)
+		(instances
+			(project "Mainboard Layout No daisy chain cp2102 moved"
+				(path "/2053dd8c-5f84-476d-9658-863c94910b2d"
+					(reference "C18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "PCM_SparkFun-Resistor:10k_0603")
 		(at 160.02 49.53 270)
 		(mirror x)
@@ -31128,8 +34015,8 @@
 		)
 	)
 	(symbol
-		(lib_id "PCM_SparkFun-Jumper:SolderJumper_2_Open")
-		(at 427.99 254 0)
+		(lib_id "PCM_Resistor_AKL:R_0805")
+		(at 269.24 87.63 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -31137,30 +34024,31 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f8d6a5a7-ff1d-43a5-8bb1-c584d77e914f")
-		(property "Reference" "JP2"
-			(at 427.99 250.19 0)
+		(uuid "f952d8dd-f605-4509-8df6-905824d198a8")
+		(property "Reference" "R16"
+			(at 273.812 92.964 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" ""
-			(at 427.99 256.54 0)
+		(property "Value" "0 ohmR_0805"
+			(at 262.128 90.678 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Footprint" "PCM_SparkFun-Jumper:Jumper_2_NO"
-			(at 427.99 257.302 0)
+		(property "Footprint" "PCM_Resistor_SMD_AKL:R_0805_2012Metric"
+			(at 257.81 87.63 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -31171,7 +34059,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 427.99 260.35 0)
+			(at 269.24 87.63 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -31181,8 +34069,8 @@
 				)
 			)
 		)
-		(property "Description" "Solder Jumper, 2-pole, open"
-			(at 427.99 262.89 0)
+		(property "Description" "SMD 0805 Chip Resistor, European Symbol, Alternate KiCad Library"
+			(at 269.24 87.63 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -31191,17 +34079,17 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
-		(pin "2"
-			(uuid "ef18dfc9-e7b8-4e10-8720-1242e3bd0595")
 		)
 		(pin "1"
-			(uuid "b12ea082-3bb9-4ecf-8602-f7961012a2dd")
+			(uuid "734fdf14-114c-4a37-870e-f1aecf5cd420")
+		)
+		(pin "2"
+			(uuid "9816d3a2-42b0-4669-b384-6d12b7e5016f")
 		)
 		(instances
 			(project "Mainboard Layout No daisy chain cp2102 moved"
 				(path "/2053dd8c-5f84-476d-9658-863c94910b2d"
-					(reference "JP2")
+					(reference "R16")
 					(unit 1)
 				)
 			)
