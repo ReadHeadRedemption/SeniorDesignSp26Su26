@@ -3,9 +3,9 @@
     "GenerationSoftware": {
       "Vendor": "KiCad",
       "Application": "Pcbnew",
-      "Version": "10.0.0"
+      "Version": "10.0.2"
     },
-    "CreationDate": "2026-04-24T18:35:15-04:00"
+    "CreationDate": "2026-05-29T00:35:40-04:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
@@ -41,41 +41,6 @@
     {
       "Path": "LM2576_Var_Volt_Reg-B_Cu.gbr",
       "FileFunction": "Copper,L2,Bot",
-      "FilePolarity": "Positive"
-    },
-    {
-      "Path": "LM2576_Var_Volt_Reg-F_Paste.gbr",
-      "FileFunction": "SolderPaste,Top",
-      "FilePolarity": "Positive"
-    },
-    {
-      "Path": "LM2576_Var_Volt_Reg-B_Paste.gbr",
-      "FileFunction": "SolderPaste,Bot",
-      "FilePolarity": "Positive"
-    },
-    {
-      "Path": "LM2576_Var_Volt_Reg-F_Silkscreen.gbr",
-      "FileFunction": "Legend,Top",
-      "FilePolarity": "Positive"
-    },
-    {
-      "Path": "LM2576_Var_Volt_Reg-B_Silkscreen.gbr",
-      "FileFunction": "Legend,Bot",
-      "FilePolarity": "Positive"
-    },
-    {
-      "Path": "LM2576_Var_Volt_Reg-F_Mask.gbr",
-      "FileFunction": "SolderMask,Top",
-      "FilePolarity": "Negative"
-    },
-    {
-      "Path": "LM2576_Var_Volt_Reg-B_Mask.gbr",
-      "FileFunction": "SolderMask,Bot",
-      "FilePolarity": "Negative"
-    },
-    {
-      "Path": "LM2576_Var_Volt_Reg-Edge_Cuts.gbr",
-      "FileFunction": "Profile",
       "FilePolarity": "Positive"
     }
   ],

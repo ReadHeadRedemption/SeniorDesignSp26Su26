@@ -6772,7 +6772,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "PCM_SparkFun-Connector:Conn_01x04_P2.54mm"
+		(symbol "PCM_SparkFun-Connector:Conn_01x03_P2.54mm"
 			(pin_names
 				(offset 1.016)
 				(hide yes)
@@ -6792,8 +6792,8 @@
 					)
 				)
 			)
-			(property "Value" "Conn_01x04"
-				(at 0 -7.62 0)
+			(property "Value" "Conn_01x03"
+				(at 0 -5.08 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -6802,8 +6802,8 @@
 					)
 				)
 			)
-			(property "Footprint" "PCM_SparkFun-Connector:1x04_P2.54mm"
-				(at 0 -10.16 0)
+			(property "Footprint" "PCM_SparkFun-Connector:1x03_P2.54mm"
+				(at 0 -7.62 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -6814,7 +6814,7 @@
 				)
 			)
 			(property "Datasheet" ""
-				(at 0 -12.7 0)
+				(at 0 -8.89 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -6825,7 +6825,7 @@
 				)
 			)
 			(property "Description" "Basic 0.1\" PTH"
-				(at 0 -15.24 0)
+				(at 0 -11.43 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -6857,10 +6857,10 @@
 					)
 				)
 			)
-			(symbol "Conn_01x04_P2.54mm_1_1"
+			(symbol "Conn_01x03_P2.54mm_1_1"
 				(rectangle
 					(start -1.27 3.81)
-					(end 1.27 -6.35)
+					(end 1.27 -3.81)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -6894,17 +6894,6 @@
 				(rectangle
 					(start -1.27 -2.413)
 					(end 0 -2.667)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -4.953)
-					(end 0 -5.207)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -6960,24 +6949,6 @@
 						)
 					)
 					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -5.08 0)
-					(length 3.81)
-					(name "Pin_4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -9234,11 +9205,27 @@
 		)
 		(uuid "fc38a55c-be43-4618-9e6d-f6ec04869725")
 	)
+	(text "adc may read a bit lower than actual\n"
+		(exclude_from_sim no)
+		(at 289.306 110.49 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "ffec2092-4347-43b4-869f-34e39d492844")
+	)
 	(junction
 		(at 443.23 110.49)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "011b68a6-1817-481c-8a92-4aa040628c65")
+	)
+	(junction
+		(at 433.07 344.17)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "01bfeab3-4365-4bac-a4fa-80a7494d48db")
 	)
 	(junction
 		(at 501.65 344.17)
@@ -9275,12 +9262,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "119b6a69-2494-4c11-8e24-b50b676319a9")
-	)
-	(junction
-		(at 433.07 344.17)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "15a8d1fd-7651-46d6-9f40-d9fcc22951fb")
 	)
 	(junction
 		(at 160.02 43.18)
@@ -9842,6 +9823,16 @@
 	)
 	(wire
 		(pts
+			(xy 481.33 91.44) (xy 481.33 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "02ea8024-e3f3-4723-a21c-dd788842298d")
+	)
+	(wire
+		(pts
 			(xy 215.9 46.99) (xy 215.9 49.53)
 		)
 		(stroke
@@ -10022,6 +10013,16 @@
 	)
 	(wire
 		(pts
+			(xy 483.87 114.3) (xy 483.87 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "10752722-72cb-4fed-98e3-1f213329648a")
+	)
+	(wire
+		(pts
 			(xy 205.74 196.85) (xy 205.74 199.39)
 		)
 		(stroke
@@ -10039,6 +10040,16 @@
 			(type default)
 		)
 		(uuid "11f10e75-b8c2-4bb9-be0f-f91791b43e72")
+	)
+	(wire
+		(pts
+			(xy 433.07 344.17) (xy 433.07 354.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "122147e9-c5dc-4d72-bcfc-eb7f7f1c6776")
 	)
 	(wire
 		(pts
@@ -10222,6 +10233,16 @@
 	)
 	(wire
 		(pts
+			(xy 427.99 337.82) (xy 427.99 354.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1d168b50-da8d-40e6-8027-2ffb150113d8")
+	)
+	(wire
+		(pts
 			(xy 52.07 191.77) (xy 52.07 210.82)
 		)
 		(stroke
@@ -10289,6 +10310,16 @@
 			(type default)
 		)
 		(uuid "2048faec-6c89-4f96-ba19-038bcda840c7")
+	)
+	(wire
+		(pts
+			(xy 430.53 346.71) (xy 430.53 354.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "205081b0-e972-4c04-b89e-a633ef65032e")
 	)
 	(wire
 		(pts
@@ -10512,16 +10543,6 @@
 	)
 	(wire
 		(pts
-			(xy 430.53 346.71) (xy 430.53 354.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2e538b98-d1f6-47ab-90e9-283511084ed7")
-	)
-	(wire
-		(pts
 			(xy 561.34 113.03) (xy 591.82 113.03)
 		)
 		(stroke
@@ -10742,6 +10763,16 @@
 	)
 	(wire
 		(pts
+			(xy 483.87 104.14) (xy 483.87 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "38761f8f-62ef-4be2-a217-5d6fd2e437aa")
+	)
+	(wire
+		(pts
 			(xy 269.24 116.84) (xy 269.24 110.49)
 		)
 		(stroke
@@ -10749,26 +10780,6 @@
 			(type default)
 		)
 		(uuid "38d3a269-07eb-4f29-a240-a297ac1cfc85")
-	)
-	(wire
-		(pts
-			(xy 483.87 106.68) (xy 483.87 104.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "38e1bbf5-2249-440e-a487-e29b253e7f75")
-	)
-	(wire
-		(pts
-			(xy 433.07 344.17) (xy 433.07 354.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3bab25a8-c078-456f-b2cf-f74ef37e1e3b")
 	)
 	(wire
 		(pts
@@ -10849,16 +10860,6 @@
 			(type default)
 		)
 		(uuid "3f807894-5fe6-46f6-be8e-70f98da79a22")
-	)
-	(wire
-		(pts
-			(xy 427.99 337.82) (xy 427.99 354.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3fb71b22-37bf-4357-8cc1-1644327109fd")
 	)
 	(wire
 		(pts
@@ -11812,16 +11813,6 @@
 	)
 	(wire
 		(pts
-			(xy 270.51 60.96) (xy 270.51 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "83be12a9-565e-4de3-bd9d-ba2b1fbd68cd")
-	)
-	(wire
-		(pts
 			(xy 114.3 50.8) (xy 132.08 50.8)
 		)
 		(stroke
@@ -11912,16 +11903,6 @@
 	)
 	(wire
 		(pts
-			(xy 267.97 60.96) (xy 267.97 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8b1529aa-41f1-4100-816d-6ae5ad7a5871")
-	)
-	(wire
-		(pts
 			(xy 170.18 45.72) (xy 170.18 48.26)
 		)
 		(stroke
@@ -11999,6 +11980,16 @@
 			(type default)
 		)
 		(uuid "8fcbd6ab-867b-4ebe-b01f-8074c591fb89")
+	)
+	(wire
+		(pts
+			(xy 270.51 60.96) (xy 270.51 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "909442eb-1fbb-403e-a4d9-c3d07c4d755d")
 	)
 	(wire
 		(pts
@@ -12782,6 +12773,16 @@
 	)
 	(wire
 		(pts
+			(xy 467.36 91.44) (xy 469.9 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "be195fdb-0833-4bb6-bad1-62999e2c3fba")
+	)
+	(wire
+		(pts
 			(xy 133.35 92.71) (xy 69.85 92.71)
 		)
 		(stroke
@@ -12859,6 +12860,16 @@
 			(type default)
 		)
 		(uuid "c3e95c04-170d-4552-8c71-73e0a0bdfea9")
+	)
+	(wire
+		(pts
+			(xy 477.52 91.44) (xy 481.33 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c3f4b5cd-6630-40b0-8bc6-73ca241974c2")
 	)
 	(wire
 		(pts
@@ -13049,6 +13060,16 @@
 			(type default)
 		)
 		(uuid "d086ca27-7e79-4cd2-8735-1350ab69b967")
+	)
+	(wire
+		(pts
+			(xy 481.33 101.6) (xy 483.87 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d1db9ec6-8651-4189-b60c-04b3815c77e6")
 	)
 	(wire
 		(pts
@@ -13312,6 +13333,16 @@
 	)
 	(wire
 		(pts
+			(xy 267.97 60.96) (xy 267.97 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e483e2fb-fccc-46b4-b5c1-f936ba6d4386")
+	)
+	(wire
+		(pts
 			(xy 580.39 91.44) (xy 607.06 91.44)
 		)
 		(stroke
@@ -13539,16 +13570,6 @@
 			(type default)
 		)
 		(uuid "f5b35b04-13be-4c45-8d23-159751c7b145")
-	)
-	(wire
-		(pts
-			(xy 425.45 346.71) (xy 425.45 354.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f6b16b9a-3590-424a-96b6-1a29f0390b57")
 	)
 	(wire
 		(pts
@@ -15045,7 +15066,7 @@
 	)
 	(global_label "SSR_Switch2"
 		(shape input)
-		(at 483.87 106.68 270)
+		(at 483.87 116.84 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -15055,7 +15076,7 @@
 		)
 		(uuid "3f1a343c-de26-4026-a9e1-b84e8f783628")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 483.87 121.6394 90)
+			(at 483.87 131.7994 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15453,7 +15474,7 @@
 	)
 	(global_label "TX"
 		(shape input)
-		(at 267.97 60.96 90)
+		(at 270.51 60.96 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -15463,7 +15484,7 @@
 		)
 		(uuid "51dad75f-2a65-44ad-8193-da22c1176bcf")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 267.97 55.7977 90)
+			(at 270.51 55.7977 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17516,7 +17537,7 @@
 	)
 	(global_label "RX"
 		(shape input)
-		(at 270.51 60.96 90)
+		(at 267.97 60.96 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -17526,7 +17547,7 @@
 		)
 		(uuid "b617d0b2-7bd9-4fac-8cb7-af0f5997bea8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 270.51 55.4953 90)
+			(at 267.97 55.4953 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18739,7 +18760,7 @@
 	)
 	(global_label "SSR_Switch"
 		(shape input)
-		(at 483.87 101.6 180)
+		(at 467.36 91.44 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -18749,7 +18770,7 @@
 		)
 		(uuid "ffb5b3d1-51d9-4274-87d4-64e44fae9573")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 470.1201 101.6 0)
+			(at 453.6101 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18840,7 +18861,7 @@
 		)
 	)
 	(symbol
-		(lib_id "PCM_SparkFun-Connector:Conn_01x04_P2.54mm")
+		(lib_id "PCM_SparkFun-Connector:Conn_01x03_P2.54mm")
 		(at 467.36 359.41 270)
 		(unit 1)
 		(body_style 1)
@@ -18852,27 +18873,29 @@
 		(fields_autoplaced yes)
 		(uuid "055c73f3-ec1c-45fc-9899-90d26c71111b")
 		(property "Reference" "J11"
-			(at 466.09 363.22 90)
+			(at 472.44 358.1399 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Value" "Conn_01x04"
-			(at 466.09 365.76 90)
+			(at 472.44 360.6799 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Footprint" "PCM_SparkFun-Connector:1x04_P2.54mm"
-			(at 457.2 359.41 0)
+		(property "Footprint" "PCM_SparkFun-Connector:1x03_P2.54mm"
+			(at 459.74 359.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18883,7 +18906,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 454.66 359.41 0)
+			(at 458.47 359.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18894,7 +18917,7 @@
 			)
 		)
 		(property "Description" "Basic 0.1\" PTH"
-			(at 452.12 359.41 0)
+			(at 455.93 359.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18912,9 +18935,6 @@
 		)
 		(pin "3"
 			(uuid "40303e41-4d68-45de-9dea-b07bf6b55250")
-		)
-		(pin "4"
-			(uuid "908d1221-5cc6-462e-92b3-57818b3255da")
 		)
 		(instances
 			(project "Mainboard Layout No daisy chain cp2102 moved"
@@ -20967,7 +20987,7 @@
 		)
 	)
 	(symbol
-		(lib_id "PCM_SparkFun-Connector:Conn_01x04_P2.54mm")
+		(lib_id "PCM_SparkFun-Connector:Conn_01x03_P2.54mm")
 		(at 499.11 358.14 270)
 		(unit 1)
 		(body_style 1)
@@ -20979,27 +20999,29 @@
 		(fields_autoplaced yes)
 		(uuid "2d3c53b1-9064-4677-b81c-b311a220e439")
 		(property "Reference" "J5"
-			(at 497.84 361.95 90)
+			(at 504.19 356.8699 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Value" "Conn_01x04"
-			(at 497.84 364.49 90)
+			(at 504.19 359.4099 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Footprint" "PCM_SparkFun-Connector:1x04_P2.54mm"
-			(at 488.95 358.14 0)
+		(property "Footprint" "PCM_SparkFun-Connector:1x03_P2.54mm"
+			(at 491.49 358.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21010,7 +21032,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 486.41 358.14 0)
+			(at 490.22 358.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21021,7 +21043,7 @@
 			)
 		)
 		(property "Description" "Basic 0.1\" PTH"
-			(at 483.87 358.14 0)
+			(at 487.68 358.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21039,9 +21061,6 @@
 		)
 		(pin "3"
 			(uuid "6700f27f-eb3c-42c7-9b68-51e7716dc840")
-		)
-		(pin "4"
-			(uuid "3e62c50b-c427-4ed2-a7b8-bdb465344ee2")
 		)
 		(instances
 			(project "Mainboard Layout No daisy chain cp2102 moved"
@@ -23149,7 +23168,7 @@
 		)
 	)
 	(symbol
-		(lib_id "PCM_SparkFun-Connector:Conn_01x04_P2.54mm")
+		(lib_id "PCM_SparkFun-Connector:Conn_01x03_P2.54mm")
 		(at 389.89 360.68 270)
 		(unit 1)
 		(body_style 1)
@@ -23161,27 +23180,29 @@
 		(fields_autoplaced yes)
 		(uuid "54f1eb6e-ea2a-4f14-892a-57ff53d92d88")
 		(property "Reference" "J26"
-			(at 388.62 364.49 90)
+			(at 394.97 359.4099 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Value" "Conn_01x04"
-			(at 388.62 367.03 90)
+			(at 394.97 361.9499 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Footprint" "PCM_SparkFun-Connector:1x04_P2.54mm"
-			(at 379.73 360.68 0)
+		(property "Footprint" "PCM_SparkFun-Connector:1x03_P2.54mm"
+			(at 382.27 360.68 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23192,7 +23213,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 377.19 360.68 0)
+			(at 381 360.68 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23203,7 +23224,7 @@
 			)
 		)
 		(property "Description" "Basic 0.1\" PTH"
-			(at 374.65 360.68 0)
+			(at 378.46 360.68 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23221,9 +23242,6 @@
 		)
 		(pin "3"
 			(uuid "5ff6486a-3a76-4ac3-b983-6610fd9ec4cb")
-		)
-		(pin "4"
-			(uuid "3eb8bfb5-6a71-4c96-aac6-0d4ef16ab9c5")
 		)
 		(instances
 			(project "Mainboard Layout No daisy chain cp2102 moved"
@@ -23663,7 +23681,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 157.099 201.168 0)
 			(hide yes)
 			(show_name no)
@@ -25765,8 +25783,8 @@
 		)
 	)
 	(symbol
-		(lib_id "PCM_SparkFun-PowerSymbol:GND")
-		(at 425.45 346.71 180)
+		(lib_id "PCM_4ms_Diode:D_Generic")
+		(at 473.71 91.44 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -25775,10 +25793,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "903d440c-fde2-4a6a-a0d8-ff48f343caba")
-		(property "Reference" "#PWR026"
-			(at 425.45 340.36 0)
-			(hide yes)
+		(uuid "8a2f72cc-cd03-4ff7-b8cf-0ce3082be38b")
+		(property "Reference" "D4"
+			(at 473.71 85.09 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -25787,18 +25804,18 @@
 				)
 			)
 		)
-		(property "Value" "GND"
-			(at 425.45 342.9 0)
+		(property "Value" "D_Generic"
+			(at 473.71 87.63 0)
 			(show_name no)
-			(do_not_autoplace yes)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 425.45 346.71 0)
+		(property "Footprint" "Diode_THT:D_DO-201AD_P15.24mm_Horizontal"
+			(at 473.71 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25809,7 +25826,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 425.45 346.71 0)
+			(at 473.71 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25819,8 +25836,8 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 425.45 337.82 0)
+		(property "Description" "Diode"
+			(at 473.71 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25831,12 +25848,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "14145fc9-062f-4113-bb89-ad608ae4a61f")
+			(uuid "288b6dfc-652a-444b-a1dd-ab6504b86b6b")
+		)
+		(pin "2"
+			(uuid "e471a234-a069-462e-8650-4d95a1738705")
 		)
 		(instances
 			(project "Mainboard Layout No daisy chain cp2102 moved"
 				(path "/2053dd8c-5f84-476d-9658-863c94910b2d"
-					(reference "#PWR026")
+					(reference "D4")
 					(unit 1)
 				)
 			)
@@ -27857,7 +27877,7 @@
 		)
 	)
 	(symbol
-		(lib_id "PCM_SparkFun-Connector:Conn_01x04_P2.54mm")
+		(lib_id "PCM_SparkFun-Connector:Conn_01x03_P2.54mm")
 		(at 355.6 360.68 270)
 		(unit 1)
 		(body_style 1)
@@ -27869,27 +27889,29 @@
 		(fields_autoplaced yes)
 		(uuid "a9d79b01-666a-4819-9e41-01c43abe2dcb")
 		(property "Reference" "J27"
-			(at 354.33 364.49 90)
+			(at 360.68 359.4099 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Value" "Conn_01x04"
-			(at 354.33 367.03 90)
+			(at 360.68 361.9499 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Footprint" "PCM_SparkFun-Connector:1x04_P2.54mm"
-			(at 345.44 360.68 0)
+		(property "Footprint" "PCM_SparkFun-Connector:1x03_P2.54mm"
+			(at 347.98 360.68 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -27900,7 +27922,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 342.9 360.68 0)
+			(at 346.71 360.68 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -27911,7 +27933,7 @@
 			)
 		)
 		(property "Description" "Basic 0.1\" PTH"
-			(at 340.36 360.68 0)
+			(at 344.17 360.68 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -27929,9 +27951,6 @@
 		)
 		(pin "3"
 			(uuid "85d89813-90b2-45f5-80ba-31a1debb76f6")
-		)
-		(pin "4"
-			(uuid "c78d370e-124d-4f79-b37a-1235a45582f1")
 		)
 		(instances
 			(project "Mainboard Layout No daisy chain cp2102 moved"
@@ -29171,6 +29190,88 @@
 		)
 	)
 	(symbol
+		(lib_id "PCM_4ms_Diode:D_Generic")
+		(at 483.87 110.49 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c00b2e8b-3268-489a-bda6-d2d0ac930a30")
+		(property "Reference" "D3"
+			(at 486.41 109.2199 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "D_Generic"
+			(at 486.41 111.7599 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_THT:D_DO-201AD_P15.24mm_Horizontal"
+			(at 483.87 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 483.87 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Diode"
+			(at 483.87 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "69f5e5ae-72e3-464e-a7bd-571561f800cf")
+		)
+		(pin "2"
+			(uuid "b45babfd-2efb-4b1e-9d3c-fc3d2f7f528b")
+		)
+		(instances
+			(project "Mainboard Layout No daisy chain cp2102 moved"
+				(path "/2053dd8c-5f84-476d-9658-863c94910b2d"
+					(reference "D3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "PCM_SL_Connectors:JST_06")
 		(at 173.99 403.86 0)
 		(unit 1)
@@ -30292,7 +30393,7 @@
 		)
 	)
 	(symbol
-		(lib_id "PCM_SparkFun-Connector:Conn_01x04_P2.54mm")
+		(lib_id "PCM_SparkFun-Connector:Conn_01x03_P2.54mm")
 		(at 430.53 359.41 270)
 		(unit 1)
 		(body_style 1)
@@ -30304,27 +30405,29 @@
 		(fields_autoplaced yes)
 		(uuid "cef7eac5-6471-4b84-83f7-068c56771214")
 		(property "Reference" "J25"
-			(at 429.26 363.22 90)
+			(at 435.61 358.1399 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Value" "Conn_01x04"
-			(at 429.26 365.76 90)
+			(at 435.61 360.6799 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Footprint" "PCM_SparkFun-Connector:1x04_P2.54mm"
-			(at 420.37 359.41 0)
+		(property "Footprint" "PCM_SparkFun-Connector:1x03_P2.54mm"
+			(at 422.91 359.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -30335,7 +30438,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 417.83 359.41 0)
+			(at 421.64 359.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -30346,7 +30449,7 @@
 			)
 		)
 		(property "Description" "Basic 0.1\" PTH"
-			(at 415.29 359.41 0)
+			(at 419.1 359.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -30364,9 +30467,6 @@
 		)
 		(pin "3"
 			(uuid "395759a4-d759-4b2c-b70f-aeb5613dd8d0")
-		)
-		(pin "4"
-			(uuid "7edcc7c0-02be-49c4-a9b9-6ed5c798713f")
 		)
 		(instances
 			(project "Mainboard Layout No daisy chain cp2102 moved"

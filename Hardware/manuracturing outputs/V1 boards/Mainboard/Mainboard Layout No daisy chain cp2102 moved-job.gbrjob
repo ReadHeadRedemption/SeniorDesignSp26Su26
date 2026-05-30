@@ -5,17 +5,17 @@
       "Application": "Pcbnew",
       "Version": "10.0.2"
     },
-    "CreationDate": "2026-05-22T09:29:50-04:00"
+    "CreationDate": "2026-05-29T09:28:03-04:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
-      "Name": "LM2679PiRegulator",
-      "GUID": "4c4d3236-3739-4506-9952-6567756c6174",
+      "Name": "Mainboard Layout No daisy chain cp2102 moved",
+      "GUID": "4d61696e-626f-4617-9264-204c61796f75",
       "Revision": "rev?"
     },
     "Size": {
-      "X": 48.05,
-      "Y": 48.05
+      "X": 207.2315,
+      "Y": 175.0
     },
     "LayerNumber": 2,
     "BoardThickness": 1.6,
@@ -27,21 +27,51 @@
       "PadToPad": 0.2,
       "PadToTrack": 0.2,
       "TrackToTrack": 0.2,
-      "MinLineWidth": 0.5,
-      "TrackToRegion": 0.5,
-      "RegionToRegion": 0.5
+      "MinLineWidth": 0.2,
+      "TrackToRegion": 0.2,
+      "RegionToRegion": 0.2
     }
   ],
   "FilesAttributes": [
     {
-      "Path": "LM2679PiRegulator-F_Cu.gbr",
+      "Path": "Mainboard Layout No daisy chain cp2102 moved-F_Cu.gbr",
       "FileFunction": "Copper,L1,Top",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "LM2679PiRegulator-B_Cu.gbr",
+      "Path": "Mainboard Layout No daisy chain cp2102 moved-B_Cu.gbr",
       "FileFunction": "Copper,L2,Bot",
       "FilePolarity": "Positive"
+    },
+    {
+      "Path": "Mainboard Layout No daisy chain cp2102 moved-F_Paste.gbr",
+      "FileFunction": "SolderPaste,Top",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "Mainboard Layout No daisy chain cp2102 moved-B_Paste.gbr",
+      "FileFunction": "SolderPaste,Bot",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "Mainboard Layout No daisy chain cp2102 moved-F_Silkscreen.gbr",
+      "FileFunction": "Legend,Top",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "Mainboard Layout No daisy chain cp2102 moved-B_Silkscreen.gbr",
+      "FileFunction": "Legend,Bot",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "Mainboard Layout No daisy chain cp2102 moved-F_Mask.gbr",
+      "FileFunction": "SolderMask,Top",
+      "FilePolarity": "Negative"
+    },
+    {
+      "Path": "Mainboard Layout No daisy chain cp2102 moved-B_Mask.gbr",
+      "FileFunction": "SolderMask,Bot",
+      "FilePolarity": "Negative"
     }
   ],
   "MaterialStackup": [
