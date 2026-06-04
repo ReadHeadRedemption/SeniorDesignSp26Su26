@@ -2188,7 +2188,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_JST:JST_EH_S6B-EH_1x06_P2.50mm_Horizontal"
+		(property "Footprint" "PCM_4ms_Connector:Pins_1x06_2.54mm_TH_SWD"
 			(at 39.37 97.79 0)
 			(hide yes)
 			(show_name no)
@@ -2380,7 +2380,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "PCM_SparkFun-Connector:JST_1x03_P1.0mm_Vertical_SMD"
+		(property "Footprint" "PCM_SparkFun-Connector:1x03_P2.54mm"
 			(at 72.39 88.9 0)
 			(hide yes)
 			(show_name no)

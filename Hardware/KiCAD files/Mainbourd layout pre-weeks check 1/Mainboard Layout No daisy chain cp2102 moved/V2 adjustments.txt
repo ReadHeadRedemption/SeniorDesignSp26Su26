@@ -1,0 +1,1 @@
+Jst connections maybe too small compared to ender 3, 1mm pitch JST's rather than the ender 3 JST's at a 2mm pitch

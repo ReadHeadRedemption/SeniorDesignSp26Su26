@@ -1913,16 +1913,6 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 83.82) (xy 162.56 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2f33c1b4-915d-4a50-bc8a-a873d51740b8")
-	)
-	(wire
-		(pts
 			(xy 120.65 67.31) (xy 120.65 69.85)
 		)
 		(stroke
@@ -2233,7 +2223,7 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 72.39) (xy 162.56 76.2)
+			(xy 162.56 72.39) (xy 162.56 85.09)
 		)
 		(stroke
 			(width 0)
@@ -2703,88 +2693,6 @@
 			(project "LM2576_Var_Volt_Reg"
 				(path "/05ad55a9-73a4-4419-8d6d-9b068d5aca56"
 					(reference "L1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 162.56 80.01 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "37a90d20-6037-4321-ac7c-916982b3c088")
-		(property "Reference" "R4"
-			(at 165.1 78.7399 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "19512"
-			(at 165.1 81.2799 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
-			(at 163.576 80.264 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 162.56 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor, US symbol"
-			(at 162.56 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "637aec22-68d6-4146-91b1-173e2b9d4747")
-		)
-		(pin "2"
-			(uuid "749d016a-3d3e-4621-9387-faf0c812118a")
-		)
-		(instances
-			(project "LM2576_Var_Volt_Reg"
-				(path "/05ad55a9-73a4-4419-8d6d-9b068d5aca56"
-					(reference "R4")
 					(unit 1)
 				)
 			)

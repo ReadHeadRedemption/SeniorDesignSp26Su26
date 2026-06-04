@@ -2183,7 +2183,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "PCM_SparkFun-Connector:JST_1x03_P1.0mm_Vertical_SMD"
+		(property "Footprint" "PCM_SparkFun-Connector:1x03_P2.54mm"
 			(at 59.69 74.93 0)
 			(hide yes)
 			(show_name no)
