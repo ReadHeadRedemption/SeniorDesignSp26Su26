@@ -3517,7 +3517,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "2100LL-221H-RC"
+		(property "Value" "22uh"
 			(at 69.85 57.1499 90)
 			(show_name no)
 			(do_not_autoplace no)

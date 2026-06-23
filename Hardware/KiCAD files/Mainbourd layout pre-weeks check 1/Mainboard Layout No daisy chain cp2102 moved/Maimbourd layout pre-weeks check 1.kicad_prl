@@ -63,7 +63,7 @@
     "ssh_key": ""
   },
   "meta": {
-    "filename": "Standalone DRV8825 V1.kicad_prl",
+    "filename": "Maimbourd layout pre-weeks check 1.kicad_prl",
     "version": 5
   },
   "net_inspector_panel": {
@@ -92,16 +92,16 @@
       9
     ],
     "col_widths": [
-      186,
-      171,
-      113,
+      222,
+      207,
+      136,
       92,
-      112,
-      115,
-      112,
+      136,
+      136,
+      136,
       98,
-      112,
-      112
+      136,
+      136
     ],
     "custom_group_rules": [],
     "expanded_rows": [],

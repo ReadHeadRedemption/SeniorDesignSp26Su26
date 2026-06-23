@@ -2376,7 +2376,7 @@
 			(uuid "68e3baed-4171-4331-92cf-39b8c62b1721")
 		)
 		(instances
-			(project "LM2576_Var_Volt_Reg"
+			(project "LM2576_Var_Volt_Reg_12V"
 				(path "/05ad55a9-73a4-4419-8d6d-9b068d5aca56"
 					(reference "D2")
 					(unit 1)
@@ -2454,7 +2454,7 @@
 			(uuid "f9e954f9-aa34-4744-b02f-c0b8181586df")
 		)
 		(instances
-			(project "LM2576_Var_Volt_Reg"
+			(project "LM2576_Var_Volt_Reg_12V"
 				(path "/05ad55a9-73a4-4419-8d6d-9b068d5aca56"
 					(reference "#PWR05")
 					(unit 1)
@@ -2532,7 +2532,7 @@
 			(uuid "0040ac2c-b35a-4a24-b086-a14d5fa8027c")
 		)
 		(instances
-			(project "LM2576_Var_Volt_Reg"
+			(project "LM2576_Var_Volt_Reg_12V"
 				(path "/05ad55a9-73a4-4419-8d6d-9b068d5aca56"
 					(reference "#PWR08")
 					(unit 1)
@@ -2610,7 +2610,7 @@
 			(uuid "74006330-a22a-4303-8314-3897ef864647")
 		)
 		(instances
-			(project "LM2576_Var_Volt_Reg"
+			(project "LM2576_Var_Volt_Reg_12V"
 				(path "/05ad55a9-73a4-4419-8d6d-9b068d5aca56"
 					(reference "#PWR01")
 					(unit 1)
@@ -2690,7 +2690,7 @@
 			(uuid "243f059e-9fc5-4eb6-9a8e-b0bbcb800b36")
 		)
 		(instances
-			(project "LM2576_Var_Volt_Reg"
+			(project "LM2576_Var_Volt_Reg_12V"
 				(path "/05ad55a9-73a4-4419-8d6d-9b068d5aca56"
 					(reference "L1")
 					(unit 1)
@@ -2721,7 +2721,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "19512"
+		(property "Value" "8756"
 			(at 165.1 81.2799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2772,7 +2772,7 @@
 			(uuid "749d016a-3d3e-4621-9387-faf0c812118a")
 		)
 		(instances
-			(project "LM2576_Var_Volt_Reg"
+			(project "LM2576_Var_Volt_Reg_12V"
 				(path "/05ad55a9-73a4-4419-8d6d-9b068d5aca56"
 					(reference "R4")
 					(unit 1)
@@ -2850,7 +2850,7 @@
 			(uuid "667e50cf-9666-4731-afde-f1a1086c82cf")
 		)
 		(instances
-			(project "LM2576_Var_Volt_Reg"
+			(project "LM2576_Var_Volt_Reg_12V"
 				(path "/05ad55a9-73a4-4419-8d6d-9b068d5aca56"
 					(reference "#PWR07")
 					(unit 1)
@@ -2928,7 +2928,7 @@
 			(uuid "c982e236-01f5-4bfd-8ae1-f8c0c183815c")
 		)
 		(instances
-			(project "LM2576_Var_Volt_Reg"
+			(project "LM2576_Var_Volt_Reg_12V"
 				(path "/05ad55a9-73a4-4419-8d6d-9b068d5aca56"
 					(reference "#PWR03")
 					(unit 1)
@@ -2958,7 +2958,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "2k"
+		(property "Value" "1k"
 			(at 165.1 91.4399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3009,7 +3009,7 @@
 			(uuid "c67b2b7f-8e3f-44da-8747-238dce5a1c5a")
 		)
 		(instances
-			(project "LM2576_Var_Volt_Reg"
+			(project "LM2576_Var_Volt_Reg_12V"
 				(path "/05ad55a9-73a4-4419-8d6d-9b068d5aca56"
 					(reference "R1")
 					(unit 1)
@@ -3087,7 +3087,7 @@
 			(uuid "ed53e8a2-e8a4-4fb6-b40a-76ddcfc3feda")
 		)
 		(instances
-			(project "LM2576_Var_Volt_Reg"
+			(project "LM2576_Var_Volt_Reg_12V"
 				(path "/05ad55a9-73a4-4419-8d6d-9b068d5aca56"
 					(reference "#PWR04")
 					(unit 1)
@@ -3169,7 +3169,7 @@
 			(uuid "77f62b1a-de04-46ef-b6c5-8704906e9b7a")
 		)
 		(instances
-			(project "LM2576_Var_Volt_Reg"
+			(project "LM2576_Var_Volt_Reg_12V"
 				(path "/05ad55a9-73a4-4419-8d6d-9b068d5aca56"
 					(reference "C1")
 					(unit 1)
@@ -3250,7 +3250,7 @@
 			(uuid "07544cc2-30b5-46d1-a67e-e297f5875597")
 		)
 		(instances
-			(project "LM2576_Var_Volt_Reg"
+			(project "LM2576_Var_Volt_Reg_12V"
 				(path "/05ad55a9-73a4-4419-8d6d-9b068d5aca56"
 					(reference "C3")
 					(unit 1)
@@ -3332,7 +3332,7 @@
 			(uuid "17c12dd2-b89e-4cec-9c48-e1cc329b925d")
 		)
 		(instances
-			(project "LM2576_Var_Volt_Reg"
+			(project "LM2576_Var_Volt_Reg_12V"
 				(path "/05ad55a9-73a4-4419-8d6d-9b068d5aca56"
 					(reference "C5")
 					(unit 1)
@@ -3410,7 +3410,7 @@
 			(uuid "a63ebb15-4bb1-4912-ae7a-ae424f7763ad")
 		)
 		(instances
-			(project "LM2576_Var_Volt_Reg"
+			(project "LM2576_Var_Volt_Reg_12V"
 				(path "/05ad55a9-73a4-4419-8d6d-9b068d5aca56"
 					(reference "#PWR02")
 					(unit 1)
@@ -3501,7 +3501,7 @@
 			(uuid "cee24dd0-9702-47c3-b7ea-97e9c7ac813f")
 		)
 		(instances
-			(project "LM2576_Var_Volt_Reg"
+			(project "LM2576_Var_Volt_Reg_12V"
 				(path "/05ad55a9-73a4-4419-8d6d-9b068d5aca56"
 					(reference "U2")
 					(unit 1)
@@ -3584,7 +3584,7 @@
 			(uuid "98427cf8-331b-4358-bb11-d15c4690610e")
 		)
 		(instances
-			(project "LM2576_Var_Volt_Reg"
+			(project "LM2576_Var_Volt_Reg_12V"
 				(path "/05ad55a9-73a4-4419-8d6d-9b068d5aca56"
 					(reference "J1")
 					(unit 1)
@@ -3662,7 +3662,7 @@
 			(uuid "306754bf-2383-4e0e-b658-b38f63529099")
 		)
 		(instances
-			(project "LM2576_Var_Volt_Reg"
+			(project "LM2576_Var_Volt_Reg_12V"
 				(path "/05ad55a9-73a4-4419-8d6d-9b068d5aca56"
 					(reference "#PWR06")
 					(unit 1)
@@ -3743,7 +3743,7 @@
 			(uuid "dee06871-c7b5-4320-be7f-c3ac4ab9f6a3")
 		)
 		(instances
-			(project "LM2576_Var_Volt_Reg"
+			(project "LM2576_Var_Volt_Reg_12V"
 				(path "/05ad55a9-73a4-4419-8d6d-9b068d5aca56"
 					(reference "C2")
 					(unit 1)
@@ -3825,7 +3825,7 @@
 			(uuid "10532ac1-1fab-4246-b867-cd85c0cf607d")
 		)
 		(instances
-			(project "LM2576_Var_Volt_Reg"
+			(project "LM2576_Var_Volt_Reg_12V"
 				(path "/05ad55a9-73a4-4419-8d6d-9b068d5aca56"
 					(reference "R3")
 					(unit 1)
@@ -3906,7 +3906,7 @@
 			(uuid "289adf1f-e186-4008-9d9e-59ad3ceea944")
 		)
 		(instances
-			(project "LM2576_Var_Volt_Reg"
+			(project "LM2576_Var_Volt_Reg_12V"
 				(path "/05ad55a9-73a4-4419-8d6d-9b068d5aca56"
 					(reference "C4")
 					(unit 1)
@@ -3989,7 +3989,7 @@
 			(uuid "e9a72a85-7f9f-4d74-bd8a-912fe1f2ab9a")
 		)
 		(instances
-			(project "LM2576_Var_Volt_Reg"
+			(project "LM2576_Var_Volt_Reg_12V"
 				(path "/05ad55a9-73a4-4419-8d6d-9b068d5aca56"
 					(reference "CR2")
 					(unit 1)

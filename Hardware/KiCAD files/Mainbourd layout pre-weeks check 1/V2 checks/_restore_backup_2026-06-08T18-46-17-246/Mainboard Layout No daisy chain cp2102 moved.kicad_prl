@@ -13,7 +13,7 @@
       "shapes": 1.0,
       "tracks": 1.0,
       "vias": 1.0,
-      "zones": 0.6
+      "zones": 0.3499999940395355
     },
     "prototype_zone_fills": false,
     "selection_filter": {
@@ -21,7 +21,7 @@
       "footprints": true,
       "graphics": true,
       "keepouts": true,
-      "lockedItems": false,
+      "lockedItems": true,
       "otherItems": true,
       "pads": true,
       "text": true,
@@ -63,7 +63,7 @@
     "ssh_key": ""
   },
   "meta": {
-    "filename": "Standalone DRV8825 V1.kicad_prl",
+    "filename": "Mainboard Layout No daisy chain cp2102 moved.kicad_prl",
     "version": 5
   },
   "net_inspector_panel": {
@@ -92,16 +92,16 @@
       9
     ],
     "col_widths": [
-      186,
-      171,
-      113,
+      222,
+      207,
+      136,
       92,
-      112,
-      115,
-      112,
+      136,
+      136,
+      136,
       98,
-      112,
-      112
+      136,
+      136
     ],
     "custom_group_rules": [],
     "expanded_rows": [],

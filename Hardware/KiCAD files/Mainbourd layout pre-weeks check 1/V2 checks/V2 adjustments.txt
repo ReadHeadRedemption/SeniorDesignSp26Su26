@@ -2,7 +2,7 @@ check Jst connections maybe too small compared to ender 3, 1mm pitch JST's rathe
 
 review LCD pinout to include the touchscreen connections
 
-Flip protection diodes as they are on backwards remove diode on programmer USB
+Flip protection diodes as they are on backwards
 
 Endstops terminate at a 2pin JST on the mainboard. only include 2 pin JST on those endstop connections
 
@@ -15,7 +15,3 @@ Silkscreen for pertinent pins for placement and lanes
 merge all spi lanes to 1 set
 
 sd mmc needs to be replacing the sd card connection currently. includes multiple new data lanes
-
-MODE IS SWAPPED 
-
-verify LCD reset transistor

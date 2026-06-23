@@ -1240,7 +1240,7 @@
 		)
 	)
 	(gr_text "match measurements to the L-bracket physically attaching it to the NEMA 17 motor\n"
-		(at 49.55 129.794 0)
+		(at 49.45 130.55 0)
 		(layer "User.1")
 		(uuid "3d0a04fd-6e7b-472b-b82e-8f4c0f647beb")
 		(effects
